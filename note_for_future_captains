@@ -1,0 +1,68 @@
+Congratulations on your ascension to the dictatorship of Physics Team.
+It is a position that involves a lot of hard work, but is also very rewarding!
+How to run physics team: _____________
+
+(quoted from Immanuel Buder)
+
+1. Membership & Recruitment
+Decide early (in September) when you want to start team meetings.Ê Decide whether you will invite seniors (having already taken physics) at the same time as juniors (currently in physics).Ê I recommend a lunch interest meeting, several announcements on the PA, flyers, etc.Ê Send emails to the math team and computer team mailing lists.Ê Have Mr. Wallin and Dr. Dell talk to their AP classes.
+
+4. Problems
+There is a folder in Mr. Wallin's room labeled physics team or IPhO or similar which has every problem we used this year.Ê Remember that the problems range widely in difficulty and style--Read and SOLVE the problems before you give them to the team (I didn't do this once and discovered that my problem was broken).Ê The BAUPC (Boston Area Undergraduate Physics Competition) is a good source of problems; they are available on the web.Ê The US Physics Olympiad has stolen problems from the BAUPC several times.Ê Most IPhO problems are available on the web (warning: the IPhO problems are often written badly; you may need to rewrite and clarify them before use).Ê Old camp problems (the named problems like "Spaceman Fred" "Loop the loop" "Three Cees" etc) are good and I have solutions for them.Ê Old selection exam (especially semi-final round) problems are also good and usually well-written.
+
+5. Meetings
+I quote from the venerable Greg N. Price:
+"This illusion of professionalism is critical in persuading potential new members that an activity really has something to offer that's worth their investment of time."
+It is vital that meetings remain on task and well-directed else people will
+lose interest.Ê Unlike in a normal class, you cannot use the threat of low
+grades as a motivation.Ê You need to demonstrate that if people come to
+meetings they will learn something valuable. In part, this means that you need
+to choose problems of appropriate difficulty: if they are too easy, no one is
+learning anything. If they are too hard, everyone will become discouraged--be
+ready with hints so this doesn't happen!
+6. Organizational Stuff
+Have a plan for registering for the olympiad.
+Have a plan for registering for the olympiad.
+Make this plan in October or November. Remember that you need to contact
+Academic Boosters if you want them to fund us (this year they gave us enough
+money so the contest was free). Tell everyone they need to fill out their forms. Tell them again. Teenagers rarely listen; you'll need to remind them to complete forms.
+Did I mention to have a plan for registering for the olympiad?
+If you want to do the Physics Bowl (a separate contest) you will need to register for that too. That deadline is later (sometime ~March I think).
+
+7. Summer
+This summer is a good time to do some planning. During school (especially the hectic college application process) you will have to live from week to week; there will not be time for long-term planning. It's a good idea to have your plan ready beforehand. This is especiall relevant for lectures, which take much more effort than problems. Also, it's a good time to do practice for yourselves
+History: _____________
+2003-04
+Mats Ahlgren & Michael Zhang
+[ADD HERE: advertise and stuff]
+Compiled this text file.
+--Mats
+
+2002-03
+Immanuel Buder & Tim Abbott
+
+2001-02
+Greg Price
+
+Mailing list: _____________
+(quoted from Immanuel Buder)
+- It is important that all members are on the list 
+- Send emails at least a week in advance when possible--not everyone checks her email every day.
+Website: _____________
+- Keep it up-to-date (check the links).
+Discus board: _____________
+- The forum needs to be *well-moderated*, or else the sysadmins will get mad.
+- You'll want to create your own username to post, instead of using 'admin'.
+- You'll want to be familiar with SFTP and SSH. You need to set the AFS permissions to 'write' for the discus/admin directories and subdirectories (see http://www.eos.ncsu.edu/guide/permissions.html). You may need to set them one at a time. A Discus file locking error may mean that AFS permissions have been reset.
+- Try to update at least once. Always make a backup before doing so. I recommend doing this to make a backup in your home directory:
+
+cd /afs/csl.tjhsst.edu/web/activities
+tar -cvvf ~/backup.tar physics
+
+Changes made to Discus:
+file: button to see intranet
+file: post and preview
+
+Peculiarities of Discus:
+- All files must be uploaded in ASCII mode (not automatic for some reason)
+- Sometimes preview eats up a space at the end of the line. If you want a line break you need to type in two spaces before posting.
