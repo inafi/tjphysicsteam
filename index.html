@@ -7,36 +7,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script> -->
+    <script src="JS/three.js"></script>
+    <script src="JS/home.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
-
 
 <body>
     <nav class="navbar fixed-top">
         <div class="left">
             <a href="index.html"><span class="active">Home</span></a>
-            <a href="status.html"><span>Schedule</span></a>
-            <a href="news.html"><span>Events</span></a>
-            <a href="cases.html"><span>Rankings</span></a>
-            <a href="print.html"><span>Officers</span></a>
+            <a href="schedule.html"><span>Schedule</span></a>
+            <a href="events.html"><span>Events</span></a>
+            <a href="rankings.html"><span>Rankings</span></a>
+            <a href="officers.html"><span>Officers</span></a>
         </div>
-        <a href="index.html"><img src = "Pics/copy.png"></a>
+        <a href="index.html"><img src="Pics/copy.png"></a>
         <div class="right">
-            <a href="status.html"><span>A Team</span></a>
-            <a href="print.html"><span>B Team</span></a>
-            <a href="news.html"><span>C Team</span></a>
-            <a href="cases.html"><span>Resources</span></a>
+            <a href="a.html"><span>A Team</span></a>
+            <a href="b.html"><span>B Team</span></a>
+            <a href="c.html"><span>C Team</span></a>
+            <a href="resources.html"><span>Resources</span></a>
         </div>
     </nav>
 
+    <div class="metric">
+    </div>
+    <div class="metric-cover">
+        <p>TJ Physics Team</p>
+    </div>
+    <div class="after"></div>
+
     <div class="block" style="background-color: #06D6A0;"></div>
-    <div class="block" style="background-color: #FFF;"></div>
+    <div class="block" style="background-color: #fff;"></div>
     <div class="block" style="background-color: #3D348B;"></div>
     <div class="block" style="background-color: #1B98E0;"></div>
     <div class="block" style="background-color: #BB0A21;"></div>
 </body>
 <script>
-
+    setInterval(function () {
+        if ($(window).scrollTop() == 0) {
+            $("nav").css('background-color', 'transparent');
+            $("nav *").css('color', '#fff');
+            $(".active").css('color', '#1B98E0');
+            $("nav span:hover").css('color', '#06D6A0');
+        } else {
+            $("nav").css('background-color', '#fff');
+            $("nav *").css('color', '#1B98E0');
+            $(".active").css('color', '#3D348B');
+            $("nav span:hover").css('color', '#06D6A0');
+        }
+    }, 20)
 </script>
 
 </html>

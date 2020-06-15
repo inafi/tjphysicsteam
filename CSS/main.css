@@ -17,6 +17,10 @@ nav * {
     transition: 0.3s;
 }
 
+/* nav.active {
+    color: #1B98E0;
+} */
+
 nav img {
     height: 5vh;
     position: absolute;
@@ -39,7 +43,7 @@ nav span {
 }
 
 nav span:hover {
-    color: #3D348B;
+    color: #06D6A0;
 }
 
 nav .left {
