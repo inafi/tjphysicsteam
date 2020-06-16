@@ -29,12 +29,23 @@
     font-size: 5vh;
     text-align: center;
     margin-top: 5vh;
+    color: #1B98E0;
 }
 
 .b1 p.desc {
     padding: 2vh 20%;
     text-align: center;
     font-size: 2vh;
+    margin-top: -2vh;
+}
+
+.b1 span {
+    color: #06D6A0;
+    font-size: 2.8vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 89vh;
 }
 
 /*Demo*/
