@@ -97,7 +97,6 @@ function initialize() {
     }
 
     function render() {
-
         camera.position.x += (0 - camera.position.x) * .05;
         camera.position.y += (800 - camera.position.y) * .05;
         camera.lookAt(scene.position);
