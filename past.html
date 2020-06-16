@@ -6,20 +6,20 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/past.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/three.js"></script>
-    <script src="JS/home.js"></script>
+    <script src="JS/past.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <div class="left">
-            <a href="index.html"><span class="active">Home</span></a>
+            <a href="index.html"><span>Home</span></a>
             <a href="schedule.html"><span>Schedule</span></a>
             <a href="events.html"><span>Events</span></a>
             <a href="rankings.html"><span>Rankings</span></a>
@@ -30,10 +30,56 @@
             <a href="a.html"><span>A Team</span></a>
             <a href="b.html"><span>B Team</span></a>
             <a href="c.html"><span>C Team</span></a>
-            <a href="past.html"><span>Past</span></a>
+            <a href="past.html"><span class="active">Past</span></a>
             <a href="resources.html"><span>Resources</span></a>
         </div>
     </nav>
+
+    <section class="timeline">
+        <div class="container">
+
+            <div class="timeline-item">
+                <div class="timeline-img">2020</div>
+                <div class="timeline-content js--fadeInLeft">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias
+                        cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi
+                        amet in dolores. Alias, ullam.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">2019</div>
+                <div class="timeline-content js--fadeInRight">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias
+                        cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi
+                        amet in dolores. Alias, ullam.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">2018</div>
+                <div class="timeline-content js--fadeInLeft">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias
+                        cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi
+                        amet in dolores. Alias, ullam.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-img">2017</div>
+                <div class="timeline-content js--fadeInRight">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias
+                        cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi
+                        amet in dolores. Alias, ullam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <div class="row">
@@ -73,13 +119,15 @@
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
-            $(".active").css('color', '#1B98E0');
-            $("nav span:hover").css('color', '#06D6A0');
+            $(".active").css('color', '#3D348B');
+            $("nav span:hover").css('color', '#3D348B');
+            $("nav img").attr("src", "Pics/copy2.png");
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#06D6A0');
+            $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
 </script>

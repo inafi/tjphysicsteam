@@ -126,6 +126,7 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: ['dayGrid'],
+            eventOrder: 'color,start',
             eventClick: function (info) {
                 // alert('Event: ' + info.event.title);
                 $(".side .date").text(monthconvert[(info.event.start + " ").split(" ")[1]] + " " + (
@@ -183,7 +184,7 @@
 
                         var year = 2020;
 
-                        if (parseInt(month) > 0 && parseInt(month) < 6)
+                        if (parseInt(month) > 0 && parseInt(month) < 7)
                             year = 2021;
 
                         var dateStr = year + "-" + month + "-" + day;
