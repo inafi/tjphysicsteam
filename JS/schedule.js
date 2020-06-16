@@ -218,6 +218,7 @@ function initialize() {
         switch (true) {
             case next:
                 $(buttonId).on("click", function () {
+                    console.log(indexMonth + " l");
                     if (indexMonth >= 2) {
                         $(mainClass).css({
                             left: "+=100%"
@@ -226,12 +227,22 @@ function initialize() {
                             left: "+=100%"
                         });
                         indexMonth -= 1;
+                    } else {
+                        indexMonth = 12;
+                        $(mainClass).css({
+                            left: "-=1100%"
+                        });
+                        $(monthClass).css({
+                            left: "-=1100%"
+                        });
+                        year -= 1;
                     }
                     return indexMonth;
                 });
                 break;
             case prev:
                 $(buttonId).on("click", function () {
+                    console.log(indexMonth);
                     if (indexMonth <= 11) {
                         $(mainClass).css({
                             left: "-=100%"
@@ -240,6 +251,15 @@ function initialize() {
                             left: "-=100%"
                         });
                         indexMonth += 1;
+                    } else {
+                        indexMonth = 1;
+                        $(mainClass).css({
+                            left: "+=1100%"
+                        });
+                        $(monthClass).css({
+                            left: "+=1100%"
+                        }); 
+                        year += 1;
                     }
                     return indexMonth;
                 });
