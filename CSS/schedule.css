@@ -2,17 +2,58 @@ body {
     background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0, #3D348B);
 }
 
-.wrap{
-    height: 80vh;
+.wrap {
+    height: auto;
+    width: 70%;
+    background-color: #ffffff;
+    margin-top: 10vh;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 2vh;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.32);
 }
 
 #calendar {
     width: 90%;
-    margin-top: 10vh;
-    position: absolute;
-    left: 0;
-    right: 0;
     margin: auto;
-    height: 80vh;
-    top: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.fc-day {
+    height: 10vh !important;
+}
+
+.fc-today-button{
+    background-color: #1B98E0 !important;
+    border: 0px transparent solid !important;
+}
+
+.fc-today-button:disabled{
+    background-color: #888 !important;
+    border: 0px transparent solid !important;
+}
+
+.fc-prev-button, .fc-next-button{
+    background-color: #1B98E0 !important;
+    border: 0px transparent solid !important;
+}
+
+.foot-wrap {
+    position: relative;
+    margin-top: 138vh
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
 }

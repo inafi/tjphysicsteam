@@ -78,13 +78,6 @@ footer {
     background-color: #3D348B;
     width: 100%;
     height: 20vh;
-    position: absolute;
-    bottom: 0;
-}
-
-.foot-wrap {
-    position: relative;
-    min-height: 100vh;
 }
 
 footer i {
