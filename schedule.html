@@ -42,8 +42,9 @@
         </div>
     </nav>
 
-    <div class="side">
-        
+    <div class="side" vis="off">
+        <p class="title"></p>
+        <p class="desc"></p>
     </div>
 
     <div class="wrap">
@@ -105,10 +106,43 @@
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
 
+        var monthconvert = {
+            'Jan': 'January',
+            'Feb': "February",
+            'Mar': "March",
+            'Apr': "April",
+            'May': "May",
+            'Jun': "June",
+            'Jul': "July",
+            'Aug': "August",
+            'Sep': "September",
+            'Oct': "October",
+            'Nov': "November",
+            'Dec': "December"
+        }
+
+        var previnfo;
+
         var calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: ['dayGrid'],
             eventClick: function (info) {
-                alert('Event: ' + info.event.title);
+                // alert('Event: ' + info.event.title);
+                $(".side .title").text(monthconvert[(info.event.start + " ").split(" ")[1]] + " " + (info.event.start + " ").split(" ")[2]);
+                var team;
+                if (info.event.backgroundColor == "#06D6A0")
+                    team = "A Team Lecture on "
+                else if (info.event.backgroundColor == "#1B98E0")
+                    team = "B Team Lecture on "
+                else
+                    team = "C Team Lecture on "
+                console.log(info.event);
+                $(".side .desc").text(team + info.event.title);
+                // alert($(".side").css("transform"));
+                if ($(".side").attr("vis") == "off"){
+                    $(".side").css("transform", "translateX(25%)");
+                    $(".wrap").css("transform", "translateX(20%)");
+                    $(".wrap").css("width", "65%");
+                } 
             }
         });
 
@@ -121,8 +155,6 @@
             async: false,
             success: function (data) {
                 var arr = Papa.parse(data).data;
-                console.log(data);
-                console.log(arr.length)
 
                 for (i = 0; i < arr.length; i++) {
                     var month = arr[i][0].split("/")[0];
@@ -132,11 +164,11 @@
                     day = day.length > 1 ? day : '0' + day;
 
                     var year = 2020;
-                    if (parseInt(month) > 0 && parseInt(month) < 7)
+
+                    if (parseInt(month) > 0 && parseInt(month) < 6)
                         year = 2021;
 
                     var dateStr = year + "-" + month + "-" + day;
-                    console.log(dateStr);
                     var date = new Date(dateStr + 'T00:00:00');
 
                     calendar.addEvent({
@@ -158,8 +190,6 @@
             async: false,
             success: function (data) {
                 var arr = Papa.parse(data).data;
-                console.log(data);
-                console.log(arr.length)
 
                 for (i = 0; i < arr.length; i++) {
                     var month = arr[i][0].split("/")[0];
@@ -173,7 +203,6 @@
                         year = 2021;
 
                     var dateStr = year + "-" + month + "-" + day;
-                    console.log(dateStr);
                     var date = new Date(dateStr + 'T00:00:00');
 
                     calendar.addEvent({
@@ -195,8 +224,6 @@
             async: false,
             success: function (data) {
                 var arr = Papa.parse(data).data;
-                console.log(data);
-                console.log(arr.length)
 
                 for (i = 0; i < arr.length; i++) {
                     var month = arr[i][0].split("/")[0];
@@ -210,7 +237,6 @@
                         year = 2021;
 
                     var dateStr = year + "-" + month + "-" + day;
-                    console.log(dateStr);
                     var date = new Date(dateStr + 'T00:00:00');
 
                     calendar.addEvent({
