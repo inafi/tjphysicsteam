@@ -105,11 +105,11 @@
             plugins: ['dayGrid']
         });
 
-        req =
+        var reqa =
             "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=0&single=true&output=csv";
 
         $.ajax({
-            url: req,
+            url: reqa,
             type: "get",
             async: false,
             success: function (data) {
@@ -125,7 +125,7 @@
                     day = day.length > 1 ? day : '0' + day;
 
                     var year = 2020;
-                    if (month > 1 && month < 7)
+                    if (parseInt(month) > 0 && parseInt(month) < 7)
                         year = 2021;
 
                     var dateStr = year + "-" + month + "-" + day;
@@ -136,7 +136,81 @@
                         title: arr[i][1],
                         start: date,
                         allDay: true,
-                        eventColor: '#000'
+                        backgroundColor: '#06D6A0'
+                    });
+                }
+            }
+        });
+
+        var reqb =
+            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=626361445&single=true&output=csv";
+
+        $.ajax({
+            url: reqb,
+            type: "get",
+            async: false,
+            success: function (data) {
+                var arr = Papa.parse(data).data;
+                console.log(data);
+                console.log(arr.length)
+
+                for (i = 0; i < arr.length; i++) {
+                    var month = arr[i][0].split("/")[0];
+                    month = month.length > 1 ? month : '0' + month;
+
+                    var day = arr[i][0].split("/")[1];
+                    day = day.length > 1 ? day : '0' + day;
+
+                    var year = 2020;
+                    if (parseInt(month) > 0 && parseInt(month) < 7)
+                        year = 2021;
+
+                    var dateStr = year + "-" + month + "-" + day;
+                    console.log(dateStr);
+                    var date = new Date(dateStr + 'T00:00:00');
+
+                    calendar.addEvent({
+                        title: arr[i][1],
+                        start: date,
+                        allDay: true,
+                        backgroundColor: '#1B98E0'
+                    });
+                }
+            }
+        });
+
+        var reqc =
+            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=993140585&single=true&output=csv";
+
+            $.ajax({
+            url: reqc,
+            type: "get",
+            async: false,
+            success: function (data) {
+                var arr = Papa.parse(data).data;
+                console.log(data);
+                console.log(arr.length)
+
+                for (i = 0; i < arr.length; i++) {
+                    var month = arr[i][0].split("/")[0];
+                    month = month.length > 1 ? month : '0' + month;
+
+                    var day = arr[i][0].split("/")[1];
+                    day = day.length > 1 ? day : '0' + day;
+
+                    var year = 2020;
+                    if (parseInt(month) > 0 && parseInt(month) < 7)
+                        year = 2021;
+
+                    var dateStr = year + "-" + month + "-" + day;
+                    console.log(dateStr);
+                    var date = new Date(dateStr + 'T00:00:00');
+
+                    calendar.addEvent({
+                        title: arr[i][1],
+                        start: date,
+                        allDay: true,
+                        backgroundColor: '#3D348B'
                     });
                 }
             }
