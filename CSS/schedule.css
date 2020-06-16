@@ -33,27 +33,48 @@ body {
     height: 10vh !important;
 }
 
-.fc-today-button{
+.fc-today-button {
     background-color: #1B98E0 !important;
     border: 0px transparent solid !important;
 }
 
-.fc-today-button:disabled{
+.fc-today-button:disabled {
     background-color: #888 !important;
     border: 0px transparent solid !important;
 }
 
-.fc-prev-button, .fc-next-button{
+.fc-prev-button,
+.fc-next-button {
     background-color: #1B98E0 !important;
+    border: 0px transparent solid !important;
+}
+
+/* .fc-day-number{
+    margin-right: 8vh;
+    margin-top: 1vh;
+}
+
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td{
+    border: 0px transparent solid !important;
+} */
+
+.fc-title {
+    color: #fff !important;
+    padding-left: 0.5vh;
+    font-size: 1.7vh;
+}
+
+.fc-event, .fc-event-dot{
+    background-color: #1b98e0 !important;
     border: 0px transparent solid !important;
 }
 
 .foot-wrap {
     position: relative;
-    margin-top: 138vh
+    margin-top: 140vh
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
 }
