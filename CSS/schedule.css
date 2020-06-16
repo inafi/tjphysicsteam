@@ -34,7 +34,7 @@ body {
     background-color: #ffffff;
     position: absolute;
     top: 10vh;
-    height: 50vh;
+    height: auto;
     width: 21%;
     border-radius: 2vh;
     box-shadow:
@@ -48,15 +48,23 @@ body {
     transform: translateX(-100%);
 }
 
-.side .title {
+.side .date {
     font-size: 3vh;
     padding-left: 3vh;
-    padding-top: 1vh;
+    padding-top: 2vh;
 }
 
-.side .desc{
+.side .title {
+    font-size: 2.5vh;
+    padding-left: 3vh;
+    padding-right: 3vh; 
+}
+
+.side .desc {
     font-size: 2vh;
     padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 8vh;
 }
 
 .fc-toolbar h2 {
