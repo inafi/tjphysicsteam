@@ -43,7 +43,7 @@ td, tr, table {
     border-top-left-radius: 1vh;
 }
 
-.t1, table.student tr > :first-child{
+.t1, table.student tr > :first-child, table.student tr > :last-child{
     color: #1B98E0;
 }
 
