@@ -30,7 +30,6 @@ tr.content {
 }
 
 table.student tr.content:hover {
-    cursor: pointer;
     transform: scaleX(1.02) scaleY(1.1);
 }
 
