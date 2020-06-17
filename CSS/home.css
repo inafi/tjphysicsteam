@@ -82,7 +82,7 @@ hr {
 }
 
 .b2 .desc {
-    font-size: 2.3vh;
+    font-size: 2vh;
     margin-top: -1vh;
     text-align: justify;
     width: 110%;
@@ -101,15 +101,22 @@ hr {
     margin-bottom: 5vh;
 }
 
-.b3 .label{
+.b3 .text {
+    display: flex;
+    align-items: center;
+}
+
+.b3 .label {
     color: #06D6A0;
     font-size: 3.7vh;
-    margin: 5vh auto 1vh auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
     display: block;
     text-align: center;
 }
 
-.b3 .desc{
+.b3 .desc {
     text-align: justify;
     font-size: 2.3vh;
 }
