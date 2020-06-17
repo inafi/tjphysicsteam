@@ -19,6 +19,10 @@ table.student {
     margin: 2vh auto 20vh auto;
 }
 
+table.student tr:nth-of-type(-n + 14){
+    background-color:  #FFD66A !important;
+}
+
 tr.content {
     background-color: #fff;
     font-size: 2vh;
