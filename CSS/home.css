@@ -94,6 +94,7 @@ hr {
     border-radius: 1vh;
     margin: auto;
     display: block;
+    width: 100%;
 }
 
 .b3 .col-5 {

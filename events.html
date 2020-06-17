@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/event.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/three.js"></script>
-    <script src="JS/home.js"></script>
+    <script src="JS/event.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
 
@@ -33,6 +33,12 @@
             <a href="resources.html"><span>Resources</span></a>
         </div>
     </nav>
+
+    <div class="event">
+    </div>
+
+    <div class="event">
+    </div>
 
     <footer>
         <div class="row">
@@ -72,13 +78,15 @@
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
-            $(".active").css('color', '#1B98E0');
-            $("nav span:hover").css('color', '#06D6A0');
+            $(".active").css('color', '#3D348B');
+            $("nav span:hover").css('color', '#3D348B');
+            $("nav img").attr("src", "Pics/copy2.png");
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#06D6A0');
+            $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
 </script>
