@@ -52,6 +52,9 @@
         </div>
     </div>
 
+    <div class="overlay-cover">
+    </div>
+
     <div class="row">
         <div style="width:10.5%"></div>
         <div class="col-3">
@@ -63,15 +66,8 @@
                     <div class="cover"></div>
                 </div>
             </div>
-        </div>
-        <div class="col-3">
-            <div class="event">
-                <div class="img-wrap">
-                    <p class="title">Periodic Physics Problems I</p>
-                    <p class="desc">Our First Problem set of the year!</p>
-                    <img src="Pics/wide.jpg">
-                    <div class="cover"></div>
-                </div>
+            <div class="overlay">aaa
+                <button class="exit">&#x2715;</button>
             </div>
         </div>
         <div class="col-3">
@@ -82,6 +78,22 @@
                     <img src="Pics/wide.jpg">
                     <div class="cover"></div>
                 </div>
+            </div>
+            <div class="overlay">bbb
+                <button class="exit">&#x2715;</button>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="event">
+                <div class="img-wrap">
+                    <p class="title">Periodic Physics Problems I</p>
+                    <p class="desc">Our First Problem set of the year!</p>
+                    <img src="Pics/wide.jpg">
+                    <div class="cover"></div>
+                </div>
+            </div>
+            <div class="overlay">
+                <button class="exit">&#x2715;</button>
             </div>
         </div>
     </div>
@@ -135,6 +147,18 @@
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    $(".event").click(function () {
+        $(this).siblings(".overlay").show();
+        $(this).siblings(".overlay").find(".exit").show();
+        $(".overlay-cover").show();
+    })
+
+    $(".exit").click(function () {
+        $(this).parent().hide();
+        $(this).hide();
+        $(".overlay-cover").hide();
+    })
 </script>
 
 </html>
