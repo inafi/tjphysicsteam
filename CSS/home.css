@@ -48,9 +48,47 @@
     top: 89vh;
 }
 
+hr {
+    width: 80%;
+}
+
+/*Team*/
+.b2 .title{
+    font-size: 5vh;
+    text-align: center;
+    margin-top: 10vh;
+    color: #1B98E0;
+}
+
+.b2 .label {
+    color: #06D6A0;
+    font-size: 2.8vh;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.b2 img{
+    width: 40%;
+    border-radius: 100%;
+}
+
+.b2 .desc {
+    position: absolute;
+    top: 2vh;
+    right: 4vh;
+    text-align: center;
+    font-size: 1.9vh;
+}
+
+.b2 .row{
+    margin-bottom: 7vh;;
+}
+
 /*Demo*/
 img.demo-left {
-    width: 100%;
+    width: 60%;
     transition: 0.3s;
     margin-bottom: 5vh;
     box-shadow:
@@ -61,10 +99,12 @@ img.demo-left {
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.32);
     transform: rotateX(10deg) rotateY(10deg) translateX(4vh);
+    margin: auto;
+    display: block;    
 }
 
 img.demo-right {
-    width: 100%;
+    width: 60%;
     transition: 0.3s;
     margin-bottom: 5vh;
     box-shadow:
@@ -88,7 +128,7 @@ img.demo-right {
 }
 
 .img-body {
-    font-size: 1.7vh;
+    font-size: 2.2vh;
     text-align: justify;
     padding-left: 10vh;
     padding-right: 10vh;
