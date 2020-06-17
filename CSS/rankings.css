@@ -2,34 +2,76 @@ body {
     background-image: linear-gradient(to top right, #5680e9, #54b9ea);
 }
 
-table {
-    height: 60vh;
+table.test {
+    height: 10vh;
+    margin: 12vh auto 0 auto;
     width: 80%;
-    margin: 12vh auto 10vh auto;
-    /* border-collapse: separate;
-    border-spacing: 2vh; */
+    empty-cells: show;
+}
+
+table.test tr {
+    font-size: 2vh;
+}
+
+table.student {
+    height: 40vh;
+    width: 80%;
+    margin: 2vh auto 20vh auto;
 }
 
 tr.content {
     background-color: #fff;
-    height: 1vh;
     font-size: 2vh;
+    transition: 0.3s;
+}
+
+table.student tr.content:hover {
+    cursor: pointer;
+    transform: scaleY(1.1);
 }
 
 tr.space {
     height: 0.5vh;
 }
 
-th {
+td, tr, table {
     text-align: center;
+    border: 0px solid transparent !important;
 }
 
-tr > :first-child {
+.t1> :first-child {
+    border-top-left-radius: 1vh;
+}
+
+.t1> :last-child {
+    border-top-right-radius: 1vh;
+}
+
+.t2> :first-child {
+    border-bottom-left-radius: 1vh;
+}
+
+.t2> :last-child {
+    border-bottom-right-radius: 1vh;
+}
+
+table.student tr> :first-child {
     border-top-left-radius: 1vh;
     border-bottom-left-radius: 1vh;
 }
 
-tr > :last-child {
+table.student tr> :last-child {
     border-top-right-radius: 1vh;
     border-bottom-right-radius: 1vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.foot-wrap {
+    position: relative;
+    margin-top: 0vh;
+    padding-top: 5vh
 }

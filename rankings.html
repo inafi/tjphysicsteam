@@ -13,6 +13,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/three.js"></script>
     <script src="JS/rankings.js"></script>
+    <script src="JS/papaparse.min.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
 
@@ -34,86 +35,104 @@
         </div>
     </nav>
 
-    <table>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
+    <table class="test">
+        <!-- <tr class="content t1">
+            <td>t1</td>
+            <td>t2</td>
+            <td>t3</td>
+            <td>t4</td>
         </tr>
-        <tr class="space"></tr>
-        <tr class="content"> 
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
+        <tr class="content t2">
+            <td>0.2</td>
+            <td>0.1</td>
+            <td>0.3</td>
+            <td>0.2</td>
+        </tr> -->
     </table>
 
-    <footer>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-3 mail">
-                Join our <a href="#">Mailing List</a> <br>
-                <a href="https://github.com/inafi/tjphysicsteam" target="_blank">Open Source.</a> Made with
-                <i class="material-icons">
-                    favorite
-                </i>
-                and
-                <i class="material-icons">
-                    science
-                </i>
-            </div>
-            <div class="col-3"></div>
-            <div class="col-3 social">
-                <a href="mailto:tjhsstphysicsteam@gmail.com" target="_blank">
+    <table class="student">
+        <!-- <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr class="content">
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+        <tr class="space"></tr> -->
+    </table>
+
+    <div class="foot-wrap">
+        <footer>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-3 mail">
+                    Join our <a href="#">Mailing List</a> <br>
+                    <a href="https://github.com/inafi/tjphysicsteam" target="_blank">Open Source.</a> Made with
                     <i class="material-icons">
-                        mail
+                        favorite
                     </i>
-                </a>
-                <a href="https://www.facebook.com/groups/1512698338974506" target="_blank">
-                    <i class="fa fa-facebook-f"></i>
-                </a>
+                    and
+                    <i class="material-icons">
+                        science
+                    </i>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3 social">
+                    <a href="mailto:tjhsstphysicsteam@gmail.com" target="_blank">
+                        <i class="material-icons">
+                            mail
+                        </i>
+                    </a>
+                    <a href="https://www.facebook.com/groups/1512698338974506" target="_blank">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
-  
+
 <!-- <div class="block" style="background-color: #06D6A0;"></div> green 
 <div class="block" style="background-color: #3D348B;"></div> purple
 <div class="block" style="background-color: #1B98E0;"></div> blue
@@ -134,6 +153,45 @@
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    var req =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzHEmL1GrN-9nTc4KXIoIxB1-Pv3bfb4OlZuaxuG8RuaSLVW9WLliYPyR_mPZaPDQ_7L0MwOjouxXM/pub?gid=0&single=true&output=csv";
+
+    $.ajax({
+        url: req,
+        type: "get",
+        async: false,
+        success: function (data) {
+            var arr = Papa.parse(data).data;
+            console.log(arr);
+            var append = '';
+            append += '<tr class="content t1">';
+
+            for (i = 0; i < arr[0].length; i++)
+                append += '<td>' + arr[0][i] + '</td>';
+
+            append += '</tr>';
+            append += '<tr class="content t2">';
+
+            for (i = 0; i < arr[1].length; i++)
+                append += '<td>' + arr[1][i] + '</td>';
+
+            append += '</tr>'
+            $("table.test").append(append);
+
+            for (i = 2; i < arr.length; i++) {
+                append = '<tr class="content">';
+                for (k = 0; k < arr[0].length; k++) {
+                    append += "<td>" + arr[i][k] + "</td>";
+                }
+                append += '</tr><tr class="space"></tr>'
+                $("table.student").append(append);
+            }
+
+            $("table.student").css("height", (arr.length - 2) * 6 + "vh");
+            $("td").css("width", "calc(100%/" + arr[0].length + ")")
+        }
+    });
 </script>
 
 </html>

@@ -84,6 +84,7 @@ footer i {
     transform: translateY(0.5vh) scale(1.2);
     padding-left: .5vh;
     padding-right: .5vh;
+    font-size: 2.5vh !important;
 }
 
 footer a {
