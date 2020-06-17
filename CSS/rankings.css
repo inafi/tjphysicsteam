@@ -27,7 +27,7 @@ tr.content {
 
 table.student tr.content:hover {
     cursor: pointer;
-    transform: scaleY(1.1);
+    transform: scaleX(1.02) scaleY(1.1);
 }
 
 tr.space {
@@ -41,6 +41,10 @@ td, tr, table {
 
 .t1> :first-child {
     border-top-left-radius: 1vh;
+}
+
+.t1, table.student tr > :first-child{
+    color: #1B98E0;
 }
 
 .t1> :last-child {
