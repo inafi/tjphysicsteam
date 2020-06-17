@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/rankings.css">
+    <link rel="stylesheet" href="CSS/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/three.js"></script>
-    <script src="JS/rankings.js"></script>
+    <script src="JS/home.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
 
@@ -21,8 +21,8 @@
         <div class="left">
             <a href="index.html"><span>Home</span></a>
             <a href="schedule.html"><span>Schedule</span></a>
-            <a href="events.html"><span>Events</span></a>
-            <a href="rankings.html"><span class="active">Rankings</span></a>
+            <a href="events.html"><span class="active">Events</span></a>
+            <a href="rankings.html"><span>Rankings</span></a>
         </div>
         <a href="index.html"><img src="Pics/copy.png"></a>
         <div class="right">
@@ -33,36 +33,6 @@
             <a href="resources.html"><span>Resources</span></a>
         </div>
     </nav>
-
-    <table>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content"> 
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-        <tr class="space"></tr>
-        <tr class="content">
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-            <th>a</th>
-        </tr>
-    </table>
 
     <footer>
         <div class="row">
@@ -92,7 +62,7 @@
         </div>
     </footer>
 </body>
-  
+
 <!-- <div class="block" style="background-color: #06D6A0;"></div> green 
 <div class="block" style="background-color: #3D348B;"></div> purple
 <div class="block" style="background-color: #1B98E0;"></div> blue
@@ -102,15 +72,13 @@
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
-            $(".active").css('color', '#3D348B');
-            $("nav span:hover").css('color', '#3D348B');
-            $("nav img").attr("src", "Pics/copy2.png");
+            $(".active").css('color', '#1B98E0');
+            $("nav span:hover").css('color', '#06D6A0');
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#06D6A0');
-            $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
 </script>

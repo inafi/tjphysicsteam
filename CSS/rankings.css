@@ -1,0 +1,22 @@
+body {
+    background-image: linear-gradient(to top right, #5680e9, #54b9ea);
+}
+
+table {
+    height: 80vh;
+    width: 80%;
+    margin: 12vh auto 10vh auto;
+    border-radius: 2vh;
+    /* border-collapse: separate;
+    border-spacing: 2vh; */
+}
+
+tr.content {
+    background-color: #fff;
+    height: 1vh;
+    font-size: 2vh;
+}
+
+tr.space{
+    height: 0.3vh;
+}

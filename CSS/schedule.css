@@ -4,7 +4,7 @@ body {
 
 .wrap {
     height: auto;
-    width: 70%;
+    width: 75%;
     background-color: #ffffff;
     position: absolute;
     top: 10vh;
@@ -113,7 +113,7 @@ body {
 
 .foot-wrap {
     position: relative;
-    margin-top: 140vh
+    margin-top: 145vh
 }
 
 footer {
