@@ -66,12 +66,13 @@ hr {
 }
 
 .b2 img {
-    width: 100%;
+    width: 110%;
     border-radius: 1vh;
+    margin-left: -5%;
 }
 
 .b2 .col-3 {
-    margin-right: 1%;
+    margin-right: 3%;
 }
 
 .b2 .label {
@@ -81,9 +82,11 @@ hr {
 }
 
 .b2 .desc {
-    font-size: 2vh;
+    font-size: 2.3vh;
     margin-top: -1vh;
     text-align: justify;
+    width: 110%;
+    margin-left: -5%;
 }
 
 /*Outreach*/
@@ -144,7 +147,6 @@ hr {
 
 .b4 .row {
     margin-bottom: 7vh;
-    ;
 }
 
 /*Demo*/
