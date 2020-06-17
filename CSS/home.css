@@ -52,15 +52,49 @@ hr {
     width: 80%;
 }
 
-/*Team*/
+/*Intro*/
 .b2 .title{
     font-size: 5vh;
     text-align: center;
-    margin-top: 10vh;
+    color: #1B98E0;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.b2 > .row{
+    margin-top: 5vh;
+}
+
+.b2 img{
+    width: 100%;
+    border-radius: 1vh;
+}
+
+.b2 .col-3{
+    margin-right: 2%;
+}
+
+.b2 .label{
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 1.5vh;
+}
+
+.b2 .desc{
+    font-size: 2vh;
+    margin-top: -1vh;
+    text-align: justify;
+}
+
+/*Team*/
+.b3 .title{
+    font-size: 5vh;
+    text-align: center;
+    margin-top: 5vh;
     color: #1B98E0;
 }
 
-.b2 .label {
+.b3 .label {
     color: #06D6A0;
     font-size: 2.8vh;
     margin: auto;
@@ -69,12 +103,12 @@ hr {
     margin-bottom: 3vh;
 }
 
-.b2 img{
+.b3 img{
     width: 40%;
     border-radius: 100%;
 }
 
-.b2 .desc {
+.b3 .desc {
     position: absolute;
     top: 2vh;
     right: 4vh;
@@ -82,7 +116,7 @@ hr {
     font-size: 1.9vh;
 }
 
-.b2 .row{
+.b3 .row{
     margin-bottom: 7vh;;
 }
 
