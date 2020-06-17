@@ -121,7 +121,7 @@
             'Dec': "December"
         }
 
-        var previnfo;
+        var previnfo = "";
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: ['dayGrid'],
@@ -145,11 +145,21 @@
                 $(".side .title").html(team + info.event.title);
                 $(".side .desc").html(desc.split(" __ ")[1]);
                 // alert($(".side").css("transform"));
+
                 if ($(".side").attr("vis") == "off") {
                     $(".side").css("transform", "translateX(25%)");
                     $(".wrap").css("transform", "translateX(20%)");
                     $(".wrap").css("width", "65%");
+                    $(".side").attr("vis", "on");
+                } else if (previnfo != "" && previnfo == info.event.start + info.event.title + info
+                    .event
+                    .backgroundColor) {
+                    $(".side").css("transform", "translateX(-100%)");
+                    $(".wrap").css("transform", "translateX(0%)");
+                    $(".wrap").css("width", "75%");
+                    $(".side").attr("vis", "off");
                 }
+                previnfo = info.event.start + info.event.title + info.event.backgroundColor;
             }
         });
 
