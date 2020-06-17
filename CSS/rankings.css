@@ -3,10 +3,9 @@ body {
 }
 
 table {
-    height: 80vh;
+    height: 60vh;
     width: 80%;
     margin: 12vh auto 10vh auto;
-    border-radius: 2vh;
     /* border-collapse: separate;
     border-spacing: 2vh; */
 }
@@ -17,6 +16,20 @@ tr.content {
     font-size: 2vh;
 }
 
-tr.space{
-    height: 0.3vh;
+tr.space {
+    height: 0.5vh;
+}
+
+th {
+    text-align: center;
+}
+
+tr > :first-child {
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+}
+
+tr > :last-child {
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
 }
