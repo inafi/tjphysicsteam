@@ -101,30 +101,57 @@ function initialize() {
         $(".resources").css("top", "100vh");
         $(".fa-chevron-left.pa").css("display", "unset");
         $(".fa-chevron-right.pa").css("display", "unset");
-        loadFileNames('Lectures/A/' + $(this).attr("name") + "/")
-            .then((data) => {
-                console.log(data);
-                nump = data.length / 2;
+        fetch('Lectures/A/dir.txt')
+            .then(response => response.text())
+            .then(text => {
+                console.log(text.split("\n"))
+                text = text.split("\n");
+                nump = 0;
                 $(".pdf-move").html("");
-                var append = '';
-                var dir = 'Lectures/A/' + $(this).attr("name") + '/';
                 viewp = 78;
                 currp = 0;
                 $(".pdf-move").css("transform", "translateX(" + currp + "%)");
-                //Lectures/A/Electromagnetism/Electrostatics_Problem_Set_Solutions.png">
-                //    <p class="label">Electrostatic PS Solutions
-
-                for (i = 0; i < data.length; i += 2) {
-                    append += '<a href="' + dir + data[i] + '" target="_blank"><div class="pdf"><img src="';
-                    append += dir + data[i + 1] + '"><p class="label">' + data[i + 1].split(".png")[0].replace(/_/g, ' ');
-                    append += '</p></div></a>';
+                var fold = $(this).attr("name");
+                var append = '';
+                for (i = 0; i < text.length; i++) {
+                    if (text[i].split("/")[0] == fold) {
+                        var name = text[i].split("/")[1].split(".pdf")[0];
+                        dir = 'Lectures/A/' + text[i];
+                        append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
+                        append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
+                        append += '</p></div></a>';
+                        console.log(dir);
+                        nump += 1;
+                    }
                 }
                 $(".pdf-move").append(append);
-                console.log(append);
             })
-            .catch((error) => {
-                console.error(error);
-            });
+
+        // loadFileNames('Lectures/A/' + $(this).attr("name") + "/")
+        //     .then((data) => {
+        //         // console.log(data);
+        //         nump = data.length / 2;
+        //         $(".pdf-move").html("");
+        //         var append = '';
+
+        //         var dir = 'Lectures/A/' + $(this).attr("name") + '/';
+        //         viewp = 78;
+        //         currp = 0;
+        //         $(".pdf-move").css("transform", "translateX(" + currp + "%)");
+        //         //Lectures/A/Electromagnetism/Electrostatics_Problem_Set_Solutions.png">
+        //         //    <p class="label">Electrostatic PS Solutions
+
+        //         for (i = 0; i < data.length; i += 2) {
+        //             append += '<a href="' + dir + data[i] + '" target="_blank"><div class="pdf"><img src="';
+        //             append += dir + data[i + 1] + '"><p class="label">' + data[i + 1].split(".png")[0].replace(/_/g, ' ');
+        //             append += '</p></div></a>';
+        //         }
+        //         $(".pdf-move").append(append);
+        //         // console.log(append);
+        //     })
+        //     .catch((error) => {
+        //         console.error(error);
+        //     });
     });
 
 
