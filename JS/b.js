@@ -101,13 +101,13 @@ function initialize() {
         $(".resources").css("top", "100vh");
         $(".fa-chevron-left.pa").css("display", "unset");
         $(".fa-chevron-right.pa").css("display", "unset");
-        loadFileNames('/Lectures/B/' + $(this).attr("name") + "/")
+        loadFileNames('Lectures/B/' + $(this).attr("name") + "/")
             .then((data) => {
                 console.log(data);
                 nump = data.length / 2;
                 $(".pdf-move").html("");
                 var append = '';
-                var dir = '/Lectures/B/' + $(this).attr("name") + '/';
+                var dir = 'Lectures/B/' + $(this).attr("name") + '/';
                 viewp = 78;
                 currp = 0;
                 $(".pdf-move").css("transform", "translateX(" + currp + "%)");
