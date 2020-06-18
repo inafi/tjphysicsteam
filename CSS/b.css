@@ -1,0 +1,266 @@
+body {
+    background-image: linear-gradient(to bottom right, #1b98e0, #3D348B);
+    height: 180vh;
+    transition: 0.3s;
+}
+
+/*Schedule*/
+.schedule {
+    width: 94%;
+    height: 10vh;
+    position: absolute;
+    margin: auto;
+    left: 3%;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    margin-top: 10vh;
+    overflow: hidden;
+}
+
+.schedule {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
+
+.event-wrap {
+    transition: 0.3s;
+}
+
+.schedule .event {
+    height: 8vh;
+    width: 13%;
+    background-color: #fff;
+    margin-top: 1vh;
+    margin-left: 2%;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* .schedule :nth-child(1){
+} */
+
+.schedule .label {
+    text-align: center;
+    color: #06D6A0;
+    font-size: 2vh;
+    padding-top: 0.8vh
+}
+
+.schedule .desc {
+    text-align: center;
+    color: #1B98E0;
+    font-size: 1.8vh;
+    width: 100%;
+    margin-top: -1.5vh;
+}
+
+.fa-chevron-left.sa {
+    position: absolute;
+    font-size: 3vh !important;
+    left: 0vh;
+    top: 10vh;
+    width: 3%;
+    height: 10vh;
+    cursor: pointer;
+    color: #3D348B;
+    padding-left: 1.5%;
+    padding-top: 3.2vh;
+    transition: 0.3s;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+}
+
+.fa-chevron-right.sa {
+    position: absolute;
+    font-size: 3vh !important;
+    right: 0vh;
+    top: 10vh;
+    width: 3%;
+    height: 10vh;
+    cursor: pointer;
+    color: #3D348B;
+    padding-left: .5%;
+    padding-top: 3.2vh;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+.fa-chevron-left.sa:hover,
+.fa-chevron-right.sa:hover {
+    color: #2c2379;
+}
+
+/*Lectures*/
+.lectures {
+    position: absolute;
+    top: 24vh;
+    width: 100%;
+}
+
+.lectures .title {
+    font-size: 6vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.topic-wrap {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.topic {
+    height: 5.5vh;
+    width: auto;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    margin-right: 3%;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    padding-top: 0.4vh;
+    font-size: 2vh;
+    color: #1B98E0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topic:hover {
+    color: #3D348B;
+}
+
+.topic i {
+    font-size: 3vh;
+    color: #3D348B;
+    transform: translateY(0.6vh);
+}
+
+/*PDF*/
+.viewer {
+    position: absolute;
+    top: 55vh;
+    width: 86%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    height: 0vh;
+    white-space: nowrap;
+    left: 7%;
+    border-radius: 1.5vh;
+    transition: 0.3s;
+}
+
+.pdf-wrap {
+    transition: 0.3s;
+    width: 90%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+.pdf {
+    height: 30vh;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-right: 3%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.pdf img {
+    width: 100%;
+}
+
+.pdf-move {
+    transition: 0.3s;
+    position: relative;
+    height: 38vh;
+}
+
+.pdf .label {
+    font-size: 2vh;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 18%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fa-chevron-left.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    left: 7%;
+    top: 55vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-left: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+    display: none;
+}
+
+.fa-chevron-right.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    right: 6%;
+    top: 55vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+    display: none;
+}
+
+/*Resources*/
+.resources {
+    position: absolute;
+    top: 55vh;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.resources .col-c {
+    height: 48vh;
+    border-radius: 1.5vh;
+    margin-right: 2%;
+    margin-bottom: 7vh;;
+    width: 20%;
+    overflow: hidden;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 60px 40px rgba(0, 0, 0, 0.32);
+}
+
+.resources .col-c img{
+    width: 100%;
+}
+
+.resources .title {
+    font-size: 6vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+footer {
+    position: absolute;
+    top: 180vh;
+    transition: 0.3s;
+}
