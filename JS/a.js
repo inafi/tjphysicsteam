@@ -15,9 +15,9 @@ function initialize() {
             for (i = 0; i < arr.length; i++) {
                 if (parseInt(arr[i][0].split("/")[0]) == month && save == null)
                     save = i;
-                var append = '<div class="event"><p class="label">';
+                var append = '<a href="' + arr[i][3] + '" target="_blank"><div class="event"><p class="label">';
                 append += arr[i][0] + '</p>';
-                append += '<p class="desc">' + arr[i][1] + "</p></div>";
+                append += '<p class="desc">' + 'Lecture on ' + arr[i][1] + "</p></div></a>";
                 $(".event-wrap").append(append);
             }
         }

@@ -96,11 +96,44 @@ body {
     width: 100%;
 }
 
-.lectures .title{
+.lectures .title {
     font-size: 5vh;
     color: #fff;
     text-align: center;
     width: 100%;
+}
+
+.topic-wrap {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.topic {
+    height: 5.5vh;
+    width: auto;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    margin-right: 3%;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    padding-top: 0.4vh;
+    font-size: 2vh;
+    color: #1B98E0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topic:hover {
+    color: #3D348B;
+}
+
+.topic i {
+    font-size: 3vh;
+    color: #3D348B;
+    transform: translateY(0.6vh);
 }
 
 footer {
