@@ -95,6 +95,9 @@ function initialize() {
     var currp = 0;
 
     $(".topic").click(function () {
+        $(".viewer").css("height", "38vh");
+        $(".fa-chevron-left.pa").css("display", "unset");
+        $(".fa-chevron-right.pa").css("display", "unset");
         loadFileNames('/Lectures/A/' + $(this).attr("name") + "/")
             .then((data) => {
                 console.log(data);
