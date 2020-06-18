@@ -44,12 +44,12 @@ function initialize() {
         $(".event-wrap").css("transform", "translateX(" + curr + "%)");
     };
 
-    $('.fa-chevron-left').click(function () {
+    $('.fa-chevron-left.sa').click(function () {
         if (view > 94)
             moveLeft();
     });
 
-    $('.fa-chevron-right').click(function () {
+    $('.fa-chevron-right.sa').click(function () {
         if (view < total)
             moveRight();
     });

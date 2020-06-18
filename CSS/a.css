@@ -55,7 +55,7 @@ body {
     margin-top: -1.5vh;
 }
 
-.fa-chevron-left {
+.fa-chevron-left.sa {
     position: absolute;
     font-size: 3vh !important;
     left: 0vh;
@@ -70,7 +70,7 @@ body {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
 }
 
-.fa-chevron-right {
+.fa-chevron-right.sa {
     position: absolute;
     font-size: 3vh !important;
     right: 0vh;
@@ -84,8 +84,8 @@ body {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
 }
 
-.fa-chevron-left:hover,
-.fa-chevron-right:hover {
+.fa-chevron-left.sa:hover,
+.fa-chevron-right.sa:hover {
     color: #2c2379;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .lectures .title {
-    font-size: 5vh;
+    font-size: 6vh;
     color: #fff;
     text-align: center;
     width: 100%;
@@ -109,6 +109,7 @@ body {
     margin-bottom: 2vh;
     display: flex;
     justify-content: center;
+    margin-top: 3vh;
 }
 
 .topic {
@@ -136,7 +137,89 @@ body {
     transform: translateY(0.6vh);
 }
 
-footer {
+/*PDF*/
+.viewer {
+    position: absolute;
+    top: 55vh;
+    width: 86%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    height: 38vh;
+    white-space: nowrap;
+    left: 7%;
+    border-radius: 1.5vh;
+}
+
+.pdf-wrap {
+    transition: 0.3s;
+    width: 90%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+.pdf {
+    height: 30vh;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-right: 3%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.pdf img {
+    width: 100%;
+}
+
+.pdf-move {
+    transition: 0.3s;
+    position: relative;
+    height: 38vh;
+}
+
+.pdf .label {
+    font-size: 2vh;
+    color: #000;
     position: absolute;
     bottom: 0;
+    text-align: center;
+    width: 18%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fa-chevron-left.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    left: 7%;
+    top: 55vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-left: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.fa-chevron-right.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    right: 6%;
+    top: 55vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+footer {
+    position: absolute;
+    top: 100vh
 }
