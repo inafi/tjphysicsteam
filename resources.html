@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="JS/papaparse.min.js"></script>
+    <script src="JS/three.js"></script>
     <script src="JS/a.js"></script>
     <link rel="icon" href="Pics/copy.png">
 </head>
@@ -26,56 +26,13 @@
         </div>
         <a href="index.html"><img src="Pics/copy.png"></a>
         <div class="right">
-            <a href="a.html"><span class="active">A Team</span></a>
+            <a href="a.html"><span>A Team</span></a>
             <a href="b.html"><span>B Team</span></a>
             <a href="c.html"><span>C Team</span></a>
             <a href="past.html"><span>Past</span></a>
-            <a href="resources.html"><span>Resources</span></a>
+            <a href="resources.html"><span class="active">Resources</span></a>
         </div>
     </nav>
-
-    <i class="fa fa-chevron-left"></i>
-    <i class="fa fa-chevron-right"></i>
-    <div class="schedule">
-        <div class="event-wrap">
-            <!-- <div class="event">
-                <p class="label">9/181</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-            <div class="event">
-                <p class="label">9/182</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-            <div class="event">
-                <p class="label">9/183</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-            <div class="event">
-                <p class="label">9/184</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-
-            <div class="event">
-                <p class="label">9/185</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-
-            <div class="event">
-                <p class="label">9/186</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-
-            <div class="event">
-                <p class="label">9/187</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-
-            <div class="event">
-                <p class="label">9/188</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div> -->
-        </div>
-    </div>
 
     <footer>
         <div class="row">
@@ -115,15 +72,13 @@
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
-            $(".active").css('color', '#3D348B');
-            $("nav span:hover").css('color', '#3D348B');
-            $("nav img").attr("src", "Pics/copy2.png");
+            $(".active").css('color', '#1B98E0');
+            $("nav span:hover").css('color', '#06D6A0');
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#06D6A0');
-            $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
 </script>

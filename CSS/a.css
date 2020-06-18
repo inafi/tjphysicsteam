@@ -1,0 +1,95 @@
+body {
+    background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0);
+    min-height: 100vh;
+}
+
+/*Schedule*/
+.schedule {
+    width: 94%;
+    height: 10vh;
+    position: absolute;
+    margin: auto;
+    left: 3%;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    margin-top: 8vh;
+    overflow: hidden;
+}
+
+.schedule {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
+
+.event-wrap {
+    transition: 0.3s;
+}
+
+.schedule .event {
+    height: 8vh;
+    width: 13%;
+    background-color: #fff;
+    margin-top: 1vh;
+    margin-left: 2%;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* .schedule :nth-child(1){
+} */
+
+.schedule .label {
+    text-align: center;
+    color: #06D6A0;
+    font-size: 2vh;
+    padding-top: 0.8vh
+}
+
+.schedule .desc {
+    text-align: center;
+    color: #1B98E0;
+    font-size: 1.8vh;
+    width: 100%;
+    margin-top: -1.5vh;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    font-size: 3vh !important;
+    left: 0vh;
+    top: 8vh;
+    width: 3%;
+    height: 10vh;
+    cursor: pointer;
+    color: #3D348B;
+    padding-left: 1.5%;
+    padding-top: 3.2vh;
+    transition: 0.3s;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+}
+
+.fa-chevron-right {
+    position: absolute;
+    font-size: 3vh !important;
+    right: 0vh;
+    top: 8vh;
+    width: 3%;
+    height: 10vh;
+    cursor: pointer;
+    color: #3D348B;
+    padding-left: .5%;
+    padding-top: 3.2vh;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+    color: #2c2379;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
