@@ -149,6 +149,7 @@ body {
     left: 7%;
     border-radius: 1.5vh;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .pdf-wrap {
