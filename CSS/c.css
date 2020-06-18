@@ -1,6 +1,6 @@
 body {
-    background-image: linear-gradient(to bottom right, #1b98e0, #3D348B);
-    height: 180vh;
+    background-image: linear-gradient(to bottom right, #1B98E0, #06D6A0);
+    height: 125vh;
     transition: 0.3s;
 }
 
@@ -261,6 +261,6 @@ body {
 
 footer {
     position: absolute;
-    top: 180vh;
+    top: 125vh;
     transition: 0.3s;
 }
