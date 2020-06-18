@@ -70,6 +70,11 @@ body {
         0 60px 40px rgba(0, 0, 0, 0.32);
 }
 
+.resources .large .col-c {
+    height: 48vh;
+    align-items: center;
+}
+
 .resources .col-c img {
     width: 100%;
 }
