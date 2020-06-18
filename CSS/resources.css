@@ -1,0 +1,84 @@
+body {
+    background-image: linear-gradient(to top left, #5680e9, #1B98E0, #06D6A0);
+}
+
+/*Teams*/
+.teams {
+    margin-top: 12vh;
+}
+
+.teams .title {
+    text-align: center;
+    font-size: 2.7vh;
+    background-color: #fff;
+    border-radius: 1vh;
+    border: 0px solid transparent;
+    padding: 0.5vh 2vh;
+    display: block;
+    margin: auto; 
+    transition: 0.3s;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.32);
+}
+
+.teams .title:hover{
+    background-color: #ddd;
+}
+
+/*Resources*/
+.resources {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.resources .label{
+    font-size: 2.5vh;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.resources .desc {
+    width: 95%;
+    padding-left: 2.5%;
+    color: #000;
+    font-size: 1.8vh;
+    text-align: center;
+}
+
+.resources .col-c {
+    height: 42vh;
+    border-radius: 1.5vh;
+    margin-right: 2%;
+    margin-bottom: 7vh;
+    width: 20%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 60px 40px rgba(0, 0, 0, 0.32);
+}
+
+.resources .col-c img {
+    width: 100%;
+}
+
+.resources .title {
+    font-size: 6vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4vh;
+    margin-top: 5vh;
+}
