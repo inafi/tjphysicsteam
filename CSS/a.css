@@ -12,7 +12,7 @@ body {
     left: 3%;
     background-color: rgba(255, 255, 255, 0.4);
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    margin-top: 8vh;
+    margin-top: 10vh;
     overflow: hidden;
 }
 
@@ -59,7 +59,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     left: 0vh;
-    top: 8vh;
+    top: 10vh;
     width: 3%;
     height: 10vh;
     cursor: pointer;
@@ -74,7 +74,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     right: 0vh;
-    top: 8vh;
+    top: 10vh;
     width: 3%;
     height: 10vh;
     cursor: pointer;
@@ -87,6 +87,20 @@ body {
 .fa-chevron-left:hover,
 .fa-chevron-right:hover {
     color: #2c2379;
+}
+
+/*Lectures*/
+.lectures {
+    position: absolute;
+    top: 24vh;
+    width: 100%;
+}
+
+.lectures .title{
+    font-size: 5vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
 }
 
 footer {

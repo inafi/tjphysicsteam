@@ -1,11 +1,11 @@
 function initialize() {
-    var reqa = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=0&single=true&output=csv";
+    var req = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=0&single=true&output=csv";
     var num;
-    var month = 4;
+    var month = 9;
     var save;
 
     $.ajax({
-        url: reqa,
+        url: req,
         type: "get",
         async: false,
         success: function (data) {
