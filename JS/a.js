@@ -126,32 +126,6 @@ function initialize() {
                 }
                 $(".pdf-move").append(append);
             })
-
-        // loadFileNames('Lectures/A/' + $(this).attr("name") + "/")
-        //     .then((data) => {
-        //         // console.log(data);
-        //         nump = data.length / 2;
-        //         $(".pdf-move").html("");
-        //         var append = '';
-
-        //         var dir = 'Lectures/A/' + $(this).attr("name") + '/';
-        //         viewp = 78;
-        //         currp = 0;
-        //         $(".pdf-move").css("transform", "translateX(" + currp + "%)");
-        //         //Lectures/A/Electromagnetism/Electrostatics_Problem_Set_Solutions.png">
-        //         //    <p class="label">Electrostatic PS Solutions
-
-        //         for (i = 0; i < data.length; i += 2) {
-        //             append += '<a href="' + dir + data[i] + '" target="_blank"><div class="pdf"><img src="';
-        //             append += dir + data[i + 1] + '"><p class="label">' + data[i + 1].split(".png")[0].replace(/_/g, ' ');
-        //             append += '</p></div></a>';
-        //         }
-        //         $(".pdf-move").append(append);
-        //         // console.log(append);
-        //     })
-        //     .catch((error) => {
-        //         console.error(error);
-        //     });
     });
 
 
