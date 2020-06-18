@@ -1,3 +1,19 @@
+nav {
+    background-color: transparent
+}
+
+nav * {
+    color: #fff
+}
+
+.active {
+    color: #06D6A0
+}
+
+nav span:hover {
+    color: #06D6A0
+}
+
 .metric {
     background-size: 100%;
     background-image: linear-gradient(to top right, #3D348B, #1b98e0);

@@ -14,5 +14,17 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    $(".event").click(function () {
+        $(this).siblings(".overlay").show();
+        $(this).siblings(".overlay").find(".exit").show();
+        $(".overlay-cover").show();
+    })
+
+    $(".exit").click(function () {
+        $(this).parent().hide();
+        $(this).hide();
+        $(".overlay-cover").hide();
+    })
 }
 $(initialize);
