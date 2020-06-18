@@ -1,6 +1,7 @@
 body {
     background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0);
-    height: 160vh;
+    height: 180vh;
+    transition: 0.3s;
 }
 
 /*Schedule*/
@@ -223,20 +224,43 @@ body {
 }
 
 /*Resources*/
-.resources{
+.resources {
     position: absolute;
-    top: 100vh;
+    top: 55vh;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.resources .col-c {
+    height: 48vh;
+    border-radius: 1.5vh;
+    margin-right: 2%;
+    margin-bottom: 7vh;;
+    width: 20%;
+    overflow: hidden;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 60px 40px rgba(0, 0, 0, 0.32);
+}
+
+.resources .col-c img{
     width: 100%;
 }
 
-.resources .title{
+.resources .title {
     font-size: 6vh;
     color: #fff;
     text-align: center;
     width: 100%;
+    margin-bottom: 4vh;
 }
 
 footer {
     position: absolute;
-    top: 150vh
+    top: 180vh;
+    transition: 0.3s;
 }

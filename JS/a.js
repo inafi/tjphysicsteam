@@ -96,6 +96,9 @@ function initialize() {
 
     $(".topic").click(function () {
         $(".viewer").css("height", "38vh");
+        $("body").css("height", "225vh");
+        $("footer").css("top", "225vh");
+        $(".resources").css("top", "100vh");
         $(".fa-chevron-left.pa").css("display", "unset");
         $(".fa-chevron-right.pa").css("display", "unset");
         loadFileNames('/Lectures/A/' + $(this).attr("name") + "/")
