@@ -113,6 +113,10 @@ footer i {
     font-size: 2.5vh !important;
 }
 
+footer .mail i:first-of-type {
+    color: red;
+}
+
 footer a {
     color: #06D6A0;
 }
