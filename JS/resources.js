@@ -22,7 +22,6 @@ function initialize() {
     fetch('Lectures/PPP/dir.txt')
         .then(response => response.text())
         .then(text => {
-            console.log(text.split("\n"))
             text = text.split("\n");
             nupm = text.length;
             nump = 0;
@@ -38,7 +37,6 @@ function initialize() {
                 append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
                 append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
                 append += '</p></div></a>';
-                console.log(dir);
             }
             $(".pdf-move").append(append);
         })
@@ -47,27 +45,23 @@ function initialize() {
     function moveLeftPdf() {
         currp += 23;
         viewp -= 23;
-        console.log(viewp);
         $(".pdf-move").css("transform", "translateX(" + currp + "%)");
     };
 
     function moveRightPdf() {
         currp -= 23;
         viewp += 23;
-        console.log(viewp);
         $(".pdf-move").css("transform", "translateX(" + currp + "%)");
     };
 
     $('.fa-chevron-left.pa').click(function () {
         if (viewp > 78)
             moveLeftPdf();
-        console.log(viewp, nump * 23, nump)
     });
 
     $('.fa-chevron-right.pa').click(function () {
         if (viewp + 23 < nump * 23)
             moveRightPdf();
-        console.log(viewp, nump * 23, nump)
     });
 }
 $(initialize);

@@ -24,7 +24,6 @@ function initialize() {
         async: false,
         success: function (data) {
             var arr = Papa.parse(data).data;
-            console.log(arr);
             var append = '';
             append += '<tr class="content t1">';
 
