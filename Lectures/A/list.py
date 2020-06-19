@@ -2,8 +2,11 @@ import glob
 import os
 result = []
 PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/A/"
+
 for x in os.walk(PATH):
-    for y in glob.glob(os.path.join(x[0], '*.pdf')):
+    files = glob.glob(os.path.join(x[0], '*.pdf'))
+    files.sort(key=os.path.getmtime, reverse=True)
+    for y in files:
         result.append(y.split("/")[-2] + "/" + y.split("/")[-1])
 
 fout = open("dir.txt", "w")
