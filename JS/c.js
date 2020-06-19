@@ -30,7 +30,7 @@ function initialize() {
         $(this).children(".label").css("width", "20%");
         $(this).children(".label").css("margin-left", "0px");
     });
-    
+
     var req = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=993140585&single=true&output=csv";
     var num;
     var month = 9;
@@ -83,60 +83,53 @@ function initialize() {
             moveRight();
     });
 
-    function loadFileNames(dir) {
-        return new Promise((resolve, reject) => {
-            try {
-                var fileNames = new Array();
-                $.ajax({
-                    url: dir,
-                    success: function (data) {
-                        for (var i = 1; i < $(data).find('li span.name').length; i++) {
-                            var elem = $(data).find('li span.name')[i];
-                            fileNames.push(elem.innerHTML);
-                        }
-                        return resolve(fileNames);
-                    }
-                });
-            } catch (ex) {
-                return reject(new Error(ex));
-            }
-        });
-    }
-
     var nump;
     var viewp = 78;
     var currp = 0;
+    var previnfo = "";
 
     $(".topic").click(function () {
-        $(".viewer").css("height", "38vh");
-        $("body").css("height", "170vh");
-        $("footer").css("top", "170vh");
-        $(".resources").css("top", "100vh");
-        $(".fa-chevron-left.pa").css("display", "unset");
-        $(".fa-chevron-right.pa").css("display", "unset");
-        fetch('Lectures/C/dir.txt')
-            .then(response => response.text())
-            .then(text => {
-                text = text.split("\n");
-                nump = 0;
-                $(".pdf-move").html("");
-                viewp = 78;
-                currp = 0;
-                $(".pdf-move").css("transform", "translateX(" + currp + "%)");
-                var fold = $(this).attr("name");
-                var append = '';
-                for (i = 0; i < text.length; i++) {
-                    if (text[i].split("/")[0] == fold) {
-                        var name = text[i].split("/")[1].split(".pdf")[0];
-                        dir = 'Lectures/C/' + text[i];
-                        append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
-                        append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
-                        append += '</p></div></a>';
-                        nump += 1;
+        if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
+            $(".viewer").css("height", "38vh");
+            $("body").css("height", "170vh");
+            $("footer").css("top", "170vh");
+            $(".resources").css("top", "100vh");
+            $(".fa-chevron-left.pa").css("display", "unset");
+            $(".fa-chevron-right.pa").css("display", "unset");
+            fetch('Lectures/C/dir.txt')
+                .then(response => response.text())
+                .then(text => {
+                    text = text.split("\n");
+                    nump = 0;
+                    $(".pdf-move").html("");
+                    viewp = 78;
+                    currp = 0;
+                    $(".pdf-move").css("transform", "translateX(" + currp + "%)");
+                    var fold = $(this).attr("name");
+                    var append = '';
+                    for (i = 0; i < text.length; i++) {
+                        if (text[i].split("/")[0] == fold) {
+                            var name = text[i].split("/")[1].split(".pdf")[0];
+                            dir = 'Lectures/C/' + text[i];
+                            append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
+                            append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
+                            append += '</p></div></a>';
+                            nump += 1;
+                        }
                     }
-                }
-                $(".pdf-move").append(append);
-            })
+                    $(".pdf-move").append(append);
+                })
+            $(".viewer").attr("vis", "on");
+        } else if (previnfo != "" && previnfo == $(this).attr("name")) {
+            $(".viewer").css("height", "0vh");
+            $("body").css("height", "180vh");
+            $("footer").css("top", "180vh");
+            $(".resources").css("top", "55vh");
+            $(".fa-chevron-left.pa").css("display", "none");
+            $(".fa-chevron-right.pa").css("display", "none");
+            $(".viewer").attr("vis", "off");
+        }
+        previnfo = $(this).attr("name");
     });
 
 
