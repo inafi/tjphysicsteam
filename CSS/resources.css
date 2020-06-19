@@ -78,9 +78,13 @@ body {
     align-items: center;
 }
 
-.resources .col-c img {
+.resources .large .col-c img {
     min-width: 100%;
     max-height: 48vh;
+}
+
+.resources .col-c img {
+    width: 100%;
 }
 
 .resources .title {
