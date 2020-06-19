@@ -23,12 +23,8 @@ function initialize() {
         .then(response => response.text())
         .then(text => {
             text = text.split("\n");
-            nupm = text.length;
-            nump = 0;
+            nump = text.length;
             $(".pdf-move").html("");
-            viewp = 78;
-            currp = 0;
-            $(".pdf-move").css("transform", "translateX(" + currp + "%)");
             var fold = $(this).attr("name");
             var append = '';
             for (i = 0; i < text.length; i++) {
@@ -57,11 +53,13 @@ function initialize() {
     $('.fa-chevron-left.pa').click(function () {
         if (viewp > 78)
             moveLeftPdf();
+        console.log(viewp, nump * 23, nump)
     });
 
     $('.fa-chevron-right.pa').click(function () {
         if (viewp + 23 < nump * 23)
             moveRightPdf();
+        console.log(viewp, nump * 23, nump)
     });
 }
 $(initialize);
