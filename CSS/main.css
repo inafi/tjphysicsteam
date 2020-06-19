@@ -31,6 +31,7 @@ nav img {
     bottom: 0;
     margin: auto;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 nav img:hover {
