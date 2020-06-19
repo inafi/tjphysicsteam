@@ -14,6 +14,22 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+    
+    $(document).on('mouseenter', '.pdf', function (event) {
+        var newwidth = Math.max($(this).children(".label").get(0).scrollWidth, $(window).width() * .2);
+        var off = $(this).children(".label").get(0).offsetWidth;
+        var scroll = $(this).children(".label").get(0).scrollWidth;
+        if (off < scroll) {
+            $(this).css("width", newwidth + "px");
+            $(this).children(".label").css("width", newwidth + "px");
+        }
+    }).on('mouseleave', '.pdf', function () {
+        $(this).css("width", "20%");
+        $(this).css("margin-left", "0vh");
+        $(this).css("margin-right", "3%");
+        $(this).children(".label").css("width", "20%");
+        $(this).children(".label").css("margin-left", "0px");
+    });
 
     var req = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=626361445&single=true&output=csv";
     var num;

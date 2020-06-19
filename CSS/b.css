@@ -169,6 +169,7 @@ body {
     margin-right: 3%;
     overflow: hidden;
     display: inline-block;
+    transition: 0.3s;
 }
 
 .pdf img {
@@ -187,9 +188,10 @@ body {
     position: absolute;
     bottom: 0;
     text-align: center;
-    width: 18%;
+    width: 20%;
     overflow: hidden;
     z-index: 1;
+    transition: 0.3s;
 }
 
 .fa-chevron-left.pa {
