@@ -155,7 +155,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     left: 7%;
-    top: 102vh;
+    top: 106vh;
     width: 3%;
     height: 38vh;
     padding-top: 17vh;
@@ -170,7 +170,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     right: 6%;
-    top: 102vh;
+    top: 106vh;
     width: 3%;
     height: 38vh;
     padding-top: 17vh;
@@ -179,4 +179,62 @@ body {
     color: #3D348B;
     transition: 0.3s;
     z-index: 10;
+}
+
+/*Toggle*/
+.toggle-center {
+    text-align: center;
+    position: relative;
+    height: 4vh;
+    width: 100%;
+}
+
+.toggle-wrap {
+    border-radius: 1.1vh;
+    margin-top: -3vh;
+    margin-bottom: 4vh;
+    white-space: nowrap;
+    background-color: #fff;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4vh;
+    position: absolute;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.toggle-wrap p {
+    height: 4vh;
+    font-size: 2vh;
+    text-align: center;
+    display: inline-block;
+    z-index: 12;
+    transition: 0.3s;
+}
+
+.toggle-wrap>:nth-child(2) {
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    padding: 0.5vh 1vh 0.5vh 2vh;
+    color: #fff
+}
+
+.toggle-wrap> :last-child {
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding: 0.5vh 2vh 0.5vh 1vh;
+    color: #1B98E0;
+}
+
+.toggle-move {
+    position: absolute;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    background-color: #06D6A0;
+    height: 4vh;
+    width: 50%;
+    transition: 0.3s;
+    left: 0;
+    z-index: -1;
 }

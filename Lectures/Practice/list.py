@@ -1,10 +1,10 @@
 import glob
 import os
 result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/PPP/"
+PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/Practice/"
 for x in os.walk(PATH):
     for y in glob.glob(os.path.join(x[0], '*.pdf')):
-        result.append(y.split("/")[-1])
+        result.append(y.split("/")[-2] + "/" + y.split("/")[-1])
 
 fout = open("dir.txt", "w")
 
