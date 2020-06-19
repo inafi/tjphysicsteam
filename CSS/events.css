@@ -17,6 +17,11 @@ body {
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.32);
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.large:hover, .event:hover{
+    transform: scale(1.02);
 }
 
 .large .title {
@@ -78,6 +83,7 @@ body {
         0 100px 80px rgba(0, 0, 0, 0.32);
     overflow: hidden;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .event img {
@@ -140,6 +146,8 @@ nav {
     z-index: 100;
     border-radius: 2vh;
     display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .exit {

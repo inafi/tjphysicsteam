@@ -19,12 +19,20 @@ function initialize() {
         $(this).siblings(".overlay").show();
         $(this).siblings(".overlay").find(".exit").show();
         $(".overlay-cover").show();
+        setTimeout(() => {
+            $(".overlay").css("opacity", "1");
+        }, 100);
+        $("body").css("overflow-y", "hidden");
     })
 
     $(".exit").click(function () {
-        $(this).parent().hide();
         $(this).hide();
         $(".overlay-cover").hide();
+        $("body").css("overflow-y", "scroll");
+        $(".overlay").css("opacity", "0");
+        setTimeout(() => {
+            $(this).parent().hide();
+        }, 200);
     })
 }
 $(initialize);
