@@ -113,14 +113,11 @@ hr {
 
 /*Outreach*/
 .b3 img {
-    border-radius: 1vh;
-    margin: auto;
-    display: block;
     width: 100%;
 }
 
 .b3 .img-wrap{
-    height: 42vh;
+    height: 40vh;
     width: auto;
     margin: auto;
     display: flex;
