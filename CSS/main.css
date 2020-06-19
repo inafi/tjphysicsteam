@@ -61,6 +61,30 @@ nav .right {
     line-height: 7vh;
 }
 
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1B98E0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3D348B;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #3D348B;
+}
+
 a {
     text-decoration: none !important;
 }
