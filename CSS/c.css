@@ -238,9 +238,10 @@ body {
     height: 47vh;
     border-radius: 1.5vh;
     margin-right: 2%;
-    margin-bottom: 7vh;;
+    margin-bottom: 7vh;
     width: 20%;
     overflow: hidden;
+    transition: 0.3s;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -250,7 +251,11 @@ body {
         0 60px 40px rgba(0, 0, 0, 0.32);
 }
 
-.resources .col-c img{
+.resources .col-c:hover {
+    transform: scale(1.03);
+}
+
+.resources .col-c img {
     width: 100%;
 }
 
