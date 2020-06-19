@@ -87,3 +87,86 @@ body {
     margin-bottom: 4vh;
     margin-top: 5vh;
 }
+
+
+/*PDF*/
+.viewer {
+    width: 86%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    height: 38vh;
+    white-space: nowrap;
+    margin-left: 7%;
+    border-radius: 1.5vh;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.pdf-wrap {
+    transition: 0.3s;
+    width: 90%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+.pdf {
+    height: 30vh;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-right: 3%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.pdf img {
+    width: 100%;
+}
+
+.pdf-move {
+    transition: 0.3s;
+    position: relative;
+    height: 38vh;
+}
+
+.pdf .label {
+    font-size: 2vh;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 18%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fa-chevron-left.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    left: 7%;
+    top: 102vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-left: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.fa-chevron-right.pa {
+    position: absolute;
+    font-size: 3vh !important;
+    right: 6%;
+    top: 102vh;
+    width: 3%;
+    height: 38vh;
+    padding-top: 17vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    color: #3D348B;
+    transition: 0.3s;
+    z-index: 10;
+}

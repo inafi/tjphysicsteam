@@ -34,6 +34,7 @@ Special_Relativity/Special_Relativity_Problem_Set_1.pdf
 Special_Relativity/Basic_Postulates_of_Special_Relativity_Solutions.pdf
 Lagrangian/1_-_Lagrangian_Mechanics_Intro.pdf
 Lagrangian/LagrangianMechanicsSolutions.pdf
+Lagrangian/0_-_Calculus_of_Variations.pdf
 Lagrangian/1.5_-_Lagrangian.pdf
 Lagrangian/LagrangianMechanics.pdf
 Lagrangian/Lagrangian_and_Hamiltonian_Mechanics_LECTURE.pdf
