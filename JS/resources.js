@@ -15,6 +15,23 @@ function initialize() {
         }
     }, 20)
 
+
+    $(document).on('mouseenter', '.pdf', function (event) {
+        var newwidth = Math.max($(this).children(".label").get(0).scrollWidth, $(window).width() * .2);
+        var off = $(this).children(".label").get(0).offsetWidth;
+        var scroll = $(this).children(".label").get(0).scrollWidth;
+        if (off < scroll) {
+            $(this).css("width", newwidth + "px");
+            $(this).children(".label").css("width", newwidth + "px");
+        }
+    }).on('mouseleave', '.pdf', function () {
+        $(this).css("width", "20%");
+        $(this).css("margin-left", "0vh");
+        $(this).css("margin-right", "3%");
+        $(this).children(".label").css("width", "20%");
+        $(this).children(".label").css("margin-left", "0px");
+    });
+
     var nump;
     var viewp = 78;
     var currp = 0;
