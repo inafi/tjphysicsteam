@@ -122,8 +122,8 @@ function initialize() {
             $(".viewer").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
             $(".viewer").css("height", "0vh");
-            $("body").css("height", "180vh");
-            $("footer").css("top", "180vh");
+            $("body").css("height", "125vh");
+            $("footer").css("top", "125vh");
             $(".resources").css("top", "55vh");
             $(".fa-chevron-left.pa").css("display", "none");
             $(".fa-chevron-right.pa").css("display", "none");
