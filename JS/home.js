@@ -131,5 +131,22 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    $.ajax({
+        url: "footer.html",
+        type: "get",
+        async: false,
+        success: function (data) {
+            $("body").append(data);
+            $.ajax({
+                url: "form.html",
+                type: "get",
+                async: false,
+                success: function (data) {
+                    $(".form-overlay").append(data);
+                }
+            });
+        }
+    });
 }
 $(initialize);
