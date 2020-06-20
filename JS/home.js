@@ -116,7 +116,7 @@ function initialize() {
         count += 0.1;
     }
 
-    $(window).scroll(function () {
+    setInterval(function () {
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
@@ -130,6 +130,6 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
-    })
+    }, 20)
 }
 $(initialize);
