@@ -163,7 +163,7 @@ body {
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
-    z-index: 10;
+    z-index: 9;
 }
 
 .fa-chevron-right.pa {
@@ -178,7 +178,7 @@ body {
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
-    z-index: 10;
+    z-index: 9;
 }
 
 /*Toggle*/

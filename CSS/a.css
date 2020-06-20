@@ -206,7 +206,7 @@ body {
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
-    z-index: 10;
+    z-index: 9;
     display: none;
 }
 
@@ -222,7 +222,7 @@ body {
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
-    z-index: 10;
+    z-index: 9;
     display: none;
 }
 
