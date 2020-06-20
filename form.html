@@ -1,34 +1,44 @@
+<script type="text/javascript">
+    var submitted = false;
+</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+    onload="if(submitted) {location.reload();}"></iframe>
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSecrgcLdCprkRnOTitHdDRMcdnmETCrDved5rDpiN1dhllOyA/formResponse"
-    method="POST">
+    method="POST" target="hidden_iframe" onsubmit="submitted=true;">
     <p class="title">TJ Physics Team Mailing List</p>
-    <div class="wrap">
-        <label>Email address*</label>
-        <textarea name="" rows="1" placeholder="Your email" required></textarea>
-    </div>
-    <div class="wrap">
+    <div class="text">
         <label>Name*</label>
-        <textarea name="" rows="1" placeholder="Your name" required></textarea>
+        <input name="entry.838337542" placeholder="Your name" type="text" required>
     </div>
-    <div class="wrap">
+    <div class="text">
+        <label>Email address*</label>
+        <input name="entry.1459108517" placeholder="Your email" type="email" required>
+    </div>
+    <div class="checks">
         <label>Grade*</label>
-        <input type="checkbox" id="Freshman" name="Freshman" value="Freshman">
+        <input type="radio" value="Freshman" name="entry.1818309782" required>
         <label for="Freshman">Freshman</label><br>
-        <input type="checkbox" id="Sophomore" name="Sophomore" value="Sophomore">
+        <input type="radio" value="Sophomore" name="entry.1818309782" required>
         <label for="Sophomore">Sophomore</label><br>
-        <input type="checkbox" id="Junior" name="Junior" value="Junior">
+        <input type="radio" value="Junior" name="entry.1818309782" required>
         <label for="Junior">Junior</label><br>
-        <input type="checkbox" id="Senior" name="Senior" value="Senior">
+        <input type="radio" value="Senior" name="entry.1818309782" required>
         <label for="Senior">Senior</label><br>
     </div>
-    <div class="wrap">
+    <div class="checks" id="checks">
         <label>What physics courses have you completed or are currently taking?*</label>
-        <select name="" required>
-            <option value="HN Physics">HN Physics</option>
-            <option value="AP Physics C">AP Physics C</option>
-            <option value="Quantum">Quantum</option>
-            <option value="None">None</option>
-        </select>
+        <input type="checkbox" value="HN Physics" name="entry.121662180">
+        <label for="HN Physics">HN Physics</label><br>
+        <input type="checkbox" value="AP Physics C" name="entry.121662180">
+        <label for="AP Physics C">AP Physics C</label><br>
+        <input type="checkbox" value="Quantum" name="entry.121662180">
+        <label for="Quantum">Quantum</label><br>
+        <input type="checkbox" value="None" name="entry.121662180">
+        <label for="None">None</label><br>
     </div>
 
-    <button type="submit" value="Send">Submit</button>
+    <input type="submit" value="Send" class="send" disabled>
 </form>
+
+<!-- //entry.1818309782
+//entry.121662180 -->
