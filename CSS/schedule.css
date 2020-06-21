@@ -6,11 +6,9 @@ body {
     height: auto;
     width: 75%;
     background-color: #ffffff;
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    right: 0;
     margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 28vh;
     border-radius: 2vh;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -113,7 +111,6 @@ body {
 
 .foot-wrap {
     position: relative;
-    margin-top: 145vh;
 }
 
 footer {

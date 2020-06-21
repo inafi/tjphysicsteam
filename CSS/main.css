@@ -11,11 +11,6 @@ nav {
     background-color: #fff;
     height: 7vh;
     color: #1B98E0;
-    transition: 0.1s;
-}
-
-nav * {
-    transition: 0.1s;
 }
 
 /* nav.active {
