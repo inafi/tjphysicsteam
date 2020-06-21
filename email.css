@@ -1,7 +1,6 @@
 .back {
     height: 100vh;
     width: 100%;
-    background-color: #bbb;
     margin: 0 !important;
     padding: 0 !important;
     position: absolute;
@@ -9,37 +8,46 @@
     left: 0;
 }
 
-.intro {
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.f1 {
     background-color: #fff;
     border-radius: 1vh;
     width: 70%;
     margin-left: 15%;
     height: auto;
     position: absolute;
+    font-family: 'Roboto';
     top: 2vh;
     padding-bottom: 2vh;
+    border: 2px solid #bbb;
+
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 40px 30px rgba(0, 0, 0, 0.32);
+        0 30px 20px rgba(0, 0, 0, 0.32);
 }
 
-.intro img {
+.f1 img {
     height: 7vh;
     position: absolute;
-    top: 1.8vh;
-    left: 57%;
+    top: 2.8vh;
+    left: 58%;
+    z-index: 10;
 }
 
-.intro .title {
+.top-title {
     font-size: 5vh;
     font-family: 'Nunito';
     font-weight: 600;
     position: absolute;
-    top: -3vh;
+    top: 2.5vh;
     left: 28%;
     color: #1b98e0;
 }
@@ -47,42 +55,53 @@
 .intro .label {
     font-size: 3vh;
     color: #3D348B;
-    font-family: 'Roboto';
     margin-top: 11vh;
     margin-left: 5%;
 }
 
-.intro .sub{
+.intro .sub {
     color: #1b98e0;
-    font-family: 'Roboto';
     margin-left: 5%;
     font-size: 2.5vh;
 }
 
 .intro .desc {
     font-size: 2vh;
-    font-family: 'Roboto';
     margin-left: 5%;
-    width: 60%;
+    width: 93%;
     margin-top: -1.5vh;
     line-height: 3vh;
     padding-right: 2%;
 }
 
-.border{
+.border {
     border-right: 1px solid #bbb;
     height: 43vh;
     width: 1px;
     position: absolute;
-    left: 63%;
+    left: 60.5%;
     top: 18.5vh;
+}
+
+.events {
+    font-family: 'Roboto';
+    width: 100%;
 }
 
 .events .title {
     font-size: 3vh;
     color: #3D348B;
     font-family: 'Roboto';
-    position: absolute;
-    top: 10vh;
-    left: 67.5%;
+    margin-top: 11vh;
+    text-align: center;
+}
+
+.events .label {
+    color: #1b98e0;
+    font-size: 2vh;
+}
+
+.events .desc {
+    font-size: 1.7vh;
+    margin-top: -1vh;
 }
