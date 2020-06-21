@@ -86,9 +86,8 @@ hr {
 }
 
 .b2 img {
-    width: 110%;
+    width: 100%;
     border-radius: 1vh;
-    margin-left: -5%;
 }
 
 .b2 .col-3 {
@@ -103,11 +102,10 @@ hr {
 }
 
 .b2 .desc {
-    font-size: 1.9vh;
+    font-size: 1.8vh;
     margin-top: -1vh;
     text-align: justify;
-    width: 110%;
-    margin-left: -5%;
+    width: 100%;
     color: #444;
 }
 
