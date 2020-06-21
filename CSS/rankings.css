@@ -4,7 +4,7 @@ body {
 
 table.test {
     height: 10vh;
-    margin: 12vh auto 0 auto;
+    margin: 10vh auto 0 auto;
     width: 80%;
     empty-cells: show;
 }
@@ -16,7 +16,7 @@ table.test tr {
 table.student {
     height: 40vh;
     width: 80%;
-    margin: 2vh auto 10vh auto;
+    margin: 2vh auto 5vh auto;
 }
 
 table.student tr:nth-of-type(-n + 14){
@@ -43,7 +43,7 @@ td, tr, table {
 }
 
 .t1> :first-child {
-    border-top-left-radius: 1vh;
+    border-top-left-radius: 0.75vh;
 }
 
 .t1, table.student tr > :first-child, table.student tr > :last-child, table.test tr > :first-child{
@@ -51,23 +51,23 @@ td, tr, table {
 }
 
 .t1> :last-child {
-    border-top-right-radius: 1vh;
+    border-top-right-radius: 0.75vh;
 }
 
 .t2> :first-child {
-    border-bottom-left-radius: 1vh;
+    border-bottom-left-radius: 0.75vh;
 }
 
 .t2> :last-child {
-    border-bottom-right-radius: 1vh;
+    border-bottom-right-radius: 0.75vh;
 }
 
 table.student tr> :first-child {
-    border-top-left-radius: 1vh;
-    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 0.75vh;
+    border-bottom-left-radius: 0.75vh;
 }
 
 table.student tr> :last-child {
-    border-top-right-radius: 1vh;
-    border-bottom-right-radius: 1vh;
+    border-top-right-radius: 0.75vh;
+    border-bottom-right-radius: 0.75vh;
 }
