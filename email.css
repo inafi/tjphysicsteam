@@ -1,14 +1,4 @@
-.back {
-    height: 100vh;
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.row{
+.row {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
@@ -19,9 +9,8 @@
     width: 70%;
     margin-left: 15%;
     height: auto;
-    position: absolute;
     font-family: 'Roboto';
-    top: 2vh;
+    margin-top: 2vh;
     padding-bottom: 2vh;
     border: 2px solid #bbb;
 
@@ -36,26 +25,23 @@
 
 .f1 img {
     height: 7vh;
-    position: absolute;
-    top: 2.8vh;
-    left: 58%;
-    z-index: 10;
+    margin-left: 3%;
+    margin-top: 1.8vh;
 }
 
 .top-title {
     font-size: 5vh;
     font-family: 'Nunito';
     font-weight: 600;
-    position: absolute;
-    top: 2.5vh;
-    left: 28%;
+    margin-left: 29%;
     color: #1b98e0;
+    margin-top: 2vh;
 }
 
 .intro .label {
     font-size: 3vh;
     color: #3D348B;
-    margin-top: 11vh;
+    margin-top: -1vh;
     margin-left: 5%;
 }
 
@@ -68,19 +54,15 @@
 .intro .desc {
     font-size: 2vh;
     margin-left: 5%;
-    width: 93%;
+    width: 110%;
     margin-top: -1.5vh;
     line-height: 3vh;
-    padding-right: 2%;
 }
 
-.border {
-    border-right: 1px solid #bbb;
-    height: 43vh;
-    width: 1px;
-    position: absolute;
-    left: 60.5%;
-    top: 18.5vh;
+.seper {
+    border-right: 1px solid #bbb !important;
+    height: 42vh;
+    margin-top: 5vh;
 }
 
 .events {
@@ -92,16 +74,20 @@
     font-size: 3vh;
     color: #3D348B;
     font-family: 'Roboto';
-    margin-top: 11vh;
+    margin-top: 0vh;
     text-align: center;
 }
 
 .events .label {
     color: #1b98e0;
     font-size: 2vh;
+    width: 90%;
+    padding-left: 5%;
 }
 
 .events .desc {
     font-size: 1.7vh;
     margin-top: -1vh;
+    width: 90%;
+    padding-left: 5%;
 }
