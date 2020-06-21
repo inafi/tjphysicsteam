@@ -1,0 +1,36 @@
+.back {
+    height: 100vh;
+    width: 100%;
+    background-color: #bbb;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.intro {
+    background-color: #fff;
+    border-radius: 1vh;
+    margin-top: 2vh;
+    width: 70%;
+    margin-left: 15%;
+    height: 50vh;
+}
+
+.intro img {
+    height: 7vh;
+    position: absolute;
+    top: 4vh;
+    left: 57%;
+}
+
+.intro .title {
+    font-size: 5vh;
+    font-family: 'Nunito';
+    font-weight: 600;
+    position: absolute;
+    top: -1vh;
+    left: 35%;
+    color: #1b98e0;
+}

@@ -175,7 +175,7 @@ nav {
 
 .form-overlay {
     width: 70%;
-    height: 65vh;
+    height: 78vh;
     background-color: #fff;
     position: fixed;
     margin: auto;
@@ -200,7 +200,7 @@ nav {
     position: fixed;
     color: #1b98e0;
     border: 0px solid transparent;
-    top: 19.5vh;
+    top: 13.5vh;
     right: 17%;
     font-size: 4vh;
     background-color: transparent;
@@ -278,7 +278,7 @@ form .send {
     border-radius: 1vh;
     margin-left: 10%;
     margin-top: 2vh;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     transition: 0.3s;
 }
 
