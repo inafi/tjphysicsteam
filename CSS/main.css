@@ -287,3 +287,62 @@ form .send:disabled {
 form .send:disabled:hover {
     background-color: #bbb !important;
 }
+
+@media only screen and (max-width: 1170px) {
+
+    nav .left,
+    nav .right {
+        display: none;
+    }
+
+    nav i {
+        z-index: 100;
+        position: absolute;
+        right: 10%;
+        color: #fff !important;
+        font-size: 3.5vh !important;
+        transition: 0.3s;
+    }
+
+    nav .navbar-nav {
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+        top: 7vh;
+        left: 0;
+        border-bottom-left-radius: 1vh;
+        border-bottom-right-radius: 1vh;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    nav .navbar-nav> :last-child {
+        border-bottom-left-radius: 1vh;
+        border-bottom-right-radius: 1vh;
+    }
+
+    nav .navbar-nav a {
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+        padding-left: 2vh;
+        font-size: 2vh;
+        transition: 0.3s;
+    }
+
+    nav * {
+        color: #1b98e0 !important;
+    }
+
+    .active {
+        color: #3D348B !important;
+    }
+
+    nav span:hover {
+        color: #06D6A0 !important;
+    }
+
+    nav a:hover {
+        background-color: #ddd !important;
+    }
+}

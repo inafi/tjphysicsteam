@@ -19,8 +19,8 @@ table.student {
     margin: 2vh auto 5vh auto;
 }
 
-table.student tr:nth-of-type(-n + 14){
-    background-color:  #FFD66A !important;
+table.student tr:nth-of-type(-n + 14) {
+    background-color: #FFD66A !important;
 }
 
 tr.content {
@@ -37,7 +37,9 @@ tr.space {
     height: 0.5vh;
 }
 
-td, tr, table {
+td,
+tr,
+table {
     text-align: center;
     border: 0px solid transparent !important;
 }
@@ -46,7 +48,10 @@ td, tr, table {
     border-top-left-radius: 0.75vh;
 }
 
-.t1, table.student tr > :first-child, table.student tr > :last-child, table.test tr > :first-child{
+.t1,
+table.student tr> :first-child,
+table.student tr> :last-child,
+table.test tr> :first-child {
     color: #1B98E0;
 }
 
