@@ -50,7 +50,6 @@ function initialize() {
     $("body").on("click", function () {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var on = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-        console.log(on);
         if (on) {
             $("form .send").prop('disabled', false);
         } else {

@@ -288,11 +288,19 @@ form .send:disabled:hover {
     background-color: #bbb !important;
 }
 
+nav .collapse, nav i {
+    display: none;
+}
+
 @media only screen and (max-width: 1170px) {
 
     nav .left,
     nav .right {
         display: none;
+    }
+
+    nav .collapse, nav i {
+        display: unset;
     }
 
     nav i {
