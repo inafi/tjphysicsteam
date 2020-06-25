@@ -50,10 +50,16 @@ body {
     text-align: center;
 }
 
+.resources .row {
+    display: flex;
+    justify-content: center;
+}
+
 .resources .col-c {
     height: 42vh;
     border-radius: 1.5vh;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
     margin-bottom: 7vh;
     width: 20%;
     overflow: hidden;
