@@ -122,7 +122,7 @@ function initialize() {
             $("nav *").css('color', '#fff');
             $(".active").css('color', '#06D6A0');
             $("nav span:hover").css('color', '#06D6A0');
-            $("nav img").attr("src", "Pics/copy2.png");
+            $("nav img").attr("src", "Pics/copy3.png");
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');

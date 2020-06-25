@@ -20,7 +20,7 @@ table.student {
 }
 
 table.student tr:nth-of-type(-n + 14) {
-    background-color: #FFD66A !important;
+    background-color: #FFDA5D !important;
 }
 
 tr.content {
