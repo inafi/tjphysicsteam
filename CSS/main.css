@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&family=Montserrat&family=Nunito&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&family=Montserrat&family=Nunito&family=Roboto&family=Work+Sans&display=swap');
 
 body {
     font-family: "Nunito", "arial" !important;
@@ -97,58 +97,67 @@ a {
 footer {
     background-color: #3D348B;
     width: 100%;
-    height: 20vh;
-}
-
-footer i {
-    transform: translateY(0.5vh) scale(1.2);
-    padding-left: .5vh;
-    padding-right: .5vh;
-    font-size: 2.5vh !important;
-}
-
-footer .mail i:first-of-type {
-    color: red;
-}
-
-footer a {
-    color: #06D6A0;
-}
-
-footer a:hover {
-    color: #1B98E0;
-}
-
-.social i {
-    color: #fff;
-    margin-top: 7.5vh;
-    font-size: 3vh;
-    padding-right: 3vh;
-}
-
-.fa-facebook-f {
-    background-color: #1B98E0;
-    border-radius: 100%;
-    width: 4vh;
-    height: 4vh;
-    padding-left: 1.2vh;
-    padding-top: 0.7vh;
-}
-
-.mail {
+    display: flex;
+    justify-content: center;
+    font-family: 'Work Sans' !important;
     font-size: 2vh;
-    color: #fff;
-    margin-top: 7vh;
 }
 
-.form-link {
+footer>.row>div {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+}
+
+footer .top {
+    margin-top: 2vh;
+    color: #fff;
+}
+
+footer .mid {
+    padding-right: 3vh;
+    margin-top: -1vh;
+}
+
+footer .mid a {
+    color: #fff;
+}
+
+footer .bot {
+    margin-top: 0.4vh;
+    margin-bottom: 1vh;
+    color: #fff;
+}
+
+footer .bot i:first-of-type {
+    color: red;
+    font-size: 2.8vh;
+    transform: translateY(.7vh);
+}
+
+footer .bot i:last-of-type {
+    font-size: 2.8vh;
+    transform: translateY(.7vh);
+}
+
+footer .top span {
     color: #06D6A0;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.form-link:hover {
+footer .top span:hover {
     color: #1B98E0;
+}
+
+footer .fa-facebook-f {
+    font-size: 3vh;
+    transform: translateX(-3vh) translateY(0.2vh);
+}
+
+footer .mail {
+    font-size: 3.2vh;
+    transform: translateX(0vh) translateY(0.9vh);
 }
 
 /*Footer Overlay*/
@@ -288,7 +297,8 @@ form .send:disabled:hover {
     background-color: #bbb !important;
 }
 
-nav .collapse, nav i {
+nav .collapse,
+nav i {
     display: none;
 }
 
@@ -299,7 +309,8 @@ nav .collapse, nav i {
         display: none;
     }
 
-    nav .collapse, nav i {
+    nav .collapse,
+    nav i {
         display: unset;
     }
 
@@ -307,7 +318,7 @@ nav .collapse, nav i {
         z-index: 100;
         position: absolute;
         right: 10%;
-        color: #fff !important;
+        color: #3D348B !important;
         font-size: 3.5vh !important;
         transition: 0.3s;
     }

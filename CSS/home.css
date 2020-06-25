@@ -85,6 +85,8 @@ hr {
 
 .b2>.row {
     margin-top: 5vh;
+    display: flex;
+    justify-content: center;
 }
 
 .b2 img {
@@ -93,8 +95,10 @@ hr {
     margin-left: -2.5%;
 }
 
-.b2 .col-3 {
-    margin-right: 3%;
+.b2 .row div {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 0 !important;
 }
 
 .b2 .label {
