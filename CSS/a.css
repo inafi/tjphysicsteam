@@ -32,7 +32,7 @@ body {
     width: 13%;
     background-color: #fff;
     margin-top: 1vh;
-    margin-left: 2%;
+    margin-right: 2%;
     border-radius: 1.5vh;
     overflow: hidden;
     display: inline-block;
@@ -65,8 +65,8 @@ body {
     height: 10vh;
     cursor: pointer;
     color: #3D348B;
-    padding-left: 1.5%;
-    padding-top: 3.2vh;
+    padding-left: 1%;
+    padding-top: 3.5vh;
     transition: 0.3s;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
 }
@@ -80,8 +80,8 @@ body {
     height: 10vh;
     cursor: pointer;
     color: #3D348B;
-    padding-left: .5%;
-    padding-top: 3.2vh;
+    padding-left: 1%;
+    padding-top: 3.5vh;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
 }
 
@@ -201,7 +201,7 @@ body {
     top: 55vh;
     width: 3%;
     height: 38vh;
-    padding-top: 17vh;
+    padding-top: 18vh;
     padding-left: 2vh;
     cursor: pointer;
     color: #3D348B;
@@ -217,7 +217,7 @@ body {
     top: 55vh;
     width: 3%;
     height: 38vh;
-    padding-top: 17vh;
+    padding-top: 18vh;
     padding-right: 2vh;
     cursor: pointer;
     color: #3D348B;
