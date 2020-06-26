@@ -13,8 +13,8 @@ body {
 }
 
 .ds-selector{
-    border: #999 solid 1px !important;
-    background: #dddddd55 !important;
+    border: #999 solid 0px !important;
+    background: #cccccc55 !important;
 }
 
 nav {
@@ -182,6 +182,16 @@ footer .mail {
 
 footer .mail:hover {
     transform: translateX(0vh) translateY(0.9vh) scale(1.2);
+}
+
+footer .fa-github {
+    font-size: 3.2vh;
+    transform: translateX(3vh) translateY(0.5vh);
+    transition: 0.3s;
+}
+
+footer .fa-github:hover {
+    transform: translateX(3vh) translateY(0.5vh) scale(1.2);
 }
 
 /*Footer Overlay*/
