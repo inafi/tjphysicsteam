@@ -47,6 +47,28 @@ function initialize() {
         }, 200);
     })
 
+    function selectText(element) {
+        if (/INPUT|TEXTAREA/i.test(element.tagName)) {
+            element.focus();
+            if (element.setSelectionRange) {
+                element.setSelectionRange(0, element.value.length);
+            } else {
+                element.select();
+            }
+            return;
+        }
+
+        if (window.getSelection) { // All browsers, except IE <=8
+            window.getSelection().selectAllChildren(element);
+        } else if (document.body.createTextRange) { // IE <=8
+            var range = document.body.createTextRange();
+            range.moveToElementText(element);
+            range.select();
+        }
+    }
+
+    selectText(document.querySelector('body'));
+    
     $("body").on("click", function () {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var on = Array.prototype.slice.call(checkboxes).some(x => x.checked);
@@ -55,6 +77,9 @@ function initialize() {
         } else {
             $("form .send").prop('disabled', true);
         }
+        $(".ds-selected").each(function () {
+            selectText(document.querySelector('body'));
+        })
     })
 }
 $(initialize);
