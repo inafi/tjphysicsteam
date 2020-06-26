@@ -117,6 +117,14 @@ body {
     color: #1B98E0;
     cursor: pointer;
     transition: 0.3s;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.topic p {
+    display: inline;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .topic:hover {

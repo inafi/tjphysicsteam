@@ -14,5 +14,10 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    new DragSelect({
+        selectables: document.querySelectorAll('h4, p'),
+        callback: e => console.log(e)
+    });
 }
 $(initialize);

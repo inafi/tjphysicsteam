@@ -131,12 +131,10 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
-
-    var ds = new DragSelect({
-        selectables: document.querySelector('body'),
-        onElementSelect: function(element) {
-            element.hide();
-        }
+    
+    new DragSelect({
+        selectables: document.querySelectorAll('p'),
+        callback: e => console.log(e)
     });
 }
 $(initialize);

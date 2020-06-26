@@ -1,4 +1,9 @@
 function initialize() {
+    var ds = new DragSelect({
+        selectables: document.querySelectorAll('div.event p, p, .pdf'),
+        callback: e => console.log(e)
+    });
+
     setInterval(function () {
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
@@ -13,6 +18,8 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
+        
+        ds.setSelectables(document.querySelectorAll('div.event p, .pdf p'));
     }, 20)
 
     $(document).on('mouseenter', '.pdf', function (event) {

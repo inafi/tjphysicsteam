@@ -23,5 +23,9 @@ function initialize() {
     var date = new Date();
     $(".side .title").text($(".fc-left h2").text().split(" ")[0] + ' ' + date.getDate());
 
+    new DragSelect({
+        selectables: document.querySelectorAll('div.side p'),
+        callback: e => console.log(e)
+    });
 }
 $(initialize);

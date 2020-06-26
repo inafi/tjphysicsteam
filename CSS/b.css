@@ -7,8 +7,7 @@ body {
 .schedule {
     width: 94%;
     height: 10vh;
-    margin: auto;
-    left: 3%;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     margin-top: 10vh;
@@ -118,6 +117,14 @@ body {
     color: #1B98E0;
     cursor: pointer;
     transition: 0.3s;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.topic p {
+    display: inline;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .topic:hover {

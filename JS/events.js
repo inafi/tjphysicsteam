@@ -34,5 +34,10 @@ function initialize() {
             $(this).parent().hide();
         }, 200);
     })
+
+    new DragSelect({
+        selectables: document.querySelectorAll('p'),
+        callback: e => console.log(e)
+    });
 }
 $(initialize);
