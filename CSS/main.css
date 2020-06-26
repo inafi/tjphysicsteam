@@ -136,8 +136,9 @@ footer .bot i:first-of-type {
 }
 
 footer .bot i:last-of-type {
-    font-size: 2.8vh;
-    transform: translateY(.7vh);
+    color: #fff;
+    font-size: 2.95vh !important;
+    transform: translateY(.5vh);
 }
 
 footer .top span {
