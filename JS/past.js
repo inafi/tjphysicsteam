@@ -17,6 +17,7 @@ function initialize() {
 
     new DragSelect({
         selectables: document.querySelectorAll('h4, p'),
+        area: document.querySelector('body'), 
         callback: e => console.log(e)
     });
 }

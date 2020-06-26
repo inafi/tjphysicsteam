@@ -1,6 +1,7 @@
 function initialize() {
     var ds = new DragSelect({
         selectables: document.querySelectorAll('div.event p, p, .pdf'),
+        area: document.querySelector('body'), 
         callback: e => console.log(e)
     });
 
@@ -18,7 +19,7 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
-        
+
         ds.setSelectables(document.querySelectorAll('div.event p, .pdf p'));
     }, 20)
 

@@ -55,6 +55,7 @@ function initialize() {
 
     new DragSelect({
         selectables: document.querySelectorAll('td, footer div'),
+        area: document.querySelector('body'), 
         callback: e => console.log(e)
     });
 }

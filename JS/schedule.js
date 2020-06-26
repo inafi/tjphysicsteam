@@ -25,6 +25,7 @@ function initialize() {
 
     new DragSelect({
         selectables: document.querySelectorAll('div.side p'),
+        area: document.querySelector('body'), 
         callback: e => console.log(e)
     });
 }
