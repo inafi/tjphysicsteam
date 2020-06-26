@@ -5,10 +5,16 @@ body {
     font-family: "Nunito", "arial" !important;
     overflow-x: hidden;
     user-select: none;
+    margin: 0 !important;
 }
 
 .ds-selected {
     user-select: text;
+}
+
+.ds-selector{
+    border: #999 solid 1px !important;
+    background: #dddddd55 !important;
 }
 
 nav {

@@ -20,7 +20,7 @@ body {
     content: '';
     background: #fff;
     width: .75vh;
-    height: 96.5%;
+    height: 97%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
