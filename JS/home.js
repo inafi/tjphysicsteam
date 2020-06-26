@@ -131,5 +131,12 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
     }, 20)
+
+    var ds = new DragSelect({
+        selectables: document.querySelector('body'),
+        onElementSelect: function(element) {
+            element.hide();
+        }
+    });
 }
 $(initialize);

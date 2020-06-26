@@ -138,7 +138,9 @@ footer .bot i:first-of-type {
 footer .bot i:last-of-type {
     color: #fff;
     font-size: 2.95vh !important;
-    transform: translateY(.5vh);
+    transform: translateY(.4vh);
+    padding-left: 0.3vh;
+    padding-right: 0.3vh;
 }
 
 footer .top span {
@@ -154,11 +156,21 @@ footer .top span:hover {
 footer .fa-facebook-f {
     font-size: 3vh;
     transform: translateX(-3vh) translateY(0.2vh);
+    transition: 0.3s;
+}
+
+footer .fa-facebook-f:hover {
+    transform: translateX(-3vh) translateY(0.2vh) scale(1.2);
 }
 
 footer .mail {
     font-size: 3.2vh;
     transform: translateX(0vh) translateY(0.9vh);
+    transition: 0.3s;
+}
+
+footer .mail:hover {
+    transform: translateX(0vh) translateY(0.9vh) scale(1.2);
 }
 
 /*Footer Overlay*/

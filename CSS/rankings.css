@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(to top right, #5680e9, #54b9ea);
+    user-select: none;
 }
 
 table.test {
@@ -75,4 +76,8 @@ table.student tr> :first-child {
 table.student tr> :last-child {
     border-top-right-radius: 0.75vh;
     border-bottom-right-radius: 0.75vh;
+}
+
+.ds-selected {
+    user-select: text;
 }

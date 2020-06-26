@@ -1,4 +1,24 @@
 function initialize() {
+    function selectText(element) {
+        if (/INPUT|TEXTAREA/i.test(element.tagName)) {
+            element.focus();
+            if (element.setSelectionRange) {
+                element.setSelectionRange(0, element.value.length);
+            } else {
+                element.select();
+            }
+            return;
+        }
+
+        if (window.getSelection) { // All browsers, except IE <=8
+            window.getSelection().selectAllChildren(element);
+        } else if (document.body.createTextRange) { // IE <=8
+            var range = document.body.createTextRange();
+            range.moveToElementText(element);
+            range.select();
+        }
+    }
+
     setInterval(function () {
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');
@@ -13,6 +33,9 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
+        $(".ds-selected").each(function () {
+            selectText(document.querySelector('body'));
+        })
     }, 20)
 
     var req =
@@ -51,6 +74,11 @@ function initialize() {
             $("table.student").css("height", (arr.length - 2) * 6 + "vh");
             $("td").css("width", "calc(100%/" + arr[0].length + ")")
         }
+    });
+
+    new DragSelect({
+        selectables: document.querySelectorAll('td, footer div'),
+        callback: e => console.log(e)
     });
 }
 $(initialize);
