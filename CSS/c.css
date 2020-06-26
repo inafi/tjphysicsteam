@@ -1,6 +1,5 @@
 body {
     background-image: linear-gradient(to bottom right, #1B98E0, #06D6A0);
-    height: 125vh;
     transition: 0.3s;
 }
 
@@ -8,17 +7,13 @@ body {
 .schedule {
     width: 94%;
     height: 10vh;
-    position: absolute;
     margin: auto;
     left: 3%;
     background-color: rgba(255, 255, 255, 0.4);
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     margin-top: 10vh;
     overflow: hidden;
-}
-
-.schedule {
-    margin-left: 0 !important;
+    margin-left: 3% !important;
     padding: 0 !important;
     white-space: nowrap;
 }
@@ -37,9 +32,6 @@ body {
     overflow: hidden;
     display: inline-block;
 }
-
-/* .schedule :nth-child(1){
-} */
 
 .schedule .label {
     text-align: center;
@@ -92,8 +84,7 @@ body {
 
 /*Lectures*/
 .lectures {
-    position: absolute;
-    top: 24vh;
+    margin-top: 4vh;
     width: 100%;
 }
 
@@ -118,7 +109,8 @@ body {
     width: auto;
     background-color: #fff;
     border-radius: 1.5vh;
-    margin-right: 3%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     padding-right: 2vh;
     padding-left: 2vh;
     padding-top: 0.4vh;
@@ -140,13 +132,12 @@ body {
 
 /*PDF*/
 .viewer {
-    position: absolute;
-    top: 55vh;
+    margin-top: 5vh;
     width: 86%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 0vh;
     white-space: nowrap;
-    left: 7%;
+    margin-left: 7%;
     border-radius: 1.5vh;
     transition: 0.3s;
     overflow: hidden;
@@ -228,8 +219,6 @@ body {
 
 /*Resources*/
 .resources {
-    position: absolute;
-    top: 55vh;
     width: 100%;
     transition: 0.3s;
 }
@@ -268,8 +257,11 @@ body {
     margin-bottom: 4vh;
 }
 
+.foot-wrap {
+    margin-top: 0vh;
+}
+
 footer {
     position: absolute;
-    top: 125vh;
     transition: 0.3s;
 }

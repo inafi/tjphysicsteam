@@ -60,7 +60,7 @@ body {
     border-radius: 1.5vh;
     margin-left: 1%;
     margin-right: 1%;
-    margin-bottom: 7vh;
+    margin-bottom: 4vh;
     width: 20%;
     overflow: hidden;
     position: relative;
@@ -109,6 +109,7 @@ body {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 38vh;
     white-space: nowrap;
+    margin-top: 1vh;
     margin-left: 7%;
     border-radius: 1.5vh;
     transition: 0.3s;
@@ -197,7 +198,7 @@ body {
 
 .toggle-wrap {
     border-radius: 1.1vh;
-    margin-top: -3vh;
+    margin-top: -2.7vh;
     white-space: nowrap;
     background-color: #fff;
     display: inline-block;
@@ -242,4 +243,8 @@ body {
     transition: 0.3s;
     left: 0;
     z-index: -1;
+}
+
+.foot-wrap{
+    margin-top: 3vh;
 }

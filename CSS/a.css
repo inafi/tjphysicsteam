@@ -32,9 +32,6 @@ body {
     display: inline-block;
 }
 
-/* .schedule :nth-child(1){
-} */
-
 .schedule .label {
     text-align: center;
     color: #06D6A0;
@@ -111,7 +108,8 @@ body {
     width: auto;
     background-color: #fff;
     border-radius: 1.5vh;
-    margin-right: 3%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     padding-right: 2vh;
     padding-left: 2vh;
     padding-top: 0.4vh;
