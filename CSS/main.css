@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&family=Montserrat&family=Nunito&family=Roboto&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&family=Montserrat&family=Nunito&family=Roboto&display=swap');
 
 body {
     font-family: "Nunito", "arial" !important;
@@ -111,7 +111,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-family: 'Work Sans' !important;
+    font-family: 'Lato', "arial" !important;
     font-size: 2vh;
 }
 
