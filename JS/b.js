@@ -1,7 +1,7 @@
 function initialize() {
     var ds = new DragSelect({
         selectables: document.querySelectorAll('div.event p, p, .pdf'),
-        area: document.querySelector('body'), 
+        area: document.querySelector('body'),
         callback: e => console.log(e)
     });
 
@@ -19,7 +19,7 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
-        
+
         ds.setSelectables(document.querySelectorAll('div.event p, .pdf p'));
     }, 20)
 
@@ -55,7 +55,10 @@ function initialize() {
             for (i = 0; i < arr.length; i++) {
                 if (parseInt(arr[i][0].split("/")[0]) == month && save == null)
                     save = i;
-                var append = '<a href="' + arr[i][3] + '" target="_blank"><div class="event"><p class="label">';
+                var href = "";
+                if (arr[i][3] != "")
+                    href = ' href="' + arr[i][3] + '"';
+                var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
                 append += arr[i][0] + '</p>';
                 append += '<p class="desc">' + 'Lecture on ' + arr[i][1] + "</p></div></a>";
                 $(".event-wrap").append(append);
