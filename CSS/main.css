@@ -10,6 +10,16 @@ body {
 
 p {
     user-select: text;
+    transition: 0.3s;
+}
+
+#clipboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    color: transparent;
+    font-size: 0vh;
 }
 
 .ds-selected {
@@ -18,7 +28,7 @@ p {
     /* user-select: text; */
 }
 
-.ds-selector{
+.ds-selector {
     border: #999 solid 0px !important;
     background: #cccccc55 !important;
     border-radius: 0.75vh;

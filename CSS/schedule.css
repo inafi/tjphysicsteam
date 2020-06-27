@@ -2,6 +2,10 @@ body {
     background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0, #3D348B);
 }
 
+.ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+}
+
 .wrap {
     height: auto;
     width: 75%;

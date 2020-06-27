@@ -12,7 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <link href='JS/calendar/core/main.css' rel='stylesheet' />
     <link href='JS/calendar/daygrid/main.css' rel='stylesheet' />
     <script src='JS/calendar/core/main.js'></script>
@@ -43,14 +45,18 @@
         </div>
     </nav>
 
-    <div class="side" vis="off">
-        <p class="date"></p>
-        <p class="title"></p>
-        <p class="desc"></p>
-    </div>
+    <p><span id="clipboard"></span></p>
 
-    <div class="wrap">
-        <div id='calendar'></div>
+    <div class="schedule">
+        <div class="side" vis="off">
+            <p class="date"></p>
+            <p class="title"></p>
+            <p class="desc"></p>
+        </div>
+
+        <div class="wrap">
+            <div id='calendar'></div>
+        </div>
     </div>
 
     <div class="foot-wrap">

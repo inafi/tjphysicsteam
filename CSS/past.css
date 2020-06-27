@@ -2,6 +2,10 @@ body {
     background-image: linear-gradient(to bottom right, #5680e9, #54b9ea, #06D6A0);
 }
 
+.ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+}
+
 .timeline {
     position: relative;
     margin-top: 10vh;

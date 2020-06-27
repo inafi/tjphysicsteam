@@ -47,6 +47,7 @@ tr,
 table {
     text-align: center;
     border: 0px solid transparent !important;
+    transition: 0.3s;
 }
 
 .t1> :first-child {

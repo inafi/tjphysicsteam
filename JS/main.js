@@ -82,11 +82,22 @@ function initialize() {
         })
     });
 
-    $("body").bind('copy', function () {
-        console.log('copy behaviour detected!')
-        $(".ds-selected").each(function(){
-            console.log($(this).text());
+    document.body.addEventListener("mouseup", function () {
+        var curr = window.getSelection().toString() == "";
+        var dstext = "";
+        $(".ds-selected").each(function () {
+            dstext += " " + $(this).text();
         })
-    });
+        $("#clipboard").text(dstext);
+        if (curr && dstext != "") {
+            var text = $("#clipboard").get(0)
+            var selection = window.getSelection();
+            var range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    }, false);
+
 }
 $(initialize);
