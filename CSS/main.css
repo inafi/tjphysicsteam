@@ -15,6 +15,7 @@ body {
 .ds-selector{
     border: #999 solid 0px !important;
     background: #cccccc55 !important;
+    border-radius: 0.75vh;
 }
 
 nav {

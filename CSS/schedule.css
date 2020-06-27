@@ -31,7 +31,6 @@ body {
 .side {
     background-color: #ffffff;
     position: absolute;
-    top: 10vh;
     height: auto;
     width: 21%;
     border-radius: 2vh;
