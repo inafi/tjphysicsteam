@@ -9,7 +9,9 @@ body {
 }
 
 .ds-selected {
-    user-select: text;
+    background: rgba(45, 170, 219, 0.3);
+    border-radius: 0.75vh;
+    /* user-select: text; */
 }
 
 .ds-selector{
@@ -143,16 +145,18 @@ footer .bot {
 
 footer .bot i:first-of-type {
     color: red;
-    font-size: 2.8vh;
+    font-size: 3.2vh;
     transform: translateY(.7vh);
+    padding-left: .7vh;
+    padding-right: .7vh;
 }
 
 footer .bot i:last-of-type {
     color: #fff;
     font-size: 2.95vh !important;
-    transform: translateY(.4vh);
-    padding-left: 0.3vh;
-    padding-right: 0.3vh;
+    transform: translateY(.5vh);
+    padding-left: 1vh;
+    padding-right: 1vh;
 }
 
 footer .top span {

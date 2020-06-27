@@ -67,7 +67,7 @@ function initialize() {
         }
     }
 
-    selectText(document.querySelector('body'));
+    // selectText(document.querySelector('body'));
     
     $("body").on("click", function () {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -78,7 +78,7 @@ function initialize() {
             $("form .send").prop('disabled', true);
         }
         $(".ds-selected").each(function () {
-            selectText(document.querySelector('body'));
+            // selectText(document.querySelector('body'));
         })
     })
 }

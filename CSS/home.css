@@ -36,6 +36,10 @@ body {
     background-color: #fff;
 }
 
+p {
+    user-select: text;
+}
+
 .metric-cover p {
     font-size: 10vh;
     position: absolute;
@@ -45,16 +49,29 @@ body {
     color: #fff;
 }
 
+/*b1*/
+.b1 {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+
 .b1 p.title {
     font-size: 5vh;
+    display: inline-block;
     text-align: center;
-    margin-top: 5vh;
+    margin: auto;
+    margin-top: 5vh !important;
     color: #1B98E0;
     font-family: 'Lato' !important;
 }
 
 .b1 p.desc {
-    padding: 2vh 20%;
+    padding-top: 0vh;
+    padding-bottom: 2vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 1vh !important;
     text-align: center;
     font-size: 2vh;
     margin-top: -2vh;
@@ -63,10 +80,7 @@ body {
 .b1 span {
     color: #06D6A0;
     font-size: 2.8vh;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 89vh;
+    /* position: absolute; */
 }
 
 hr {
@@ -74,12 +88,18 @@ hr {
 }
 
 /*Intro*/
+.b2 {
+    text-align: center;
+}
+
 .b2 .title {
     font-size: 5vh;
     text-align: center;
     color: #1B98E0;
-    width: 100%;
-    margin-top: 5vh;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    margin-top: 2vh;
     font-family: 'Lato' !important;
 }
 
@@ -124,7 +144,7 @@ hr {
     width: 100%;
 }
 
-.b3 .img-wrap{
+.b3 .img-wrap {
     height: 40vh;
     width: auto;
     margin: auto;
@@ -179,12 +199,20 @@ hr {
 }
 
 /*Team*/
+.b3,
+.b4 {
+    text-align: center;
+}
+
 .b3 .title,
 .b4 .title {
     font-size: 5vh;
     text-align: center;
-    margin-top: 3vh;
     color: #1B98E0;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    margin-top: 2vh;
     font-family: 'Lato' !important;
 }
 
@@ -192,24 +220,32 @@ hr {
     color: #06D6A0;
     font-size: 2.8vh;
     margin: auto;
-    display: block;
+    display: inline-block;
     text-align: center;
     margin-bottom: 3vh;
+    margin-top: 1vh;
 }
 
 .b4 img {
-    width: 40%;
+    width: 12vh;
     border-radius: 100%;
 }
 
+.b4 > div > div{
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
 .b4 .desc {
-    position: absolute;
-    top: 2vh;
+    margin-top: 2vh;
     right: 4vh;
     text-align: center;
     font-size: 1.9vh;
+    transform: translateX(3vh);
 }
 
 .b4 .row {
-    padding-bottom: 6vh;
+    padding-bottom: 3vh;
+    display: flex;
+    justify-content: center;
 }
