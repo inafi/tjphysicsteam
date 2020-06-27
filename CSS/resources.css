@@ -2,6 +2,10 @@ body {
     background-image: linear-gradient(to top left, #5680e9, #1B98E0, #06D6A0);
 }
 
+.ds-selected.title, .pdf .ds-selected {
+    background: rgba(130, 130, 130, 0.4);
+}
+
 /*Teams*/
 .teams {
     margin-top: 12vh;
@@ -34,6 +38,7 @@ body {
 .resources {
     width: 100%;
     transition: 0.3s;
+    text-align: center;
 }
 
 .resources .label {
@@ -97,7 +102,8 @@ body {
     font-size: 6vh;
     color: #fff;
     text-align: center;
-    width: 100%;
+    display: inline-block;
+    margin: auto;
     margin-bottom: 4vh;
     margin-top: 5vh;
 }
@@ -156,6 +162,7 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: 0.3s;
+    padding-top: 0vh;
 }
 
 .fa-chevron-left.pa {
@@ -165,7 +172,7 @@ body {
     top: 106vh;
     width: 3%;
     height: 38vh;
-    padding-top: 18vh;
+    padding-top: 4vh;
     padding-left: 2vh;
     cursor: pointer;
     color: #3D348B;
@@ -180,7 +187,7 @@ body {
     top: 106vh;
     width: 3%;
     height: 38vh;
-    padding-top: 18vh;
+    padding-top: 4vh;
     padding-right: 2vh;
     cursor: pointer;
     color: #3D348B;

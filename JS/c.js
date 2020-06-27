@@ -1,6 +1,6 @@
 function initialize() {
     var ds = new DragSelect({
-        selectables: document.querySelectorAll('div.event p, p, .pdf'),
+        selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
         area: document.querySelector('body'),
         callback: e => console.log(e)
     });
@@ -20,7 +20,7 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
 
-        ds.setSelectables(document.querySelectorAll('div.event p, .pdf p'));
+        ds.setSelectables(document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'));
     }, 20)
 
     $(document).on('mouseenter', '.pdf', function (event) {

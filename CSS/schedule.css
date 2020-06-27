@@ -34,6 +34,7 @@ body {
     height: auto;
     width: 21%;
     border-radius: 2vh;
+    text-align: center;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -47,21 +48,22 @@ body {
 
 .side .date {
     font-size: 3vh;
-    padding-left: 3vh;
-    padding-top: 2vh;
+    margin-top: 2vh;
+    display: inline-block;
 }
 
 .side .title {
     font-size: 2.5vh;
-    padding-left: 3vh;
-    padding-right: 3vh; 
+    margin-left: 3vh;
+    margin-right: 3vh; 
 }
 
 .side .desc {
     font-size: 2vh;
     padding-left: 3vh;
     padding-right: 3vh;
-    padding-bottom: 8vh;
+    margin-bottom: 8vh;
+    text-align: justify;
 }
 
 .fc-toolbar h2 {

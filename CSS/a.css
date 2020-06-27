@@ -3,6 +3,10 @@ body {
     transition: 0.3s;
 }
 
+.ds-selected.title, .pdf .ds-selected {
+    background: rgba(130, 130, 130, 0.4);
+}
+
 /*Schedule*/
 .schedule {
     width: 94%;
@@ -83,13 +87,15 @@ body {
 .lectures {
     margin-top: 4vh;
     width: 100%;
+    text-align: center;
 }
 
 .lectures .title {
     font-size: 6vh;
     color: #fff;
     text-align: center;
-    width: 100%;
+    display: inline-block;
+    margin: auto;
 }
 
 .topic-wrap {
@@ -226,6 +232,7 @@ body {
 .resources {
     width: 100%;
     transition: 0.3s;
+    text-align: center;
 }
 
 .resources .col-c {
@@ -258,7 +265,8 @@ body {
     font-size: 6vh;
     color: #fff;
     text-align: center;
-    width: 100%;
+    display: inline-block;
+    margin: auto;
     margin-bottom: 4vh;
 }
 

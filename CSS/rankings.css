@@ -2,6 +2,11 @@ body {
     background-image: linear-gradient(to top right, #5680e9, #54b9ea);
 }
 
+.ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+    border-radius: inherit;
+}
+
 table.test {
     height: 10vh;
     margin: 10vh auto 0 auto;

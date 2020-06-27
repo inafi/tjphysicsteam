@@ -8,9 +8,14 @@ body {
     margin: 0 !important;
 }
 
+p {
+    /* user-select: text; */
+}
+
 .ds-selected {
-    background: rgba(45, 170, 219, 0.3);
-    border-radius: 0.75vh;
+    background: rgba(190, 190, 190, 0.35);
+    border-radius: 0.5vh;
+    user-select: text;
     /* user-select: text; */
 }
 

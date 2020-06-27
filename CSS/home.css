@@ -29,6 +29,7 @@ nav span:hover {
 .metric-cover {
     width: 100%;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+    text-align: center;
 }
 
 .wrap-body,
@@ -36,17 +37,14 @@ body {
     background-color: #fff;
 }
 
-p {
-    user-select: text;
-}
-
 .metric-cover p {
     font-size: 10vh;
     position: absolute;
     top: 20vh;
-    width: 100%;
-    text-align: center;
+    display: inline-block;
+    margin: auto;
     color: #fff;
+    transform: translateX(-50%);
 }
 
 /*b1*/
