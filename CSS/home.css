@@ -14,6 +14,10 @@ nav span:hover {
     color: #06D6A0
 }
 
+.ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+}
+
 .metric {
     background-size: 100%;
     background-image: linear-gradient(to top right, #3D348B, #1b98e0);
@@ -229,7 +233,7 @@ hr {
     border-radius: 100%;
 }
 
-.b4 > div > div{
+.b4>div>div {
     margin-left: 1vh;
     margin-right: 1vh;
 }

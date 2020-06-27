@@ -68,7 +68,7 @@ function initialize() {
     }
 
     // selectText(document.querySelector('body'));
-    
+
     $("body").on("click", function () {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var on = Array.prototype.slice.call(checkboxes).some(x => x.checked);
@@ -80,6 +80,13 @@ function initialize() {
         $(".ds-selected").each(function () {
             // selectText(document.querySelector('body'));
         })
-    })
+    });
+
+    $("body").bind('copy', function () {
+        console.log('copy behaviour detected!')
+        $(".ds-selected").each(function(){
+            console.log($(this).text());
+        })
+    });
 }
 $(initialize);
