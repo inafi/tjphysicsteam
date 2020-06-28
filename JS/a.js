@@ -1,8 +1,7 @@
 function initialize() {
     var ds = new DragSelect({
         selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
-        area: document.querySelector('body'),
-        callback: e => console.log(e)
+        area: document.querySelector('body')
     });
 
     setInterval(function () {
@@ -20,7 +19,7 @@ function initialize() {
             $("nav img").attr("src", "Pics/copy.png");
         }
 
-        ds.setSelectables(document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'));
+        ds.addSelectables(document.querySelectorAll('.pdf p'));
     }, 20)
 
     $(document).on('mouseenter', '.pdf', function (event) {
@@ -68,17 +67,22 @@ function initialize() {
                 } catch (err) {
 
                 }
-                console.log(date, title, desc, link);
-                if (parseInt(date.split("/")[0]) == month && save == null)
-                    save = i;
-                var href = "";
-                if (link != "")
-                    href = ' href="' + link + '"';
-                var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
-                append += date + '</p>';
-                append += '<p class="desc">' + 'Lecture on ' + title + "</p></div></a>";
-                $(".event-wrap").append(append);
+                try {
+                    console.log(date, title, desc, link);
+                    if (parseInt(date.split("/")[0]) == month && save == null)
+                        save = i;
+                    var href = "";
+                    if (link != "")
+                        href = ' href="' + link + '"';
+                    var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
+                    append += date + '</p>';
+                    append += '<p class="desc">' + 'Lecture on ' + title + "</p></div></a>";
+                    $(".event-wrap").append(append);
+                } catch (err) {
+                    num -= 1;
+                }
             }
+            ds.addSelectables(document.querySelectorAll('div.event p'));
         }
     });
 
