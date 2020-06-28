@@ -82,13 +82,17 @@ function initialize() {
         })
     });
 
-    $("body").bind('copy', function () {
-        var curr = window.getSelection().toString() == "";
-        var dstext = "";
+    var dstext = "";
+    setInterval(() => {
+        dstext = ""
         $(".ds-selected").each(function () {
             dstext += " " + $(this).text();
         })
-        $("#clipboard").text(dstext);
+        $("#clipboard").html(dstext);
+    }, 20);
+
+    $("body").bind('copy', function () {
+        var curr = window.getSelection().toString() == "";
         if (curr && dstext != "") {
             var text = $("#clipboard").get(0)
             var selection = window.getSelection();
