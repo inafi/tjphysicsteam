@@ -82,7 +82,7 @@ function initialize() {
         })
     });
 
-    document.body.addEventListener("mouseup", function () {
+    $("body").bind('copy', function () {
         var curr = window.getSelection().toString() == "";
         var dstext = "";
         $(".ds-selected").each(function () {
@@ -97,7 +97,7 @@ function initialize() {
             selection.removeAllRanges();
             selection.addRange(range);
         }
-    }, false);
+    });
 
 }
 $(initialize);
