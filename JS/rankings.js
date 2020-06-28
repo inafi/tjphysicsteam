@@ -23,7 +23,6 @@ function initialize() {
         async: false,
         success: function (data) {
             var arr = data.sheets[0].data[0].rowData;
-            console.log(arr);
             var append = '';
             append += '<tr class="content t1">';
 

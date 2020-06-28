@@ -68,7 +68,7 @@ function initialize() {
 
                 }
                 try {
-                    console.log(date, title, desc, link);
+                    // console.log(date, title, desc, link);
                     if (parseInt(date.split("/")[0]) == month && save == null)
                         save = i;
                     var href = "";
