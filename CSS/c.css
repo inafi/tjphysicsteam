@@ -1,24 +1,28 @@
 body {
-    background-image: linear-gradient(to bottom right, #1B98E0, #06D6A0);
+    background-image: linear-gradient(to bottom right, #1b98e0, #06D6A0);
     transition: 0.3s;
 }
 
-.ds-selected.title, .pdf .ds-selected {
+.ds-selected.title,
+.pdf .ds-selected {
     background: rgba(130, 130, 130, 0.4);
 }
+
+.event .ds-selected,
+.topic .ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+}
+
 
 /*Schedule*/
 .schedule {
     width: 94%;
     height: 10vh;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.4);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    margin-top: 10vh;
     overflow: hidden;
-    margin-left: 3% !important;
     padding: 0 !important;
     white-space: nowrap;
+    display: inline-block;
 }
 
 .event-wrap {
@@ -51,31 +55,45 @@ body {
     margin-top: -1.5vh;
 }
 
+.slider {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    height: 10vh;
+    margin-top: 10vh;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider> :first-child,
+.slider> :last-child {
+    display: inline-block !important;
+}
+
 .fa-chevron-left.sa {
-    position: absolute;
     font-size: 3vh !important;
-    left: 0vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 3%;
     height: 10vh;
-    cursor: pointer;
-    color: #3D348B;
     padding-left: 1%;
     padding-top: 3.5vh;
+    cursor: pointer;
     transition: 0.3s;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
 }
 
 .fa-chevron-right.sa {
-    position: absolute;
     font-size: 3vh !important;
-    right: 0vh;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 3%;
     height: 10vh;
-    cursor: pointer;
-    color: #3D348B;
     padding-left: 1%;
     padding-top: 3.5vh;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .fa-chevron-left.sa:hover,
