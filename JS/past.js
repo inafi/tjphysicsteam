@@ -15,10 +15,14 @@ function initialize() {
         }
     }, 20)
 
-    new DragSelect({
+    var ds = new DragSelect({
         selectables: document.querySelectorAll('h4, p'),
         area: document.querySelector('body'), 
         callback: e => console.log(e)
+    });
+
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
     });
 }
 $(initialize);

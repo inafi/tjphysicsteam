@@ -23,10 +23,14 @@ function initialize() {
     var date = new Date();
     $(".side .title").text($(".fc-left h2").text().split(" ")[0] + ' ' + date.getDate());
 
-    new DragSelect({
+    var ds = new DragSelect({
         selectables: document.querySelectorAll('div.side p'),
         area: document.querySelector('body'), 
         callback: e => console.log(e)
+    });
+
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
     });
 }
 $(initialize);

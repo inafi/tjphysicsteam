@@ -4,6 +4,10 @@ function initialize() {
         area: document.querySelector('body')
     });
 
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
+    });
+
     setInterval(function () {
         if ($(window).scrollTop() == 0) {
             $("nav").css('background-color', 'transparent');

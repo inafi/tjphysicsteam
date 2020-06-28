@@ -3,6 +3,10 @@ function initialize() {
         selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
         area: document.querySelector('body')
     });
+    
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
+    });
 
     setInterval(function () {
         if ($(window).scrollTop() == 0) {

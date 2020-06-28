@@ -35,10 +35,14 @@ function initialize() {
         }, 200);
     })
 
-    new DragSelect({
+    var ds = new DragSelect({
         selectables: document.querySelectorAll('p'),
         area: document.querySelector('body'), 
         callback: e => console.log(e)
+    });
+
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
     });
 }
 $(initialize);

@@ -52,9 +52,13 @@ function initialize() {
         }
     });
 
-    new DragSelect({
+    var ds = new DragSelect({
         selectables: document.querySelectorAll('td, footer div'),
         area: document.querySelector('body')
+    });
+
+    $('body').on('mousedown', 'p', function(event) {
+        ds.removeSelection($(this).get(0));
     });
 }
 $(initialize);

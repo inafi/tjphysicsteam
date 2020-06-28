@@ -1,8 +1,7 @@
 function initialize() {
     var ds = new DragSelect({
         selectables: document.querySelectorAll('.topic p, .pdf p, p.title'),
-        area: document.querySelector('body'), 
-        callback: e => console.log(e)
+        area: document.querySelector('body')
     });
 
     setInterval(function () {
