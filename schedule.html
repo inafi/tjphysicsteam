@@ -91,15 +91,15 @@
                 info.event.start + " ").split(" ")[2]);
             var team;
             var desc = info.event.id;
+            var href = "";
+            if (desc.split(' __ ')[0] != "")
+                href = ' href="' + desc.split(' __ ')[0] + '"';
             if (info.event.backgroundColor == "#06D6A0")
-                team = "A Team " + "<a href='" + desc.split(' __ ')[0] +
-                "' target='_blank'>Lecture</a>" + " on ";
+                team = "A Team " + "<a" + href + " target='_blank'>Lecture</a>" + " on ";
             else if (info.event.backgroundColor == "#1B98E0")
-                team = "B Team " + "<a href='" + desc.split(' __ ')[0] +
-                "' target='_blank'>Lecture</a>" + " on ";
+                team = "B Team " + "<a" + href + " target='_blank'>Lecture</a>" + " on ";
             else
-                team = "C Team " + "<a href='" + desc.split(' __ ')[0] +
-                "' target='_blank'>Lecture</a>" + " on ";
+                team = "C Team " + "<a" + href + " target='_blank'>Lecture</a>" + " on ";
             console.log(info.event);
             $(".side .title").html(team + info.event.title);
             $(".side .desc").html(desc.split(" __ ")[1]);
@@ -122,32 +122,36 @@
         }
     });
 
-    var reqa =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=0&single=true&output=csv";
-
-    var reqb =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=626361445&single=true&output=csv";
-
-    var reqc =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=993140585&single=true&output=csv";
-
-    getDoc(reqa, '#06D6A0');
-    getDoc(reqb, '#1B98E0');
-    getDoc(reqc, '#3D348B');
+    getDoc(1, '#06D6A0');
+    getDoc(2, '#1B98E0');
+    getDoc(3, '#3D348B');
 
     function getDoc(req, color) {
         $.ajax({
-            url: req,
+            url: "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
             type: "get",
             async: false,
             success: function (data) {
-                var arr = Papa.parse(data).data;
-                console.log(arr);
+                var arr = data.sheets[req].data[0].rowData;
+                num = arr.length;
+
                 for (i = 0; i < arr.length; i++) {
-                    var month = arr[i][0].split("/")[0];
+                    var date = "";
+                    var title = "";
+                    var desc = "";
+                    var link = "";
+                    try {
+                        date = arr[i].values[0].formattedValue;
+                        title = arr[i].values[1].formattedValue;
+                        desc = arr[i].values[2].formattedValue;
+                        link = arr[i].values[3].formattedValue;
+                    } catch (err) {
+
+                    }
+                    var month = date.split("/")[0];
                     month = month.length > 1 ? month : '0' + month;
 
-                    var day = arr[i][0].split("/")[1];
+                    var day = date.split("/")[1];
                     day = day.length > 1 ? day : '0' + day;
 
                     var year = 2020;
@@ -159,11 +163,11 @@
                     var date = new Date(dateStr + 'T00:00:00');
 
                     calendar.addEvent({
-                        title: arr[i][1],
+                        title: title,
                         start: date,
                         allDay: true,
                         backgroundColor: color,
-                        id: arr[i][3] + " __ " + arr[i][2]
+                        id: link + " __ " + desc
                     });
                 }
             }

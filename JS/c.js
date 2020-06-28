@@ -38,8 +38,10 @@ function initialize() {
         $(this).children(".label").css("margin-left", "0px");
     });
 
-    var req = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQceVGvkhRKu73a7grDmOPnr0kQ1hBomcButE_ERqf4BlhbuJ1LLYWzZOFVKBo0wsVz4bupKXtlMk1A/pub?gid=993140585&single=true&output=csv";
+    var req = "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
     var num;
+    //This is for adjusting the calendar slider at the top
+    //Just use a date object and get the UTC month
     var month = 9;
     var save;
 
@@ -48,17 +50,32 @@ function initialize() {
         type: "get",
         async: false,
         success: function (data) {
-            var arr = Papa.parse(data).data;
+            var arr = data.sheets[3].data[0].rowData;
             num = arr.length;
+            // console.log(arr);
+            // console.log(num);
             for (i = 0; i < arr.length; i++) {
-                if (parseInt(arr[i][0].split("/")[0]) == month && save == null)
+                var date = "";
+                var title = "";
+                var desc = "";
+                var link = "";
+                try {
+                    date = arr[i].values[0].formattedValue;
+                    title = arr[i].values[1].formattedValue;
+                    desc = arr[i].values[2].formattedValue;
+                    link = arr[i].values[3].formattedValue;
+                } catch (err) {
+
+                }
+                console.log(date, title, desc, link);
+                if (parseInt(date.split("/")[0]) == month && save == null)
                     save = i;
                 var href = "";
-                if (arr[i][3] != "")
-                    href = ' href="' + arr[i][3] + '"';
+                if (link != "")
+                    href = ' href="' + link + '"';
                 var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
-                append += arr[i][0] + '</p>';
-                append += '<p class="desc">' + 'Lecture on ' + arr[i][1] + "</p></div></a>";
+                append += date + '</p>';
+                append += '<p class="desc">' + 'Lecture on ' + title + "</p></div></a>";
                 $(".event-wrap").append(append);
             }
         }
