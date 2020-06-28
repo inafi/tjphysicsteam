@@ -105,6 +105,10 @@ hr {
     font-family: 'Lato' !important;
 }
 
+.b2 div > a {
+    display: inline-block;
+}
+
 .b2>.row {
     margin-top: 5vh;
     display: flex;
