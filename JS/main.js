@@ -102,6 +102,5 @@ function initialize() {
             selection.addRange(range);
         }
     });
-
 }
 $(initialize);
