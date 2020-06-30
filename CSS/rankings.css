@@ -47,7 +47,8 @@ tr,
 table {
     text-align: center;
     border: 0px solid transparent !important;
-    transition: 0.3s;
+    user-select: text;
+    transition: background 0.3s;
 }
 
 .t1> :first-child {
@@ -81,4 +82,12 @@ table.student tr> :first-child {
 table.student tr> :last-child {
     border-top-right-radius: 0.75vh;
     border-bottom-right-radius: 0.75vh;
+}
+
+footer {
+    position: absolute;
+}
+
+.foot-wrap {
+    margin-top: 0vh;
 }

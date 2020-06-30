@@ -15,6 +15,7 @@ function initialize() {
             });
         }
     });
+    
     $("nav").append(' <i class="navbar-toggler fa fa-chevron-down" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> </i> <div class="collapse" id="navbarNavAltMarkup"> <div class="anim"> <div class="navbar-nav"> <a href="index.html"><span>Home</span></a> <a href="schedule.html"><span>Schedule</span></a> <a href="events.html"><span>Events</span></a> <a href="rankings.html"><span>Rankings</span></a> <a href="a.html"><span>A Team</span></a> <a href="b.html"><span>B Team</span></a> <a href="c.html"><span>C Team</span></a> <a href="past.html"><span>Past</span></a> <a href="resources.html"><span>Resources</span></a> </div></div></div>');
 
     $("nav i").click(function () {
@@ -47,28 +48,6 @@ function initialize() {
         }, 200);
     })
 
-    function selectText(element) {
-        if (/INPUT|TEXTAREA/i.test(element.tagName)) {
-            element.focus();
-            if (element.setSelectionRange) {
-                element.setSelectionRange(0, element.value.length);
-            } else {
-                element.select();
-            }
-            return;
-        }
-
-        if (window.getSelection) { // All browsers, except IE <=8
-            window.getSelection().selectAllChildren(element);
-        } else if (document.body.createTextRange) { // IE <=8
-            var range = document.body.createTextRange();
-            range.moveToElementText(element);
-            range.select();
-        }
-    }
-
-    // selectText(document.querySelector('body'));
-
     $("body").on("click", function () {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var on = Array.prototype.slice.call(checkboxes).some(x => x.checked);
@@ -77,9 +56,6 @@ function initialize() {
         } else {
             $("form .send").prop('disabled', true);
         }
-        $(".ds-selected").each(function () {
-            // selectText(document.querySelector('body'));
-        })
     });
 
     var dstext = "";

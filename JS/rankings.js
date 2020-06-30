@@ -57,8 +57,8 @@ function initialize() {
         area: document.querySelector('body')
     });
 
-    $('body').on('mousedown', 'p', function(event) {
-        ds.removeSelection($(this).get(0));
+    $('body').on('mousedown', 'td', function (event) {
+        ds.removeSelection(document.querySelectorAll('td'));
     });
 }
 $(initialize);
