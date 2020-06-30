@@ -3,9 +3,12 @@ body {
     transition: 0.3s;
 }
 
-.ds-selected.title,
 .pdf .ds-selected {
     background: rgba(130, 130, 130, 0.4);
+}
+
+.ds-selected.title {
+    background: rgba(130, 130, 130, 0.6);
 }
 
 .event .ds-selected,
@@ -43,7 +46,8 @@ body {
     text-align: center;
     color: #06D6A0;
     font-size: 2vh;
-    padding-top: 0.8vh
+    margin-top: 0.8vh;
+    display: inline-block;
 }
 
 .schedule .desc {
