@@ -1,6 +1,6 @@
 function initialize() {
     var ds = new DragSelect({
-        selectables: document.querySelectorAll('.topic p, .pdf p, p.title'),
+        selectables: document.querySelectorAll('.topic p, .pdf p, p.title, .exam-resource p'),
         area: document.querySelector('body')
     });
 
@@ -45,7 +45,6 @@ function initialize() {
     var nump;
     var viewp = 78;
     var currp = 0;
-
 
     fetch('Lectures/Practice/dir.txt')
         .then(response => response.text())

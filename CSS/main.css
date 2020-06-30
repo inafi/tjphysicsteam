@@ -23,9 +23,8 @@ p {
 }
 
 .ds-selected {
-    background: rgba(190, 190, 190, 0.35);
+    background: rgba(130, 130, 130, 0.35);
     border-radius: 0.5vh;
-    /* user-select: text; */
 }
 
 .ds-selector {

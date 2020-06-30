@@ -2,8 +2,16 @@ body {
     background-image: linear-gradient(to top left, #5680e9, #1B98E0, #06D6A0);
 }
 
-.ds-selected.title, .pdf .ds-selected {
+.pdf .ds-selected {
     background: rgba(130, 130, 130, 0.4);
+}
+
+.ds-selected.title {
+    background: rgba(130, 130, 130, 0.6);
+}
+
+.exam-resource .ds-selected{
+    background: rgba(45, 170, 219, 0.3);
 }
 
 /*Teams*/
@@ -32,6 +40,22 @@ body {
 
 .teams .title:hover {
     background-color: #ddd;
+}
+
+/*Exams*/
+.exam-resource .col-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exam-resource img {
+    margin-bottom: 2vh;
+}
+
+.exam-resource p {
+    display: inline-block !important;
+    padding: 0 !important;
 }
 
 /*Resources*/
@@ -107,7 +131,6 @@ body {
     margin-bottom: 4vh;
     margin-top: 5vh;
 }
-
 
 /*PDF*/
 .viewer {
@@ -252,6 +275,6 @@ body {
     z-index: -1;
 }
 
-.foot-wrap{
+.foot-wrap {
     margin-top: 3vh;
 }
