@@ -1,7 +1,7 @@
 import glob
 import os
 result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/Solutions"
+PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/Tests"
 for x in os.walk(PATH):
     for y in glob.glob(os.path.join(x[0], '*.pdf')):
         result.append(y)
@@ -12,8 +12,9 @@ for i in result:
     # if "/PPP/" in i:
     #     print(i)
     f = i.split(".pdf")[0]
-    if " " in i:
-        os.system("mv " + i.replace(" ", "\ ") + " " + i.replace(" ", "_"))
-        f = i.split(".pdf")[0].replace(" ", "_")
+    if " " in i or "PS_" in i:
+        os.system("mv " + i.replace(" ", "\ ") + " " + i.replace(" ", "_").replace("PS_", ""))
+        # f = f.replace(" ", "_")
+    print(f)
     os.system("gs -o " + f + ".png" + " -sDEVICE=pngalpha -dLastPage=1 " + i)
     
