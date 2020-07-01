@@ -6,12 +6,7 @@ function initialize() {
 
     var container;
     var camera, scene, renderer;
-
     var particles, particle, count = 0;
-
-    var mouseX = 85,
-        mouseY = -342;
-
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
 
@@ -116,26 +111,8 @@ function initialize() {
         ds.removeSelection($(this).get(0));
     });
 
-    // function doOnOrientationChange() {
-    //     switch (window.orientation) {
-    //         case -90:
-    //             document.getElementById("landscape").style.display = "block";
-    //             break;
-    //         case 90:
-    //             document.getElementById("landscape").style.display = "block";
-    //             break;
-    //         default:
-    //             document.getElementById("landscape").style.display = "none";
-    //             break;
-    //     }
-    // }
-
-    // //Listen to orientation change
-    // window.addEventListener('orientationchange', doOnOrientationChange);
-
     setInterval(() => {
         screen.orientation.lock('landscape');
     }, 20);
-
 }
 $(initialize);

@@ -37,12 +37,11 @@ p {
 nav {
     font-size: 2vh;
     height: 7vh;
-    color: #1B98E0;
 }
 
-/* nav.active {
-    color: #1B98E0;
-} */
+nav a {
+    color: #fff;
+}
 
 nav img {
     height: 5vh;
@@ -64,10 +63,11 @@ nav span {
     padding-right: 2vh;
     padding-left: 2vh;
     font-size: 2vh;
+    transition: 0.3s;
 }
 
 nav span:hover {
-    color: #06D6A0;
+    color: #3D348B;
 }
 
 nav .left {
