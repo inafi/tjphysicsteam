@@ -66,7 +66,7 @@ function initialize() {
     function animate() {
         setTimeout(function () {
             requestAnimationFrame(animate);
-        }, 1000 / 30);
+        }, 1000 / 20);
 
         render();
     }
