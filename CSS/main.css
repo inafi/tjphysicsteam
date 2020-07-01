@@ -314,12 +314,6 @@ form label {
     cursor: pointer;
 }
 
-form input[type="checkbox"] {
-    background: #1b98e0 !important;
-    background-color: #1b98e0 !important;
-
-}
-
 form .text input {
     margin-left: 10%;
     min-width: 60%;
