@@ -48,20 +48,20 @@ function initialize() {
     var previnfo = "";
 
     $(".topic").click(function () {
-        if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
-            $(".viewer").css("height", "38vh");
-            $(".viewer").css("margin-bottom", "6vh");
-            $(".fa-chevron-left.pa").css("display", "unset");
-            $(".fa-chevron-right.pa").css("display", "unset");
+        if ($("#tests").attr("vis") == "off" || previnfo != $(this).attr("name")) {
+            $("#tests").css("height", "38vh");
+            $("#tests").css("margin-bottom", "6vh");
+            $("#tests .fa-chevron-left.pa").css("display", "unset");
+            $("#tests .fa-chevron-right.pa").css("display", "unset");
             fetch('Lectures/Tests/dir.txt')
                 .then(response => response.text())
                 .then(text => {
                     text = text.split("\n");
                     numpt = 0;
-                    $(".pdf-move").html("");
+                    $("#tests .pdf-move").html("");
                     viewpt = 78;
                     currpt = 0;
-                    $(".pdf-move").css("transform", "translateX(" + currpt + "%)");
+                    $("#tests .pdf-move").css("transform", "translateX(" + currpt + "%)");
                     var fold = $(this).attr("name");
                     var append = '';
                     for (i = 0; i < text.length; i++) {
@@ -74,15 +74,15 @@ function initialize() {
                             numpt += 1;
                         }
                     }
-                    $(".pdf-move").append(append);
+                    $("#tests .pdf-move").append(append);
                 })
-            $(".viewer").attr("vis", "on");
+            $("#tests").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
-            $(".viewer").css("height", "0vh");
-            $(".viewer").css("margin-bottom", "0vh");
-            $(".fa-chevron-left.pa").css("display", "none");
-            $(".fa-chevron-right.pa").css("display", "none");
-            $(".viewer").attr("vis", "off");
+            $("#tests").css("height", "0vh");
+            $("#tests").css("margin-bottom", "0vh");
+            $("#tests .fa-chevron-left.pa").css("display", "none");
+            $("#tests .fa-chevron-right.pa").css("display", "none");
+            $("#tests").attr("vis", "off");
         }
         previnfo = $(this).attr("name");
     });
