@@ -1,8 +1,8 @@
 function initialize() {
 
-    var SEPARATION = 100,
-        AMOUNTX = 100,
-        AMOUNTY = 70;
+    var SEPARATION = 160,
+        AMOUNTX = 60,
+        AMOUNTY = 40;
 
     var container;
     var camera, scene, renderer;
@@ -52,9 +52,6 @@ function initialize() {
         renderer = new THREE.CanvasRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         container.appendChild(renderer.domElement);
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.addEventListener('touchstart', onDocumentTouchStart, false);
-        document.addEventListener('touchmove', onDocumentTouchMove, false);
         window.addEventListener('resize', onWindowResize, false);
     }
 
@@ -66,39 +63,17 @@ function initialize() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
-    //
-
-    function onDocumentMouseMove(event) {
-        mouseX = event.clientX - windowHalfX;
-        mouseY = event.clientY - windowHalfY;
-    }
-
-    function onDocumentTouchStart(event) {
-        if (event.touches.length === 1) {
-            event.preventDefault();
-            mouseX = event.touches[0].pageX - windowHalfX;
-            mouseY = event.touches[0].pageY - windowHalfY;
-        }
-    }
-
-    function onDocumentTouchMove(event) {
-        if (event.touches.length === 1) {
-            event.preventDefault();
-            mouseX = event.touches[0].pageX - windowHalfX;
-            mouseY = event.touches[0].pageY - windowHalfY;
-        }
-    }
-
-    //
-
     function animate() {
-        requestAnimationFrame(animate);
+        setTimeout(function () {
+            requestAnimationFrame(animate);
+        }, 1000 / 30);
+
         render();
     }
 
     function render() {
         camera.position.x += (0 - camera.position.x) * .05;
-        camera.position.y += (800 - camera.position.y) * .05;
+        camera.position.y += (1000 - camera.position.y) * .05;
         camera.lookAt(scene.position);
 
         var i = 0;
@@ -106,8 +81,8 @@ function initialize() {
         for (var ix = 0; ix < AMOUNTX; ix++) {
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 50) + (Math.sin((iy + count) * 0.5) * 50);
-                particle.scale.x = particle.scale.y = Math.max((Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2, 3);
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 90) + (Math.sin((iy + count) * 0.5) * 90);
+                particle.scale.x = particle.scale.y = Math.max((Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2 + 3, 5);
             }
         }
 
@@ -137,8 +112,30 @@ function initialize() {
         area: document.querySelector('body')
     });
 
-    $('body').on('mousedown', 'p', function(event) {
+    $('body').on('mousedown', 'p', function (event) {
         ds.removeSelection($(this).get(0));
     });
+
+    // function doOnOrientationChange() {
+    //     switch (window.orientation) {
+    //         case -90:
+    //             document.getElementById("landscape").style.display = "block";
+    //             break;
+    //         case 90:
+    //             document.getElementById("landscape").style.display = "block";
+    //             break;
+    //         default:
+    //             document.getElementById("landscape").style.display = "none";
+    //             break;
+    //     }
+    // }
+
+    // //Listen to orientation change
+    // window.addEventListener('orientationchange', doOnOrientationChange);
+
+    setInterval(() => {
+        screen.orientation.lock('landscape');
+    }, 20);
+
 }
 $(initialize);
