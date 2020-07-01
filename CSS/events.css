@@ -2,6 +2,14 @@ body {
     background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0);
 }
 
+.ds-selected {
+    background: rgba(45, 170, 219, 0.3);
+}
+
+.row {
+    margin: 0 !important;
+}
+
 .large {
     width: 100%;
     height: 60vh;
@@ -17,7 +25,7 @@ body {
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.32);
     overflow: hidden;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .large:hover, .event:hover{
@@ -35,7 +43,8 @@ body {
 
 .large img {
     position: absolute;
-    width: 100%;
+    min-width: 100%;
+    min-height: 60vh;
 }
 
 .large .cover {
@@ -83,16 +92,18 @@ body {
         0 100px 80px rgba(0, 0, 0, 0.32);
     overflow: hidden;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .event img {
     height: 100%;
     position: absolute;
+    min-width: 100%;
+    min-height: 40vh;
 }
 
 .event .cover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .5));
     width: 100%;
     height: 40vh;
     position: absolute;

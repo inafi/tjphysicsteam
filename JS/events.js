@@ -16,13 +16,15 @@ function initialize() {
     }, 20)
 
     $(".event").click(function () {
-        $(this).siblings(".overlay").show();
-        $(this).siblings(".overlay").find(".exit").show();
-        $(".overlay-cover").show();
-        setTimeout(() => {
-            $(".overlay").css("opacity", "1");
-        }, 100);
-        $("body").css("overflow-y", "hidden");
+        if ($(this).parent().attr("href") == null) {
+            $(this).siblings(".overlay").show();
+            $(this).siblings(".overlay").find(".exit").show();
+            $(".overlay-cover").show();
+            setTimeout(() => {
+                $(".overlay").css("opacity", "1");
+            }, 100);
+            $("body").css("overflow-y", "hidden");
+        }
     })
 
     $(".exit").click(function () {
@@ -37,11 +39,11 @@ function initialize() {
 
     var ds = new DragSelect({
         selectables: document.querySelectorAll('p'),
-        area: document.querySelector('body'), 
+        area: document.querySelector('body'),
         callback: e => console.log(e)
     });
 
-    $('body').on('mousedown', 'p', function(event) {
+    $('body').on('mousedown', 'p', function (event) {
         ds.removeSelection($(this).get(0));
     });
 }
