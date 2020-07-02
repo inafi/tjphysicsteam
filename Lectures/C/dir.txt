@@ -16,6 +16,9 @@ Thermodynamics/Thermodynamics.pdf
 Vectors/Vectors_v2_no_comments.pdf
 Vectors/Vectors_Lecture_Solutions.pdf
 Oscillations/SHM.pdf
+Math/TaylorApproximations_0607.pdf
+Math/TaylorApproximations_0506.pdf
+Math/DiscreteCalculus_0708.pdf
 Magnetism/Magnetism_Guest_Lecture.pdf
 Rotation/Rotation_Lecture.pdf
 Rotation/RotationalKinematics.pdf

@@ -33,6 +33,13 @@ Special_Relativity/Special_Relativity_Problem_Set_1.pdf
 Special_Relativity/relativistic-dynamics-part.pdf
 Special_Relativity/Basic_Postulates_of_Special_Relativity.pdf
 Special_Relativity/Basic_Postulates_of_Special_Relativity_Solutions.pdf
+Math/E_-_Lagrange_Multipliers_and_Extrema.pdf
+Math/1_-_Multivariable_Overview.pdf
+Math/VectorCalculus_0708.pdf
+Math/SurfaceIntegrals_0708.pdf
+Math/MultipleIntegrals_0708.pdf
+Math/DifferentialEquations_0607.pdf
+Math/ComplexAndEuler_0607.pdf
 Lagrangian/2_-_Noether_Hamiltonian.pdf
 Lagrangian/1_-_Lagrangian_Mechanics_Intro.pdf
 Lagrangian/1.5_-_Lagrangian.pdf
@@ -46,8 +53,6 @@ Waves/Wave_Mechanics.pdf
 Waves/The_Wave_Equation.pdf
 Waves/The_Wave_Equation-2.pdf
 Waves/AdvancedWaves.pdf
-Multivariable/E_-_Lagrange_Multipliers_and_Extrema.pdf
-Multivariable/1_-_Multivariable_Overview.pdf
 Rotation/Rotation_2013_2014_Problem_Set_Solutions.pdf
 Rotation/Non_Uniform_Circular_Motion.pdf
 Rotation/Non_Uniform_Circular_Motion_Solution_Set.pdf
