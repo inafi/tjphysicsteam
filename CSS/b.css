@@ -164,11 +164,12 @@ body {
 /*PDF*/
 .viewer {
     margin-top: 5vh;
-    width: 86%;
+    width: 84%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 0vh;
+    margin-left: auto;
+    margin-right: auto;
     white-space: nowrap;
-    margin-left: 7%;
     border-radius: 1.5vh;
     transition: 0.3s;
     overflow: hidden;
@@ -176,7 +177,7 @@ body {
 
 .pdf-wrap {
     transition: 0.3s;
-    width: 90%;
+    width: 92.142857%;
     overflow: hidden;
     display: block;
     margin: auto;
@@ -219,7 +220,7 @@ body {
 .fa-chevron-left.pa {
     position: absolute;
     font-size: 3vh !important;
-    left: 7%;
+    left: 8.3%;
     top: 55vh;
     width: 3%;
     height: 38vh;
@@ -235,7 +236,7 @@ body {
 .fa-chevron-right.pa {
     position: absolute;
     font-size: 3vh !important;
-    right: 6%;
+    right: 7%;
     top: 55vh;
     width: 3%;
     height: 38vh;

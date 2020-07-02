@@ -1,8 +1,8 @@
 function initialize() {
 
     var SEPARATION = 160,
-        AMOUNTX = 60,
-        AMOUNTY = 40;
+        AMOUNTX = 50,
+        AMOUNTY = 30;
 
     var container;
     var camera, scene, renderer;
@@ -14,17 +14,19 @@ function initialize() {
     animate();
 
     function init() {
-
+        var final = 0;
         container = document.querySelector('div.metric');
         camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
-        camera.position.z = 1000;
+        // setTimeout(() => {
+        // camera.position.z = 800;
+        // }, 2000);
         scene = new THREE.Scene();
         particles = new Array();
 
         var PI2 = Math.PI * 2;
         var material = new THREE.ParticleCanvasMaterial({
 
-            color: 0xe1e1e1,
+            color: 0xffffff,
             program: function (context) {
                 context.beginPath();
                 context.arc(0, 0, .6, 0, PI2, true);
@@ -58,11 +60,16 @@ function initialize() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
+    var radius = 0;
+
     function animate() {
         setTimeout(function () {
             requestAnimationFrame(animate);
         }, 1000 / 20);
-
+        if (radius < 800) {
+            camera.position.z = radius;
+            radius += 7;
+        }
         render();
     }
 

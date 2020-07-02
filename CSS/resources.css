@@ -191,12 +191,13 @@ body {
 
 /*PDF*/
 .viewer {
-    width: 86%;
+    width: 84%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 38vh;
     white-space: nowrap;
     margin-top: 1vh;
-    margin-left: 7%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 1.5vh;
     transition: 0.3s;
     overflow: hidden;
@@ -205,7 +206,7 @@ body {
 
 .pdf-wrap {
     transition: 0.3s;
-    width: 90%;
+    width: 92.142857%;
     overflow: hidden;
     display: block;
     margin: auto;
@@ -250,7 +251,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     margin-top: 18vh;
-    left: 9%;
+    left: 9.3%;
     width: 3%;
     height: 38vh;
     cursor: pointer;
@@ -263,7 +264,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     margin-top: 18vh;
-    right: 6.5%;
+    right: 7%;
     width: 3%;
     height: 38vh;
     cursor: pointer;
