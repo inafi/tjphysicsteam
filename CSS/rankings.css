@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(to top right, #5680e9, #54b9ea);
+    min-height: 100vh;
 }
 
 .ds-selected {
@@ -49,6 +50,7 @@ table {
     border: 0px solid transparent !important;
     user-select: text;
     transition: background 0.3s;
+    outline: none;
 }
 
 .t1> :first-child {
