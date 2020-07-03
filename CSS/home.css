@@ -105,7 +105,7 @@ hr {
     font-family: 'Lato' !important;
 }
 
-.b2 div > a {
+.b2 div>a {
     display: inline-block;
 }
 
@@ -247,7 +247,7 @@ hr {
     right: 4vh;
     text-align: center;
     font-size: 1.9vh;
-    transform: translateX(3vh);
+    transform: translateX(4vh);
 }
 
 .b4 .row {
