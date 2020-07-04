@@ -17,9 +17,6 @@ function initialize() {
         var final = 0;
         container = document.querySelector('div.metric');
         camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
-        // setTimeout(() => {
-        // camera.position.z = 800;
-        // }, 2000);
         scene = new THREE.Scene();
         particles = new Array();
 

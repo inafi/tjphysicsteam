@@ -38,13 +38,13 @@ function initialize() {
         $("body").css("overflow-y", "hidden");
     })
 
-    $(".form-exit").click(function () {
-        $(this).hide();
+    $(".form-exit, .form-overlay-cover").on("mousedown",function () {
+        $(".form-exit").hide();
         $(".form-overlay-cover").hide();
         $("body").css("overflow-y", "scroll");
         $(".form-overlay").css("opacity", "0");
         setTimeout(() => {
-            $(this).parent().hide();
+            $(".form-overlay").hide();
         }, 200);
     })
 

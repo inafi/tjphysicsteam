@@ -27,13 +27,13 @@ function initialize() {
         }
     })
 
-    $(".exit").click(function () {
-        $(this).hide();
+    $(".exit, .overlay-cover").on("mousedown", function () {
+        $(".exit").hide();
         $(".overlay-cover").hide();
         $("body").css("overflow-y", "scroll");
         $(".overlay").css("opacity", "0");
         setTimeout(() => {
-            $(this).parent().hide();
+            $(".overlay").hide();
         }, 200);
     })
 

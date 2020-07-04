@@ -161,14 +161,16 @@ footer .bot {
     color: #fff;
 }
 
+/*Heart*/
 footer .bot i:first-of-type {
     color: red;
     font-size: 3.2vh;
     transform: translateY(.7vh);
-    padding-left: .7vh;
-    padding-right: .7vh;
+    padding-left: .5vh;
+    padding-right: .5vh;
 }
 
+/*Atom*/
 footer .bot i:last-of-type {
     color: #fff;
     font-size: 2.95vh !important;
