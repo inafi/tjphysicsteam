@@ -1,11 +1,12 @@
 body {
-    background-image: linear-gradient(to top right, #5680e9, #54b9ea);
+    background-image: linear-gradient(to top right, #185a9d, #1B98E0, #43cea2);
     min-height: 100vh;
 }
 
 .ds-selected {
     background: rgba(45, 170, 219, 0.3);
     border-radius: inherit;
+    transform: scaleX(1) scaleY(1) !important;
 }
 
 table.test {
@@ -26,8 +27,7 @@ table.student {
 }
 
 table.student tr {
-    border-top: 0vh solid #1B98E0;
-    border-bottom: 0.3vh solid #1B98E0 ;
+    border: 0.3vh solid transparent;
     transform: scaleX(1);
 }
 
@@ -41,11 +41,12 @@ tr.content {
     transition: 0.3s;
 }
 
+.td-over {
+    border: 0.3vh solid rgba(0, 0, 0, 0.01);
+}
+
 table.student tr.content:hover {
     transform: scaleX(1.02) scaleY(1);
-    /* border-top: .8vh solid transparent;
-    border-bottom: .8vh solid transparent; */
-    width: 100%;
 }
 
 tr.space {

@@ -17,6 +17,17 @@ function initialize() {
 
     var req = "https://sheets.googleapis.com/v4/spreadsheets/1vBfqcpmkNG3xDgoDCBVgLwaWlV4t88Ev8hlsyXMOPuo/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
 
+    $(document).on('mouseenter', 'table.student tr', function (event) {
+        $(this).find("td").each(function(){
+            $(this).addClass("td-over");
+            console.log($(this).get(0))
+        })
+    }).on("mouseout", function() {
+        $(this).find("td").each(function(){
+            $(this).removeClass("td-over");
+        })
+    });
+
     $.ajax({
         url: req,
         type: "get",
