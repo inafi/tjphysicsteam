@@ -130,6 +130,10 @@ function initialize() {
             $(".viewer").css("margin-bottom", "6vh");
             $(".fa-chevron-left.pa").css("display", "unset");
             $(".fa-chevron-right.pa").css("display", "unset");
+            $(".topic").each(function(){
+                $(this).css("color", "#1B98E0");
+            })
+            $(this).css("color", "#3D348B");
             fetch('Lectures/B/dir.txt')
                 .then(response => response.text())
                 .then(text => {
@@ -155,6 +159,9 @@ function initialize() {
                 })
             $(".viewer").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
+            $(".topic").each(function(){
+                $(this).css("color", "#1B98E0");
+            })
             $(".viewer").css("height", "0vh");
             $(".viewer").css("margin-bottom", "0vh");
             $(".fa-chevron-left.pa").css("display", "none");

@@ -141,7 +141,6 @@ body {
     font-size: 2vh;
     color: #1B98E0;
     cursor: pointer;
-    transition: 0.3s;
     white-space: nowrap;
     overflow-x: hidden;
 }
@@ -153,7 +152,8 @@ body {
 }
 
 .topic:hover {
-    color: #3D348B;
+    color: #3D348B !important;
+    transition: 0.3s;
 }
 
 .topic i {
