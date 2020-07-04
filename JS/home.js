@@ -89,8 +89,7 @@ function initialize() {
         }
 
         renderer.render(scene, camera);
-
-        count += 0.1;
+        count += 0.03;
     }
 
     setInterval(function () {
