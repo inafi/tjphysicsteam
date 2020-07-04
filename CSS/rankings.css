@@ -25,7 +25,13 @@ table.student {
     margin: 2vh auto 5vh auto;
 }
 
-table.student tr:nth-of-type(-n + 14) {
+table.student tr {
+    border-top: 0vh solid #1B98E0;
+    border-bottom: 0.3vh solid #1B98E0 ;
+    transform: scaleX(1);
+}
+
+table.student tr:nth-of-type(-n + 7) {
     background-color: #FFDA5D !important;
 }
 
@@ -36,7 +42,10 @@ tr.content {
 }
 
 table.student tr.content:hover {
-    transform: scaleX(1.02) scaleY(1.1);
+    transform: scaleX(1.02) scaleY(1);
+    /* border-top: .8vh solid transparent;
+    border-bottom: .8vh solid transparent; */
+    width: 100%;
 }
 
 tr.space {
@@ -47,10 +56,10 @@ td,
 tr,
 table {
     text-align: center;
-    border: 0px solid transparent !important;
     user-select: text;
     transition: background 0.3s;
     outline: none;
+    transform: scale(1.00);
 }
 
 .t1> :first-child {

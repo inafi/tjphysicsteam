@@ -43,7 +43,7 @@ function initialize() {
                 for (k = 0; k < arr[0].values.length; k++) {
                     append += "<td>" + arr[i].values[k].formattedValue + "</td>";
                 }
-                append += '</tr><tr class="space"></tr>'
+                append += '</tr>'
                 $("table.student").append(append);
             }
 

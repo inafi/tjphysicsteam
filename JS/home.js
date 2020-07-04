@@ -61,15 +61,15 @@ function initialize() {
     }
 
     var radius = 0;
+    var temp = 0;
 
     function animate() {
-        setTimeout(function () {
-            requestAnimationFrame(animate);
-        }, 1000 / 20);
         if (radius < 800) {
             camera.position.z = radius;
-            radius += 7;
+            radius = -800 / (0.0008 * (temp + 1000)) + 1000;
+            temp += 20;
         }
+        requestAnimationFrame(animate);
         render();
     }
 
@@ -117,9 +117,5 @@ function initialize() {
     $('body').on('mousedown', 'p', function (event) {
         ds.removeSelection($(this).get(0));
     });
-
-    setInterval(() => {
-        screen.orientation.lock('landscape');
-    }, 20);
 }
 $(initialize);

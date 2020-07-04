@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0, #3D348B);
+    min-height: 100vh;
 }
 
 .ds-selected {
@@ -12,7 +13,7 @@ body {
     background-color: #ffffff;
     margin: auto;
     margin-top: 10vh;
-    margin-bottom: 12vh;
+    margin-bottom: 10vh;
     border-radius: 2vh;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -119,5 +120,4 @@ body {
 }
 
 footer {
-    position: absolute;
 }
