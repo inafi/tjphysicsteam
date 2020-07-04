@@ -67,7 +67,7 @@ function initialize() {
         if (radius < 800) {
             camera.position.z = radius;
             radius = -800 / (0.0008 * (temp + 1000)) + 1000;
-            temp += 20;
+            temp += 10;
         }
         requestAnimationFrame(animate);
         render();
