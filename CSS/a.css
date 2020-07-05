@@ -1,6 +1,19 @@
 body {
-    background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0);
+    background: linear-gradient(to right, #2193b0, #6dd5ed, #3bb5fc, #06D6A0);
     transition: 0.3s;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #06D6A0, #3bb5fc);    
+    -webkit-mask: linear-gradient(#fff, transparent);
+    mask: linear-gradient(#fff, transparent);
 }
 
 .pdf .ds-selected {
