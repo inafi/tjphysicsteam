@@ -32,7 +32,7 @@ table.student tr {
 }
 
 table.student tr:nth-of-type(-n + 7) {
-    background-image: linear-gradient(to right, #93a5cf, #e4efe9, #93a5cf, #d5e0f7, #93a5cf);
+    background-image: linear-gradient(to right, #b1c0e2, #e4efe9, #b1c0e2, #d5e0f7, #b1c0e2);
 }
 
 table.student tr:nth-of-type(-n + 3) {
@@ -82,7 +82,9 @@ table {
 }
 
 .t1,
-table.test tr> :first-child {
+table.test tr> :first-child,
+table.student tr> :first-child,
+table.student tr> :last-child  {
     color: #1B98E0;
 }
 
