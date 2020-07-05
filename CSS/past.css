@@ -1,5 +1,18 @@
 body {
-    background-image: linear-gradient(to bottom right, #5680e9, #54b9ea, #06D6A0);
+    background: linear-gradient(to top left, #06D6A0, #84ceeb, #1B98E0, #43cea2);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #4568dc, #36d1dc);
+    -webkit-mask: linear-gradient(#fff, transparent);
+    mask: linear-gradient(#fff, transparent);
 }
 
 .ds-selected {
@@ -19,6 +32,10 @@ body {
 .timeline-item p {
     font-size: 1.6vh;
     display: inline-block;
+}
+
+.timeline-item p:nth-of-type(2n) {
+    margin-top: -12px;
 }
 
 .timeline::before {
@@ -88,7 +105,6 @@ body {
 .timeline-item:nth-child(even) .timeline-content {
     float: right;
     padding: 2vh 3vh 1vh 3vh;
-    ;
     margin-right: -10%;
 }
 
