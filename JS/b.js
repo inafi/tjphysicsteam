@@ -128,8 +128,6 @@ function initialize() {
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
             $(".viewer").css("margin-bottom", "6vh");
-            $(".fa-chevron-left.pa").css("display", "unset");
-            $(".fa-chevron-right.pa").css("display", "unset");
             $(".topic").each(function(){
                 $(this).css("color", "#1B98E0");
             })
@@ -164,8 +162,6 @@ function initialize() {
             })
             $(".viewer").css("height", "0vh");
             $(".viewer").css("margin-bottom", "0vh");
-            $(".fa-chevron-left.pa").css("display", "none");
-            $(".fa-chevron-right.pa").css("display", "none");
             $(".viewer").attr("vis", "off");
         }
         previnfo = $(this).attr("name");

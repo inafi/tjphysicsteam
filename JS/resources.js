@@ -51,8 +51,6 @@ function initialize() {
         if ($("#tests").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $("#tests").css("height", "38vh");
             $("#tests").css("margin-bottom", "6vh");
-            $("#tests .fa-chevron-left.pa").css("display", "unset");
-            $("#tests .fa-chevron-right.pa").css("display", "unset");
             $(".topic").each(function(){
                 $(this).css("color", "#1B98E0");
             })
@@ -87,8 +85,6 @@ function initialize() {
             })
             $("#tests").css("height", "0vh");
             $("#tests").css("margin-bottom", "0vh");
-            $("#tests .fa-chevron-left.pa").css("display", "none");
-            $("#tests .fa-chevron-right.pa").css("display", "none");
             $("#tests").attr("vis", "off");
         }
         previnfo = $(this).attr("name");

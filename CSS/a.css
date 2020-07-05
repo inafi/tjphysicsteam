@@ -187,6 +187,7 @@ body::before {
     border-radius: 1.5vh;
     transition: 0.3s;
     overflow: hidden;
+    position: relative;
 }
 
 .pdf-wrap {
@@ -234,33 +235,27 @@ body::before {
 .fa-chevron-left.pa {
     position: absolute;
     font-size: 3vh !important;
-    left: 8.3%;
-    top: 55vh;
+    left: 1.6%;
+    top: 18vh;
     width: 3%;
     height: 38vh;
-    padding-top: 8vh;
-    padding-left: 2vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
-    display: none;
 }
 
 .fa-chevron-right.pa {
     position: absolute;
     font-size: 3vh !important;
-    right: 7%;
-    top: 55vh;
+    right: -0.6%;
+    top: 18vh;
     width: 3%;
     height: 38vh;
-    padding-top: 8vh;
-    padding-right: 2vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
-    display: none;
 }
 
 /*Resources*/

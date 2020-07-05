@@ -43,10 +43,6 @@ body {
 }
 
 /*Exam PDF*/
-#tests i {
-    display: none;
-}
-
 #tests {
     height: 0vh;
 }
@@ -202,6 +198,7 @@ body {
     transition: 0.3s;
     overflow: hidden;
     text-align: left;
+    position: relative;
 }
 
 .pdf-wrap {
@@ -251,7 +248,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     margin-top: 18vh;
-    left: 9.3%;
+    left: 1.6%;
     width: 3%;
     height: 38vh;
     cursor: pointer;
@@ -264,7 +261,7 @@ body {
     position: absolute;
     font-size: 3vh !important;
     margin-top: 18vh;
-    right: 7%;
+    right: -0.6%;
     width: 3%;
     height: 38vh;
     cursor: pointer;
