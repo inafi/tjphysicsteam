@@ -1,5 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&family=Montserrat&family=Nunito&family=Roboto&display=swap');
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito/Nunito-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato/Lato-Bold.ttf");
+    font-weight: bold;
+}
 
 body {
     font-family: "Nunito", "arial" !important;

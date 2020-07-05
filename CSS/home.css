@@ -69,20 +69,21 @@ body {
 }
 
 .b1 p.desc {
-    padding-top: 0vh;
     padding-bottom: 2vh;
     width: 60%;
     margin: auto;
     margin-top: 1vh !important;
     text-align: center;
     font-size: 2vh;
-    margin-top: -2vh;
 }
 
-.b1 span {
+.b1 .label {
     color: #06D6A0;
     font-size: 2.8vh;
-    /* position: absolute; */
+    display: inline-block;
+    text-align: center;
+    margin-top: .6vh;
+    margin-bottom: -0.1vh;
 }
 
 hr {
@@ -102,7 +103,7 @@ hr {
     text-align: center;
     margin: auto;
     margin-top: 2vh;
-    font-family: 'Lato' !important;
+    font-family: 'Lato', 'Arial';
 }
 
 .b2 div>a {
@@ -131,9 +132,9 @@ hr {
     text-align: center;
     font-size: 3.2vh;
     margin-top: 1.5vh;
-    font-weight: bold;
     width: 105%;
     margin-left: -2.5%;
+    font-family: 'Lato', 'Arial';
 }
 
 .b2 .desc {
