@@ -56,6 +56,7 @@ p {
 nav {
     font-size: 2vh;
     height: 7vh;
+    font-family: 'Lato', "arial";
 }
 
 nav a {
@@ -150,7 +151,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-family: 'Lato', "arial" !important;
+    font-family: 'Lato', "arial";
     font-size: 2vh;
 }
 
