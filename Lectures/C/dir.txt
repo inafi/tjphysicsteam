@@ -5,7 +5,7 @@ Gravity/C_Gravitation_Lecture.pdf
 Gravity/C_Gravitation_Solutions.pdf
 Gravity/Gravitation_Lecture.pdf
 Energy/Energy_Lecture_C.pdf
-Energy/_Energy_Problem_Set.pdf
+Energy/Energy_Problem_Set.pdf
 Momentum/Momentum_and_Collisions.pdf
 Mechanics/C_MechanicsReview_Solutions.pdf
 Mechanics/C_Mechanics_Review.pdf
