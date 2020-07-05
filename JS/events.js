@@ -17,14 +17,14 @@ function initialize() {
 
     $(".event").click(function () {
         if ($(this).parent().attr("href") == null) {
-            $(this).siblings(".overlay").show();
-            $(this).siblings(".overlay").find(".exit").show();
+            $(this).parent().parent().find(".overlay").show();
+            $(this).parent().parent().find(".exit").show();
             $(".overlay-cover").show();
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
             }, 100);
             $("body").css("overflow-y", "hidden");
-        }
+        } 
     })
 
     $(".exit, .overlay-cover").on("mousedown", function () {
