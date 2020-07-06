@@ -20,7 +20,6 @@ function initialize() {
     $(document).on('mouseenter', 'table.student tr', function (event) {
         $(this).find("td").each(function(){
             $(this).addClass("td-over");
-            console.log($(this).get(0))
         })
     }).on("mouseout", function() {
         $(this).find("td").each(function(){

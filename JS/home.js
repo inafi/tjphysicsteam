@@ -111,7 +111,6 @@ function initialize() {
 
         renderer.render(scene, camera);
         count += 0.03;
-        console.log(count);
     }
 
     setInterval(function () {
