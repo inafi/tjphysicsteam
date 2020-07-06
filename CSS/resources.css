@@ -39,7 +39,14 @@ body {
 }
 
 .teams .title:hover {
-    background-color: #ddd;
+    transform: scale(1.05);
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.038),
+        0 8.5px 6px rgba(0, 0, 0, 0.03),
+        0 12.3px 7.9px rgba(0, 0, 0, 0.032),
+        0 21.8px 13.4px rgba(0, 0, 0, 0.026),
+        0 30px 25px rgba(0, 0, 0, 0.14);
 }
 
 /*Exam PDF*/
