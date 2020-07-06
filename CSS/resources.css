@@ -54,7 +54,6 @@ body {
     display: flex;
     justify-content: center;
     margin-top: -2vh;
-    margin-bottom: 4vh;
 }
 
 .topic {
@@ -93,7 +92,7 @@ body {
 
 /*Exams*/
 .exam-resource {
-    margin-top: vh;
+    margin-top: 2vh;
 }
 
 .exam-resource .col-c {
