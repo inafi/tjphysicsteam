@@ -59,6 +59,29 @@ function initialize() {
 
     var radius = 0;
     var temp = 0;
+    var showing = 1;
+
+    $.fn.isOnScreen = function () {
+        var win = $(window);
+        var viewport = {
+            top: win.scrollTop(),
+            left: win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    };
+
+    window.addEventListener('scroll', () => {
+        if ($('.metric').isOnScreen() == true) 
+            showing = 1;
+        else 
+            showing = 0;
+    });
 
     function animate() {
         if (radius < 800) {
@@ -67,7 +90,8 @@ function initialize() {
             temp += 5;
         }
         requestAnimationFrame(animate);
-        render();
+        if (showing == 1)
+            render();
     }
 
     function render() {
@@ -80,13 +104,14 @@ function initialize() {
         for (var ix = 0; ix < AMOUNTX; ix++) {
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 90) + (Math.sin((iy + count) * 0.5) * 90);
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 110) + (Math.sin((iy + count) * 0.5) * 110);
                 particle.scale.x = particle.scale.y = Math.max((Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2 + 3, 5);
             }
         }
 
         renderer.render(scene, camera);
         count += 0.03;
+        console.log(count);
     }
 
     setInterval(function () {
