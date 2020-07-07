@@ -377,20 +377,21 @@ form .send:disabled:hover {
 }
 
 nav .collapse,
+/* .navbar-toggler, */
 nav i {
-    display: none;
+    display: none !important;
 }
 
 @media only screen and (max-width: 1170px) {
-
     nav .left,
     nav .right {
         display: none;
     }
 
     nav .collapse,
+    /* .navbar-toggler, */
     nav i {
-        display: unset;
+        display: unset !important;
     }
 
     nav i {
@@ -413,6 +414,7 @@ nav i {
         overflow: hidden;
         opacity: 0;
         transition: 0.3s;
+        transform: translateY(calc(-100% - 10vh));
     }
 
     nav .navbar-nav> :last-child {
@@ -443,4 +445,23 @@ nav i {
     nav a:hover {
         background-color: #ddd !important;
     }
+
+    .form-overlay {
+        width: 90%;
+    }
+
+    .form-exit {
+        top: 1vh;
+        right: 2%;
+        color: #fff;
+    }
+}
+
+@media only screen and (orientation:portrait) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
 }

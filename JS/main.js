@@ -22,9 +22,11 @@ function initialize() {
         if ($(this).attr("aria-expanded") == "true") {
             $(this).css("transform", "rotateZ(0deg)");
             $(".navbar-nav").css("opacity", "0");
+            $(".navbar-nav").css("transform", "translateY(calc(-100% - 10vh))");
         } else {
             $(this).css("transform", "rotateZ(180deg)");
             $(".navbar-nav").css("opacity", "1");
+            $(".navbar-nav").css("transform", "translateY(0%)");
         }
     })
 

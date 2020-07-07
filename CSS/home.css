@@ -122,10 +122,12 @@ hr {
     margin-left: -2.5%;
 }
 
-.b2 .row div {
+.b2 .row>div {
     margin-left: 2.5%;
     margin-right: 2.5%;
     padding: 0 !important;
+    min-width: 50vh;
+    max-width: 70vh;
 }
 
 .b2 .label {
@@ -180,9 +182,15 @@ hr {
     transition: 0.3s;
 }
 
+.b3 .row {
+    justify-content: center;
+}
+
 .b3 .col-5 {
     margin-top: 3vh;
     margin-bottom: 8vh;
+    min-width: 70vh;
+    max-width: 95vh;
 }
 
 .b3 .text {
@@ -241,6 +249,8 @@ hr {
 .b4>div>div {
     margin-left: 1vh;
     margin-right: 1vh;
+    min-width: 33vh;
+    max-width: 45vh;
 }
 
 .b4 .desc {
@@ -255,4 +265,39 @@ hr {
     padding-bottom: 3vh;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (orientation:portrait) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body,
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .metric-cover p {
+        top: 15vh;
+    }
+
+    .b1 p.label {
+        width: 80%;
+    }
+
+    .b1 p.desc {
+        width: 90%;
+    }
+
+    .b2 .row>div,
+    .b3 .col-5 {
+        min-width: 40vh;
+    }
+
+    .b3 .img-wrap {
+        display: none;
+    }
 }
