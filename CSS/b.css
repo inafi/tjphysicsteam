@@ -264,12 +264,19 @@ body::before {
     text-align: center;
 }
 
+.resources .row{
+    display: flex;
+    justify-content: center;
+}
+
 .resources .col-c {
     height: 48vh;
     border-radius: 1.5vh;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
     margin-bottom: 7vh;
     width: 20%;
+    min-width: 38vh;
     overflow: hidden;
     transition: 0.3s;
     box-shadow:
