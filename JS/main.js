@@ -79,7 +79,7 @@ function initialize() {
         }
     });
 
-    $('body * ').on('touchstart', function () {
+    $('.navbar-toggler:not').on('touchstart', function () {
         console.log($(this));
         $(this)[0].click();
     });
