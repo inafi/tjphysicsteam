@@ -27,7 +27,7 @@ function initialize() {
         } 
     })
 
-    $(".exit, .overlay-cover").on("mousedown", function () {
+    $(".exit, .overlay-cover").on("mousedown click", function () {
         $(".exit").hide();
         $(".overlay-cover").hide();
         $("body").css("overflow-y", "scroll");
