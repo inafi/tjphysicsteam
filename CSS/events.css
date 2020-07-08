@@ -235,7 +235,7 @@ nav {
     color: #1b98e0;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
     .row {
         justify-content: center;
     }
@@ -254,4 +254,4 @@ nav {
     .overlay {
         height: 75vh;
     }
-}
+} */

@@ -457,11 +457,11 @@ nav i {
     }
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
 
     html,
     body {
         overflow-x: hidden;
     }
 
-}
+} */

@@ -136,13 +136,59 @@ function initialize() {
         }
     }, 20)
 
-    var ds = new DragSelect({
-        selectables: document.querySelectorAll('p'),
-        area: document.querySelector('body')
-    });
+    try {
+        var ds = new DragSelect({
+            selectables: document.querySelectorAll('p'),
+            area: document.querySelector('body')
+        });
+    
+        $('body').on('mousedown', 'p', function (event) {
+            ds.removeSelection($(this).get(0));
+        });
+        
+    } catch (error) {
+        
+    }
 
-    $('body').on('mousedown', 'p', function (event) {
-        ds.removeSelection($(this).get(0));
-    });
+    var css = `
+    @media only screen and (orientation:portrait) {
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+    
+        body,
+        .row {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+    
+        .metric-cover p {
+            top: 15vh;
+        }
+    
+        .b1 p.label {
+            width: 80%;
+        }
+    
+        .b1 p.desc {
+            width: 90%;
+        }
+    
+        .b2 .row>div,
+        .b3 .col-5 {
+            min-width: 40vh;
+        }
+    
+        .b3 .img-wrap {
+            display: none;
+        }
+    }
+    `
+
+    if (isMobile){
+        $("head").append('<style>' + css + '</style>');
+    }
 }
 $(initialize);

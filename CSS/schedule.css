@@ -125,7 +125,7 @@ body {
     display: none;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
 
     .wrap,
     .side,
@@ -159,4 +159,4 @@ body {
     .fc-scroller::-webkit-scrollbar {
         width: 0px;
     }
-}
+} */

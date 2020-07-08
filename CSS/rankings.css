@@ -118,7 +118,7 @@ footer {
     margin-top: 0vh;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
     .table-wrap {
         overflow-x: scroll !important;
         width: 90%;
@@ -136,4 +136,4 @@ footer {
     table.student tr.content:hover {
         transform: scaleX(1) scaleY(1);
     }
-}
+} */

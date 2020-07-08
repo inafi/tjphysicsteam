@@ -267,7 +267,7 @@ hr {
     justify-content: center;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
 
     html,
     body {
@@ -300,4 +300,4 @@ hr {
     .b3 .img-wrap {
         display: none;
     }
-}
+} */
