@@ -20,15 +20,22 @@ function initialize() {
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
         }
+        var lineheight = $('#last-year').offset().top - $('#first-year').offset().top;
+    
+        $(".line").css("height", lineheight + "px");
     }, 20)
 
-    var ds = new DragSelect({
-        selectables: document.querySelectorAll('h4, p'),
-        area: document.querySelector('body')
-    });
+    try {
+        var ds = new DragSelect({
+            selectables: document.querySelectorAll('h4, p'),
+            area: document.querySelector('body')
+        });
+    
+        $('body').on('mousedown', 'p', function (event) {
+            ds.removeSelection($(this).get(0));
+        });
+    } catch (error) {
+    }
 
-    $('body').on('mousedown', 'p', function(event) {
-        ds.removeSelection($(this).get(0));
-    });
 }
 $(initialize);
