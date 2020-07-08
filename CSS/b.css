@@ -11,7 +11,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, #3bb5fc, #4568dc);    
+    background: linear-gradient(to right, #3bb5fc, #4568dc);
     -webkit-mask: linear-gradient(#fff, transparent);
     mask: linear-gradient(#fff, transparent);
 }
@@ -111,6 +111,7 @@ body::before {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .fa-chevron-left.sa:hover,
 .fa-chevron-right.sa:hover {
     color: #2c2379;
@@ -264,7 +265,7 @@ body::before {
     text-align: center;
 }
 
-.resources .row{
+.resources .row {
     display: flex;
     justify-content: center;
 }
@@ -286,6 +287,13 @@ body::before {
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 60px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resources .col-place {
+    margin-left: 1%;
+    margin-right: 1%;
+    min-width: 38vh;
+    width: 20%;
 }
 
 .resources .col-c:hover {

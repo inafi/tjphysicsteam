@@ -15,8 +15,16 @@ nav {
     margin: 0 !important;
 }
 
-.row > div{
-    width: 75%;
+.event-row {
+    display: flex;
+    justify-content: center;
+}
+
+.event-row>div {
+    min-width: 48vh;
+    margin: 0 !important;
+    padding-left: 1% !important;
+    padding-right: 1% !important;
 }
 
 .large {
@@ -24,7 +32,7 @@ nav {
     height: 60vh;
     background-color: #fff;
     border-radius: 2vh;
-    margin: 10vh auto 8vh auto;
+    margin: 10vh auto 8vh auto !important;
     display: block;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -232,11 +240,12 @@ nav {
         justify-content: center;
     }
 
-    .large, .event{
+    .large,
+    .event {
         min-width: 48vh;
     }
 
-    .overlay{
+    .overlay {
         height: 75vh;
     }
 }
