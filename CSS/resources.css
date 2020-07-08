@@ -200,7 +200,6 @@ body {
 .viewer {
     width: 84%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-    height: 38vh;
     white-space: nowrap;
     margin-top: 1vh;
     margin-left: auto;
@@ -210,11 +209,14 @@ body {
     overflow: hidden;
     text-align: left;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pdf-wrap {
     transition: 0.3s;
-    width: 92.142857%;
+    width: calc(100% - 13vh);
     overflow: hidden;
     display: block;
     margin: auto;
@@ -258,29 +260,25 @@ body {
 }
 
 .fa-chevron-left.pa {
-    position: absolute;
     font-size: 3vh !important;
-    margin-top: 18vh;
-    left: 1.6%;
-    width: 3%;
+    padding-top: 18vh;
     height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
+    transform: translateX(2.5vh)
 }
 
 .fa-chevron-right.pa {
-    position: absolute;
     font-size: 3vh !important;
-    margin-top: 18vh;
-    right: -0.6%;
-    width: 3%;
+    padding-top: 18vh;
     height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
+    transform: translateX(-2.5vh)
 }
 
 /*Toggle*/
