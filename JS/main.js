@@ -89,11 +89,6 @@ function initialize() {
     }
 
     var css = `
-
-        html,
-        body {
-            overflow-x: hidden;
-        }
     
     `
 
