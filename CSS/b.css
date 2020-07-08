@@ -31,7 +31,7 @@ body::before {
 
 /*Schedule*/
 .schedule {
-    width: 94%;
+    width: calc(100% - 10vh);
     height: 10vh;
     text-align: center;
     overflow: hidden;
@@ -92,8 +92,7 @@ body::before {
     font-size: 3vh !important;
     width: 3%;
     height: 10vh;
-    padding-left: 1%;
-    padding-top: 5.2vh;
+    padding-top: 4.4vh;
     cursor: pointer;
     transition: 0.3s;
     transform: translateX(-2vh);
@@ -103,8 +102,7 @@ body::before {
     font-size: 3vh !important;
     width: 3%;
     height: 10vh;
-    padding-left: 1%;
-    padding-top: 5.2vh;
+    padding-top: 4.4vh;
     cursor: pointer;
     transition: 0.3s;
     transform: translateX(2vh);
@@ -187,11 +185,14 @@ body::before {
     transition: 0.3s;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pdf-wrap {
     transition: 0.3s;
-    width: 92.142857%;
+    width: calc(100% - 13vh);
     overflow: hidden;
     display: block;
     margin: auto;
@@ -234,29 +235,25 @@ body::before {
 }
 
 .fa-chevron-left.pa {
-    position: absolute;
     font-size: 3vh !important;
-    left: 1.6%;
-    top: 18vh;
-    width: 3%;
+    padding-top: 18vh;
     height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
+    transform: translateX(2.5vh)
 }
 
 .fa-chevron-right.pa {
-    position: absolute;
     font-size: 3vh !important;
-    right: -0.6%;
-    top: 18vh;
-    width: 3%;
+    padding-top: 18vh;
     height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
+    transform: translateX(-2.5vh)
 }
 
 /*Resources*/
@@ -290,7 +287,7 @@ body::before {
         0 60px 40px rgba(0, 0, 0, 0.15);
 }
 
-.col-place{
+.col-place {
     width: 20%;
     min-width: 38vh;
     margin-left: 1%;

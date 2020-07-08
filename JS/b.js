@@ -203,16 +203,36 @@ function initialize() {
     });
 
     var css = `
-    @media only screen and (orientation:portrait) {
+    .schedule,
+    .pdf-wrap {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 
-        .slider,
-        .lectures,
-        .viewer {
-            display: none;
-        }
-    
+    .fa-chevron-left.sa,
+    .fa-chevron-right.sa,
+    .fa-chevron-left.pa,
+    .fa-chevron-right.pa
+     {
+        display: none;
+    }
+
+
+    @media only screen and (orientation:portrait) {
         .resources {
             margin-top: 10vh;
+        }
+
+        .pdf{
+            margin-right: 10%;
+        }
+
+        .schedule {
+            width: 95%;
+        }
+    
+        .pdf-wrap {
+            width: 90%;
         }
     }
     
@@ -221,11 +241,19 @@ function initialize() {
         .pdf .label {
             transform: translateY(2vh);
         }
-    
-        .schedule,
+
+        .fa-chevron-left.sa,
+        .fa-chevron-right.sa {
+
+            padding-top: 5.5vh;
+        }
+
+        .schedule {
+            width: 98%;
+        }
+
         .pdf-wrap {
-            overflow-x: scroll;
-            overflow-y: hidden;
+            width: 97%;
         }
     }
     `
