@@ -342,7 +342,7 @@ body {
     margin-top: 3vh;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
     .teams .col-3 {
         width: 0% !important;
         flex: 0 0 0 !important;
@@ -376,4 +376,4 @@ body {
     .toggle-wrap p{
         transform: translateY(-1vh);
     }
-}
+} */

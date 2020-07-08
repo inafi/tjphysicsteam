@@ -180,7 +180,6 @@ function initialize() {
         previnfo = $(this).attr("name");
     });
 
-
     function moveLeftPdf() {
         currp += 23;
         viewp -= 23;
@@ -202,5 +201,37 @@ function initialize() {
         if (viewp + 23 < nump * 23)
             moveRightPdf();
     });
+
+    var css = `
+    @media only screen and (orientation:portrait) {
+
+        .slider,
+        .lectures,
+        .viewer {
+            display: none;
+        }
+    
+        .resources {
+            margin-top: 10vh;
+        }
+    }
+    
+    @media only screen and (orientation:landscape) {
+    
+        .pdf .label {
+            transform: translateY(2vh);
+        }
+    
+        .schedule,
+        .pdf-wrap {
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+    }
+    `
+
+    if (isMobile){
+        $("head").append('<style>' + css + '</style>');
+    }
 }
 $(initialize);

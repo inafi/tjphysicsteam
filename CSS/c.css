@@ -325,7 +325,7 @@ footer {
     transition: 0.3s;
 }
 
-@media only screen and (orientation:portrait) {
+/* @media only screen and (orientation:portrait) {
 
     .slider,
     .lectures,
@@ -349,4 +349,4 @@ footer {
         overflow-x: scroll;
         overflow-y: hidden;
     }
-}
+} */

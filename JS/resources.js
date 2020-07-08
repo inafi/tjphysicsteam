@@ -228,5 +228,47 @@ function initialize() {
             moveRightPdf();
         console.log(viewp, nump * 23, nump)
     });
+
+    var css = `
+    @media only screen and (orientation:portrait) {
+        .teams .col-3 {
+            width: 0% !important;
+            flex: 0 0 0 !important;
+        }
+    
+        .slider,
+        .lectures,
+        .viewer,
+        .topic-wrap,
+        #pastsets,
+        .toggle-center {
+            display: none !important;
+        }
+    
+        .resources .title> :first-child {
+            margin-top: 2vh;
+        }
+    }
+    
+    @media only screen and (orientation:landscape) {
+    
+        .pdf .label {
+            transform: translateY(2vh);
+        }
+    
+        .pdf-wrap {
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+    
+        .toggle-wrap p{
+            transform: translateY(-1vh);
+        }
+    }
+    `
+
+    if (isMobile){
+        $("head").append('<style>' + css + '</style>');
+    }
 }
 $(initialize);
