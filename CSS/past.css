@@ -130,7 +130,7 @@ body::before {
 
     .timeline .timeline-content {
         max-width: 100%;
-        width: auto;
+        width: 100%;
         margin-left: 70px;
     }
 
