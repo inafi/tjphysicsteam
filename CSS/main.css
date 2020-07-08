@@ -20,10 +20,6 @@
     font-weight: bold;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 body {
     font-family: "Nunito", "arial" !important;
     overflow-x: hidden;

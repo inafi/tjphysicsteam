@@ -89,7 +89,9 @@ function initialize() {
     }
 
     var css = `
-    
+    html {
+        overflow-x: hidden;
+    } 
     `
 
     if (isMobile){
