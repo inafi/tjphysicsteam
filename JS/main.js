@@ -89,14 +89,13 @@ function initialize() {
     }
 
     var css = `
-    @media only screen and (orientation:portrait) {
 
         html,
         body {
             overflow-x: hidden;
         }
     
-    };`
+    `
 
     if (isMobile){
         $("head").append('<style>' + css + '</style>');
