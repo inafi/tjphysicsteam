@@ -60,7 +60,7 @@ function initialize() {
     //This is for adjusting the calendar slider at the top
     //Just use a date object and get the UTC month
     var month = 9;
-    var save;
+    var save; //Used to save index of month in the get array
 
     $.ajax({
         url: req,
@@ -103,27 +103,29 @@ function initialize() {
         }
     });
 
-    var total = num * 15;
-    var view = 94;
-    var curr = save * -15;
+    var size = $(".event").width() + .02 * $(window).width();
+    var total = num * size;
+    // console.log($(".event").width() + .02 * $(window).width(), .24 * $(window).height() + .02 * $(window).width(), .15 * $(window).width() + .02 * $(window).width())
+    var view = $(".schedule").width();
+    var curr = save * -1 * size;
 
-    view += save * 15;
-    $(".event-wrap").css("transform", "translateX(" + save * -15 + "%)");
+    view += save * size;
+    $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
 
     function moveLeft() {
-        curr += 15;
-        view -= 15;
-        $(".event-wrap").css("transform", "translateX(" + curr + "%)");
+        curr += size;
+        view -= size;
+        $(".event-wrap").css("transform", "translateX(" + curr + "px)");
     };
 
     function moveRight() {
-        curr -= 15;
-        view += 15;
-        $(".event-wrap").css("transform", "translateX(" + curr + "%)");
+        curr -= size;
+        view += size;
+        $(".event-wrap").css("transform", "translateX(" + curr + "px)");
     };
 
     $('.fa-chevron-left.sa').click(function () {
-        if (view > 94)
+        if (view > $(".schedule").width())
             moveLeft();
     });
 
@@ -132,8 +134,17 @@ function initialize() {
             moveRight();
     });
 
+    $(window).on('resize', function () {
+        size = $(".event").width() + .02 * $(window).width();
+        total = num * size;
+        view = $(".schedule").width();
+        curr = save * -1 * size;
+        $(".event-wrap").css("transform", "translateX(0%)");
+    });
+
+    var sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
     var nump;
-    var viewp = 78;
+    var viewp = $(".pdf-wrap").width();
     var currp = 0;
     var previnfo = "";
 
@@ -151,7 +162,7 @@ function initialize() {
                     text = text.split("\n");
                     nump = 0;
                     $(".pdf-move").html("");
-                    viewp = 78;
+                    viewp = $(".pdf-wrap").width();
                     currp = 0;
                     $(".pdf-move").css("transform", "translateX(" + currp + "%)");
                     var fold = $(this).attr("name");
@@ -179,27 +190,33 @@ function initialize() {
         }
         previnfo = $(this).attr("name");
     });
-
+    
     function moveLeftPdf() {
-        currp += 23;
-        viewp -= 23;
-        $(".pdf-move").css("transform", "translateX(" + currp + "%)");
+        currp += sizep;
+        viewp -= sizep;
+        $(".pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     function moveRightPdf() {
-        currp -= 23;
-        viewp += 23;
-        $(".pdf-move").css("transform", "translateX(" + currp + "%)");
+        currp -= sizep;
+        viewp += sizep;
+        $(".pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     $('.fa-chevron-left.pa').click(function () {
-        if (viewp > 78)
+        if (viewp > $(".pdf-wrap").width())
             moveLeftPdf();
     });
 
     $('.fa-chevron-right.pa').click(function () {
-        if (viewp + 23 < nump * 23)
+        if (viewp < nump * sizep)
             moveRightPdf();
+    });
+
+    $(window).on('resize', function () {
+        sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
+        viewp = $(".pdf-wrap").width();
+        $(".pdf-move").css("transform", "translateX(0%)");
     });
     
     var css = `

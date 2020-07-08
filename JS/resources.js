@@ -55,8 +55,9 @@ function initialize() {
         $(this).children(".label").css("margin-left", "0px");
     });
 
+    var sizet = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
     var numpt;
-    var viewpt = 78;
+    var viewpt = $(".pdf-wrap").width();
     var currpt = 0;
     var previnfo = "";
 
@@ -74,7 +75,7 @@ function initialize() {
                     text = text.split("\n");
                     numpt = 0;
                     $("#tests .pdf-move").html("");
-                    viewpt = 78;
+                    viewpt = $(".pdf-wrap").width();
                     currpt = 0;
                     $("#tests .pdf-move").css("transform", "translateX(" + currpt + "%)");
                     var fold = $(this).attr("name");
@@ -104,29 +105,34 @@ function initialize() {
     });
 
     function moveLeftPdfT() {
-        currpt += 23;
-        viewpt -= 23;
-        $("#tests .pdf-move").css("transform", "translateX(" + currpt + "%)");
+        currpt += sizet;
+        viewpt -= sizet;
+        $("#tests .pdf-move").css("transform", "translateX(" + currpt + "px)");
     };
 
     function moveRightPdfT() {
-        currpt -= 23;
-        viewpt += 23;
-        $("#tests .pdf-move").css("transform", "translateX(" + currpt + "%)");
+        currpt -= sizet;
+        viewpt += sizet;
+        $("#tests .pdf-move").css("transform", "translateX(" + currpt + "px)");
     };
 
     $('#tests .fa-chevron-left.pa').click(function () {
-        if (viewpt > 78)
+        if (viewpt > $(".pdf-wrap").width())
             moveLeftPdfT();
-        console.log(viewpt, numpt * 23, numpt)
     });
 
     $('#tests .fa-chevron-right.pa').click(function () {
-        if (viewpt + 23 < numpt * 23)
+        if (viewpt < numpt * sizet)
             moveRightPdfT();
-        console.log(viewpt, numpt * 23, numpt)
     });
 
+    $(window).on('resize', function () {
+        sizet = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
+        viewp = $(".pdf-wrap").width();
+        $("#tests .pdf-move").css("transform", "translateX(0%)");
+    });
+
+    var sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
     var nump;
     var viewp = 78;
     var currp = 0;
@@ -137,7 +143,7 @@ function initialize() {
             text = text.split("\n");
             nump = 0;
             $("#sets .pdf-move").html("");
-            viewp = 78;
+            viewp = $(".pdf-wrap").width();
             currp = 0;
             $("#sets .pdf-move").css("transform", "translateX(" + currp + "%)");
             var fold = "Problems";
@@ -186,7 +192,7 @@ function initialize() {
                 text = text.split("\n");
                 nump = 0;
                 $("#sets .pdf-move").html("");
-                viewp = 78;
+                viewp = $(".pdf-wrap").width();
                 currp = 0;
                 $("#sets .pdf-move").css("transform", "translateX(" + currp + "%)");
                 var fold = $(this).text();
@@ -206,27 +212,31 @@ function initialize() {
     })
 
     function moveLeftPdf() {
-        currp += 23;
-        viewp -= 23;
-        $("#sets .pdf-move").css("transform", "translateX(" + currp + "%)");
+        currp += sizep;
+        viewp -= sizep;
+        $("#sets .pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     function moveRightPdf() {
-        currp -= 23;
-        viewp += 23;
-        $("#sets .pdf-move").css("transform", "translateX(" + currp + "%)");
+        currp -= sizep;
+        viewp += sizep;
+        $("#sets .pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     $('#sets .fa-chevron-left.pa').click(function () {
-        if (viewp > 78)
+        if (viewp > $(".pdf-wrap").width())
             moveLeftPdf();
-        console.log(viewp, nump * 23, nump)
     });
 
     $('#sets .fa-chevron-right.pa').click(function () {
-        if (viewp + 23 < nump * 23)
+        if (viewp < nump * sizep)
             moveRightPdf();
-        console.log(viewp, nump * 23, nump)
+    });
+
+    $(window).on('resize', function () {
+        sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
+        viewp = $(".pdf-wrap").width();
+        $("#sets .pdf-move").css("transform", "translateX(0%)");
     });
 
     var css = `
@@ -252,6 +262,14 @@ function initialize() {
         .resources .title> :first-child {
             margin-top: 2vh;
         }
+    
+        .pdf{
+            margin-right: 10%;
+        }
+
+        .pdf-wrap {
+            width: 90%;
+        }
     }
     
     @media only screen and (orientation:landscape) {
@@ -263,7 +281,7 @@ function initialize() {
         .toggle-wrap p{
             transform: translateY(-1vh);
         }
-        
+
         .pdf-wrap {
             width: 97%;
         }
