@@ -230,19 +230,23 @@ function initialize() {
     });
 
     var css = `
+    .pdf-wrap {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .fa-chevron-left.sa,
+    .fa-chevron-right.sa,
+    .fa-chevron-left.pa,
+    .fa-chevron-right.pa
+     {
+        display: none;
+    }
+
     @media only screen and (orientation:portrait) {
         .teams .col-3 {
             width: 0% !important;
             flex: 0 0 0 !important;
-        }
-    
-        .slider,
-        .lectures,
-        .viewer,
-        .topic-wrap,
-        #pastsets,
-        .toggle-center {
-            display: none !important;
         }
     
         .resources .title> :first-child {
@@ -256,13 +260,12 @@ function initialize() {
             transform: translateY(2vh);
         }
     
-        .pdf-wrap {
-            overflow-x: scroll;
-            overflow-y: hidden;
-        }
-    
         .toggle-wrap p{
             transform: translateY(-1vh);
+        }
+        
+        .pdf-wrap {
+            width: 97%;
         }
     }
     `
