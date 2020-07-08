@@ -249,3 +249,9 @@ nav {
         height: 75vh;
     }
 }
+
+@media only screen and (orientation:landscape) {
+    .overlay {
+        height: 75vh;
+    }
+}
