@@ -215,6 +215,7 @@ function initialize() {
     $(window).on('resize', function () {
         sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
         viewp = $(".pdf-wrap").width();
+        currp = 0;
         $(".pdf-move").css("transform", "translateX(0%)");
     });
 

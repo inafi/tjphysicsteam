@@ -129,6 +129,7 @@ function initialize() {
     $(window).on('resize', function () {
         sizet = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
         viewp = $(".pdf-wrap").width();
+        currpt = 0;
         $("#tests .pdf-move").css("transform", "translateX(0%)");
     });
 
@@ -236,6 +237,7 @@ function initialize() {
     $(window).on('resize', function () {
         sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
         viewp = $(".pdf-wrap").width();
+        currp = 0;
         $("#sets .pdf-move").css("transform", "translateX(0%)");
     });
 
