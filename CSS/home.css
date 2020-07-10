@@ -28,9 +28,20 @@ nav span:hover {
     transform: translateY(-25vh);
     top: 0;
     height: 100vh;
+}
+
+.metric-cover .back {
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../Pics/home/metric.png");
     background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 0;
+    display: none;
 }
 
 .metric-cover {
@@ -52,6 +63,7 @@ body {
     margin: auto;
     color: #fff;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 /*b1*/

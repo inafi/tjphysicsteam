@@ -21,8 +21,7 @@ function initialize() {
         init();
         animate();
     } else{
-        $(".metric").css("background-position-y", "19vh");
-        $(".metric").css("background-image", "url('../Pics/home/metric.png')");
+        $(".metric-cover .back").css("display", "unset");
     }
 
     function init() {
