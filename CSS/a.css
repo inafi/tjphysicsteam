@@ -15,4 +15,3 @@ body::before {
     -webkit-mask: linear-gradient(#fff, transparent);
     mask: linear-gradient(#fff, transparent);
 }
-
