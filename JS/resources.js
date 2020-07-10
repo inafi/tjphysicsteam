@@ -276,10 +276,6 @@ function initialize() {
     
     @media only screen and (orientation:landscape) {
     
-        .pdf .label {
-            transform: translateY(2vh);
-        }
-    
         .toggle-wrap p{
             transform: translateY(-1vh);
         }

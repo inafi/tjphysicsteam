@@ -254,10 +254,6 @@ function initialize() {
     }
     
     @media only screen and (orientation:landscape) {
-    
-        .pdf .label {
-            transform: translateY(2vh);
-        }
 
         .fa-chevron-left.sa,
         .fa-chevron-right.sa {
