@@ -142,9 +142,9 @@ function initialize() {
         $(".event-wrap").css("transform", "translateX(0%)");
     });
 
-    var sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
+    var sizep = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03);
     var nump;
-    var viewp = $(".pdf-wrap").width();
+    var viewp = parseInt($(".pdf-wrap").width());;
     var currp = 0;
     var previnfo = "";
 
@@ -162,7 +162,7 @@ function initialize() {
                     text = text.split("\n");
                     nump = 0;
                     $(".pdf-move").html("");
-                    viewp = $(".pdf-wrap").width();
+                    viewp = parseInt($(".pdf-wrap").width());
                     currp = 0;
                     $(".pdf-move").css("transform", "translateX(" + currp + "%)");
                     var fold = $(this).attr("name");
@@ -214,8 +214,8 @@ function initialize() {
     });
 
     $(window).on('resize', function () {
-        sizep = Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03;
-        viewp = $(".pdf-wrap").width();
+        sizep = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03);
+        viewp = parseInt($(".pdf-wrap").width());
         currp = 0;
         $(".pdf-move").css("transform", "translateX(0%)");
     });

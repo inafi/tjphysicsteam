@@ -15,6 +15,12 @@ nav {
     margin: 0 !important;
 }
 
+.event-small{
+    width: 75%;
+    margin-left: 12.5% !important;
+    margin-right: 12.5% !important;
+}
+
 .event-row {
     display: flex;
     justify-content: center;
@@ -22,7 +28,7 @@ nav {
 
 .event-row>div {
     min-width: 48vh;
-    margin: 0 !important;
+    margin: 0 .25vh !important;
     padding-left: 1% !important;
     padding-right: 1% !important;
 }
