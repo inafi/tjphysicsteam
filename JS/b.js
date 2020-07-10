@@ -103,9 +103,9 @@ function initialize() {
         }
     });
 
-    var size = $(".event").width() + .02 * $(window).width();
+    var size = parseInt($(".event").width() + .02 * $(window).width());
     var total = num * size;
-    var view = $(".schedule").width();
+    var view = parseInt($(".schedule").width());
     var curr = save * -1 * size;
 
     view += save * size;
@@ -134,9 +134,9 @@ function initialize() {
     });
 
     $(window).on('resize', function () {
-        size = $(".event").width() + .02 * $(window).width();
+        size = parseInt($(".event").width() + .02 * $(window).width());
         total = num * size;
-        view = $(".schedule").width();
+        view = parseInt($(".schedule").width());
         curr = save * -1 * size;
         $(".event-wrap").css("transform", "translateX(0%)");
     });
