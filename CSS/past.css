@@ -119,7 +119,7 @@ body::before {
     border-color: transparent transparent transparent transparent;
 }
 
-@media screen and (max-width: 768px), (orientation:portrait){
+@media screen and (max-width: 1155px), (orientation:portrait){
     .line {
         left: 50px;
     }

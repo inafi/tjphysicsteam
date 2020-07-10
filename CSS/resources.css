@@ -257,6 +257,7 @@ body {
     z-index: 1;
     transition: 0.3s;
     padding-top: 0vh;
+    margin-bottom: 1.7vh !important;
 }
 
 .fa-chevron-left.pa {
