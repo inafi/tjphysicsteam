@@ -70,6 +70,10 @@ function initialize() {
             .overlay {
                 height: 75vh;
             }
+
+            .event-row{
+                transform: translateX(-1%);
+            }
         }
         
         @media only screen and (orientation:landscape) {

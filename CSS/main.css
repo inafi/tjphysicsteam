@@ -27,6 +27,11 @@ body {
     margin: 0 !important;
 }
 
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 p {
     user-select: text;
     transition: 0.3s;
