@@ -166,6 +166,7 @@ hr {
 /*Outreach*/
 .b3 img {
     width: 100%;
+    min-height: 40vh;
 }
 
 .b3 .img-wrap {

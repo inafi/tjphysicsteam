@@ -463,8 +463,9 @@ form .send:disabled:hover {
     background-color: #bbb !important;
 }
 
-nav .collapse {
-    display: none !important;
+nav .collapse,
+nav #nav-icon3 {
+    display: none;
 }
 
 @media only screen and (max-width: 1170px) {
@@ -475,6 +476,8 @@ nav .collapse {
     }
 
     nav .collapse {
+    nav .collapse,
+    #nav-icon3 {
         display: unset !important;
     }
 

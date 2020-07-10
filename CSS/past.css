@@ -119,13 +119,26 @@ body::before {
     border-color: transparent transparent transparent transparent;
 }
 
-@media screen and (max-width: 1155px), (orientation:portrait){
+
+/* @media screen and (min-width: 1120px) and (max-width: 1365px) {
+
+    .timeline-item {
+        width: 85%;
+    }
+} */
+
+@media screen and (max-width: 1365px),
+(orientation:portrait) {
     .line {
         left: 50px;
     }
 
     .timeline .timeline-img {
         left: 50px;
+    }
+
+    .timeline-item {
+        max-width: 120vh;
     }
 
     .timeline .timeline-content {
