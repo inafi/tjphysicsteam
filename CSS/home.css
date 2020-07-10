@@ -39,23 +39,6 @@ nav span:hover {
     text-align: center;
 }
 
-.metric-cover div.wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translateX();
-}
-
-.metric-cover img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    z-index: 0;
-    min-height: 75vh;
-}
-
 .wrap-body,
 body {
     background-color: #fff;
@@ -69,7 +52,6 @@ body {
     margin: auto;
     color: #fff;
     transform: translateX(-50%);
-    z-index: 1;
 }
 
 /*b1*/
