@@ -154,6 +154,7 @@ body {
     margin-right: 1%;
     margin-bottom: 4vh;
     min-width: 38vh;
+    max-width: 40vh;
     width: 20%;
     overflow: hidden;
     position: relative;
@@ -226,6 +227,7 @@ body {
     height: 30vh;
     width: 20%;
     min-width: 28vh;
+    max-width: 45vh;
     background-color: #fff;
     border-radius: 1.5vh;
     margin-top: 2vh;
@@ -253,6 +255,7 @@ body {
     text-align: center;
     width: 20%;
     min-width: 28vh;
+    max-width: 45vh;
     overflow: hidden;
     z-index: 1;
     transition: 0.3s;

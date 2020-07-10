@@ -142,7 +142,7 @@ function initialize() {
         $(".event-wrap").css("transform", "translateX(0%)");
     });
 
-    var sizep = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03);
+    var sizep = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
     var nump;
     var viewp = parseInt($(".pdf-wrap").width());;
     var currp = 0;

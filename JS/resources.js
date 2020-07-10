@@ -55,7 +55,7 @@ function initialize() {
         $(this).children(".label").css("margin-left", "0px");
     });
 
-    var sizet = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03);
+    var sizet = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
     var numpt;
     var viewpt = parseInt($(".pdf-wrap").width());
     var currpt = 0;
@@ -65,7 +65,7 @@ function initialize() {
         if ($("#tests").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $("#tests").css("height", "38vh");
             $("#tests").css("margin-bottom", "6vh");
-            $(".topic").each(function(){
+            $(".topic").each(function () {
                 $(this).css("color", "#1B98E0");
             })
             $(this).css("color", "#3D348B");
@@ -94,7 +94,7 @@ function initialize() {
                 })
             $("#tests").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
-            $(".topic").each(function(){
+            $(".topic").each(function () {
                 $(this).css("color", "#1B98E0");
             })
             $("#tests").css("height", "0vh");
@@ -133,7 +133,7 @@ function initialize() {
         $("#tests .pdf-move").css("transform", "translateX(0%)");
     });
 
-    var sizep = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03)
+    var sizet = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
     var nump;
     var viewp = parseInt(parseInt($(".pdf-wrap").width()));
     var currp = 0;
@@ -290,7 +290,7 @@ function initialize() {
     }
     `
 
-    if (isMobile){
+    if (isMobile) {
         $("head").append('<style>' + css + '</style>');
     }
 }
