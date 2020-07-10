@@ -202,7 +202,7 @@ button:focus {
 
 /*Scrollbar*/
 ::-webkit-scrollbar {
-    width: 13px;
+    width: 1vh;
 }
 
 /* Track */

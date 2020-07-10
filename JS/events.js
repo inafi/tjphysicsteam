@@ -31,6 +31,9 @@ function initialize() {
             }, 100);
             $("body").css("overflow-y", "hidden");
         }
+        if (isMobile) {
+            $(".event-row").css("transform", "none")
+        }
     })
 
     $(".exit, .overlay-cover").on("mousedown click", function () {
@@ -38,6 +41,8 @@ function initialize() {
         $(".overlay-cover").hide();
         $("body").css("overflow-y", "scroll");
         $(".overlay").css("opacity", "0");
+        if (isMobile && window.innerHeight > window.innerWidth)
+            $(".event-row").css("transform", "translateX(-1%)");
         setTimeout(() => {
             $(".overlay").hide();
         }, 200);
