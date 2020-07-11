@@ -43,40 +43,36 @@ function initialize() {
     }
 
     var css = `
-    @media only screen and (orientation:portrait) {
+    .fc-scroller::-webkit-scrollbar {
+        width: 0px;
+    }
 
-        .wrap,
-        .side,
-        footer {
-            display: none;
+    @media only screen and (orientation:portrait) {
+        .schedule {
+            overflow-x: scroll;
         }
-    
-        .land-warning {
-            display: unset;
-            color: #000;
-            text-align: center;
-            font-size: 4vh;
-            padding: 3vh 2vh;
-            width: 90%;
-            left: 5%;
-            margin-top: 20vh;
-            position: absolute;
-            background-color: #ffffff;
-            border-radius: 2vh;
-            box-shadow:
-                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-                0 12.5px 10px rgba(0, 0, 0, 0.06),
-                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-                0 60px 40px rgba(0, 0, 0, 0.12);
+
+        .fc-content {
+            height: 2vh !important;
+        }
+
+        .fc-title {
+            font-size: 1.3vh !important;
+        }
+
+        .wrap {
+            width: 150%;
+            height: 70vh;
+            margin-bottom: 5vh;
         }
     }
     
     @media only screen and (orientation:landscape) {
-        .fc-scroller::-webkit-scrollbar {
-            width: 0px;
+        .wrap {
+            width: 90%;
+            height: 125vh;
         }
+    
     }
     `
 
