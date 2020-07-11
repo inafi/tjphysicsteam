@@ -401,7 +401,7 @@ form .wrap {
 
 form label {
     font-size: 2.3vh;
-    width: 100%;
+    width: 90%;
     margin-left: 10%;
     color: #3D348B;
     text-align: left;
@@ -409,7 +409,7 @@ form label {
 
 .checks> :first-child {
     font-size: 2.3vh;
-    width: 100%;
+    width: 90%;
     margin-left: 10%;
     color: #3D348B;
     margin-bottom: 1vh;
@@ -418,7 +418,7 @@ form label {
 
 .checks label {
     font-size: 2vh;
-    width: 100%;
+    width: 88%;
     margin-left: 12%;
     color: #06D6A0;
 }
