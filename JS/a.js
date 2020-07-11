@@ -99,7 +99,8 @@ function initialize() {
                     num -= 1;
                 }
             }
-            ds.addSelectables(document.querySelectorAll('div.event p'));
+            if (!isMobile)
+                ds.addSelectables(document.querySelectorAll('div.event p'));
         }
     });
 
@@ -110,7 +111,14 @@ function initialize() {
     var curr = save * -1 * size;
 
     view += save * size;
-    $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
+
+    if (!isMobile)
+        $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
+    else {
+        var lscroll = parseInt($(".event-wrap a:eq(" + save + ")").offset().left);
+        if (save != 0)
+            $(".schedule").scrollLeft(lscroll);
+    }
 
     function moveLeft() {
         curr += size;

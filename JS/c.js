@@ -99,7 +99,8 @@ function initialize() {
                     num -= 1;
                 }
             }
-            ds.addSelectables(document.querySelectorAll('div.event p'));
+            if (!isMobile)
+                ds.addSelectables(document.querySelectorAll('div.event p'));
         }
     });
 
@@ -109,7 +110,14 @@ function initialize() {
     var curr = save * -1 * size;
 
     view += save * size;
-    $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
+
+    if (!isMobile)
+        $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
+    else {
+        var lscroll = parseInt($(".event-wrap a:eq(" + save + ")").offset().left);
+        if (save != 0)
+            $(".schedule").scrollLeft(lscroll);
+    }
 
     function moveLeft() {
         curr += size;
@@ -151,7 +159,7 @@ function initialize() {
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
             $(".viewer").css("margin-bottom", "6vh");
-            $(".topic").each(function(){
+            $(".topic").each(function () {
                 $(this).css("color", "#1B98E0");
             })
             $(this).css("color", "#3D348B");
@@ -180,7 +188,7 @@ function initialize() {
                 })
             $(".viewer").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
-            $(".topic").each(function(){
+            $(".topic").each(function () {
                 $(this).css("color", "#1B98E0");
             })
             $(".viewer").css("height", "0vh");
@@ -189,7 +197,7 @@ function initialize() {
         }
         previnfo = $(this).attr("name");
     });
-    
+
     function moveLeftPdf() {
         currp += sizep;
         viewp -= sizep;
@@ -218,7 +226,7 @@ function initialize() {
         currp = 0;
         $(".pdf-move").css("transform", "translateX(0%)");
     });
-    
+
     var css = `
     .schedule,
     .pdf-wrap {
@@ -271,7 +279,7 @@ function initialize() {
     }
     `
 
-    if (isMobile){
+    if (isMobile) {
         $("head").append('<style>' + css + '</style>');
     }
 }
