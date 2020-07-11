@@ -16,8 +16,8 @@ function initialize() {
         }
     });
 
-    $(document).ready(function(){
-        $('#nav-icon3').click(function(){
+    $(document).ready(function () {
+        $('#nav-icon3').click(function () {
             $(this).toggleClass('open');
         });
     });
@@ -45,13 +45,15 @@ function initialize() {
         setTimeout(() => {
             $(".form-overlay").css("opacity", "1");
         }, 10);
-        $("body").css("overflow-y", "hidden");
+        if (!isMobile)
+            $("body").css("overflow-y", "hidden");
     })
 
     $(".form-exit, .form-overlay-cover").on("mousedown click", function () {
         $(".form-exit").hide();
         $(".form-overlay-cover").hide();
-        $("body").css("overflow-y", "scroll");
+        if (!isMobile)
+            $("body").css("overflow-y", "scroll");
         $(".form-overlay").css("opacity", "0");
         setTimeout(() => {
             $(".form-overlay").hide();
@@ -100,9 +102,17 @@ function initialize() {
     html {
         overflow-x: hidden;
     } 
+
+    @media only screen and (orientation:landscape) {
+        .checks input {
+            margin-top: 0vh;
+        }
+        .form-overlay {
+            width: 80%;
+        }
     `
 
-    if (isMobile){
+    if (isMobile) {
         $("head").append('<style>' + css + '</style>');
     }
 

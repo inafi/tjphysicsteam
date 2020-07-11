@@ -419,7 +419,7 @@ form label {
 .checks label {
     font-size: 2vh;
     width: 88%;
-    margin-left: 12%;
+    margin-left: calc(10% + 2vh);
     color: #06D6A0;
 }
 
@@ -428,6 +428,10 @@ form label {
     left: 10%;
     margin-top: 0.9vh;
     cursor: pointer;
+}
+
+form input[type="radio"], form input[type="checkbox"] {
+    width: 2vh;
 }
 
 form .text input {

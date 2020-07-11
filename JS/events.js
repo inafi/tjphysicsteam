@@ -29,20 +29,17 @@ function initialize() {
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
             }, 100);
-            $("body").css("overflow-y", "hidden");
-        }
-        if (isMobile) {
-            $(".event-row").css("transform", "none")
+            if (!isMobile)
+                $("body").css("overflow-y", "hidden");
         }
     })
 
     $(".exit, .overlay-cover").on("mousedown click", function () {
         $(".exit").hide();
         $(".overlay-cover").hide();
-        $("body").css("overflow-y", "scroll");
+        if (!isMobile)
+            $("body").css("overflow-y", "scroll");
         $(".overlay").css("opacity", "0");
-        if (isMobile && window.innerHeight > window.innerWidth)
-            $(".event-row").css("transform", "translateX(-1%)");
         setTimeout(() => {
             $(".overlay").hide();
         }, 200);
@@ -76,9 +73,6 @@ function initialize() {
                 height: 75vh;
             }
 
-            .event-row{
-                transform: translateX(-1%);
-            }
         }
         
         @media only screen and (orientation:landscape) {

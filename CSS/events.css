@@ -15,23 +15,22 @@ nav {
     margin: 0 !important;
 }
 
-.event-small {
-    width: 75%;
-    margin-left: 12.5% !important;
-    margin-right: 12.5% !important;
-}
-
-.event-row {
+.event-small, .event-large {
     display: flex;
     justify-content: center;
 }
 
-.event-row>div {
+.event-large > div{
+    width: 79%;
     min-width: 48vh;
-    margin: 0 .25vh !important;
-    padding-left: 1% !important;
-    padding-right: 1% !important;
-}
+} 
+
+.event-small > div{
+    width: 25%;
+    margin-left: 1%;
+    margin-right: 1%;
+    min-width: 48vh;
+} 
 
 .large {
     min-width: 100%;
