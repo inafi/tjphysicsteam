@@ -189,12 +189,12 @@ hr {
 }
 
 .img-left {
-    transform: rotateX(10deg) rotateY(10deg) translateX(-6vh);
+    transform: rotateX(10deg) rotateY(10deg) translateX(-4vh);
     transition: 0.3s;
 }
 
 .img-right {
-    transform: rotateX(10deg) rotateY(-10deg) translateX(6vh);
+    transform: rotateX(10deg) rotateY(-10deg) translateX(4vh);
     transition: 0.3s;
 }
 

@@ -15,7 +15,7 @@ nav {
     margin: 0 !important;
 }
 
-.event-small{
+.event-small {
     width: 75%;
     margin-left: 12.5% !important;
     margin-right: 12.5% !important;
@@ -37,7 +37,7 @@ nav {
     min-width: 100%;
     height: 60vh;
     background-color: #fff;
-    border-radius: 2vh;
+    border-radius: 1.5vh;
     margin: 10vh auto 8vh auto !important;
     display: block;
     box-shadow:
@@ -46,14 +46,31 @@ nav {
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 27.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 40px 30px rgba(0, 0, 0, 0.3);
+        0 40px 30px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
-.large:hover,
+.large:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 27.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 30px 20px rgba(0, 0, 0, 0.35);
+}
+
 .event:hover {
     transform: scale(1.02);
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 27.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 20px 15px rgba(0, 0, 0, 0.3);
 }
 
 .large .title {
@@ -104,7 +121,7 @@ nav {
     width: 100%;
     height: 40vh;
     background-color: #fff;
-    border-radius: 2vh;
+    border-radius: 1.5vh;
     margin-bottom: 8vh;
     display: block;
     box-shadow:
@@ -113,10 +130,10 @@ nav {
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 12.3px 17.9px rgba(0, 0, 0, 0.072),
         0 21.8px 13.4px rgba(0, 0, 0, 0.086),
-        0 30px 20px rgba(0, 0, 0, 0.22);
+        0 30px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
 .event img {
@@ -175,7 +192,7 @@ nav {
     right: 0;
     bottom: 0;
     z-index: 100;
-    border-radius: 2vh;
+    border-radius: 1.5vh;
     display: none;
     opacity: 0;
     transition: 0.3s;

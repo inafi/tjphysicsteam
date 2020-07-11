@@ -141,7 +141,6 @@ button:focus {
     height: 0.3vh;
     width: 100%;
     background: #3D348B;
-    border-radius: 10vh;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -179,14 +178,14 @@ button:focus {
     transform: scale(0);
 }
 
-#nav-icon3.open span:nth-child(2) {
+#nav-icon3.open span:nth-child(3) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-#nav-icon3.open span:nth-child(3) {
+#nav-icon3.open span:nth-child(2) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -358,7 +357,7 @@ nav {
     right: 0;
     bottom: 0;
     z-index: 100;
-    border-radius: 2vh;
+    border-radius: 1.5vh;
     display: none;
     opacity: 0;
     transition: 0.3s;
