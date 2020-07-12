@@ -70,7 +70,7 @@ function initialize() {
             $("body").css("overflow-y", "hidden");
     })
 
-    $(".form-exit, .form-overlay-cover").on("mousedown touchstart", function () {
+    $(".form-exit, .form-overlay-cover").on("mousedown touchstart", function (e) {
         $(".form-exit").hide();
         $(".form-overlay-cover").hide();
         if (!isMobile)
@@ -79,6 +79,7 @@ function initialize() {
         setTimeout(() => {
             $(".form-overlay").hide();
         }, 200);
+        e.preventDefault();
     })
 
     $("body").on("click", function () {

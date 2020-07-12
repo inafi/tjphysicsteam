@@ -34,7 +34,7 @@ function initialize() {
         }
     })
 
-    $(".exit, .overlay-cover").on("mousedown touchstart", function () {
+    $(".exit, .overlay-cover").on("mousedown touchstart", function (e) {
         $(".exit").hide();
         $(".overlay-cover").hide();
         if (!isMobile)
@@ -43,6 +43,7 @@ function initialize() {
         setTimeout(() => {
             $(".overlay").hide();
         }, 200);
+        e.preventDefault();
     })
 
     try {
