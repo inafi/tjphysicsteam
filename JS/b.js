@@ -22,7 +22,7 @@ function initialize() {
         if ($(window).scrollTop() == 0 && !isMobile) {
             $("nav").css('background-color', 'transparent');
             $("nav *").css('color', '#fff');
-            $(".active").css('color', '#3D348B');
+            $(".active").css('color', '#06D6A0');
             $("nav span:hover").css('color', '#3D348B');
             $("nav img").attr("src", "Pics/copy2.png");
         } else {

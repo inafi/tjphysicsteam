@@ -107,6 +107,7 @@ table {
 
 .t1,
 table.test tr> :first-child,
+table.test tr> :last-child,
 table.student tr> :first-child,
 table.student tr> :last-child {
     color: #1B98E0;
