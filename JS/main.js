@@ -103,6 +103,13 @@ function initialize() {
         overflow-x: hidden;
     } 
 
+    @media only screen and (orientation:portrait) {
+        .form-overlay {
+            height: 75vh;
+        }
+
+    }
+
     @media only screen and (orientation:landscape) {
         .checks input {
             margin-top: 0vh;
@@ -110,6 +117,7 @@ function initialize() {
         .form-overlay {
             width: 80%;
         }
+    }
     `
 
     if (isMobile) {

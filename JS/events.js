@@ -78,6 +78,7 @@ function initialize() {
         @media only screen and (orientation:landscape) {
             .overlay {
                 height: 75vh;
+                width: 80%;
             }
         }
     `
