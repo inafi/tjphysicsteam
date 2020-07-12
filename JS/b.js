@@ -155,7 +155,9 @@ function initialize() {
     var currp = 0;
     var previnfo = "";
 
-    $(".topic").on("click", function (e) {
+    $(".topic").on("click touchend", function (e) {
+        if ((e.type == "click" && isMobile && Math.abs(window.orientation) == 90) || (e.type == "touchend" && isMobile && Math.abs(window.orientation) != 90))
+            return;
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
             $(".viewer").css("margin-bottom", "6vh");
