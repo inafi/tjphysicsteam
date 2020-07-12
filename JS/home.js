@@ -184,6 +184,11 @@ function initialize() {
         .b3 .col-5 {
             min-width: 40vh;
         }
+
+        .b3 .col-5 {
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
     
         .b3 .img-wrap {
             display: none;
