@@ -65,6 +65,10 @@ function initialize() {
             height: 70vh;
             margin-bottom: 5vh;
         }
+
+        .fc-toolbar h2 {
+            font-size: 2vh !important;
+        }
     }
     
     @media only screen and (orientation:landscape) {
@@ -73,6 +77,9 @@ function initialize() {
             height: 125vh;
         }
     
+        .fc-toolbar h2 {
+            font-size: 6vh !important;
+        }
     }
     `
 

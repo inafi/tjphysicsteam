@@ -49,7 +49,7 @@ function initialize() {
             $("body").css("overflow-y", "hidden");
     })
 
-    $(".form-exit, .form-overlay-cover").on("mousedown click", function () {
+    $(".form-exit, .form-overlay-cover").on("mousedown touchstart", function () {
         $(".form-exit").hide();
         $(".form-overlay-cover").hide();
         if (!isMobile)

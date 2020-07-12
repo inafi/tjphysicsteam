@@ -155,7 +155,7 @@ function initialize() {
     var currp = 0;
     var previnfo = "";
 
-    $(".topic").click(function () {
+    $(".topic").on("click", function (e) {
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
             $(".viewer").css("margin-bottom", "6vh");

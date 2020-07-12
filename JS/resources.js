@@ -61,7 +61,9 @@ function initialize() {
     var currpt = 0;
     var previnfo = "";
 
-    $(".topic").click(function () {
+    $(".topic").on("click touchend", function (e) {
+        if (e.type == "click" && isMobile)
+            return;
         if ($("#tests").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $("#tests").css("height", "38vh");
             $("#tests").css("margin-bottom", "6vh");
@@ -162,7 +164,7 @@ function initialize() {
             $("#sets .pdf-move").append(append);
         })
 
-    $(".toggle-center p").click(function () {
+    $(".toggle-center p").on("click touchstart", function () {
         if ($(this).attr("val") == "off") {
             if ($(this).text() == "Solutions") {
                 $(".toggle-move").css("transform", "translateX(100%)");

@@ -34,7 +34,7 @@ function initialize() {
         }
     })
 
-    $(".exit, .overlay-cover").on("mousedown click", function () {
+    $(".exit, .overlay-cover").on("mousedown touchstart", function () {
         $(".exit").hide();
         $(".overlay-cover").hide();
         if (!isMobile)
