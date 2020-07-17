@@ -25,12 +25,20 @@ function initialize() {
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#3D348B');
             $("nav img").attr("src", "Pics/copy2.png");
+            $("nav").css('box-shadow', 'none');
         } else {
             $("nav").css('background-color', '#fff');
             $("nav *").css('color', '#1B98E0');
             $(".active").css('color', '#3D348B');
             $("nav span:hover").css('color', '#06D6A0');
             $("nav img").attr("src", "Pics/copy.png");
+            $("nav").css('box-shadow', `
+                0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.018),
+                0 1.5px 2px rgba(0, 0, 0, 0.02),
+                0 2.3px 2px rgba(0, 0, 0, 0.022),
+                0 3.8px 2px rgba(0, 0, 0, 0.026),
+                0 4px 5px rgba(0, 0, 0, 0.05)`);
         }
         try {
             ds.addSelectables(document.querySelectorAll('.pdf p'));
@@ -218,12 +226,12 @@ function initialize() {
     });
 
     $('.fa-chevron-right.pa').click(function () {
-        if (viewp < nump * sizep)
+        if (viewp < nump * sizep - $(window).width() * .03)
             moveRightPdf();
     });
 
     $(window).on('resize', function () {
-        sizep = parseInt(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2) + $(window).width() * .03);
+        sizep = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
         viewp = parseInt($(".pdf-wrap").width());
         currp = 0;
         $(".pdf-move").css("transform", "translateX(0%)");

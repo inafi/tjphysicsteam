@@ -62,6 +62,7 @@ nav {
     font-size: 2vh;
     height: 7vh;
     font-family: 'Lato', "arial";
+    transition: 0.3s;
 }
 
 nav a {
@@ -77,7 +78,6 @@ nav img {
     bottom: 0;
     margin: auto;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 nav img:hover {
@@ -457,7 +457,7 @@ form .send {
     padding: .8vh 2vh;
     font-size: 2vh;
     border-radius: 1vh;
-    margin-left: 10%;
+    margin-left: auto;
     margin-top: 2vh;
     margin-bottom: 2vh;
     transition: 0.3s;

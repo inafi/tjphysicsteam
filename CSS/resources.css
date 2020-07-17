@@ -31,7 +31,7 @@ body {
     border: 0px solid transparent;
     padding: 0.5vh 2vh;
     display: block;
-    margin: auto;
+    margin: 0% 3% 2% 3%;
     transition: 0.3s;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -201,7 +201,7 @@ body {
     display: inline-block;
     margin: auto;
     margin-bottom: 4vh;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
 /*PDF*/
