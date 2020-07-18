@@ -496,7 +496,7 @@ nav #nav-icon3 {
         background-color: #fff;
         width: 100%;
         position: fixed;
-        top: 7vh;
+        top: calc(7vh - 1px);
         left: 0;
         border-bottom-left-radius: 1vh;
         border-bottom-right-radius: 1vh;
