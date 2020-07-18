@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to top left, #06D6A0, #2193b0, #1B98E0, #43cea2);
+    background: linear-gradient(to top left, #06D6A0, #3bb5fc, #1B98E0, #43cea2);
 }
 
 body::before {
@@ -10,7 +10,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, #4568dc, #36d1dc);
+    background: linear-gradient(to bottom right, #4568dc, #36d1dc);
     -webkit-mask: linear-gradient(#fff, transparent);
     mask: linear-gradient(#fff, transparent);
 }

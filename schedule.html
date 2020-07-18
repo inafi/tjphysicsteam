@@ -127,16 +127,16 @@
                 // alert($(".side").css("transform"));
 
                 if ($(".side").attr("vis") == "off") {
-                    $(".side").css("transform", "translateX(18%)");
-                    $(".wrap").css("transform", "translateX(20%)");
-                    $(".wrap").css("width", "65%");
+                    $(".side").css("transform", "translateX(10%)");
+                    $(".wrap").css("transform", "translateX(16%)");
+                    $(".wrap").css("width", "72%");
                     $(".side").attr("vis", "on");
                 } else if (previnfo != "" && previnfo == info.event.start + info.event.title + info
                     .event
                     .backgroundColor) {
-                    $(".side").css("transform", "translateX(-100%)");
+                    $(".side").css("transform", "translateX(-105%)");
                     $(".wrap").css("transform", "translateX(0%)");
-                    $(".wrap").css("width", "75%");
+                    $(".wrap").css("width", "85%");
                     $(".side").attr("vis", "off");
                 }
                 previnfo = info.event.start + info.event.title + info.event.backgroundColor;
@@ -203,7 +203,7 @@
 
                     if (desc == null)
                         desc = ""
-                        
+
                     if (link == null)
                         link = ""
 
