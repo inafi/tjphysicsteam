@@ -235,7 +235,6 @@ nav {
     margin-top: 2vh;
     margin-bottom: 0vh;
     color: #1b98e0;
-    font-weight: bold;
     font-family: "Lato";
     display: inline-block;
 }
@@ -249,8 +248,12 @@ nav {
 
 .overlay .label {
     font-size: 3.3vh;
-    float: left;
-    margin-left: 5%;
+    margin-top: 0vh;
+    margin-bottom: 0.5vh;
+    margin-left: 6%;
+    margin-right: 6%;
+    width: 88%;
+    text-align: left;
     font-family: "Lato";
     color: #06D6A0;
     display: inline-block;
@@ -259,10 +262,22 @@ nav {
 .overlay .desc {
     font-size: 2.2vh;
     text-align: left;
-    width: 90%;
+    width: 88%;
     margin: auto;
+    margin-top: 0vh;
+    margin-bottom: 0.5vh;
     display: inline-block;
     line-height: 3.7vh;
+}
+
+.overlay ul {
+    text-align: left;
+    margin-left: 6%;
+    font-size: 2.2vh;
+    line-height: 3.7vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    padding-left: 2.5vh;
 }
 
 .overlay hr {
