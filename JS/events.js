@@ -72,6 +72,10 @@ function initialize() {
             .row {
                 justify-content: center;
             }
+
+            .event-small>div {
+                min-width: 48vh;
+            }
         
             .large,
             .event {
@@ -82,6 +86,13 @@ function initialize() {
                 height: 75vh;
             }
 
+            .vid {
+                height: 60vw;
+            }
+
+            .slides {
+                height: 60vw;
+            }
         }
         
         @media only screen and (orientation:landscape) {
