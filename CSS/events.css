@@ -15,22 +15,39 @@ nav {
     margin: 0 !important;
 }
 
-.event-small, .event-large {
+.event-small,
+.event-large {
     display: flex;
     justify-content: center;
 }
 
-.event-large > div{
+.event-large>div {
     width: 79%;
     min-width: 48vh;
-} 
+}
 
-.event-small > div{
+.event-small>div {
     width: 25%;
     margin-left: 1%;
     margin-right: 1%;
     min-width: 48vh;
-} 
+}
+
+.vid {
+    height: calc(30vh + 25vw);
+    width: 80%;
+    border: 0px;
+    border-radius: 1vh;
+    margin-top: -5vh;
+}
+
+.slides {
+    height: calc(30vh + 25vw);
+    width: 80%;
+    border: 0px;
+    border-radius: 1vh;
+    margin-top: 2vh;
+}
 
 .large {
     min-width: 100%;
@@ -39,6 +56,7 @@ nav {
     border-radius: 1.5vh;
     margin: 10vh auto 8vh auto !important;
     display: block;
+    cursor: pointer;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -143,7 +161,7 @@ nav {
 }
 
 .event .cover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .4));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .6));
     width: 100%;
     height: 40vh;
     position: absolute;

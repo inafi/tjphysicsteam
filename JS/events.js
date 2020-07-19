@@ -29,7 +29,7 @@ function initialize() {
         }
     }, 20)
 
-    $(".event").click(function () {
+    $(".event, .large").click(function () {
         if ($(this).parent().attr("href") == null) {
             $(this).parent().parent().find(".overlay").show();
             $(this).parent().parent().find(".exit").show();
