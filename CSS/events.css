@@ -223,7 +223,8 @@ nav {
     opacity: 0;
     transition: 0.3s;
     text-align: center;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .overlay::-webkit-scrollbar {

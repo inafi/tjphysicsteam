@@ -59,21 +59,19 @@ body {
 .side .date {
     font-size: 3vh;
     margin-top: 3vh;
+    margin-bottom: 0vh;
     display: inline-block;
 }
 
 .side .title {
     font-size: 2.5vh;
-    margin-left: 3vh;
-    margin-right: 3vh;
+    margin: .75vh 3vh;
     display: inline-block;
 }
 
 .side .desc {
     font-size: 2vh;
-    margin-left: 3vh;
-    margin-right: 3vh;
-    margin-bottom: 4vh;
+    margin: 0vh 3vh 4vh 3vh;
     text-align: justify;
     display: inline-block;
 }
