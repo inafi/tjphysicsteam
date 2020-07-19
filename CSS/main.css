@@ -401,16 +401,16 @@ form .wrap {
 
 form label {
     font-size: 2.3vh;
-    width: 90%;
-    margin-left: 10%;
+    width: 95%;
+    margin-left: 5%;
     color: #3D348B;
     text-align: left;
 }
 
 .checks> :first-child {
     font-size: 2.3vh;
-    width: 90%;
-    margin-left: 10%;
+    width: 95%;
+    margin-left: 5%;
     color: #3D348B;
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -418,25 +418,27 @@ form label {
 
 .checks label {
     font-size: 2vh;
-    width: 88%;
-    margin-left: calc(10% + 2vh);
+    margin-left: 2vh;
     color: #06D6A0;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+.checks .choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
 }
 
 .checks input {
-    position: absolute;
-    left: 10%;
-    margin-top: 0.9vh;
     cursor: pointer;
-}
-
-form input[type="radio"], form input[type="checkbox"] {
-    width: 2vh;
+    margin-left: 5%;
 }
 
 form .text input {
     margin-left: -20%;
-    min-width: 60%;
+    min-width: 70%;
     border: 0;
     border-bottom: 1px #bbb solid;
     margin-bottom: 2vh;

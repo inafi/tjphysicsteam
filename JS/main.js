@@ -126,11 +126,12 @@ function initialize() {
     }
 
     @media only screen and (orientation:landscape) {
-        .checks input {
-            margin-top: 0vh;
-        }
         .form-overlay {
             width: 80%;
+        } 
+
+        .checks input {
+            width: 2vh;
         }
     }
     `
