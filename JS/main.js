@@ -68,15 +68,13 @@ function initialize() {
         setTimeout(() => {
             $(".form-overlay").css("opacity", "1");
         }, 10);
-        if (!isMobile)
-            $("body").css("overflow-y", "hidden");
+        $("html, body").css("overflow-y", "hidden");
     })
 
     $(".form-exit, .form-overlay-cover").on("mousedown touchstart", function (e) {
         $(".form-exit").hide();
         $(".form-overlay-cover").hide();
-        if (!isMobile)
-            $("body").css("overflow-y", "scroll");
+        $("html, body").css("overflow-y", "auto");
         $(".form-overlay").css("opacity", "0");
         setTimeout(() => {
             $(".form-overlay").hide();
