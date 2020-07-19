@@ -37,16 +37,14 @@ function initialize() {
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
             }, 100);
-            if (!isMobile)
-                $("body").css("overflow-y", "hidden");
+            $("html, body").css("overflow-y", "hidden");
         }
     })
 
     $(".exit, .overlay-cover").on("mousedown touchstart", function (e) {
         $(".exit").hide();
         $(".overlay-cover").hide();
-        if (!isMobile)
-            $("body").css("overflow-y", "scroll");
+        $("html, body").css("overflow-y", "auto");
         $(".overlay").css("opacity", "0");
         setTimeout(() => {
             $(".overlay").hide();
