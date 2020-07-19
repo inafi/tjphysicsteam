@@ -258,9 +258,15 @@ hr {
     margin-top: 1vh;
 }
 
+.b4 .img-wrap {
+    width: 12vh;
+    height: 12vh;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
 .b4 img {
     width: 12vh;
-    border-radius: 100%;
 }
 
 .b4>div>div {
