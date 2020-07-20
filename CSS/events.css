@@ -43,16 +43,20 @@ nav {
     margin-right: 0%;
 }
 
+.event-fill {
+    flex: 1 1 auto;
+}
+
 .vid {
     height: calc(30vh + 25vw);
-    width: 80%;
+    width: 85%;
     border: 0px;
     border-radius: 1.5vh;
 }
 
 .slides {
-    height: calc(30vh + 25vw);
-    width: 80%;
+    height: calc(30vh + 27vw);
+    width: 85%;
     border: 0px;
     border-radius: 1.5vh;
     margin-top: 2vh;
@@ -281,7 +285,7 @@ nav {
     padding-left: 2.5vh;
 }
 
-.overlay ul p{
+.overlay ul p {
     margin-top: 0vh;
     margin-bottom: 0vh;
     display: inline-block;
