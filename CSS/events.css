@@ -48,18 +48,19 @@ nav {
 }
 
 .vid {
-    height: calc(30vh + 25vw);
+    height: 40vw;
     width: 85%;
     border: 0px;
     border-radius: 1.5vh;
 }
 
 .slides {
-    height: calc(30vh + 27vw);
+    height: 45vw;
     width: 85%;
     border: 0px;
     border-radius: 1.5vh;
     margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .large {
