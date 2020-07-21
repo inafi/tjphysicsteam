@@ -27,7 +27,8 @@ body {
     overflow: auto;
 }
 
-.wrap::-webkit-scrollbar {
+.wrap::-webkit-scrollbar,
+.fc-scroller::-webkit-scrollbar {
     width: 0px;
 }
 
@@ -84,21 +85,38 @@ body {
     display: inline-block;
 }
 
+.fc-button,
+.fc-button-group {
+    vertical-align: unset !important;
+}
+
+.fc-button-group {
+    transform: translateY(-1px);
+}
+
 .change-view {
     outline: none;
     border: 0;
-    /* position: absolute; */
     background-color: #1B98E0;
-    /* right: calc(11% + 10vh); */
-    /* top: 2vh; */
     color: #fff;
     font-size: 1.6vh;
-    padding: 1vh 2vh;
     line-height: 1vh;
     height: 4vh;
     border-radius: 0.25em;
+    width: 8vh;
 }
 
+.fc-right {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+/*List View*/
+.fc-list-item {
+    cursor: pointer;
+}
+
+/*Month Day Grid*/
 .fc-toolbar h2 {
     font-size: 2.8vh !important;
 }
