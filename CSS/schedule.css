@@ -24,7 +24,7 @@ body {
         0 60px 40px rgba(0, 0, 0, 0.12);
     transition: 0.3s;
     transform: translateX(0%);
-    overflow: scroll;
+    overflow: auto;
 }
 
 .wrap::-webkit-scrollbar {
@@ -36,6 +36,12 @@ body {
     margin: auto;
     padding-top: 2vh;
     padding-bottom: 2vh;
+}
+
+#calendar .fc-right button {
+    height: 4vh !important;
+    line-height: 1vh !important;
+    font-size: 1.6vh !important;
 }
 
 .side {
@@ -54,6 +60,8 @@ body {
         0 50px 40px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     transform: translateX(-100%);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .side .date {
@@ -74,6 +82,21 @@ body {
     margin: 0vh 3vh 4vh 3vh;
     text-align: justify;
     display: inline-block;
+}
+
+.change-view {
+    outline: none;
+    border: 0;
+    /* position: absolute; */
+    background-color: #1B98E0;
+    /* right: calc(11% + 10vh); */
+    /* top: 2vh; */
+    color: #fff;
+    font-size: 1.6vh;
+    padding: 1vh 2vh;
+    line-height: 1vh;
+    height: 4vh;
+    border-radius: 0.25em;
 }
 
 .fc-toolbar h2 {
