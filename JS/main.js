@@ -24,9 +24,12 @@ function initialize() {
     });
 
     $("nav").append(`
-    <div id="nav-icon3" class="navbar-toggler"
-        expanded="false"> <span></span> <span></span>
-        <span></span> <span></span></div>
+    <div class="wrap-icon">
+        <div id="nav-icon3" class="navbar-toggler"
+            expanded="false"> <span></span> <span></span>
+            <span></span> <span></span>
+        </div>
+    </div>
     <div class="collapse" id="navbarNavAltMarkup">
         <div class="anim">
             <div class="navbar-nav"> <a href="index.html"><span name="index">Home</span></a> <a href="schedule.html"><span
@@ -39,9 +42,9 @@ function initialize() {
     </div>
     `);
 
-    $("nav #nav-icon3").on("click", function (e) {
-        // if (e.type == "click" && isMobile)
-        //     return;
+    $("nav #nav-icon3").on("click touchstart", function (e) {
+        if (e.type == "click" && isMobile)
+            return;
         $(this).toggleClass('open');
         if ($(this).attr("expanded") == "true") {
             $(this).css("transform", "rotateZ(0deg)");
@@ -118,6 +121,19 @@ function initialize() {
         overflow-x: hidden;
     } 
 
+    *::-webkit-scrollbar{
+        width: 0 !important;
+        -webkit-appearance: none;
+    }
+
+    .navbar-nav {
+        z-index: 1;
+    }
+
+    .wrap-icon {
+        background-color: #fff;
+    }
+
     @media only screen and (orientation:portrait) {
         .form-overlay {
             height: 75vh;
@@ -140,7 +156,7 @@ function initialize() {
         $("head").append('<style>' + css + '</style>');
     }
 
-    $('.navbar-toggler:not').on('touchstart', function () {
+    $('*').on('touchend', function () {
         $(this)[0].click();
     });
 }

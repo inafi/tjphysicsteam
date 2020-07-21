@@ -38,6 +38,13 @@ function initialize() {
                 $(".overlay").css("opacity", "1");
             }, 100);
             $("html, body").css("overflow-y", "hidden");
+            $('html, body').on('scroll touchmove mousewheel', function (e) {
+                if ($(".overlay").css("opacity") == "1") {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            })
         }
     })
 
