@@ -13,7 +13,7 @@ function initialize() {
         success: function (data) {
             $(".foot-wrap").append(data);
             $.ajax({
-                url: "former.html",
+                url: "form.html",
                 type: "get",
                 async: false,
                 success: function (data) {
