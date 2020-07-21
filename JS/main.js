@@ -7,13 +7,13 @@ function initialize() {
     }
 
     $.ajax({
-        url: "footere.html",
+        url: "footer.html",
         type: "get",
         async: false,
         success: function (data) {
             $(".foot-wrap").append(data);
             $.ajax({
-                url: "form.html",
+                url: "former.html",
                 type: "get",
                 async: false,
                 success: function (data) {
