@@ -7,7 +7,7 @@ function initialize() {
     }
 
     $.ajax({
-        url: "footer.html",
+        url: "footere.html",
         type: "get",
         async: false,
         success: function (data) {
