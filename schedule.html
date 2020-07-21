@@ -247,8 +247,14 @@
                 0 3.8px 2px rgba(0, 0, 0, 0.026),
                 0 4px 5px rgba(0, 0, 0, 0.05)`);
         }
-        if ($(".fc-right").children().length == 2)
-            $(".fc-right").append('<button class="change-view">List</button>');
+        if ($(".fc-right").children().length == 2){
+            var text = "";
+            if ($("#calendar").attr("view") == "grid") 
+                text = "List";
+            else
+                text = "Grid";
+            $(".fc-right").append('<button class="change-view">' + text + '</button>');
+        }
     }, 20)
 
     if (isMobile) {
@@ -265,11 +271,9 @@
         if ($("#calendar").attr("view") == "grid") {
             calendar.changeView('listMonth');
             $("#calendar").attr("view", "list");
-            $(".change-view").html("Grid");
         } else {
             calendar.changeView('dayGridMonth');
             $("#calendar").attr("view", "grid");
-            $(".change-view").html("List");
         }
     })
 
