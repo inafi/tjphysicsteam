@@ -268,7 +268,7 @@ footer .top {
 
 footer .mid {
     padding-right: 3vh;
-    margin-top: -1vh;
+    margin-top: -0.5vh;
 }
 
 footer .mid a {
@@ -318,7 +318,7 @@ footer .fa-github {
 }
 
 footer .fa-github:hover {
-    transform: translateX(3vh) translateY(0.5vh) scale(1.2);
+    transform: translateX(3vh) translateY(0.5vh) scale(1.1);
 }
 
 /*Heart*/
