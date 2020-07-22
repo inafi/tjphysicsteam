@@ -138,7 +138,7 @@ function initialize() {
 
     $(window).on('resize', function () {
         sizet = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
-        viewp = parseInt($(".pdf-wrap").width());
+        viewpt = parseInt($(".pdf-wrap").width());
         currpt = 0;
         $("#tests .pdf-move").css("transform", "translateX(0%)");
     });
