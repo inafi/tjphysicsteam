@@ -11,7 +11,7 @@ body {
 
 table.test {
     height: 10vh;
-    margin: 10vh auto 0 auto;
+    margin: 8vh auto 0 auto;
     width: 80%;
     empty-cells: show;
 }
