@@ -79,6 +79,7 @@ nav img {
     margin: auto;
     cursor: pointer;
     z-index: 3;
+    transition: 0.3s;
 }
 
 nav img:hover {
