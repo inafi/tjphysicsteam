@@ -285,10 +285,6 @@ function initialize() {
     }
     
     @media only screen and (orientation:landscape) {
-    
-        .toggle-wrap p{
-            transform: translateY(-1vh);
-        }
 
         .pdf-wrap {
             width: 97%;

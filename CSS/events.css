@@ -218,6 +218,7 @@ nav {
 
 .overlay {
     width: 90%;
+    max-width: calc(300vh - 22%);
     height: 85vh;
     background-color: #fff;
     position: fixed;

@@ -160,6 +160,7 @@
 .viewer {
     margin-top: 4vh;
     width: 84%;
+    max-width: 200vh;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 0vh;
     margin-left: auto;
@@ -248,6 +249,8 @@
     width: 100%;
     transition: 0.3s;
     text-align: center;
+    max-width: 200vh;
+    margin: auto;
 }
 
 .resources .row {

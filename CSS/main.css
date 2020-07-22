@@ -357,7 +357,10 @@ nav {
 }
 
 .form-overlay {
-    width: 60%;
+    width: 50%;
+    max-width: 150vh;
+    padding-left: 4%;
+    padding-right: 4%;
     height: 78vh;
     background-color: #fff;
     position: fixed;
@@ -411,19 +414,18 @@ form .wrap {
 
 form label {
     font-size: 2.3vh;
-    width: 95%;
-    margin-left: 5%;
+    width: 100%;
     color: #3D348B;
     text-align: left;
 }
 
 .checks> :first-child {
     font-size: 2.3vh;
-    width: 95%;
-    margin-left: 5%;
+    width: 100%;
     color: #3D348B;
     margin-bottom: 1vh;
     margin-top: 1vh;
+    margin-left: 0vh;
 }
 
 .checks label {
@@ -443,12 +445,10 @@ form label {
 
 .checks input {
     cursor: pointer;
-    margin-left: 5%;
 }
 
 form .text input {
-    margin-left: -20%;
-    min-width: 70%;
+    min-width: 100%;
     border: 0;
     border-bottom: 1px #bbb solid;
     margin-bottom: 2vh;
