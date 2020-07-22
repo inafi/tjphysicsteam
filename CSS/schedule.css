@@ -10,6 +10,7 @@ body {
 .wrap {
     height: auto;
     width: 85%;
+    max-width: 280vh;
     background-color: #ffffff;
     margin: auto;
     margin-top: 10vh;
@@ -50,6 +51,7 @@ body {
     position: absolute;
     height: auto;
     width: 21%;
+    max-width: 80vh;
     border-radius: 1.5vh;
     text-align: center;
     box-shadow:

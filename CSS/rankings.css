@@ -13,6 +13,7 @@ table.test {
     height: 10vh;
     margin: 8vh auto 0 auto;
     width: 80%;
+    max-width: 200vh;
     empty-cells: show;
 }
 
@@ -23,6 +24,7 @@ table.test tr {
 table.student {
     height: 40vh;
     width: 80%;
+    max-width: 200vh;
     margin: 2vh auto 5vh auto;
 }
 
