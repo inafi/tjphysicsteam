@@ -90,28 +90,34 @@ function initialize() {
         $("head").append('<style>' + desk + '</style>');
     }
 
+    var prev = -1;
+    var curr = 0;
     setInterval(function () {
-        if ($(window).scrollTop() == 0 && !isMobile) {
-            $("nav").css('background-color', 'transparent');
-            $("nav *").css('color', '#fff');
-            $(".active").css('color', '#3D348B');
-            $("nav span:hover").css('color', '#3D348B');
-            $("nav img").attr("src", "Pics/copy2.png");
-            $("nav").css('box-shadow', 'none');
-        } else {
-            $("nav").css('background-color', '#fff');
-            $("nav *").css('color', '#1B98E0');
-            $(".active").css('color', '#3D348B');
-            $("nav span:hover").css('color', '#06D6A0');
-            $("nav img").attr("src", "Pics/copy.png");
-            $("nav").css('box-shadow', `
-                0 2.8px 2.2px rgba(0, 0, 0, 0.014),
-                0 6.7px 5.3px rgba(0, 0, 0, 0.018),
-                0 1.5px 2px rgba(0, 0, 0, 0.02),
-                0 2.3px 2px rgba(0, 0, 0, 0.022),
-                0 3.8px 2px rgba(0, 0, 0, 0.026),
-                0 4px 5px rgba(0, 0, 0, 0.05)`);
+        curr = $(window).scrollTop();
+        if (curr != prev) {
+            if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > 1170) {
+                $("nav").css('background-color', 'transparent');
+                $("nav *").css('color', '#fff');
+                $(".active").css('color', '#3D348B');
+                $("nav span:hover").css('color', '#3D348B');
+                $("nav img").attr("src", "Pics/copy2.png");
+                $("nav").css('box-shadow', 'none');
+            } else {
+                $("nav").css('background-color', '#fff');
+                $("nav *").css('color', '#1B98E0');
+                $(".active").css('color', '#3D348B');
+                $("nav span:hover").css('color', '#06D6A0');
+                $("nav img").attr("src", "Pics/copy.png");
+                $("nav").css('box-shadow', `
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.018),
+                    0 1.5px 2px rgba(0, 0, 0, 0.02),
+                    0 2.3px 2px rgba(0, 0, 0, 0.022),
+                    0 3.8px 2px rgba(0, 0, 0, 0.026),
+                    0 4px 5px rgba(0, 0, 0, 0.05)`);
+            }
         }
+        prev = curr;
         var lineheight = $('#last-year').offset().top - $('#first-year').offset().top;
     
         $(".line").css("height", lineheight + "px");
