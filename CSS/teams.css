@@ -68,13 +68,15 @@
 .slider> :first-child,
 .slider> :last-child {
     display: inline-block !important;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .fa-chevron-left.sa {
     font-size: 3vh !important;
     width: 3%;
     height: 10vh;
-    padding-top: 4.4vh;
+    padding-top: 3.6vh;
     cursor: pointer;
     transition: 0.3s;
     transform: translateX(-2vh);
@@ -84,7 +86,7 @@
     font-size: 3vh !important;
     width: 3%;
     height: 10vh;
-    padding-top: 4.4vh;
+    padding-top: 3.6vh;
     cursor: pointer;
     transition: 0.3s;
     transform: translateX(2vh);
