@@ -45,6 +45,8 @@ nav {
 
 .event-fill {
     flex: 1 1 auto;
+    min-width: 0vh !important;
+    width: auto !important;
 }
 
 .vid {
