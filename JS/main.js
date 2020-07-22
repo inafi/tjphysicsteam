@@ -71,13 +71,20 @@ function initialize() {
         setTimeout(() => {
             $(".form-overlay").css("opacity", "1");
         }, 10);
-        $("html, body").css("overflow-y", "hidden");
+        $("body").css("overflow-y", "hidden");
+        $('html, body').on('scroll touchmove mousewheel', function (e) {
+            if ($(".form-overlay").css("opacity") == "1") {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        })
     })
 
     $(".form-exit, .form-overlay-cover").on("mousedown touchstart", function (e) {
         $(".form-exit").hide();
         $(".form-overlay-cover").hide();
-        $("html, body").css("overflow-y", "auto");
+        $("body").css("overflow-y", "auto");
         $(".form-overlay").css("opacity", "0");
         setTimeout(() => {
             $(".form-overlay").hide();
