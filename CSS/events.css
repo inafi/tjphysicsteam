@@ -22,7 +22,7 @@ nav {
     padding-left: 11%;
     padding-right: 11%;
     margin: auto !important;
-    max-width: 300vh;
+    max-width: 270vh;
 }
 
 .event-large>div {
@@ -53,13 +53,16 @@ nav {
 
 .vid {
     height: 40vw;
+    max-height: calc(108vh - 12%);
     width: 85%;
     border: 0px;
     border-radius: 1.5vh;
+    margin-top: 3vh;
 }
 
 .slides {
     height: 45vw;
+    max-height: calc(108vh - 12%);
     width: 85%;
     border: 0px;
     border-radius: 1.5vh;
@@ -218,7 +221,7 @@ nav {
 
 .overlay {
     width: 90%;
-    max-width: calc(300vh - 22%);
+    max-width: calc(270vh - 22%);
     height: 85vh;
     background-color: #fff;
     position: fixed;
@@ -254,7 +257,7 @@ nav {
     font-size: 1.8vh;
     display: inline-block;
     margin-top: 1vh;
-    margin-bottom: 3vh;
+    margin-bottom: 0vh;
 }
 
 .overlay .label {

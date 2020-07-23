@@ -61,7 +61,7 @@ body::before {
     height: 0;
     top: 3vh;
     left: -1.5vh;
-    border-color: transparent transparent transparent transparent;
+    border-color: transparent;
 }
 
 .timeline-item::after {
@@ -116,7 +116,7 @@ body::before {
     top: 3vh;
     right: -1.5vh;
     border-width: 1vh 0 1vh 1.5vh;
-    border-color: transparent transparent transparent transparent;
+    border-color: transparent;
 }
 
 
