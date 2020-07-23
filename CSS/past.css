@@ -27,15 +27,13 @@ body::before {
 .timeline-item p.title {
     font-size: 2.4vh;
     color: #1B98E0;
+    margin-bottom: 0.25vh;
 }
 
 .timeline-item p {
-    font-size: 1.6vh;
+    font-size: 1.7vh;
     display: inline-block;
-}
-
-.timeline-item p:nth-of-type(2n) {
-    margin-top: -12px;
+    margin-bottom: 1vh;
 }
 
 .line {
