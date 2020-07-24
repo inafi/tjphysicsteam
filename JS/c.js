@@ -122,7 +122,7 @@ function initialize() {
     var size = parseInt($(".event").width() + .02 * $(window).width());
     var total = num * size;
     var view = parseInt($(".schedule").width());
-    var curr = save * -1 * size;
+    var currc = save * -1 * size;
 
     view += save * size;
 
@@ -135,15 +135,15 @@ function initialize() {
     }
 
     function moveLeft() {
-        curr += size;
+        currc += size;
         view -= size;
-        $(".event-wrap").css("transform", "translateX(" + curr + "px)");
+        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
     };
 
     function moveRight() {
-        curr -= size;
+        currc -= size;
         view += size;
-        $(".event-wrap").css("transform", "translateX(" + curr + "px)");
+        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
     };
 
     $('.fa-chevron-left.sa').click(function () {
@@ -160,7 +160,7 @@ function initialize() {
         size = parseInt($(".event").width() + .02 * $(window).width());
         total = num * size;
         view = parseInt($(".schedule").width());
-        curr = save * -1 * size;
+        currc = save * -1 * size;
         $(".event-wrap").css("transform", "translateX(0%)");
     });
 
