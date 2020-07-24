@@ -47,12 +47,10 @@ function initialize() {
             return;
         $(this).toggleClass('open');
         if ($(this).attr("expanded") == "true") {
-            $(this).css("transform", "rotateZ(0deg)");
             $(".navbar-nav").css("opacity", "0");
             $(".navbar-nav").css("transform", "translateY(calc(-100% - 10vh))");
             $(this).attr("expanded", "false");
         } else {
-            $(this).css("transform", "rotateZ(180deg)");
             $(".navbar-nav").css("opacity", "1");
             $(".navbar-nav").css("transform", "translateY(0%)");
             $(this).attr("expanded", "true");
