@@ -54,19 +54,19 @@ nav {
 .vid {
     height: 40vw;
     max-height: calc(108vh - 12%);
-    width: 85%;
+    width: 88%;
     border: 0px;
     border-radius: 1.5vh;
     margin-top: 3vh;
+    margin-bottom: 2vh;
 }
 
 .slides {
     height: 45vw;
     max-height: calc(108vh - 12%);
-    width: 85%;
+    width: 88%;
     border: 0px;
     border-radius: 1.5vh;
-    margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
