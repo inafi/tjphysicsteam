@@ -82,10 +82,6 @@ nav img {
     transition: 0.3s;
 }
 
-nav img:hover {
-    height: 5.5vh;
-}
-
 nav span {
     padding-right: 2vh;
     padding-left: 2vh;

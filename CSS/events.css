@@ -25,6 +25,10 @@ nav {
     max-width: 270vh;
 }
 
+.event-small {
+    display: -webkit-box;
+}
+
 .event-large>div {
     width: 100%;
     min-width: 48vh;
@@ -75,7 +79,7 @@ nav {
     height: 60vh;
     background-color: #fff;
     border-radius: 1.5vh;
-    margin: 10vh auto 8vh auto !important;
+    margin: 9vh auto 8vh auto !important;
     display: block;
     cursor: pointer;
     box-shadow:

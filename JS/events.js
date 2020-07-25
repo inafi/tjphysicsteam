@@ -85,6 +85,10 @@ function initialize() {
                 justify-content: center;
             }
 
+            .event-small {
+                display: flex;
+            }
+
             .event-small>div {
                 min-width: 48vh;
             }
