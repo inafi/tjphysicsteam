@@ -100,7 +100,7 @@ function initialize() {
                 $("nav *").css('color', '#fff');
                 $(".active").css('color', '#3D348B');
                 $("nav span:hover").css('color', '#3D348B');
-                $("nav img").attr("src", "Pics/copy2.png");
+                $("nav img").attr("src", "Pics/copy3.png");
                 $("nav").css('box-shadow', 'none');
             } else {
                 $("nav").css('background-color', '#fff');

@@ -5,14 +5,14 @@
     <title>TJ Physics Team</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/main.css?version=23">
-    <link rel="stylesheet" href="CSS/events.css?version=25">
+    <link rel="stylesheet" href="CSS/main.css?version=26">
+    <link rel="stylesheet" href="CSS/events.css?version=28">
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="CSS/material.css?version=20">
-    <script src="JS/events.js?v=1"></script>
+    <link rel="stylesheet" href="CSS/material.css?version=23">
+    <script src="JS/events.js?v=2"></script>
     <script src="JS/custom/scroll.js"></script>
-    <script src="JS/main.js?v=1"></script>
+    <script src="JS/main.js?v=2"></script>
     <script>
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|Silk|lge|maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i
             .test(navigator.userAgent) ||
@@ -20,6 +20,18 @@
             .test(navigator.userAgent.substr(0, 4))) {} else {
             document.write('<script src="JS/custom/ds.min.js"><\/script>');
         }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152856221-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-152856221-2');
     </script>
     <link rel="icon" href="Pics/copy.png">
 </head>
@@ -32,6 +44,7 @@
             <a href="events.html"><span class="active">Events</span></a>
             <a href="rankings.html"><span>Rankings</span></a>
         </div>
+        <a href="index.html"><img src="Pics/copy2.png"></a>
         <a href="index.html"><img src="Pics/copy2.png"></a>
         <div class="right">
             <a href="a.html"><span>A Team</span></a>
@@ -176,6 +189,27 @@
             <a>
                 <div class="event">
                     <div class="img-wrap">
+                        <p class="title">Basic Calculus and 1D Kinematics</p>
+                        <p class="desc">Click to view video and notes</p>
+                        <img src="Pics/events/summer/calc.png">
+                        <div class="cover"></div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <p class="title">Basic Calculus and 1D Kinematics</p><br>
+                    <p class="subtitle">Presented by Anya Mischel &middot; July 25, 2020</p><br>
+                    <br>
+                    <p class="desc">Here are the lecture <a href="https://drive.google.com/file/d/1qxRtaLh7_PY7gwJ0XEmC03M2U_5huORD/view?usp=sharing" target="_blank">notes.</a></p>
+                    <iframe src="https://www.youtube.com/embed/o2-AR_su5lI?enablejsapi=1" allowfullscreen="true"
+                        mozallowfullscreen="true" webkitallowfullscreen="true" class="vid">
+                    </iframe>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a>
+                <div class="event">
+                    <div class="img-wrap">
                         <p class="title">Vectors and Dimensions</p>
                         <p class="desc">Click to view video and slides</p>
                         <img src="Pics/events/summer/vectors.png">
@@ -195,7 +229,8 @@
                 </div>
             </a>
         </div>
-        <div class="event-fill"></div>
+        <!-- <div></div> -->
+        <!-- <div class="event-fill"></div> -->
         <!-- <div>
             <a>
                 <div class="event">
