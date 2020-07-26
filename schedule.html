@@ -5,11 +5,11 @@
     <title>TJ Physics Team</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/main.css?version=26">
-    <link rel="stylesheet" href="CSS/schedule.css?version=27">
+    <link rel="stylesheet" href="CSS/main.css?version=27">
+    <link rel="stylesheet" href="CSS/schedule.css?version=28">
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="CSS/material.css?version=24">
+    <link rel="stylesheet" href="CSS/material.css?version=25">
     <link href='JS/calendar/core/main.min.css' rel='stylesheet' />
     <script src='JS/calendar/core/main.min.js'></script>
     <link href='JS/calendar/daygrid/main.min.css' rel='stylesheet' />
@@ -317,6 +317,23 @@
             location.reload();
         }
     });
+
+    if (!isMobile) {
+        calendar.setOption('height', $(window).height() * .9);
+        if ($(window).height() / $(window).width() > 0.65) {
+            aspectside = false;
+            $(".side").css("transform", "translateX(-105%)");
+            $(".wrap").css("transform", "translateX(0%)");
+            $(".wrap").css("width", "85%");
+            $(".side").attr("vis", "off");
+            setTimeout(() => {
+                if ($("#calendar").attr("view") == "grid")
+                    $(".change-view")[0].click();
+            }, 500);
+        } else {
+            aspectside = true;
+        }
+    }
 
     $(window).on('resize', function () {
         if (!isMobile) {

@@ -9,12 +9,13 @@ body {
 
 .wrap {
     height: auto;
+    min-height: 80vh;
     width: 85%;
     max-width: 280vh;
     background-color: #ffffff;
     margin: auto;
     margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
     border-radius: 1.5vh;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),

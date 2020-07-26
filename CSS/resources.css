@@ -61,6 +61,7 @@ body {
 .topic-wrap {
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-top: -1.5vh;
     margin-bottom: 2vh;
     display: flex;
     justify-content: center;
@@ -304,7 +305,7 @@ body {
 
 .toggle-wrap {
     border-radius: 1.1vh;
-    margin-top: -2.7vh;
+    margin-top: -2vh;
     white-space: nowrap;
     background-color: #fff;
     display: flex;
