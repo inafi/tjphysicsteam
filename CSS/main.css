@@ -46,6 +46,14 @@ p {
     font-size: 0vh;
 }
 
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 .ds-selected {
     background: rgba(130, 130, 130, 0.35);
     border-radius: 0.5vh;
