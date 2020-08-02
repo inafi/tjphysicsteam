@@ -39,7 +39,13 @@ function initialize() {
     $(".event, .large").click(function () {
         if ($(this).parent().attr("href") == null) {
             $(this).parent().parent().find(".overlay").show();
-            $(this).parent().parent().find(".exit").show();
+            try {
+                var link = $(this).parent().parent().find(".vid").attr("name");
+                $(this).parent().parent().find(".vid").attr("src", link);
+                console.log($(this).parent().parent().find(".vid"));
+            } catch (error) {
+                console.log(error)
+            }
             $(".overlay-cover").show();
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
@@ -55,9 +61,12 @@ function initialize() {
         }
     })
 
-    $(".exit, .overlay-cover").on("mousedown touchstart", function (e) {
-        $(".exit").hide();
+    $(".overlay-cover").on("mousedown touchstart", function (e) {
         $(".overlay-cover").hide();
+        $(".overlay").each(function () {
+            if ($(this).css("display") != "none")
+                $(this).find(".vid").attr("src", "");
+        })
         $("html, body").css("overflow-y", "auto");
         $(".overlay").css("opacity", "0");
         setTimeout(() => {
