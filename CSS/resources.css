@@ -206,6 +206,10 @@ body {
     margin-top: 2vh;
 }
 
+.resources p.title:last-of-type {
+    margin-top: 5vh;
+}
+
 /*PDF*/
 .viewer {
     width: 84%;

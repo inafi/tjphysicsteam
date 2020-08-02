@@ -23,6 +23,7 @@ nav {
     padding-right: 11%;
     margin: auto !important;
     max-width: 270vh;
+    width: 100%;
 }
 
 .event-small {
@@ -32,21 +33,15 @@ nav {
 .event-large>div {
     width: 100%;
     min-width: 48vh;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .event-small>div {
-    width: 32%;
-    margin-left: .91%;
-    margin-right: .91%;
-    min-width: 48vh;
-}
-
-.event-small>div:first-child {
-    margin-left: 0%;
-}
-
-.event-small>div:last-child {
-    margin-right: 0%;
+    width: calc(100%/3);
+    padding-left: 1%;
+    padding-right: 1%;
+    min-width: 42vh;
 }
 
 .event-fill {

@@ -105,7 +105,7 @@
 }
 
 .lectures .title {
-    font-size: 6vh;
+    font-size: 7vh;
     color: #fff;
     text-align: center;
     display: inline-block;
@@ -303,12 +303,11 @@
 }
 
 .resources .title {
-    font-size: 6vh;
+    font-size: 7vh;
     color: #fff;
     text-align: center;
     display: inline-block;
     margin: auto;
-    margin-top: -1vh;
     margin-bottom: 4vh;
 }
 
