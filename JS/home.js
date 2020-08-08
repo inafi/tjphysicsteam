@@ -8,7 +8,7 @@ function initialize() {
     }
 
     var SEPARATION = 160,
-        AMOUNTX = 50,
+        AMOUNTX = 45,
         AMOUNTY = 30;
 
     var container;

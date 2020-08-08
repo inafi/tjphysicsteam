@@ -1,0 +1,393 @@
+6/22 - Week 1 Monday
+
+Masterclass Seminar (Amol) 
+
+Programming Bootcamp Lecture L1.1 (Alex)
+
+Research Bootcamp Lecture L1.1 (Franklyn)
+
+Research Bootcamp Section S1.1 (Dhruvik)
+
+6/23 - Week 1 Tuesday
+
+Masterclass Seminar (Amy)
+
+Programming Bootcamp Lecture L1.2 (Alex)
+
+Research Bootcamp Lecture L1.2 (Franklyn)
+
+Programming Bootcamp Section S1.1 (Aleks)
+
+6/24 - Week 1 Wednesday
+
+Masterclass Seminar (Dhruvik)
+
+Programming Bootcamp Lecture L1.3 (Alex)
+
+Research Bootcamp Lecture L1.3 (Franklyn)
+
+Research Bootcamp Section S1.2 (Dhruvik)
+
+6/25 - Week 1 Thursday
+
+Masterclass Seminar (Michael)
+
+Research Bootcamp Lecture L1.4 (Franklyn)
+
+Programming Bootcamp Lecture L1.4 (Alex)
+
+Programming Bootcamp Section S1.2 (Aleks)
+
+6/26 - Week 1 Friday
+
+Masterclass Seminar (Jiwoo)
+
+Research Bootcamp Lecture L1.5 (Franklyn)
+
+Programming Bootcamp Lecture L1.5 (Aleks)
+
+6/27 - Week 1 Saturday
+
+Weekend Challenge 1 (Joshua)
+
+6/28 - Week 1 Sunday
+
+Navigating the Publication Process (Dhaman Kaur)
+
+From Sewage to Seawater: Transferring Skills between Research Domains (David Ma)
+
+Secure 2 Part Computation for High School Students (Jesse Stern)
+
+Symplectic Geometry: From Newton to Classical Mechanics (Javier Echevarria)
+
+Research + Life = ? (Stephen Yoo)
+
+Machine Learning for Property Prediction: PT 1 (Allison Tam and Nithin Buduma)
+
+Machine Learning for Property Prediction: PT 2 (Allison Tam and Nithin Buduma)
+
+6/29 - Week 2 Monday
+
+Masterclass Seminar (Joey)
+
+Programming Bootcamp Lecture L2.1 (Alex)
+
+Research Bootcamp Lecture L2.1 (Franklyn)
+
+Research Bootcamp Section S2.1 (Dhruvik)
+
+6/30 - Week 2 Tuesday
+
+Masterclass Seminar (Kasha)
+
+Programming Bootcamp Lecture L2.2 (Alex)
+
+Research Bootcamp Lecture L2.2 (Franklyn)
+
+Programming Bootcamp Section S2.1 (Aleks)
+
+7/1 - Week 2 Wednesday
+
+Masterclass Seminar (Harshal)
+
+Programming Bootcamp Lecture L2.3 (Alex)
+
+Research Bootcamp Lecture L2.3 (Franklyn)
+
+Research Bootcamp Section S2.2 (Dhruvik)
+
+7/2 - Week 2 Thursday
+
+Masterclass Seminar (Sahaj)
+
+Programming Bootcamp Lecture L2.4 (Alex)
+
+Research Bootcamp Lecture L2.4 (Franklyn)
+
+Programming Bootcamp Section S2.2 (Aleks)
+
+7/3 - Week 2 Friday
+
+Masterclass Seminar (Katherine D.)
+
+Programming Bootcamp Lecture L2.5 Part 1 (Alex; part 1 re-recorded due to recording error)
+
+Programming Bootcamp Lecture L2.5 Part 2 (Alex + Aleks)
+
+Research Bootcamp Lecture L2.5 (Franklyn)
+
+7/4 - Week 2 Saturday
+
+Weekend Challenge 2 (Joshua) 
+
+7/5 - Week 2 Sunday
+
+Reimagining Hospitals through Machine Learning (Aansh Shah)
+
+How Can We Do the Most Good Through Our Research (Karen Ge)
+
+Challenges in Public Health Research and an Introduction to Natural Language Processing (Anurag Sengupta)
+
+The Tor Network and Its Vulnerabilities (David Lu)
+
+Analyzing Fare Evasions: A Discriminatory Practice (Nic Rothbacher)
+
+The History of Racism in Science (Eric Xia)
+
+How to Create Effective Models in Research (Jonathan Lu)
+
+How to Choose a Research Lab (Anmol Warman) 
+
+7/6 - Week 3 Monday
+
+Masterclass Seminar (Jenny)
+
+Programming Bootcamp Lecture L3.1 (Alex)
+
+Research Bootcamp Lecture L3.1 (Franklyn)
+
+Research Bootcamp Section S3.1 (Dhruvik)
+
+7/7 - Week 3 Tuesday
+
+Masterclass Seminar (Benjamin)
+
+Programming Bootcamp Lecture L3.2 (Aleks)
+
+Research Bootcamp Lecture L3.2 (Franklyn)
+
+Programming Bootcamp Section S3.1 (Aleks)
+
+7/8 - Week 3 Wednesday
+
+Masterclass Seminar (Arjun)
+
+Programming Bootcamp Lecture L3.3 (Aleks)
+
+Research Bootcamp Lecture L3.3 (Franklyn)
+
+Research Bootcamp Section S3.2 (Dhruvik)
+
+7/9 - Week 3 Thursday
+
+Masterclass Seminar and Followup to Answer More Questions (Shawn)
+
+Programming Bootcamp Lecture L3.4 (Aleks)
+
+Research Bootcamp Lecture L3.4 (Franklyn)
+
+Programming Bootcamp Section S3.2 (Aleks)
+
+7/10 - Week 3 Friday
+
+Masterclass Seminar (David)
+
+Programming Bootcamp Lecture L3.5 (Aleks)
+
+Research Bootcamp Lecture L3.5 (Franklyn)
+
+7/11 - Week 3 Saturday
+
+Weekend Challenge 3 (Joshua)
+
+7/12 - Week 3 Sunday
+
+From my Basement to Boeing: Starting Aerospace and Engineering Research from Scratch (Matthew Tan)
+
+AI & Medicine: Obstacles and Prospects (Pranav Warman)
+
+Should I go to Grad School? (Jerry Qu)
+
+A Tale of Two Fields—or, Why You Shouldn’t Only Study Computer Science (Allen Huang)
+
+Detecting natural disasters, damage, and incidents in the wild (Ethan Weber)
+
+Recognising and Overcoming Biases in Research (Gaeun Kim)
+
+You and Theoretical Physics (Brian Huang)
+
+Yelp Dataset Challenge: Data Competitions and Social Engineering (Cierra Beck)
+
+Potential of AI in Healthcare: Applying Machine Learning to Cluster Patients (Andrew Shea)
+
+Ethics in health + AI research: How Can We Innovate for Good? (Stephanie Brito)
+
+Engineering for Precision Medicine (Hari Sadasivan; audio only, presentation slides here) 
+
+7/13 - Week 4 Monday
+
+Masterclass Seminar (Leo)
+
+Programming Bootcamp Lecture L4.1 (Alex)
+
+Research Bootcamp Lecture L4.1 (Franklyn)
+
+Research Bootcamp Section S4.1 (Dhruvik, Adam, Anne, Franklyn, Alex)
+
+7/14 - Week 4 Tuesday
+
+Masterclass Seminar (Anne)
+
+Programming Bootcamp Lecture L4.2 (Alex)
+
+Research Bootcamp Lecture L4.2 (Franklyn)
+
+Programming Bootcamp Section S4.1 (Aleks)
+
+7/15 - Week 4 Wednesday
+
+Masterclass Seminar (Marco)
+
+Programming Bootcamp Lecture L4.3 (Alex)
+
+Research Bootcamp Lecture L4.3 (Franklyn)
+
+Research Bootcamp Section S4.2 (Dhruvik)
+
+7/16 - Week 4 Thursday
+
+Masterclass Seminar (Michael)
+
+Programming Bootcamp Lecture L4.4 (Alex)
+
+Research Bootcamp Lecture L4.4 (Franklyn)
+
+Programming Bootcamp Section S4.2 (Aleks)
+
+7/17 - Week 4 Friday
+
+Masterclass Seminar (Julius)
+
+Programming Bootcamp Lecture L4.5 (Aleks)
+
+Research Bootcamp Lecture L4.5 (Franklyn)
+
+7/18 - Week 4 Saturday
+
+Weekend Challenge 4 (Joshua)
+
+7/19 - Week 4 Sunday
+
+Introduction to Evolutionary Computation (Jordan Wick)
+
+Introduction to Reinforcement Learning (Ryan Tolsma)
+
+Solving Problems with Metaheuristics (Gheric Speiginer) 
+
+Bias and Fairness in Machine Learning (Eric Frankel)
+
+Making@Home (Yatin Chandar)
+
+Introduction to Embedded Systems (Billy Zhao)
+
+7/20 - Week 5 Monday
+
+Masterclass Seminar (Vahid)
+
+Programming Bootcamp Lecture L5.1 (Alex)
+
+Research Bootcamp Lecture L5.1 (Dhruvik)
+
+Research Bootcamp Section S5.1 (Anne)
+
+7/21 - Week 5 Tuesday
+
+Masterclass Seminar (Katherine H.)
+
+Programming Bootcamp Lecture L5.2 (Aleks)
+
+Research Bootcamp Lecture L5.2 (Dhruvik)
+
+Programming Bootcamp Section S5.1 (Aleks)
+
+7/22 - Week 5 Wednesday
+
+Masterclass Seminar (Anushka)
+
+Programming Bootcamp Lecture L5.3 (Alex)
+
+Research Bootcamp Lecture L5.3 (Dhruvik)
+
+Research Bootcamp Section S5.2 (Franklyn)
+
+7/23 - Week 5 Thursday
+
+Masterclass Seminar Part 1 (Daniel)
+
+Masterclass Seminar Part 2 (Daniel)
+
+Programming Bootcamp Lecture L5.4 (Alex)
+
+Research Bootcamp Lecture L5.4 (Dhruvik)
+
+Programming Bootcamp Section S5.2 (Aleks)
+
+7/24 - Week 5 Friday
+
+Masterclass Seminar (John)
+
+Programming Bootcamp Lecture L5.5 (Aleks)
+
+Research Bootcamp Lecture L5.5 (Dhruvik)
+
+7/25 - Week 5 Saturday
+
+Weekend Challenge 5 (Joshua)
+
+7/26 - Week 5 Sunday
+
+Applied Academia: How a Researcher Stays Relevant in the Workplace (Rahul Khanna)
+
+Introduction to Financial Markets (Chris Wang)
+
+STEM Education Research and STEM Outreach (Muntaha Samad)
+
+How to Fail for Fun and Profit (Cannon Lewis)
+
+An Introduction to Error-Correcting Codes, or, Tips for Surviving a Rather Particular Alien Abduction (Abhijit Mudigonda)
+
+Startups: Are They Worth the Risk? (Nathan Lam)
+
+Why can’t I eat steak for EVERY meal? (Steven Okada)
+
+Using Science to Guide Public Policy (Harshal Agarwal) 
+
+7/27 - Week 6 Monday
+
+Masterclass Seminar (Adam)
+
+Programming Bootcamp Lecture L6.1 (Aleks and Alex)
+
+Research Bootcamp Lecture L6.1 (Dhruvik)
+
+Research Bootcamp Section S6.1 (Anne)
+
+7/28 - Week 6 Tuesday
+
+Masterclass Seminar (Sabrina)
+
+Programming Bootcamp Lecture L6.2 (Alex)
+
+Research Bootcamp Lecture L6.2 (Dhruvik)
+
+Programming Bootcamp Section S6.1 (Aleks)
+
+7/29 - Week 6 Wednesday
+
+Masterclass Seminar (Stephen)
+
+Programming Bootcamp Lecture L6.3 (Alex)
+
+Research Bootcamp Lecture L6.3 (Dhruvik)
+
+Research Bootcamp Section S6.2 (Anne)
+
+7/30 - Week 6 Thursday
+
+Masterclass Seminar (Michael)
+
+Programming Bootcamp Lecture L6.4 (Adam)
+
+Research Bootcamp Lecture L6.4 (Dhruvik)
+
+Programming Bootcamp Section S6.2 (Aleks)

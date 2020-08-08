@@ -42,9 +42,7 @@ function initialize() {
             try {
                 var link = $(this).parent().parent().find(".vid").attr("name");
                 $(this).parent().parent().find(".vid").attr("src", link);
-                console.log($(this).parent().parent().find(".vid"));
             } catch (error) {
-                console.log(error)
             }
             $(".overlay-cover").show();
             setTimeout(() => {

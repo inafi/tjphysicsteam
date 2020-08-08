@@ -66,7 +66,7 @@ body {
     transform: translateX(-100%);
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 3vh 3vh 4vh 3vh;
+    padding: 2vh 3vh 3vh;
 }
 
 .side .date {
@@ -76,15 +76,15 @@ body {
 }
 
 .side .title {
-    font-size: 2.5vh;
-    margin: 0 auto 0.75vh auto;
+    font-size: 2.4vh;
+    margin: 0.5vh auto 1vh;
     display: inline-block;
 }
 
 .side .desc {
     font-size: 2vh;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
     display: inline-block;
 }
 

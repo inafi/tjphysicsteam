@@ -27,6 +27,10 @@ body {
     margin: 0 !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .row {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -209,31 +213,25 @@ button:focus {
 }
 
 /*Scrollbar*/
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 1vh;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #fff;
+body::-webkit-scrollbar-thumb {
+    background-color: #3bb5fc;
+    border-radius: 20vh;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #1B98E0;
+body.top-flat::-webkit-scrollbar-thumb{
+    border-radius: 0 0 20vh 20vh;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+body.bot-flat::-webkit-scrollbar-thumb{
+    border-radius: 20vh 20vh 0 0 ;
+}
+
+body::-webkit-scrollbar-thumb:hover {
     background: #3D348B;
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: #3D348B;
-}
-
-a {
-    text-decoration: none !important;
 }
 
 .block {

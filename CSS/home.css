@@ -90,6 +90,7 @@ body {
     margin-top: 1vh !important;
     text-align: center;
     font-size: 2vh;
+    max-width: 140vh;
 }
 
 .b1 .label {
