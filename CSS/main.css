@@ -1,5 +1,11 @@
 @font-face {
     font-family: "Nunito";
+    src: url("fonts/Nunito/Nunito-Light.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Nunito";
     src: url("fonts/Nunito/Nunito-Regular.ttf");
 }
 
@@ -18,6 +24,24 @@
     font-family: "Lato";
     src: url("fonts/Lato/Lato-Bold.ttf");
     font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Light.ttf");
+    font-weight: 100;
 }
 
 body {
@@ -297,7 +321,7 @@ footer .fa-facebook-f {
 }
 
 footer .fa-facebook-f:hover {
-    transform: translateX(-3vh) translateY(0.2vh) scale(1.2);
+    color: #1B98E0;
 }
 
 footer .mail {
@@ -307,7 +331,7 @@ footer .mail {
 }
 
 footer .mail:hover {
-    transform: translateX(0vh) translateY(0.9vh) scale(1.2);
+    color: #1B98E0;
 }
 
 footer .fa-github {
@@ -323,7 +347,7 @@ footer .fa-github:hover {
 /*Heart*/
 footer .bot i:first-of-type {
     color: red;
-    font-size: 2.5vh;
+    font-size: 2.8vh;
     transform: translateY(.8vh);
     padding-left: .2vh;
     padding-right: .2vh;

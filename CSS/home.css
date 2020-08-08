@@ -64,6 +64,7 @@ body {
     color: #fff;
     transform: translateX(-50%);
     z-index: 1;
+    font-weight: 100;
 }
 
 /*b1*/
