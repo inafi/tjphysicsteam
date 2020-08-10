@@ -220,20 +220,20 @@ button:focus {
 
 /*Scrollbar*/
 body::-webkit-scrollbar {
-    width: 1vh;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #3bb5fc;
-    border-radius: 20vh;
+    border-radius: 10px;
 }
 
 body.top-flat::-webkit-scrollbar-thumb{
-    border-radius: 0 0 20vh 20vh;
+    border-radius: 0 0 10px 10px;
 }
 
 body.bot-flat::-webkit-scrollbar-thumb{
-    border-radius: 20vh 20vh 0 0 ;
+    border-radius: 10px 10px 0 0 ;
 }
 
 body::-webkit-scrollbar-thumb:hover {

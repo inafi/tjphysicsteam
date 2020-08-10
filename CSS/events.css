@@ -1,5 +1,19 @@
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #06D6A0, #1b98e0);
+    -webkit-mask: linear-gradient(#fff, transparent);
+    mask: linear-gradient(#fff, transparent);
+}
+
 body {
-    background-image: linear-gradient(to bottom right, #06D6A0, #1b98e0);
+    background: linear-gradient(to right, #3a7bd5, #3bb5fc);
+    transition: 0.3s;
 }
 
 nav {
