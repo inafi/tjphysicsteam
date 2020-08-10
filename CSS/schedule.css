@@ -1,6 +1,10 @@
 body {
     background-image: linear-gradient(to bottom right, #06D6A0, #3bb5fc, #562fc9);
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 !important;
+    margin: 0 !important
 }
 
 .ds-selected {
