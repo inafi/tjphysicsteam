@@ -12,6 +12,6 @@ body::before {
 }
 
 body {
-    background: linear-gradient(to right, #2193b0, #6dd5ed, #3bb5fc, #06D6A0);
+    background: linear-gradient(to right, #2193b0, #25d1f8, #3bb5fc, #06D6A0);
     transition: 0.3s;
 }
