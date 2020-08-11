@@ -88,21 +88,26 @@ function initialize() {
 
     var css = `
         @media only screen and (orientation:portrait) {
-            .row {
+            .event-small,
+            .event-large {
                 justify-content: center;
+                padding-left: 0%;
+                padding-right: 0%;
             }
 
-            .event-small {
-                display: flex;
+            .event-large>div {
+                padding-left: 8%;
+                padding-right: 8%;
             }
 
             .event-small>div {
-                min-width: 48vh;
+                padding-left: 8%;
+                padding-right: 8%;
             }
         
             .large,
             .event {
-                min-width: 48vh;
+                min-width: 0vh;
             }
         
             .overlay {
