@@ -7,10 +7,10 @@ function initialize() {
     }
 
     setInterval(() => {
-        if ($(window).scrollTop() == 0){
+        if ($(window).scrollTop() == 0) {
             $("body").addClass("top-flat");
             $("body").removeClass("bot-flat");
-        } else if ($(window).scrollTop() + $(window).height() == $(document).height()){
+        } else if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             $("body").removeClass("top-flat");
             $("body").addClass("bot-flat");
         } else {
@@ -46,10 +46,10 @@ function initialize() {
     <div class="collapse" id="navbarNavAltMarkup">
         <div class="anim">
             <div class="navbar-nav"> <a href="index.html"><span name="index">Home</span></a> <a href="schedule.html"><span
-                        name="schedule">Calendar</span></a> <a href="events.html"><span name="events">Events</span></a> <a
-                    href="rankings.html"><span name="rankings">Rankings</span></a> <a href="a.html"><span name="a">A
+                        name="schedule">Calendar</span></a> <a href="events.html"><span name="events">Events</span></a> <a href="past.html"><span name="past">Past</span></a>
+                         <a href="a.html"><span name="a">A
                         Team</span></a> <a href="b.html" name="b"><span>B Team</span></a> <a href="c.html"><span name="c">C
-                        Team</span></a> <a href="past.html"><span name="past">Past</span></a> <a href="resources.html"><span
+                        Team</span></a> <a href="resources.html"><span
                         name="resources">Resources</span></a> </div>
         </div>
     </div>
