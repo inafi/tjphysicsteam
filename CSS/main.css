@@ -78,7 +78,7 @@ img {
 
 nav {
     font-size: 2vh;
-    height: 7vh;
+    height: 6vh;
     font-family: 'Lato', "arial";
     transition: 0.3s;
 }
@@ -512,7 +512,7 @@ nav .wrap-icon {
         background-color: #fff;
         width: 100%;
         position: fixed;
-        top: calc(7vh - 1px);
+        top: calc(6vh - 1px);
         left: 0;
         border-bottom-left-radius: 1vh;
         border-bottom-right-radius: 1vh;
