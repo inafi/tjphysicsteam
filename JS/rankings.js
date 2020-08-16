@@ -9,7 +9,7 @@ function initialize() {
     var prev = -1;
     var curr = 0;
     setInterval(function () {
-        curr = $(window).scrollTop();
+        curr = $(window).scrollTop() + $(window).width();
         if (curr != prev) {
             if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > 1170) {
                 $("nav").css('background-color', 'transparent');

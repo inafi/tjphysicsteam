@@ -88,7 +88,7 @@ nav a {
 }
 
 nav img {
-    height: 5vh;
+    height: 4.75vh;
     position: absolute;
     left: 0;
     right: 0;
@@ -113,14 +113,14 @@ nav span:hover {
 
 nav .left {
     position: absolute;
-    left: 0;
+    left: 5%;
     margin: auto;
     line-height: 7vh;
 }
 
 nav .right {
     position: absolute;
-    right: 0;
+    right: 5%;
     margin: auto;
     line-height: 7vh;
 }
