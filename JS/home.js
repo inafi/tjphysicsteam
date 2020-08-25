@@ -152,7 +152,7 @@ function initialize() {
             }
         }
         prev = curr;
-    }, 20)
+    }, 50)
 
     try {
         var ds = new DragSelect({

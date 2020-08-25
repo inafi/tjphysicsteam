@@ -52,7 +52,7 @@ function initialize() {
         } catch (error) {
 
         }
-    }, 20)
+    }, 50)
 
     $(document).on('mouseenter', '.pdf', function (event) {
         var newwidth = Math.max($(this).children(".label").get(0).scrollWidth, $(window).width() * .2);

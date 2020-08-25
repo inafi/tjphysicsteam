@@ -19,13 +19,12 @@ for name in result:
             else:
                 num = int(re.search('version=(.*)"', i).group(1)) + 1
                 i = re.sub('version=(.*)"', "version=" + str(num) + '"', i)
-        
         if '<script' in i and len(i.split("/")) == 3:
             if "?v=" not in i:
                 i = i.replace('"><', '?v=1"><')
             else:
                 num = int(re.search('v=(.*)">', i).group(1)) + 1
-                i = re.sub('v=(.*)">', "v=" + str(num) + '">', i)
+                # i = re.sub('v=(.*)">', "v=" + str(num) + '">', i)
         orig += i
 
     w = open(name, 'w')

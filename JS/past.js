@@ -121,7 +121,7 @@ function initialize() {
         var lineheight = $('#last-year').offset().top - $('#first-year').offset().top;
     
         $(".line").css("height", lineheight + "px");
-    }, 20)
+    }, 50)
 
     try {
         var ds = new DragSelect({

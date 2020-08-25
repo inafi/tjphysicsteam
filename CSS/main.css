@@ -157,7 +157,7 @@ button:focus {
     transition: .5s ease-in-out;
     cursor: pointer;
     right: 10%;
-    top: 1.7vh;
+    top: 1.2vh;
 }
 
 #nav-icon3 span {

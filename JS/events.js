@@ -34,7 +34,7 @@ function initialize() {
             }
         }
         prev = curr;
-    }, 20)
+    }, 50)
 
     $(".event, .large").click(function () {
         if ($(this).parent().attr("href") == null) {

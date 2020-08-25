@@ -34,7 +34,7 @@ function initialize() {
             }
         }
         prev = curr;
-    }, 20)
+    }, 50)
 
     var req = "https://sheets.googleapis.com/v4/spreadsheets/1vBfqcpmkNG3xDgoDCBVgLwaWlV4t88Ev8hlsyXMOPuo/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
 
