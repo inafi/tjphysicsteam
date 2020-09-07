@@ -228,12 +228,12 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
-body.top-flat::-webkit-scrollbar-thumb{
+body.top-flat::-webkit-scrollbar-thumb {
     border-radius: 0 0 10px 10px;
 }
 
-body.bot-flat::-webkit-scrollbar-thumb{
-    border-radius: 10px 10px 0 0 ;
+body.bot-flat::-webkit-scrollbar-thumb {
+    border-radius: 10px 10px 0 0;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -256,92 +256,34 @@ footer {
     display: flex;
     justify-content: center;
     font-family: 'Lato', "arial";
-    font-size: 1.8vh;
-    padding-bottom: 1vh;
+    font-size: 1.9vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 footer>.row>div {
     width: 100%;
-    height: 3.5vh;
     text-align: center;
-}
-
-footer .top {
-    margin-top: 2vh;
     color: #fff;
+    margin: .5vh auto;
 }
 
-footer .mid {
-    padding-right: 3vh;
-    margin-top: -0.5vh;
-}
-
-footer .mid a {
-    color: #fff;
-}
-
-footer .bot {
-    margin-top: 0.4vh;
-    margin-bottom: 1vh;
-    color: #fff;
-}
-
-footer .top span {
-    color: #06D6A0;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-footer .top span:hover {
-    color: #1B98E0;
-}
-
-footer .fa-facebook-f {
-    font-size: 2.5vh;
-    transform: translateX(-3vh) translateY(0.2vh);
-    transition: 0.3s;
-}
-
-footer .fa-facebook-f:hover {
-    color: #1B98E0;
-}
-
-footer .mail {
-    font-size: 2.5vh;
-    transform: translateX(0vh) translateY(0.9vh);
-    transition: 0.3s;
-}
-
-footer .mail:hover {
-    color: #1B98E0;
-}
-
-footer .fa-github {
-    font-size: 3.2vh;
-    transform: translateX(3vh) translateY(0.5vh);
-    transition: 0.3s;
-}
-
-footer .fa-github:hover {
-    transform: translateX(3vh) translateY(0.5vh) scale(1.1);
-}
-
-/*Heart*/
-footer .bot i:first-of-type {
-    color: red;
+footer .info i {
     font-size: 2.8vh;
-    transform: translateY(.8vh);
-    padding-left: .2vh;
-    padding-right: .2vh;
+    color: #fff;
+    margin: 0 1vh;
+    transition: 0.3s;
 }
 
-/*Atom*/
-footer .bot i:last-of-type {
-    color: #fff;
+footer .info i:hover {
+    color: #1b98e0;
+}
+
+footer .row>div:last-child i {
+    color: #ff0000;
     font-size: 2.5vh;
-    transform: translateY(.5vh);
-    padding-left: .7vh;
-    padding-right: .7vh;
+    margin: 0 .5vh;
+    transform: translateY(0.25vh);
 }
 
 /*Footer Overlay*/
