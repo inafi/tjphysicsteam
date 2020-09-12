@@ -108,7 +108,7 @@ function initialize() {
                         href = ' href="' + link + '"';
                     var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
                     append += date + '</p>';
-                    append += '<p class="desc">' + 'Lecture on ' + title + "</p></div></a>";
+                    append += '<p class="desc">' + title + "</p></div></a>";
                     $(".event-wrap").append(append);
                 } catch (err) {
                     num -= 1;

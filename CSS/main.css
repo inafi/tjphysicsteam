@@ -239,7 +239,7 @@ body.bot-flat::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: #3D348B;
 }
-
+ 
 .block {
     width: 100%;
     height: 30vh;
