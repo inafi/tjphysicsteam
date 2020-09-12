@@ -93,7 +93,6 @@ function initialize() {
     var page = (window.location + "").split("/").slice(-1)[0].split(".")[0];
     if (page == "")
         page = "index";
-    alert(page);
     $("nav .navbar-nav span[name=" + page + "]").addClass("active");
 
     $(".form-link").click(function () {
