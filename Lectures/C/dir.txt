@@ -10,6 +10,12 @@ Momentum/Momentum_and_Collisions.pdf
 Mechanics/C_MechanicsReview_Solutions.pdf
 Mechanics/C_Mechanics_Review.pdf
 Thermodynamics/Thermodynamics.pdf
+2D_Kinematics/Kinematics_Review_Problem.pdf
+2D_Kinematics/Kinematics.pdf
+2D_Kinematics/KinematicsProblemSet11.1.13.pdf
+2D_Kinematics/KinematicsProblemSet11.8.13.pdf
+2D_Kinematics/KinematicsSolutions11.1.13.pdf
+2D_Kinematics/KinematicsSolutions11.8.13.pdf
 2D_Kinematics/Kinematics10.18.13.pdf
 2D_Kinematics/2D_Kinematics_solutions.pdf
 2D_Kinematics/2D_Kinematics_Final.pdf
