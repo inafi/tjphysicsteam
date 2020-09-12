@@ -45,17 +45,37 @@ function initialize() {
     </div>
     <div class="collapse" id="navbarNavAltMarkup">
         <div class="anim">
-            <div class="navbar-nav"> <a href="index.html"><span name="index">Home</span></a> <a href="schedule.html"><span
-                        name="schedule">Calendar</span></a> <a href="events.html"><span name="events">Events</span></a> <a href="past.html"><span name="past">Past</span></a>
-                         <a href="a.html"><span name="a">A
-                        Team</span></a> <a href="b.html" name="b"><span>B Team</span></a> <a href="c.html"><span name="c">C
-                        Team</span></a> <a href="resources.html"><span
-                        name="resources">Resources</span></a> </div>
+            <div class="navbar-nav">
+                <a href="index.html">
+                    <span name="index">Home</span>
+                </a>
+                <a href="schedule.html">
+                    <span name="schedule">Calendar</span>
+                </a>
+                <a href="events.html">
+                    <span name="events">Events</span>
+                </a>
+                <a href="past.html">
+                    <span name="past">Past</span>
+                </a>
+                <a href="a.html">
+                    <span name="a">A Team</span>
+                </a>
+                <a href="b.html" name="b">
+                    <span name="b">B Team</span>
+                </a>
+                <a href="c.html">
+                    <span name="c">C Team</span>
+                </a>
+                <a href="resources.html">
+                    <span name="resources">Resources</span>
+                </a>
+            </div>
         </div>
     </div>
     `);
 
-    $("nav #nav-icon3").on("click touchstart", function (e) {
+    $("nav #nav-icon3").on("click touchend", function (e) {
         if (e.type == "click" && isMobile)
             return;
         $(this).toggleClass('open');
@@ -73,6 +93,7 @@ function initialize() {
     var page = (window.location + "").split("/").slice(-1)[0].split(".")[0];
     if (page == "")
         page = "index";
+    alert(page);
     $("nav .navbar-nav span[name=" + page + "]").addClass("active");
 
     $(".form-link").click(function () {
@@ -134,6 +155,24 @@ function initialize() {
         }
     });
 
+    var disable_click_flag = false;
+
+    $(window).scroll(function () {
+        disable_click_flag = true;
+
+        clearTimeout($.data(this, 'scrollTimer'));
+
+        $.data(this, 'scrollTimer', setTimeout(function () {
+            disable_click_flag = false;
+        }, 250));
+    });
+
+    $("body").on("click", "a", function (e) {
+        if (disable_click_flag) {
+            e.preventDefault();
+        }
+    });
+
     var css = `
     html {
         overflow-x: hidden;
@@ -170,9 +209,5 @@ function initialize() {
     if (isMobile) {
         $("head").append('<style>' + css + '</style>');
     }
-
-    $('*').on('touchend', function () {
-        $(this)[0].click();
-    });
 }
 $(initialize);

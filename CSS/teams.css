@@ -57,7 +57,7 @@
 .slider {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
     height: 10vh;
-    margin-top: 10vh;
+    margin-top: 8vh;
     white-space: nowrap;
     display: flex;
     justify-content: center;

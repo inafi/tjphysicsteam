@@ -59,7 +59,7 @@ function initialize() {
         }
     })
 
-    $(".overlay-cover").on("mousedown touchstart", function (e) {
+    $(".overlay-cover").on("mousedown touchend", function (e) {
         $(".overlay-cover").hide();
         $(".overlay").each(function () {
             if ($(this).css("display") != "none")
@@ -88,6 +88,10 @@ function initialize() {
 
     var css = `
         @media only screen and (orientation:portrait) {
+            .overlay .title {
+                font-size: 4vh;
+            }
+
             .event-small,
             .event-large {
                 justify-content: center;

@@ -74,7 +74,8 @@ function initialize() {
     var num;
     //This is for adjusting the calendar slider at the top
     //Just use a date object and get the UTC month
-    var month = 9;
+    var TodayDate = new Date();
+    var month = TodayDate.getMonth() + 1;
     var save; //Used to save index of month in the get array
 
     $.ajax({
@@ -166,12 +167,21 @@ function initialize() {
 
     var sizep = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
     var nump;
-    var viewp = parseInt($(".pdf-wrap").width());;
+    var viewp = parseInt($(".pdf-wrap").width());
     var currp = 0;
     var previnfo = "";
+    var disable_click = false;
 
-    $(".topic").on("click touchend", function (e) {
-        if ((e.type == "click" && isMobile && Math.abs(window.orientation) == 90) || (e.type == "touchend" && isMobile && Math.abs(window.orientation) != 90))
+    $(window).scroll(function () {
+        disable_click = true;
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function () {
+            disable_clickg = false;
+        }, 250));
+    });
+
+    $(".topic").on("click", function (e) {
+        if (!disable_click && isMobile) 
             return;
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
@@ -282,7 +292,6 @@ function initialize() {
 
         .fa-chevron-left.sa,
         .fa-chevron-right.sa {
-
             padding-top: 5.5vh;
         }
 
