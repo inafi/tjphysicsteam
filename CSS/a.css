@@ -15,3 +15,7 @@ body {
     background: linear-gradient(to right, #2193b0, #25d1f8, #3bb5fc, #06D6A0);
     transition: 0.3s;
 }
+
+.topic-wrap {
+    width: 70%;
+}

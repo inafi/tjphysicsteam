@@ -291,6 +291,10 @@ function initialize() {
         .pdf-wrap {
             width: 90%;
         }
+
+        .topic-wrap {
+            width: 100%;
+        }
     }
     
     @media only screen and (orientation:landscape) {
