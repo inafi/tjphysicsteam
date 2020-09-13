@@ -6,8 +6,10 @@ function initialize() {
         isMobile = true;
     }
 
-    $(".fc-today-button").text("Today");
-    $("body").on("click", function () {
+    setTimeout(() => {
+        $(".fc-today-button").text("Today");
+    }, 100);
+    $("body").on("click touchstart", function () {
         $(".fc-today-button").text("Today");
     })
 
@@ -32,6 +34,10 @@ function initialize() {
         width: 0px;
     }
 
+    .side {
+        display: none !important;
+    }
+
     @media only screen and (orientation:portrait) {
         .schedule {
             overflow-x: scroll;
@@ -52,7 +58,18 @@ function initialize() {
         }
 
         .fc-toolbar h2 {
-            font-size: 2vh !important;
+            font-size: 2.8vh !important;
+        }
+
+        .fc-list-heading-alt, .fc-list-heading-main, .fc-list-item-time, .fc-list-item-title {
+            font-size: 1.8vh;
+        }
+
+        .fc-event-dot {
+            width: 1vh;
+            height: 1vh;
+            border-radius: 100%;
+            margin-top: .7vh;
         }
     }
     

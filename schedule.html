@@ -17,7 +17,7 @@
     <link href='JS/calendar/list/main.min.css' rel='stylesheet' />
     <script src='JS/calendar/list/main.min.js'></script>
     <script src="JS/custom/papaparse.min.js"></script>
-    <script src="JS/schedule.js?v=17"></script>
+    <script src="JS/schedule.js?v=18"></script>
     <script src="JS/custom/scroll.js"></script>
     <script src="JS/main.js?v=17"></script>
     <script>
@@ -279,7 +279,7 @@
             }
         }
         prev = curr;
-        if ($(".fc-right").children().length == 2) {
+        if ($(".fc-right").children().length == 2 && !isMobile) {
             var text = "";
             if ($("#calendar").attr("view") == "grid")
                 text = "List";
@@ -311,14 +311,14 @@
 
     setTimeout(() => {
         if (isMobile) {
-            $(".change-view")[0].click();
+            calendar.changeView('listMonth');
         }
     }, 100);
 
     $(window).on('orientationchange', function () {
         // alert(window.innerHeight < window.innerWidth);
         if (isMobile) {
-            location.reload();
+            // location.reload();
         }
     });
 
