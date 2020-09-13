@@ -73,9 +73,7 @@ function initialize() {
     </div>
     `);
 
-    $("nav #nav-icon3").on("click touchend", function (e) {
-        if (e.type == "click" && isMobile)
-            return;
+    $("nav #nav-icon3").on("click", function (e) {
         $(this).toggleClass('open');
         if ($(this).attr("expanded") == "true") {
             $(".navbar-nav").css("opacity", "0");

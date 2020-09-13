@@ -185,9 +185,18 @@ function initialize() {
             margin-right: 0 !important;
             margin-left: 0 !important;
         }
-    
+
+        .metric {
+            height: 80vh;
+        }
+
+        .metric-cover .back {
+            height: 60vh;
+        }
+
         .metric-cover p {
-            top: 15vh;
+            top: 12vh;
+            font-size: 8vh;
         }
     
         .b1 p.label {
@@ -210,6 +219,12 @@ function initialize() {
     
         .b3 .img-wrap {
             display: none;
+        }
+    }
+
+    @media only screen and (orientation:landscape) {
+        .metric-cover p {
+            font-size: 14vh;
         }
     }
     `
