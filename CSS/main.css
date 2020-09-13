@@ -157,13 +157,13 @@ button:focus {
     transition: .5s ease-in-out;
     cursor: pointer;
     right: 10%;
-    top: 1.2vh;
+    top: 1.3vh;
 }
 
 #nav-icon3 span {
     display: block;
     position: absolute;
-    height: 0.3vh;
+    height: 2px;
     width: 100%;
     background: #3D348B;
     opacity: 1;
@@ -257,8 +257,8 @@ footer {
     justify-content: center;
     font-family: 'Lato', "arial";
     font-size: 1.9vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 footer>.row>div {
@@ -438,7 +438,7 @@ nav .wrap-icon {
     display: none;
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 130vh) {
 
     nav .left,
     nav .right {
@@ -464,6 +464,7 @@ nav .wrap-icon {
         transition: .25s ease-in-out;
         transform: translateY(calc(-100% - 10vh));
         z-index: 1;
+        flex-direction: column !important;
         box-shadow:
             0 2.8px 2.2px rgba(0, 0, 0, 0.014),
             0 6.7px 5.3px rgba(0, 0, 0, 0.018),
@@ -484,6 +485,7 @@ nav .wrap-icon {
         padding-left: 2vh;
         font-size: 2vh;
         transition: 0.3s;
+        width: 100%;
     }
 
     nav * {

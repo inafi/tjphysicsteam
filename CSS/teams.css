@@ -12,9 +12,27 @@
 }
 
 /*Schedule*/
+.slider {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    height: 9vh;
+    margin-top: 8vh;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider> :first-child,
+.slider> :last-child {
+    display: inline-block !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .schedule {
     width: calc(100% - 10vh);
-    height: 10vh;
+    height: 9vh;
     text-align: center;
     overflow: hidden;
     padding: 0 !important;
@@ -27,7 +45,7 @@
 }
 
 .schedule .event {
-    height: 8vh;
+    height: 7vh;
     min-width: 24vh;
     max-width: 35vh;
     width: 13%;
@@ -43,33 +61,17 @@
     text-align: center;
     color: #06D6A0;
     font-size: 2vh;
-    margin-top: 1vh;
+    margin-top: .6vh;
 }
 
 .schedule .desc {
     text-align: center;
     color: #1B98E0;
     font-size: 1.8vh;
-    width: 100%;
+    width: 90%;
+    margin:auto;
+    overflow: hidden;
     margin-top: -15px;
-}
-
-.slider {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-    height: 10vh;
-    margin-top: 8vh;
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.slider> :first-child,
-.slider> :last-child {
-    display: inline-block !important;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .fa-chevron-left.sa {

@@ -38,39 +38,37 @@ function initialize() {
 
     $("nav").append(`
     <div class="wrap-icon">
-        <div id="nav-icon3" class="navbar-toggler"
+        <div id="nav-icon3"
             expanded="false"> <span></span> <span></span>
             <span></span> <span></span>
         </div>
     </div>
-    <div class="collapse" id="navbarNavAltMarkup">
-        <div class="anim">
-            <div class="navbar-nav">
-                <a href="index.html">
-                    <span name="index">Home</span>
-                </a>
-                <a href="schedule.html">
-                    <span name="schedule">Calendar</span>
-                </a>
-                <a href="events.html">
-                    <span name="events">Events</span>
-                </a>
-                <a href="past.html">
-                    <span name="past">Past</span>
-                </a>
-                <a href="a.html">
-                    <span name="a">A Team</span>
-                </a>
-                <a href="b.html" name="b">
-                    <span name="b">B Team</span>
-                </a>
-                <a href="c.html">
-                    <span name="c">C Team</span>
-                </a>
-                <a href="resources.html">
-                    <span name="resources">Resources</span>
-                </a>
-            </div>
+    <div class="collapse">
+        <div class="navbar-nav">
+            <a href="index.html">
+                <span name="index">Home</span>
+            </a>
+            <a href="schedule.html">
+                <span name="schedule">Calendar</span>
+            </a>
+            <a href="events.html">
+                <span name="events">Events</span>
+            </a>
+            <a href="past.html">
+                <span name="past">Past</span>
+            </a>
+            <a href="a.html">
+                <span name="a">A Team</span>
+            </a>
+            <a href="b.html" name="b">
+                <span name="b">B Team</span>
+            </a>
+            <a href="c.html">
+                <span name="c">C Team</span>
+            </a>
+            <a href="resources.html">
+                <span name="resources">Resources</span>
+            </a>
         </div>
     </div>
     `);
