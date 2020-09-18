@@ -80,7 +80,18 @@ function initialize() {
         }
     
         .fc-toolbar h2 {
-            font-size: 6vh !important;
+            font-size: 4vh !important;
+        }
+
+        .fc-list-heading-alt, .fc-list-heading-main, .fc-list-item-time, .fc-list-item-title {
+            font-size: 3vh;
+        }
+
+        .fc-event-dot {
+            width: 1.2vh;
+            height: 1.2vh;
+            border-radius: 100%;
+            transform: translateY(-1vh);
         }
     }
     `
