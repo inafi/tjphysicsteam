@@ -104,6 +104,8 @@ function initialize() {
                 } catch (err) {
 
                 }
+                if (title == null)
+                    title = "";
                 if (link == null)
                     link = "";
                 if (desc == null)
@@ -133,7 +135,7 @@ function initialize() {
     // console.log($(".event").width() + .02 * $(window).width(), .24 * $(window).height() + .02 * $(window).width(), .15 * $(window).width() + .02 * $(window).width())
     var view = parseInt($(".schedule").width());
     var currc;
-    
+
     if (save == null) {
         currc = -1 * size;
     } else {

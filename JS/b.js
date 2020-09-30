@@ -104,6 +104,8 @@ function initialize() {
                 } catch (err) {
 
                 }
+                if (title == null)
+                    title = "";
                 if (link == null)
                     link = "";
                 if (desc == null)
