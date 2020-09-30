@@ -91,7 +91,7 @@ function initialize() {
             num = arr.length;
             // console.log(arr);
             // console.log(num);
-            for (i = 0; i < arr.length; i++) {
+            for (i = 1; i < arr.length; i++) {
                 var date = "";
                 var title = "";
                 var desc = "";
