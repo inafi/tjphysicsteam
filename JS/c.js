@@ -104,6 +104,10 @@ function initialize() {
                 } catch (err) {
 
                 }
+                if (link == null)
+                    link = "";
+                if (desc == null)
+                    link = "";
                 try {
                     // console.log(date, title, desc, link);
                     if (parseInt(date.split("/")[0]) == month && save == null)

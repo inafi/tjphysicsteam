@@ -44,8 +44,8 @@ function initialize() {
                 0 2.3px 2px rgba(0, 0, 0, 0.022),
                 0 3.8px 2px rgba(0, 0, 0, 0.026),
                 0 4px 5px rgba(0, 0, 0, 0.05)`);
-                
-                if ($("nav #nav-icon3").attr("expanded") == "true"){
+
+                if ($("nav #nav-icon3").attr("expanded") == "true") {
                     $("nav #nav-icon3").click();
                 }
             }
@@ -104,6 +104,10 @@ function initialize() {
                 } catch (err) {
 
                 }
+                if (link == null)
+                    link = "";
+                if (desc == null)
+                    link = "";
                 try {
                     // console.log(date, title, desc, link);
                     if (parseInt(date.split("/")[0]) == month && save == null)
@@ -186,7 +190,7 @@ function initialize() {
     });
 
     $(".topic").on("click", function (e) {
-        if (!disable_click && isMobile) 
+        if (!disable_click && isMobile)
             return;
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
