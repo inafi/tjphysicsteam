@@ -132,9 +132,14 @@ function initialize() {
     var total = num * size;
     // console.log($(".event").width() + .02 * $(window).width(), .24 * $(window).height() + .02 * $(window).width(), .15 * $(window).width() + .02 * $(window).width())
     var view = parseInt($(".schedule").width());
-    var currc = save * -1 * size;
-
-    view += save * size;
+    var currc;
+    
+    if (save == null) {
+        currc = -1 * size;
+    } else {
+        currc = save * -1 * size;
+        view += save * size;
+    }
 
     if (!isMobile)
         $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");

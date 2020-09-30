@@ -131,9 +131,14 @@ function initialize() {
     var size = parseInt($(".event").width() + .02 * $(window).width());
     var total = num * size;
     var view = parseInt($(".schedule").width());
-    var currc = save * -1 * size;
-
-    view += save * size;
+    var currc;
+    
+    if (save == null) {
+        currc = -1 * size;
+    } else {
+        currc = save * -1 * size;
+        view += save * size;
+    }
 
     if (!isMobile)
         $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
