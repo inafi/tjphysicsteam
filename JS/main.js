@@ -190,7 +190,6 @@ function initialize() {
         .form-overlay {
             height: 75vh;
         }
-
     }
 
     @media only screen and (orientation:landscape) {

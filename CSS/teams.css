@@ -55,6 +55,7 @@
     border-radius: 1.5vh;
     overflow: hidden;
     display: inline-block;
+    transition: 0.3s;
 }
 
 .schedule .label {

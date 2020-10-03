@@ -58,10 +58,23 @@ function initialize() {
         }
     }, 50)
 
+    $(document).on('mouseenter', '.event', function (event) {
+        var newwidth = Math.max($(this).children(".desc")[0].scrollWidth + $(".event").width() * .2, $(".event").width());
+        var off = $(this).children(".desc")[0].offsetWidth;
+        var scroll = $(this).children(".desc")[0].scrollWidth;
+        if (off < scroll) {
+            $(this).css("width", newwidth + "px");
+        }
+    }).on('mouseleave', '.event', function () {
+        $(this).css("width", "13%");
+        $(this).css("margin-left", "0vh");
+        $(this).css("margin-right", "2%");
+    });
+
     $(document).on('mouseenter', '.pdf', function (event) {
-        var newwidth = Math.max($(this).children(".label").get(0).scrollWidth, $(window).width() * .2);
-        var off = $(this).children(".label").get(0).offsetWidth;
-        var scroll = $(this).children(".label").get(0).scrollWidth;
+        var newwidth = Math.max($(this).children(".label")[0].scrollWidth, $(window).width() * .2);
+        var off = $(this).children(".label")[0].offsetWidth;
+        var scroll = $(this).children(".label")[0].scrollWidth;
         if (off < scroll) {
             $(this).css("width", newwidth + "px");
             $(this).children(".label").css("width", newwidth + "px");
@@ -113,7 +126,7 @@ function initialize() {
                 try {
                     // console.log(date, title, desc, link);
                     if (parseInt(date.split("/")[0]) == month && save == null)
-                        save = i;
+                        save = i - 1;
                     var href = "";
                     if (link != "")
                         href = ' href="' + link + '"';
@@ -130,17 +143,13 @@ function initialize() {
         }
     });
 
-    var size = parseInt($(".event").width() + .02 * $(window).width());
-    var total = num * size;
-    // console.log($(".event").width() + .02 * $(window).width(), .24 * $(window).height() + .02 * $(window).width(), .15 * $(window).width() + .02 * $(window).width())
-    var view = parseInt($(".schedule").width());
+    var size = $(".event").width() + .02 * $(window).width();
     var currc;
 
     if (save == null) {
         currc = -1 * size;
     } else {
         currc = save * -1 * size;
-        view += save * size;
     }
 
     if (!isMobile)
@@ -151,33 +160,57 @@ function initialize() {
             $(".schedule").scrollLeft(lscroll);
     }
 
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
     function moveLeft() {
         currc += size;
-        view -= size;
         $(".event-wrap").css("transform", "translateX(" + currc + "px)");
     };
 
     function moveRight() {
         currc -= size;
-        view += size;
         $(".event-wrap").css("transform", "translateX(" + currc + "px)");
     };
 
     $('.fa-chevron-left.sa').click(function () {
-        if (view > $(".schedule").width())
+        if (!isVisible($(".event-wrap > :first-child")[0]))
             moveLeft();
     });
 
     $('.fa-chevron-right.sa').click(function () {
-        if (view < total)
+        if (!isVisible($(".event-wrap > :last-child")[0]))
             moveRight();
     });
 
     $(window).on('resize', function () {
-        size = parseInt($(".event").width() + .02 * $(window).width());
-        total = num * size;
-        view = parseInt($(".schedule").width());
-        currc = save * -1 * size;
+        size = $(".event").width() + .02 * $(window).width();
+        if (save == null)
+            currc = -1 * size;
+        else 
+            currc = save * -1 * size;
         $(".event-wrap").css("transform", "translateX(0%)");
     });
 

@@ -195,7 +195,7 @@ function initialize() {
         }
 
         .metric-cover p {
-            top: 12vh;
+            top: 20vh;
             font-size: 8vh;
         }
     
