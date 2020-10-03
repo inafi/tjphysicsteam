@@ -25,14 +25,14 @@ function initialize() {
         async: false,
         success: function (data) {
             $(".foot-wrap").append(data);
-            $.ajax({
-                url: "form.html",
-                type: "get",
-                async: false,
-                success: function (data) {
-                    $(".form-overlay").append(data);
-                }
-            });
+            // $.ajax({
+            //     url: "form.html",
+            //     type: "get",
+            //     async: false,
+            //     success: function (data) {
+            //         $(".form-overlay").append(data);
+            //     }
+            // });
         }
     });
 

@@ -36,7 +36,8 @@ function initialize() {
                 $("nav *").css('color', '#1B98E0');
                 $(".active").css('color', '#3D348B');
                 $("nav span:hover").css('color', '#06D6A0');
-                $("nav img").attr("src", "Pics/copy.png");
+                if ($("nav img").attr("src") != "Pics/copy.png")
+                    $("nav img").attr("src", "Pics/copy.png");
                 $("nav").css('box-shadow', `
                 0 2.8px 2.2px rgba(0, 0, 0, 0.014),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.018),
@@ -209,7 +210,7 @@ function initialize() {
         size = $(".event").width() + .02 * $(window).width();
         if (save == null)
             currc = -1 * size;
-        else 
+        else
             currc = save * -1 * size;
         $(".event-wrap").css("transform", "translateX(0%)");
     });
