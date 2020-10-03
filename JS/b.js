@@ -235,10 +235,12 @@ function initialize() {
         if ($(".viewer").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $(".viewer").css("height", "38vh");
             $(".viewer").css("margin-bottom", "6vh");
-            $(".topic").each(function () {
-                $(this).css("color", "#1B98E0");
-            })
+            $(".topic").css("color", "#1B98E0");
             $(this).css("color", "#3D348B");
+            $(".topic i").removeClass("fa-folder-open");
+            $(".topic i").addClass("fa-folder");
+            $(this).children("i").removeClass("fa-folder");
+            $(this).children("i").addClass("fa-folder-open");
             fetch('Lectures/B/dir.txt')
                 .then(response => response.text())
                 .then(text => {
@@ -264,9 +266,9 @@ function initialize() {
                 })
             $(".viewer").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
-            $(".topic").each(function () {
-                $(this).css("color", "#1B98E0");
-            })
+            $(".topic").css("color", "#1B98E0");
+            $(".topic i").removeClass("fa-folder-open");
+            $(".topic i").addClass("fa-folder");
             $(".viewer").css("height", "0vh");
             $(".viewer").css("margin-bottom", "0vh");
             $(".viewer").attr("vis", "off");
