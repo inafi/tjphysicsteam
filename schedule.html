@@ -139,7 +139,7 @@
                 if (!isMobile) {
                     var link = info.event.id.split(" __ ")[0];
                     var desc = info.event.id.split(" __ ")[1];
-                    if (link != "") 
+                    if (link != "")
                         desc += "<br>(Click to view content)"
                     if (desc != "")
                         $("div.desc").css("opacity", 1);
@@ -167,6 +167,7 @@
                 right: 'prev,next'
             },
             plugins: ['list', 'dayGrid'],
+            defaultView: 'listMonth',
             eventOrder: 'color, start',
             eventClick: function (info) {
                 if (!isMobile) {
@@ -326,13 +327,10 @@
     }, 50)
 
     setTimeout(() => {
-        if (isMobile) {
-            calendar.changeView('listMonth');
-        } else {
+        if (!isMobile) {
             calendar.setOption('height', $(window).height() * .95);
             if ($(window).height() / $(window).width() > 0.65) {
                 aspectside = false;
-                $(".wrap").css("transform", "translateX(0%)");
                 if ($("#calendar").attr("view") == "grid")
                     calendar.changeView('listMonth');
             } else {
@@ -346,7 +344,6 @@
             calendar.setOption('height', $(window).height() * .95);
             if ($(window).height() / $(window).width() > 0.65) {
                 aspectside = false;
-                $(".wrap").css("transform", "translateX(0%)");
                 if ($("#calendar").attr("view") == "grid")
                     calendar.changeView('listMonth');
             } else {
