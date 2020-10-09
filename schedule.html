@@ -171,12 +171,12 @@
         type: "get",
         async: false,
         success: function (data) {
-            getDoc(4, '#BB0A21');
-            getDoc(1, '#06D6A0');
-            getDoc(2, '#1B98E0');
-            getDoc(3, '#3D348B');
+            getDoc(4, '#BB0A21', "G");
+            getDoc(1, '#06D6A0', "A");
+            getDoc(2, '#1B98E0', "B");
+            getDoc(3, '#3D348B', "C");
 
-            function getDoc(req, color) {
+            function getDoc(req, color, type) {
                 var arr = data.sheets[req].data[0].rowData;
                 num = arr.length;
 
@@ -210,6 +210,21 @@
 
                     if (link == null)
                         link = ""
+
+                    switch (type) {
+                        case "G":
+                            title = "General - " + title;
+                            break;
+                        case "A":
+                            title = "A Team - " + title;
+                            break;
+                        case "B":
+                            title = "B Team - " + title;
+                            break;
+                        case "C":
+                            title = "C Team - " + title;
+                            break;
+                    }
 
                     var month = date.split("/")[0];
                     month = month.length > 1 ? month : '0' + month;
