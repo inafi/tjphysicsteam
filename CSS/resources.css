@@ -74,7 +74,7 @@ body {
 .topic-wrap {
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: -1.5vh;
+    margin-top: -2.5vh;
     margin-bottom: 2vh;
     display: flex;
     justify-content: center;
@@ -85,11 +85,13 @@ body {
     width: auto;
     background-color: #fff;
     border-radius: 1.5vh;
-    margin: 0 1.5% 1.5vh 1.5%;
-    padding: 0.4vh 2vh 0 2vh;
+    margin: 1.5vh 1.5%;
+    padding: 0.4vh 2vh;
     font-size: 2vh;
     color: #1B98E0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     overflow-x: hidden;
 }
@@ -108,7 +110,8 @@ body {
 .topic i {
     font-size: 3vh;
     color: #3D348B;
-    transform: translateY(0.6vh);
+    margin-right: .75vh;
+    transform: translateY(-0.2vh);
 }
 
 /*Exams*/

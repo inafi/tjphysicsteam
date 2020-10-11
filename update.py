@@ -26,30 +26,30 @@ for name in result:
                 num = int(re.search('v=(.*)">', i).group(1)) + 1
                 i = re.sub('v=(.*)">', "v=" + str(num) + '">', i)
         orig += i
-
     w = open(name, 'w')
     w.write(orig)
 
 # minifier
 
-result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/JS"
-for x in os.walk(PATH):
-    for y in glob.glob(os.path.join(x[0], '*.js')):
-        if "custom/" not in y and "calendar/" not in y and "min." not in y:
-            result.append(y)
 
-for i in result:
-    name = i
-    os.system("terser %s --compress --mangle --output %s" % (i, name))
+# result = []
+# PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/JS"
+# for x in os.walk(PATH):
+#     for y in glob.glob(os.path.join(x[0], '*.js')):
+#         if "custom/" not in y and "calendar/" not in y and "min." not in y:
+#             result.append(y)
 
-result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/CSS"
-for x in os.walk(PATH):
-    for y in glob.glob(os.path.join(x[0], '*.css')):
-        if "fonts/" not in y and "calendar/" not in y and "min." not in y:
-            result.append(y)
+# for i in result:
+#     name = i
+#     os.system("terser %s --compress --mangle --output %s" % (i, name))
 
-for i in result:
-    name = i
-    os.system("cleancss -o %s %s" % (i, name))
+# result = []
+# PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/CSS"
+# for x in os.walk(PATH):
+#     for y in glob.glob(os.path.join(x[0], '*.css')):
+#         if "fonts/" not in y and "calendar/" not in y and "min." not in y:
+#             result.append(y)
+
+# for i in result:
+#     name = i
+#     os.system("cleancss -o %s %s" % (i, name))
