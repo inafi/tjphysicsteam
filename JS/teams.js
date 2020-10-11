@@ -96,13 +96,17 @@ function initialize() {
         var newwidth = $(this).children(".label")[0].scrollWidth;
         var off = $(this).children(".label")[0].offsetWidth;
         var scroll = $(this).children(".label")[0].scrollWidth;
+        $(this).width($(this).width());
         if (off < scroll) {
-            $(this).width(newwidth + "px").animate();
+            $(this).width(newwidth + "px");
             $(this).children(".label").width(newwidth + "px");
         }
     }).on('mouseleave', '#8th .pdf', function () {
         $(this).width($(this).find("img").width());
         $(this).children(".label").width("100%");
+        setTimeout(() => {
+            $(this).css("width", "auto");
+        }, 300);
     });
 
     //Events
@@ -139,7 +143,7 @@ function initialize() {
     //Gets which team user is is viewing
     var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
     page.push("ABC".indexOf(page[0]) + 1)
-    
+
     $.ajax({
         url: req,
         type: "get",
@@ -230,10 +234,11 @@ function initialize() {
     });
 
     //PDF Viewer
-    var sizep = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
+    var sizep = $("#lectures .pdf-move a").width();
     var nump;
-    var viewp = parseInt($(".pdf-wrap").width());
+    var index = 0;
     var currp = 0;
+    var viewp = parseInt($(".pdf-wrap").width());
     var previnfo = "";
 
     $(".topic").on("click", function (e) {
@@ -254,6 +259,7 @@ function initialize() {
                     $("#lectures .pdf-move").html("");
                     viewp = parseInt($(".pdf-wrap").width());
                     currp = 0;
+                    index = 0;
                     $("#lectures .pdf-move").css("transform", "translateX(" + currp + "%)");
                     var fold = $(this).attr("name");
                     var append = '';
@@ -283,32 +289,41 @@ function initialize() {
 
     function moveLeftPdf() {
         currp += sizep;
-        viewp -= sizep;
+        index -= 1;
         $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     function moveRightPdf() {
         currp -= sizep;
-        viewp += sizep;
+        index += 1;
         $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
     };
 
     $('#lectures .fa-chevron-left.pa').click(function () {
-        if (viewp > $("#lectures .pdf-wrap").width())
+        sizep = $("#lectures .pdf-move a").width();
+        viewp = parseInt($(".pdf-wrap").width());
+        if (viewp + sizep * index > $("#lectures .pdf-wrap").width())
             moveLeftPdf();
     });
 
     $('#lectures .fa-chevron-right.pa').click(function () {
-        if (viewp < nump * sizep - $(window).width() * .03)
+        sizep = $("#lectures .pdf-move a").width();
+        viewp = parseInt($(".pdf-wrap").width());
+        if (viewp + sizep * index < nump * sizep - $(window).width() * .03)
             moveRightPdf();
     });
 
     $(window).on('resize', function () {
-        sizep = parseInt(Math.min(Math.max($(window).height() * .28, $("#lectures .pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
+        sizep = $("#lectures .pdf-move a").width();
         viewp = parseInt($(".pdf-wrap").width());
         currp = 0;
+        index = 0;
         $("#lectures .pdf-move").css("transform", "translateX(0%)");
     });
+
+    // setInterval(() => {
+    //     console.log(sizep, viewp, viewp + sizep * index, nump, nump * sizep - $(window).width() * .03);
+    // }, 100);
 
     $.ajax({
         url: "https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
@@ -321,6 +336,7 @@ function initialize() {
                 var numpl;
                 var viewpl = parseInt($(id + " .pdf-wrap").width());
                 var currpl = 0;
+                var indexl = 0;
                 var slides = [];
                 var youtube = [];
 
@@ -350,6 +366,7 @@ function initialize() {
                     $(id + " .pdf-move").html("");
                     viewpl = parseInt($(id + " .pdf-wrap").width());
                     currpl = 0;
+                    indexl = 0;
                     $(id + " .pdf-move").css("transform", "translateX(" + currpl + "%)");
                     var append = '';
                     var arr;
@@ -395,34 +412,37 @@ function initialize() {
                     update(1);
                 });
 
-                function moveLeftPdf() {
+                function moveLeftPdfl() {
                     currpl += sizepl;
-                    viewpl -= sizepl;
+                    indexl -= 1;
                     $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
                 };
 
-                function moveRightPdf() {
+                function moveRightPdfl() {
                     currpl -= sizepl;
-                    viewpl += sizepl;
+                    indexl += 1;
                     $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
                 };
 
                 $(id + ' .fa-chevron-left.pa').click(function () {
-                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
-                    if (viewpl > $(id + " .pdf-wrap").width())
-                        moveLeftPdf();
+                    sizepl = $(id + " .pdf-move a").width();
+                    viewpl = parseInt($(id + " .pdf-wrap").width());
+                    if (viewpl + sizepl * indexl > $(id + " .pdf-wrap").width())
+                        moveLeftPdfl();
                 });
 
                 $(id + ' .fa-chevron-right.pa').click(function () {
-                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
-                    if (viewpl < numpl * sizepl - $(window).width() * .03)
-                        moveRightPdf();
+                    sizepl = $(id + " .pdf-move a").width();
+                    viewpl = parseInt($(id + " .pdf-wrap").width());
+                    if (viewpl + sizepl * indexl < numpl * sizepl - $(window).width() * .03)
+                        moveRightPdfl();
                 });
 
                 $(window).on('resize', function () {
-                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
+                    sizepl = $(id + " .pdf-move a").width();
                     viewpl = parseInt($(id + " .pdf-wrap").width());
                     currpl = 0;
+                    indexl = 0;
                     $(id + " .pdf-move").css("transform", "translateX(0%)");
                 });
             }

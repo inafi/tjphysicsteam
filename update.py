@@ -31,7 +31,6 @@ for name in result:
 
 # minifier
 
-
 # result = []
 # PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/JS"
 # for x in os.walk(PATH):
