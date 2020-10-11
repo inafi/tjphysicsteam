@@ -107,8 +107,13 @@ div.desc {
 }
 
 /*List View*/
+.fc-list-heading {
+    font-size: 1.8vh;
+}
+
 .fc-list-item {
     cursor: pointer;
+    font-size: 1.7vh;
 }
 
 /*Month Day Grid*/

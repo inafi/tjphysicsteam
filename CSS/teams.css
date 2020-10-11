@@ -70,9 +70,8 @@
     color: #1B98E0;
     font-size: 1.8vh;
     width: 90%;
-    margin:auto;
+    margin: auto;
     overflow: hidden;
-    margin-top: -15px;
 }
 
 .fa-chevron-left.sa {
@@ -157,7 +156,6 @@
     width: 84%;
     max-width: 200vh;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-    height: 0vh;
     margin-left: auto;
     margin-right: auto;
     white-space: nowrap;
@@ -168,6 +166,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.viewer[vis="off"] {
+    height: 0vh;
 }
 
 .pdf-wrap {
@@ -196,6 +198,13 @@
     width: 100%;
 }
 
+.pdf .img-wrap {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pdf-move {
     transition: 0.3s;
     position: relative;
@@ -219,8 +228,6 @@
 
 .fa-chevron-left.pa {
     font-size: 3vh !important;
-    padding-top: 18vh;
-    height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
@@ -230,13 +237,87 @@
 
 .fa-chevron-right.pa {
     font-size: 3vh !important;
-    padding-top: 18vh;
-    height: 38vh;
     cursor: pointer;
     color: #3D348B;
     transition: 0.3s;
     z-index: 9;
     transform: translateX(-2.5vh)
+}
+
+/*8th Periods*/
+div.switch-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: -1vh;
+}
+
+div.switch {
+    color: #fff;
+    font-size: 1.8vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    font-family: 'Nunito';
+    margin: 0 1%;
+    padding: .75vh 1.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+div.switch.active-switch {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.switch:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.switch p {
+    margin-left: 1vh;
+}
+
+div.switch img {
+    height: 2vh;
+}
+
+.lecture-group .pdf {
+    margin-top: 0vh;
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    padding-top: 2vh;
+}
+
+.lecture-group .pdf .img-wrap {
+    height: auto;
+    border-radius: 1.5vh;
+    overflow: hidden;
+}
+
+.lecture-group .pdf img {
+    border-radius: 1.5vh;
+    height: 27vh;
+    width: auto;
+}
+
+.lecture-group .pdf-move {
+    height: 35vh;
+}
+
+.lecture-group .pdf .label {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    text-align: center;
+    display: inline-block;
 }
 
 /*Resources*/

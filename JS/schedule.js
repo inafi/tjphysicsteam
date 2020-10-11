@@ -83,6 +83,10 @@ function initialize() {
     }
 
     @media only screen and (orientation:portrait) {
+        body {
+            overflow-x: scroll;
+        }
+    
         .schedule {
             overflow-x: scroll;
         }
@@ -136,10 +140,10 @@ function initialize() {
         }
 
         .fc-event-dot {
-            width: 1.2vh;
-            height: 1.2vh;
+            width: 1.5vh;
+            height: 1.5vh;
             border-radius: 100%;
-            transform: translateY(-1vh);
+            transform: translateY(1vh);
         }
     }
     `

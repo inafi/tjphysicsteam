@@ -5,16 +5,16 @@
     <title>TJ Physics Team</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/main.css?version=70">
-    <link rel="stylesheet" href="CSS/a.css?version=72">
-    <link rel="stylesheet" href="CSS/teams.css?version=70">
+    <link rel="stylesheet" href="CSS/main.css?version=72">
+    <link rel="stylesheet" href="CSS/a.css?version=74">
+    <link rel="stylesheet" href="CSS/teams.css?version=72">
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="CSS/material.css?version=67">
+    <link rel="stylesheet" href="CSS/material.css?version=69">
     <script src="JS/custom/papaparse.min.js"></script>
-    <script src="JS/a.js?v=36"></script>
+    <script src="JS/teams.js?v=38"></script>
     <script src="JS/custom/scroll.js"></script>
-    <script src="JS/main.js?v=36"></script>
+    <script src="JS/main.js?v=38"></script>
     <script>
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|Silk|lge|maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i
             .test(navigator.userAgent) ||
@@ -141,7 +141,7 @@
         </div>
     </div>
 
-    <div class="viewer" vis="off">
+    <div class="viewer" vis="off" id="lectures">
         <i class="far fa-chevron-left pa"></i>
         <div class="pdf-wrap">
             <div class="pdf-move">
@@ -151,11 +151,41 @@
                 </div>
                 <div class="pdf">
                     <img src="Lectures/A/Electromagnetism/EMWaves2014.png">
-                    <p class="label">Clssical ELectromagnetic Waves That do stuff </p>
+                    <p class="label">Classical ELectromagnetic Waves That do stuff </p>
                 </div> -->
             </div>
         </div>
         <i class="far fa-chevron-right pa"></i>
+    </div>
+
+    <div class="lectures">
+        <p class="title" style="margin-top: -2vh; margin-bottom: -2vh;">8th Periods</p>
+    </div>
+
+    <div class="lecture-group" id="8th">
+        <div class="switch-wrap">
+            <div class="switch" id="slides">
+                <img src="Pics/lectures/slides.png">
+                <p>
+                    Slides
+                </p>
+            </div>
+            <div class="switch" id="youtube">
+                <img src="Pics/lectures/youtube.png">
+                <p>
+                    YouTube
+                </p>
+            </div>
+        </div>
+
+        <div class="viewer" vis="on" style="margin-bottom: 5vh;">
+            <i class="far fa-chevron-left pa"></i>
+            <div class="pdf-wrap">
+                <div class="pdf-move">
+                </div>
+            </div>
+            <i class="far fa-chevron-right pa"></i>
+        </div>
     </div>
 
     <div class="resources" id="resources">

@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: "Nunito", "arial" !important;
+    font-family: "Nunito", "arial";
     overflow-x: hidden;
     user-select: none;
     font-weight: 100;
@@ -52,6 +52,7 @@ a {
 p {
     user-select: text;
     transition: 0.3s;
+    margin-bottom: 0vh;
 }
 
 #clipboard {
