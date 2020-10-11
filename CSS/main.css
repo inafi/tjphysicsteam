@@ -1,58 +1,58 @@
 @font-face {
-    font-family: "Nunito";
-    src: url("fonts/Nunito/nunito-light-webfont.woff2") format('woff2');
-    font-weight: 100;
-} 
-
-@font-face {
-    font-family: "Nunito";
-    src: url("fonts/Nunito/nunito-regular-webfont.woff2") format('woff2');
+    font-family: Nunito;
+    src: url(fonts/Nunito/nunito-light-webfont.woff2) format('woff2');
+    font-weight: 100
 }
 
 @font-face {
-    font-family: "Nunito";
-    src: url("fonts/Nunito/nunito-bold-webfont.woff2") format('woff2');
-    font-weight: bold;
+    font-family: Nunito;
+    src: url(fonts/Nunito/nunito-regular-webfont.woff2) format('woff2')
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("fonts/Lato/lato-light-webfont.woff2") format('woff2');
-    font-weight: 100;
+    font-family: Nunito;
+    src: url(fonts/Nunito/nunito-bold-webfont.woff2) format('woff2');
+    font-weight: 700
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("fonts/Lato/lato-regular-webfont.woff2") format('woff2');
+    font-family: Lato;
+    src: url(fonts/Lato/lato-light-webfont.woff2) format('woff2');
+    font-weight: 100
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("fonts/Lato/lato-bold-webfont.woff2") format('woff2');
-    font-weight: bold;
+    font-family: Lato;
+    src: url(fonts/Lato/lato-regular-webfont.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(fonts/Lato/lato-bold-webfont.woff2) format('woff2');
+    font-weight: 700
 }
 
 body {
-    font-family: "Nunito", "arial";
+    font-family: Nunito, arial;
     overflow-x: hidden;
     user-select: none;
     font-weight: 100;
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none !important
 }
 
 .row {
     margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-right: 0 !important
 }
 
 p {
     user-select: text;
-    transition: 0.3s;
-    margin-bottom: 0vh;
+    transition: .3s;
+    margin-bottom: 0
 }
 
 #clipboard {
@@ -61,7 +61,7 @@ p {
     left: 0;
     z-index: -1000;
     color: transparent;
-    font-size: 0vh;
+    font-size: 0
 }
 
 img {
@@ -69,31 +69,31 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-user-drag: none;
+    -webkit-user-drag: none
 }
 
 .ds-selected {
-    background: rgba(130, 130, 130, 0.35);
-    border-radius: 0.5vh;
+    background: rgba(130, 130, 130, .35);
+    border-radius: .5vh
 }
 
 .ds-selector {
-    border: #999 solid 0px !important;
+    border: #999 solid 0 !important;
     background: #cccccc55 !important;
-    border-radius: 0.75vh;
-    z-index: 1000 !important;
+    border-radius: .75vh;
+    z-index: 1000 !important
 }
 
 nav {
     font-size: 2vh;
     height: 6vh;
-    font-family: 'Nunito', "arial";
+    font-family: Nunito, arial;
     font-weight: 100;
-    transition: 0.3s;
+    transition: .3s
 }
 
 nav a {
-    color: #fff;
+    color: #fff
 }
 
 nav img {
@@ -106,67 +106,66 @@ nav img {
     margin: auto;
     cursor: pointer;
     z-index: 3;
-    transition: 0.3s;
+    transition: .3s
 }
 
 nav span {
     padding-right: 2vh;
     padding-left: 2vh;
     font-size: 2vh;
-    transition: 0.3s;
+    transition: .3s
 }
 
 nav span:hover {
-    color: #3D348B !important;
+    color: #3d348b !important
 }
 
 nav .left {
     position: absolute;
     left: 5%;
     margin: auto;
-    line-height: 7vh;
+    line-height: 7vh
 }
 
 nav .right {
     position: absolute;
     right: 5%;
     margin: auto;
-    line-height: 7vh;
+    line-height: 7vh
 }
 
 button:focus {
-    outline: none;
+    outline: 0
 }
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
-/* Icon 3 */
 .wrap-icon {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 6vh;
-    z-index: 2;
+    z-index: 2
 }
 
 #nav-icon3 {
     width: 5vh;
     height: 6vh;
     position: absolute;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
     right: 10%;
-    top: 1.3vh;
+    top: 1.3vh
 }
 
 #nav-icon3 span {
@@ -174,142 +173,139 @@ button:focus {
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #3D348B;
+    background: #3d348b;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    transition: .25s ease-in-out
 }
 
-/* Icon 3 */
 #nav-icon3 span:nth-child(1) {
-    top: 0px;
+    top: 0
 }
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-    top: 1.5vh;
+    top: 1.5vh
 }
 
 #nav-icon3 span:nth-child(4) {
-    top: 3vh;
+    top: 3vh
 }
 
 #nav-icon3.open span:nth-child(1) {
     width: 0%;
     left: 50%;
-    transform: scale(0);
+    transform: scale(0)
 }
 
 #nav-icon3.open span:nth-child(3) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 #nav-icon3.open span:nth-child(2) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
 #nav-icon3.open span:nth-child(4) {
     width: 0%;
     transform: scale(0);
-    left: 50%;
+    left: 50%
 }
 
-/*Scrollbar*/
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 10px
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #3bb5fc;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 body.top-flat::-webkit-scrollbar-thumb {
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px
 }
 
 body.bot-flat::-webkit-scrollbar-thumb {
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #3D348B;
+    background: #3d348b
 }
- 
+
 .block {
     width: 100%;
-    height: 30vh;
+    height: 30vh
 }
 
 .auto-block {
     width: 100%;
-    height: auto;
+    height: auto
 }
 
 footer {
-    background-color: #3D348B;
+    background-color: #3d348b;
     width: 100%;
     display: flex;
     justify-content: center;
-    font-family: 'Lato', "arial";
+    font-family: Lato, arial;
     font-size: 1.9vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    font-weight: 100;
+    font-weight: 100
 }
 
 footer>.row>div {
     width: 100%;
     text-align: center;
     color: #fff;
-    margin: .5vh auto;
+    margin: .5vh auto
 }
 
 footer .info i {
     font-size: 2.8vh;
     color: #fff;
     margin: 0 1vh;
-    transition: 0.3s;
+    transition: .3s
 }
 
 footer .info i:hover {
-    color: #1b98e0;
+    color: #1b98e0
 }
 
 footer .row>div:last-child i {
-    color: #ff0000;
+    color: red;
     font-size: 2.5vh;
     margin: 0 .5vh;
-    transform: translateY(0.25vh);
+    transform: translateY(.25vh)
 }
 
-/*Footer Overlay*/
 .form-overlay-cover {
     height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
     z-index: 40;
-    display: none;
+    display: none
 }
 
 nav {
-    z-index: 10 !important;
+    z-index: 10 !important
 }
 
 .form-overlay {
@@ -329,30 +325,30 @@ nav {
     border-radius: 1.5vh;
     display: none;
     opacity: 0;
-    transition: 0.3s;
+    transition: .3s;
     overflow-y: scroll;
     overflow-x: hidden;
-    text-align: center;
+    text-align: center
 }
 
 .form-overlay::-webkit-scrollbar {
-    width: 0px;
+    width: 0
 }
 
 .form-exit {
     position: fixed;
     color: #1b98e0;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
     top: 13.5vh;
     right: 17%;
     font-size: 4vh;
     background-color: transparent;
-    transition: 0.3s;
-    display: none;
+    transition: .3s;
+    display: none
 }
 
 .form-exit:hover {
-    color: #3D348B;
+    color: #3d348b
 }
 
 form .title {
@@ -361,46 +357,46 @@ form .title {
     text-align: center;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    display: inline-block;
+    display: inline-block
 }
 
 form .wrap {
-    width: 100%;
+    width: 100%
 }
 
 form label {
     font-size: 2.3vh;
     width: 100%;
-    color: #3D348B;
-    text-align: left;
+    color: #3d348b;
+    text-align: left
 }
 
-.checks> :first-child {
+.checks>:first-child {
     font-size: 2.3vh;
     width: 100%;
-    color: #3D348B;
+    color: #3d348b;
     margin-bottom: 1vh;
     margin-top: 1vh;
-    margin-left: 0vh;
+    margin-left: 0
 }
 
 .checks label {
     font-size: 2vh;
     margin-left: 2vh;
-    color: #06D6A0;
-    margin-top: 0vh;
-    margin-bottom: 0vh;
+    color: #06d6a0;
+    margin-top: 0;
+    margin-bottom: 0
 }
 
 .checks .choice {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1vh;
+    margin-bottom: 1vh
 }
 
 .checks input {
-    cursor: pointer;
+    cursor: pointer
 }
 
 form .text input {
@@ -408,14 +404,14 @@ form .text input {
     border: 0;
     border-bottom: 1px #bbb solid;
     margin-bottom: 2vh;
-    transition: 0.6s;
+    transition: .6s;
     font-size: 1.8vh;
-    text-align: left;
+    text-align: left
 }
 
 form .text input:focus {
-    outline: none !important;
-    border-bottom: 2px #1b98e0 solid;
+    outline: 0 !important;
+    border-bottom: 2px #1b98e0 solid
 }
 
 form .send {
@@ -428,36 +424,36 @@ form .send {
     margin-left: auto;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    transition: 0.3s;
+    transition: .3s
 }
 
 form .send:hover {
-    background-color: #3D348B;
+    background-color: #3d348b
 }
 
 form .send:disabled {
-    background-color: #bbb;
+    background-color: #bbb
 }
 
 form .send:disabled:hover {
-    background-color: #bbb !important;
+    background-color: #bbb !important
 }
 
 nav .collapse,
 nav .wrap-icon {
-    display: none;
+    display: none
 }
 
-@media only screen and (max-width: 130vh) {
+@media only screen and (max-width:130vh) {
 
     nav .left,
     nav .right {
-        display: none;
+        display: none
     }
 
     nav .collapse,
     nav .wrap-icon {
-        display: unset !important;
+        display: unset !important
     }
 
     nav .navbar-nav {
@@ -475,18 +471,12 @@ nav .wrap-icon {
         transform: translateY(calc(-100% - 10vh));
         z-index: 1;
         flex-direction: column !important;
-        box-shadow:
-            0 2.8px 2.2px rgba(0, 0, 0, 0.014),
-            0 6.7px 5.3px rgba(0, 0, 0, 0.018),
-            0 1.5px 2px rgba(0, 0, 0, 0.02),
-            0 2.3px 2px rgba(0, 0, 0, 0.022),
-            0 3.8px 2px rgba(0, 0, 0, 0.026),
-            0 4px 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, .014), 0 6.7px 5.3px rgba(0, 0, 0, .018), 0 1.5px 2px rgba(0, 0, 0, .02), 0 2.3px 2px rgba(0, 0, 0, .022), 0 3.8px 2px rgba(0, 0, 0, .026), 0 4px 5px rgba(0, 0, 0, .05)
     }
 
-    nav .navbar-nav> :last-child {
+    nav .navbar-nav>:last-child {
         border-bottom-left-radius: 1vh;
-        border-bottom-right-radius: 1vh;
+        border-bottom-right-radius: 1vh
     }
 
     nav .navbar-nav a {
@@ -494,42 +484,33 @@ nav .wrap-icon {
         padding-bottom: 1.5vh;
         padding-left: 2vh;
         font-size: 2vh;
-        transition: 0.3s;
-        width: 100%;
+        transition: .3s;
+        width: 100%
     }
 
     nav * {
-        color: #1b98e0 !important;
+        color: #1b98e0 !important
     }
 
     .active {
-        color: #3D348B !important;
+        color: #3d348b !important
     }
 
     nav span:hover {
-        color: #06D6A0 !important;
+        color: #06d6a0 !important
     }
 
     nav a:hover {
-        background-color: #ddd !important;
+        background-color: #ddd !important
     }
 
     .form-overlay {
-        width: 90%;
+        width: 90%
     }
 
     .form-exit {
         top: 1vh;
         right: 2%;
-        color: #fff;
+        color: #fff
     }
 }
-
-/* @media only screen and (orientation:portrait) {
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-} */

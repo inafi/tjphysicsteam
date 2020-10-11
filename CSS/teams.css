@@ -120,6 +120,7 @@
     margin-right: auto !important;
     display: flex;
     justify-content: center;
+    max-width: 200vh;
 }
 
 .topic {
