@@ -321,10 +321,6 @@ function initialize() {
         $("#lectures .pdf-move").css("transform", "translateX(0%)");
     });
 
-    // setInterval(() => {
-    //     console.log(sizep, viewp, viewp + sizep * index, nump, nump * sizep - $(window).width() * .03);
-    // }, 100);
-
     $.ajax({
         url: "https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
         type: "get",
