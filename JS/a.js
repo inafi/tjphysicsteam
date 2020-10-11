@@ -1,1 +1,491 @@
-function initialize(){var t=!1;(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4)))&&(t=!0);var e=-1,n=0;setInterval((function(){(n=$(window).scrollTop()+$(window).width())!=e&&(0==$(window).scrollTop()&&!t&&$(window).width()>1.3*$(window).height()?($("nav").css("background-color","transparent"),$("nav *").css("color","#fff"),$(".active").css("color","#3D348B"),$("nav span:hover").css("color","#3D348B"),$("nav img").attr("src","Pics/copy2.png"),$("nav").css("box-shadow","none")):($("nav").css("background-color","#fff"),$("nav *").css("color","#1B98E0"),$(".active").css("color","#3D348B"),$("nav span:hover").css("color","#06D6A0"),"Pics/copy.png"!=$("nav img").attr("src")&&$("nav img").attr("src","Pics/copy.png"),$("nav").css("box-shadow","\n                0 2.8px 2.2px rgba(0, 0, 0, 0.014),\n                0 6.7px 5.3px rgba(0, 0, 0, 0.018),\n                0 1.5px 2px rgba(0, 0, 0, 0.02),\n                0 2.3px 2px rgba(0, 0, 0, 0.022),\n                0 3.8px 2px rgba(0, 0, 0, 0.026),\n                0 4px 5px rgba(0, 0, 0, 0.05)"),"true"==$("nav #nav-icon3").attr("expanded")&&$("nav #nav-icon3").click())),e=n;try{a.addSelectables(document.querySelectorAll(".pdf p"))}catch(t){}}),50);try{var a=new DragSelect({selectables:document.querySelectorAll("div.event p, .topic p, .pdf p, p.title"),area:document.querySelector("body")})}catch(t){}function s(t){if(!(t instanceof Element))throw Error("DomUtil: elem is not an element.");const e=getComputedStyle(t);if("none"===e.display)return!1;if("visible"!==e.visibility)return!1;if(e.opacity<.1)return!1;if(t.offsetWidth+t.offsetHeight+t.getBoundingClientRect().height+t.getBoundingClientRect().width===0)return!1;const n={x:t.getBoundingClientRect().left+t.offsetWidth/2,y:t.getBoundingClientRect().top+t.offsetHeight/2};if(n.x<0)return!1;if(n.x>(document.documentElement.clientWidth||window.innerWidth))return!1;if(n.y<0)return!1;if(n.y>(document.documentElement.clientHeight||window.innerHeight))return!1;let i=document.elementFromPoint(n.x,n.y);do{if(i===t)return!0}while(i=i.parentNode);return!1}t||$("body").on("mousedown","p",(function(t){a.removeSelection($(this).get(0))})),$(document).on("mouseenter",".event",(function(t){var e=Math.max($(this).children(".desc")[0].scrollWidth+.2*$(".event").width(),$(".event").width());$(this).children(".desc")[0].offsetWidth<$(this).children(".desc")[0].scrollWidth&&$(this).css("width",e+"px")})).on("mouseleave",".event",(function(){$(this).css("width","13%"),$(this).css("margin-left","0vh"),$(this).css("margin-right","2%")})),$(document).on("mouseenter","#lectures .pdf",(function(t){var e=Math.max($(this).children(".label")[0].scrollWidth,.2*$(window).width());$(this).children(".label")[0].offsetWidth<$(this).children(".label")[0].scrollWidth&&($(this).css("width",e+"px"),$(this).children(".label").css("width",e+"px"))})).on("mouseleave","#lectures .pdf",(function(){$(this).css("width","20%"),$(this).css("margin-left","0vh"),$(this).css("margin-right","3%"),$(this).children(".label").css("width","20%"),$(this).children(".label").css("margin-left","0px")})),$(document).on("mouseenter","#8th .pdf",(function(t){var e=$(this).children(".label")[0].scrollWidth;$(this).children(".label")[0].offsetWidth<$(this).children(".label")[0].scrollWidth&&($(this).width(e+"px").animate(),$(this).children(".label").width(e+"px"))})).on("mouseleave","#8th .pdf",(function(){$(this).width($(this).find("img").width()),$(this).children(".label").width("100%")}));var r,o=(new Date).getMonth()+1,c=[window.location.href.split("/").pop().split(".")[0].toUpperCase()];if(c.push("ABC".indexOf(c[0])+1),$.ajax({url:"https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",type:"get",async:!1,success:function(e){var n=e.sheets[c[1]].data[0].rowData;for(num=n.length,i=1;i<n.length;i++){var s="",l="",d="",h="";try{s=n[i].values[0].formattedValue,l=n[i].values[1].formattedValue,d=n[i].values[2].formattedValue,h=n[i].values[3].formattedValue}catch(t){}null==l&&(l=""),null==h&&(h=""),null==d&&(h="");try{parseInt(s.split("/")[0])==o&&null==r&&(r=i-1);var p="";""!=h&&(p=' href="'+h+'"');var f="<a"+p+' target="_blank"><div class="event"><p class="label">';f+=s+"</p>",f+='<p class="desc">'+l+"</p></div></a>",$(".event-wrap").append(f)}catch(t){num-=1}}t||a.addSelectables(document.querySelectorAll("div.event p"))}}),t){var l=parseInt($(".event-wrap a:eq("+r+")").offset().left);0!=r&&$(".schedule").scrollLeft(l)}else $(".event-wrap").css("transform","translateX("+-1*r*h+"px)");var d,h=$(".event").width()+.02*$(window).width();d=null==r?-1*h:-1*r*h,$(".fa-chevron-left.sa").click((function(){s($(".event-wrap > :first-child")[0])||(d+=h,$(".event-wrap").css("transform","translateX("+d+"px)"))})),$(".fa-chevron-right.sa").click((function(){s($(".event-wrap > :last-child")[0])||(d-=h,$(".event-wrap").css("transform","translateX("+d+"px)"))})),$(window).on("resize",(function(){h=$(".event").width()+.02*$(window).width(),d=null==r?-1*h:-1*r*h,$(".event-wrap").css("transform","translateX(0%)")}));var p,f=parseInt(Math.min(Math.max(.28*$(window).height(),.2*$(".pdf-wrap").width()),.45*$(window).height())+.03*$(window).width()),w=parseInt($(".pdf-wrap").width()),u=0,m="";$(".topic").on("click",(function(t){"off"==$("#lectures").attr("vis")||m!=$(this).attr("name")?($("#lectures").css("height","38vh"),$("#lectures").css("margin-bottom","6vh"),$(".topic").css("color","#1B98E0"),$(this).css("color","#3D348B"),$(".topic i").removeClass("fa-folder-open"),$(".topic i").addClass("fa-folder"),$(this).children("i").removeClass("fa-folder"),$(this).children("i").addClass("fa-folder-open"),fetch("Lectures/"+c[0]+"/dir.txt").then((t=>t.text())).then((t=>{t=t.split("\n"),p=0,$("#lectures .pdf-move").html(""),w=parseInt($(".pdf-wrap").width()),u=0,$("#lectures .pdf-move").css("transform","translateX("+u+"%)");var e=$(this).attr("name"),n="";for(i=0;i<t.length;i++)if(t[i].split("/")[0]==e){var a=t[i].split("/")[1].split(".pdf")[0];dir="Lectures/"+c[0]+"/"+t[i],n+='<a href="'+dir+'" target="_blank"><div class="pdf"><img src="',n+=dir.replace(/.pdf/g,".png")+'"><p class="label">'+a.replace(/_/g," "),n+="</p></div></a>",p+=1}$("#lectures .pdf-move").append(n)})),$("#lectures").attr("vis","on")):""!=m&&m==$(this).attr("name")&&($(".topic").css("color","#1B98E0"),$(".topic i").removeClass("fa-folder-open"),$(".topic i").addClass("fa-folder"),$("#lectures").css("height","0vh"),$("#lectures").css("margin-bottom","0vh"),$("#lectures").attr("vis","off")),m=$(this).attr("name")})),$("#lectures .fa-chevron-left.pa").click((function(){w>$("#lectures .pdf-wrap").width()&&(u+=f,w-=f,$("#lectures .pdf-move").css("transform","translateX("+u+"px)"))})),$("#lectures .fa-chevron-right.pa").click((function(){w<p*f-.03*$(window).width()&&(u-=f,w+=f,$("#lectures .pdf-move").css("transform","translateX("+u+"px)"))})),$(window).on("resize",(function(){f=parseInt(Math.min(Math.max(.28*$(window).height(),.2*$("#lectures .pdf-wrap").width()),.45*$(window).height())+.03*$(window).width()),w=parseInt($(".pdf-wrap").width()),u=0,$("#lectures .pdf-move").css("transform","translateX(0%)")})),$.ajax({url:"https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",type:"get",success:function(t){!function(e,n){var a,s=parseInt($("#8th .pdf").width()+.03*$(window).width()),r=parseInt($(e+" .pdf-wrap").width()),o=0,c=[],l=[];for(k=0;k<n.length;k++){var d=t.sheets[n[k]].data[0].rowData;for(i=1;i<d.length;i++){try{null!=d[i].values[0].formattedValue&&c.push([d[i].values[0].formattedValue,d[i].values[1].formattedValue])}catch(t){}try{null!=d[i].values[2].formattedValue&&l.push([d[i].values[2].formattedValue,d[i].values[3].formattedValue])}catch(t){}}}function h(t){$(e+" .pdf-move").html(""),r=parseInt($(e+" .pdf-wrap").width()),o=0,$(e+" .pdf-move").css("transform","translateX("+o+"%)");var n,s,d,h,p="";for($(e+" .switch").removeClass("active-switch"),0==t&&(a=(n=c).length,s="slides",$(e+" #slides").addClass("active-switch")),1==t&&(a=(n=l).length,s="youtube",$(e+" #youtube").addClass("active-switch")),i=a-1;i>-1;i--){var f;0==t&&(f="https://lh3.googleusercontent.com/d/"+(f=c[i][1].split("/d/")[1].split("/")[0])+"=w640"),1==t&&(d=l[i][1],h=void 0,f="https://img.youtube.com/vi/"+(f=!(!(h=d.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/))||11!=h[7].length)&&h[7])+"/mqdefault.jpg"),p+='<a href="'+n[i][1]+'" target="_blank"><div class="pdf"><div class="img-wrap '+s+'"><img src="',p+=f+'"></div><p class="label">'+n[i][0],p+="</p></div></a>"}$(e+" .pdf-move").append(p)}h(0),$(e+" #slides").click((function(){h(0)})),$(e+" #youtube").click((function(){h(1)})),$(e+" .fa-chevron-left.pa").click((function(){s=parseInt($("#8th .pdf").width()+.03*$(window).width()),r>$(e+" .pdf-wrap").width()&&(o+=s,r-=s,$(e+" .pdf-move").css("transform","translateX("+o+"px)"))})),$(e+" .fa-chevron-right.pa").click((function(){s=parseInt($("#8th .pdf").width()+.03*$(window).width()),r<a*s-.03*$(window).width()&&(o-=s,r+=s,$(e+" .pdf-move").css("transform","translateX("+o+"px)"))})),$(window).on("resize",(function(){s=parseInt($("#8th .pdf").width()+.03*$(window).width()),r=parseInt($(e+" .pdf-wrap").width()),o=0,$(e+" .pdf-move").css("transform","translateX(0%)")}))}("#8th",[c[1]-1])}});t&&$("head").append("<style>\n    .schedule,\n    .pdf-wrap {\n        overflow-x: scroll;\n        overflow-y: hidden;\n    }\n\n    .fa-chevron-left.sa,\n    .fa-chevron-right.sa,\n    .fa-chevron-left.pa,\n    .fa-chevron-right.pa\n     {\n        display: none;\n    }\n\n\n    @media only screen and (orientation:portrait) {\n        .resources {\n            margin-top: 10vh;\n        }\n\n        .pdf{\n            margin-right: 10%;\n        }\n\n        .schedule {\n            width: 95%;\n        }\n    \n        .pdf-wrap {\n            width: 90%;\n        }\n\n        .topic-wrap {\n            width: 100%;\n        }\n    }\n    \n    @media only screen and (orientation:landscape) {\n    \n        .fa-chevron-left.sa,\n        .fa-chevron-right.sa {\n            padding-top: 5.5vh;\n        }\n\n        .schedule {\n            width: 98%;\n        }\n\n        .pdf-wrap {\n            width: 97%;\n        }\n    }\n    </style>")}$(initialize);
+function initialize() {
+    //Mobile
+    var isMobile = false;
+    if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
+        /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+        isMobile = true;
+    }
+
+    //navbar
+    var prev = -1;
+    var curr = 0;
+    setInterval(function () {
+        curr = $(window).scrollTop() + $(window).width();
+        if (curr != prev) {
+            if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height() * 1.3) {
+                $("nav").css('background-color', 'transparent');
+                $("nav *").css('color', '#fff');
+                $(".active").css('color', '#3D348B');
+                $("nav span:hover").css('color', '#3D348B');
+                $("nav img").attr("src", "Pics/copy2.png");
+                $("nav").css('box-shadow', 'none');
+            } else {
+                $("nav").css('background-color', '#fff');
+                $("nav *").css('color', '#1B98E0');
+                $(".active").css('color', '#3D348B');
+                $("nav span:hover").css('color', '#06D6A0');
+                if ($("nav img").attr("src") != "Pics/copy.png")
+                    $("nav img").attr("src", "Pics/copy.png");
+                $("nav").css('box-shadow', `
+                0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.018),
+                0 1.5px 2px rgba(0, 0, 0, 0.02),
+                0 2.3px 2px rgba(0, 0, 0, 0.022),
+                0 3.8px 2px rgba(0, 0, 0, 0.026),
+                0 4px 5px rgba(0, 0, 0, 0.05)`);
+
+                if ($("nav #nav-icon3").attr("expanded") == "true") {
+                    $("nav #nav-icon3").click();
+                }
+            }
+        }
+        prev = curr;
+        try {
+            ds.addSelectables(document.querySelectorAll('.pdf p'));
+        } catch (error) {
+
+        }
+    }, 50)
+
+    //DragSelect
+    try {
+        var ds = new DragSelect({
+            selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
+            area: document.querySelector('body')
+        });
+    } catch (error) {
+
+    }
+
+    if (!isMobile)
+        $('body').on('mousedown', 'p', function (event) {
+            ds.removeSelection($(this).get(0));
+        });
+
+    //div width
+    $(document).on('mouseenter', '.event', function (event) {
+        var newwidth = Math.max($(this).children(".desc")[0].scrollWidth + $(".event").width() * .2, $(".event").width());
+        var off = $(this).children(".desc")[0].offsetWidth;
+        var scroll = $(this).children(".desc")[0].scrollWidth;
+        if (off < scroll) {
+            $(this).css("width", newwidth + "px");
+        }
+    }).on('mouseleave', '.event', function () {
+        $(this).css("width", "13%");
+        $(this).css("margin-left", "0vh");
+        $(this).css("margin-right", "2%");
+    });
+
+    $(document).on('mouseenter', '#lectures .pdf', function (event) {
+        var newwidth = Math.max($(this).children(".label")[0].scrollWidth, $(window).width() * .2);
+        var off = $(this).children(".label")[0].offsetWidth;
+        var scroll = $(this).children(".label")[0].scrollWidth;
+        if (off < scroll) {
+            $(this).css("width", newwidth + "px");
+            $(this).children(".label").css("width", newwidth + "px");
+        }
+    }).on('mouseleave', '#lectures .pdf', function () {
+        $(this).css("width", "20%");
+        $(this).css("margin-left", "0vh");
+        $(this).css("margin-right", "3%");
+        $(this).children(".label").css("width", "20%");
+        $(this).children(".label").css("margin-left", "0px");
+    });
+
+    $(document).on('mouseenter', '#8th .pdf', function (event) {
+        var newwidth = $(this).children(".label")[0].scrollWidth;
+        var off = $(this).children(".label")[0].offsetWidth;
+        var scroll = $(this).children(".label")[0].scrollWidth;
+        if (off < scroll) {
+            $(this).width(newwidth + "px").animate();
+            $(this).children(".label").width(newwidth + "px");
+        }
+    }).on('mouseleave', '#8th .pdf', function () {
+        $(this).width($(this).find("img").width());
+        $(this).children(".label").width("100%");
+    });
+
+    //Events
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+    var req = "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
+    var TodayDate = new Date();
+    var month = TodayDate.getMonth() + 1;
+    var save; //Used to save index of month in the get array
+
+    //Gets which team user is is viewing
+    var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
+    page.push("ABC".indexOf(page[0]) + 1)
+
+    $.ajax({
+        url: req,
+        type: "get",
+        async: false,
+        success: function (data) {
+            var arr = data.sheets[page[1]].data[0].rowData;
+            num = arr.length;
+            for (i = 1; i < arr.length; i++) {
+                var date = "";
+                var title = "";
+                var desc = "";
+                var link = "";
+                try {
+                    date = arr[i].values[0].formattedValue;
+                    title = arr[i].values[1].formattedValue;
+                    desc = arr[i].values[2].formattedValue;
+                    link = arr[i].values[3].formattedValue;
+                } catch (err) {}
+                if (title == null)
+                    title = "";
+                if (link == null)
+                    link = "";
+                if (desc == null)
+                    link = "";
+                try {
+                    if (parseInt(date.split("/")[0]) == month && save == null)
+                        save = i - 1;
+                    var href = "";
+                    if (link != "")
+                        href = ' href="' + link + '"';
+                    var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
+                    append += date + '</p>';
+                    append += '<p class="desc">' + title + "</p></div></a>";
+                    $(".event-wrap").append(append);
+                } catch (err) {
+                    num -= 1;
+                }
+            }
+            if (!isMobile)
+                ds.addSelectables(document.querySelectorAll('div.event p'));
+        }
+    });
+
+    if (!isMobile)
+        $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
+    else {
+        var lscroll = parseInt($(".event-wrap a:eq(" + save + ")").offset().left);
+        if (save != 0)
+            $(".schedule").scrollLeft(lscroll);
+    }
+
+    var size = $(".event").width() + .02 * $(window).width();
+    var currc;
+
+    if (save == null) {
+        currc = -1 * size;
+    } else {
+        currc = save * -1 * size;
+    }
+
+    function moveLeft() {
+        currc += size;
+        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
+    };
+
+    function moveRight() {
+        currc -= size;
+        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
+    };
+
+    $('.fa-chevron-left.sa').click(function () {
+        if (!isVisible($(".event-wrap > :first-child")[0]))
+            moveLeft();
+    });
+
+    $('.fa-chevron-right.sa').click(function () {
+        if (!isVisible($(".event-wrap > :last-child")[0]))
+            moveRight();
+    });
+
+    $(window).on('resize', function () {
+        size = $(".event").width() + .02 * $(window).width();
+        if (save == null)
+            currc = -1 * size;
+        else
+            currc = save * -1 * size;
+        $(".event-wrap").css("transform", "translateX(0%)");
+    });
+
+    //PDF Viewer
+    var sizep = parseInt(Math.min(Math.max($(window).height() * .28, $(".pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
+    var nump;
+    var viewp = parseInt($(".pdf-wrap").width());
+    var currp = 0;
+    var previnfo = "";
+
+    $(".topic").on("click", function (e) {
+        if ($("#lectures").attr("vis") == "off" || previnfo != $(this).attr("name")) {
+            $("#lectures").css("height", "38vh");
+            $("#lectures").css("margin-bottom", "6vh");
+            $(".topic").css("color", "#1B98E0");
+            $(this).css("color", "#3D348B");
+            $(".topic i").removeClass("fa-folder-open");
+            $(".topic i").addClass("fa-folder");
+            $(this).children("i").removeClass("fa-folder");
+            $(this).children("i").addClass("fa-folder-open");
+            fetch('Lectures/' + page[0] + '/dir.txt')
+                .then(response => response.text())
+                .then(text => {
+                    text = text.split("\n");
+                    nump = 0;
+                    $("#lectures .pdf-move").html("");
+                    viewp = parseInt($(".pdf-wrap").width());
+                    currp = 0;
+                    $("#lectures .pdf-move").css("transform", "translateX(" + currp + "%)");
+                    var fold = $(this).attr("name");
+                    var append = '';
+                    for (i = 0; i < text.length; i++) {
+                        if (text[i].split("/")[0] == fold) {
+                            var name = text[i].split("/")[1].split(".pdf")[0];
+                            dir = 'Lectures/' + page[0] + '/' + text[i];
+                            append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
+                            append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
+                            append += '</p></div></a>';
+                            nump += 1;
+                        }
+                    }
+                    $("#lectures .pdf-move").append(append);
+                })
+            $("#lectures").attr("vis", "on");
+        } else if (previnfo != "" && previnfo == $(this).attr("name")) {
+            $(".topic").css("color", "#1B98E0");
+            $(".topic i").removeClass("fa-folder-open");
+            $(".topic i").addClass("fa-folder");
+            $("#lectures").css("height", "0vh");
+            $("#lectures").css("margin-bottom", "0vh");
+            $("#lectures").attr("vis", "off");
+        }
+        previnfo = $(this).attr("name");
+    });
+
+    function moveLeftPdf() {
+        currp += sizep;
+        viewp -= sizep;
+        $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
+    };
+
+    function moveRightPdf() {
+        currp -= sizep;
+        viewp += sizep;
+        $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
+    };
+
+    $('#lectures .fa-chevron-left.pa').click(function () {
+        if (viewp > $("#lectures .pdf-wrap").width())
+            moveLeftPdf();
+    });
+
+    $('#lectures .fa-chevron-right.pa').click(function () {
+        if (viewp < nump * sizep - $(window).width() * .03)
+            moveRightPdf();
+    });
+
+    $(window).on('resize', function () {
+        sizep = parseInt(Math.min(Math.max($(window).height() * .28, $("#lectures .pdf-wrap").width() * .2), $(window).height() * .45) + $(window).width() * .03);
+        viewp = parseInt($(".pdf-wrap").width());
+        currp = 0;
+        $("#lectures .pdf-move").css("transform", "translateX(0%)");
+    });
+
+    $.ajax({
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
+        type: "get",
+        success: function (data) {
+            pdfviewer("#8th", [page[1] - 1]);
+
+            function pdfviewer(id, index) {
+                var sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
+                var numpl;
+                var viewpl = parseInt($(id + " .pdf-wrap").width());
+                var currpl = 0;
+                var slides = [];
+                var youtube = [];
+
+                for (k = 0; k < index.length; k++) {
+                    var arr = data.sheets[index[k]].data[0].rowData;
+                    for (i = 1; i < arr.length; i++) {
+                        try {
+                            if (arr[i].values[0].formattedValue != null)
+                                slides.push([arr[i].values[0].formattedValue, arr[i].values[1].formattedValue]);
+                        } catch (error) {}
+                        try {
+                            if (arr[i].values[2].formattedValue != null)
+                                youtube.push([arr[i].values[2].formattedValue, arr[i].values[3].formattedValue]);
+                        } catch (error) {}
+                    }
+                }
+
+                update(0);
+
+                function youtube_parser(url) {
+                    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+                    var match = url.match(regExp);
+                    return (match && match[7].length == 11) ? match[7] : false;
+                }
+
+                function update(view) {
+                    $(id + " .pdf-move").html("");
+                    viewpl = parseInt($(id + " .pdf-wrap").width());
+                    currpl = 0;
+                    $(id + " .pdf-move").css("transform", "translateX(" + currpl + "%)");
+                    var append = '';
+                    var arr;
+                    var pick;
+
+                    $(id + " .switch").removeClass("active-switch");
+                    if (view == 0) {
+                        arr = slides;
+                        numpl = arr.length;
+                        pick = "slides";
+                        $(id + " #slides").addClass("active-switch");
+                    }
+                    if (view == 1) {
+                        arr = youtube;
+                        numpl = arr.length;
+                        pick = "youtube";
+                        $(id + " #youtube").addClass("active-switch");
+                    }
+
+                    for (i = numpl - 1; i > -1; i--) {
+                        var pic;
+                        if (view == 0) {
+                            pic = slides[i][1].split("/d/")[1].split("/")[0]
+                            pic = "https://lh3.googleusercontent.com/d/" + pic + "=w640"
+                        }
+                        if (view == 1) {
+                            pic = youtube_parser(youtube[i][1]);
+                            pic = "https://img.youtube.com/vi/" + pic + "/mqdefault.jpg";
+                        }
+                        append += '<a href="' + arr[i][1] + '" target="_blank"><div class="pdf"><div class="img-wrap ' + pick + '"><img src="';
+                        append += pic + '"></div><p class="label">' + arr[i][0];
+                        append += '</p></div></a>';
+                    }
+
+                    $(id + " .pdf-move").append(append);
+                }
+
+                $(id + ' #slides').click(function () {
+                    update(0);
+                });
+
+                $(id + ' #youtube').click(function () {
+                    update(1);
+                });
+
+                function moveLeftPdf() {
+                    currpl += sizepl;
+                    viewpl -= sizepl;
+                    $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
+                };
+
+                function moveRightPdf() {
+                    currpl -= sizepl;
+                    viewpl += sizepl;
+                    $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
+                };
+
+                $(id + ' .fa-chevron-left.pa').click(function () {
+                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
+                    if (viewpl > $(id + " .pdf-wrap").width())
+                        moveLeftPdf();
+                });
+
+                $(id + ' .fa-chevron-right.pa').click(function () {
+                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
+                    if (viewpl < numpl * sizepl - $(window).width() * .03)
+                        moveRightPdf();
+                });
+
+                $(window).on('resize', function () {
+                    sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
+                    viewpl = parseInt($(id + " .pdf-wrap").width());
+                    currpl = 0;
+                    $(id + " .pdf-move").css("transform", "translateX(0%)");
+                });
+            }
+        }
+    });
+
+    var css = `
+    .schedule,
+    .pdf-wrap {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .fa-chevron-left.sa,
+    .fa-chevron-right.sa,
+    .fa-chevron-left.pa,
+    .fa-chevron-right.pa
+     {
+        display: none;
+    }
+
+
+    @media only screen and (orientation:portrait) {
+        .resources {
+            margin-top: 10vh;
+        }
+
+        .pdf{
+            margin-right: 10%;
+        }
+
+        .schedule {
+            width: 95%;
+        }
+    
+        .pdf-wrap {
+            width: 90%;
+        }
+
+        .topic-wrap {
+            width: 100%;
+        }
+    }
+    
+    @media only screen and (orientation:landscape) {
+    
+        .fa-chevron-left.sa,
+        .fa-chevron-right.sa {
+            padding-top: 5.5vh;
+        }
+
+        .schedule {
+            width: 98%;
+        }
+
+        .pdf-wrap {
+            width: 97%;
+        }
+    }
+    `
+
+    if (isMobile) {
+        $("head").append('<style>' + css + '</style>');
+    }
+}
+$(initialize);
