@@ -29,3 +29,16 @@ for name in result:
 
     w = open(name, 'w')
     w.write(orig)
+
+#minifier
+
+result = []
+PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/JS"
+for x in os.walk(PATH):
+    for y in glob.glob(os.path.join(x[0], '*.js')):
+        if "custom/" not in y and "calendar/" not in y and "min." not in y:
+            result.append(y)
+
+for i in result:
+    name = i
+    os.system("terser %s --compress --mangle --output %s" % (i, name))
