@@ -379,7 +379,7 @@ function initialize() {
                         }
                         if (view == 1) {
                             pic = youtube_parser(youtube[i][1]);
-                            pic = "https://img.youtube.com/vi/" + pic + "/mqdefault.jpg";
+                            pic = "https://img.youtube.com/vi/" + pic + "/sddefault.jpg";
                         }
                         append += '<a href="' + arr[i][1] + '" target="_blank"><div class="pdf"><div class="img-wrap ' + pick + '"><img src="';
                         append += pic + '"></div><p class="label">' + arr[i][0];
