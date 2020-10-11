@@ -139,7 +139,6 @@ function initialize() {
     //Gets which team user is is viewing
     var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
     page.push("ABC".indexOf(page[0]) + 1)
-    console.log(page);
     
     $.ajax({
         url: req,
@@ -269,7 +268,6 @@ function initialize() {
                         }
                     }
                     $("#lectures .pdf-move").append(append);
-                    console.log(append);
                 })
             $("#lectures").attr("vis", "on");
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
