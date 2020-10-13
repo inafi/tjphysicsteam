@@ -466,12 +466,16 @@ function initialize() {
 
 
     @media only screen and (orientation:portrait) {
+        .viewer {
+            width: 90%;
+        }
+
         .resources {
             margin-top: 10vh;
         }
 
         .pdf{
-            margin-right: 10%;
+            margin-right: 8%;
         }
 
         .schedule {
