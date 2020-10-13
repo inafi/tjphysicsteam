@@ -1,4 +1,8 @@
 function initialize() {
+    //Gets which team user is is viewing
+    var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
+    page.push("ABC".indexOf(page[0]) + 1)
+
     //Mobile
     var isMobile = false;
     if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -15,7 +19,10 @@ function initialize() {
             if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height() * 1.3) {
                 $("nav").css('background-color', 'transparent');
                 $("nav *").css('color', '#fff');
-                $(".active").css('color', '#3D348B');
+                if (page[1] != 2)
+                    $(".active").css('color', '#3D348B');
+                else
+                    $(".active").css('color', '#06D6A0');
                 $("nav span:hover").css('color', '#3D348B');
                 $("nav img").attr("src", "Pics/copy2.png");
                 $("nav").css('box-shadow', 'none');
@@ -140,14 +147,12 @@ function initialize() {
     var month = TodayDate.getMonth() + 1;
     var save; //Used to save index of month in the get array
 
-    //Gets which team user is is viewing
-    var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
-    page.push("ABC".indexOf(page[0]) + 1)
+    var size = $(".event").width() + .02 * $(window).width();
+    var currc;
 
     $.ajax({
         url: req,
         type: "get",
-        async: false,
         success: function (data) {
             var arr = data.sheets[page[1]].data[0].rowData;
             num = arr.length;
@@ -182,27 +187,26 @@ function initialize() {
                     num -= 1;
                 }
             }
-            if (!isMobile)
+            size = $(".event").width() + .02 * $(window).width();
+            if (save == null) {
+                currc = -1 * size;
+            } else {
+                currc = save * -1 * size;
+            }
+
+            if (!isMobile) {
+                $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
                 ds.addSelectables(document.querySelectorAll('div.event p'));
+            } else {
+                var lscroll = parseInt($(".event-wrap a:eq(" + save + ")").offset().left);
+                if (save != 0)
+                    $(".schedule").scrollLeft(lscroll);
+            }
+
+            $(".slider").height("9vh");
+            $(".lectures").css("margin-top", "4vh");
         }
     });
-
-    if (!isMobile)
-        $(".event-wrap").css("transform", "translateX(" + save * -1 * size + "px)");
-    else {
-        var lscroll = parseInt($(".event-wrap a:eq(" + save + ")").offset().left);
-        if (save != 0)
-            $(".schedule").scrollLeft(lscroll);
-    }
-
-    var size = $(".event").width() + .02 * $(window).width();
-    var currc;
-
-    if (save == null) {
-        currc = -1 * size;
-    } else {
-        currc = save * -1 * size;
-    }
 
     function moveLeft() {
         currc += size;

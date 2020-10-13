@@ -6,7 +6,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, #3bb5fc, #526efc);
+    background: linear-gradient(to right, #3bb5fc, #6a41ff);
     -webkit-mask: linear-gradient(#fff, transparent);
     mask: linear-gradient(#fff, transparent);
 }
