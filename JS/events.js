@@ -32,8 +32,8 @@ function initialize() {
                 0 2.3px 2px rgba(0, 0, 0, 0.022),
                 0 3.8px 2px rgba(0, 0, 0, 0.026),
                 0 4px 5px rgba(0, 0, 0, 0.05)`);
-                
-                if ($("nav #nav-icon3").attr("expanded") == "true"){
+
+                if ($("nav #nav-icon3").attr("expanded") == "true") {
                     $("nav #nav-icon3").click();
                 }
             }
@@ -42,13 +42,12 @@ function initialize() {
     }, 50)
 
     $(".event, .large").click(function () {
-        if ($(this).parent().attr("href") == null) {
+        if ($(this).parent().attr("href") == null && $(this).parent().parent().find(".overlay").length != 0) {
             $(this).parent().parent().find(".overlay").show();
             try {
                 var link = $(this).parent().parent().find(".vid").attr("name");
                 $(this).parent().parent().find(".vid").attr("src", link);
-            } catch (error) {
-            }
+            } catch (error) {}
             $(".overlay-cover").show();
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
@@ -118,17 +117,38 @@ function initialize() {
             .event {
                 min-width: 0vh;
             }
+
+            .large .desc {
+                font-size: 2.2vh;
+            }
+
+            .large .title {
+                font-size: 5vh;
+            }
         
             .overlay {
                 height: 75vh;
             }
 
+            .overlay .desc {
+                margin-top: 2vh;
+            }
+
+            .overlay.text .label {
+                margin-left: 6%;
+            }
+
+            .overlay.text .desc {
+                width: 88%;
+                margin-top: 0vh;
+            }
+
             .vid {
-                height: 60vw;
+                height: 70vw;
             }
 
             .slides {
-                height: 60vw;
+                height: 70vw;
             }
         }
         
