@@ -48,6 +48,10 @@ function initialize() {
                 var link = $(this).parent().parent().find(".vid").attr("name");
                 $(this).parent().parent().find(".vid").attr("src", link);
             } catch (error) {}
+            try {
+                var link = $(this).parent().parent().find(".slides").attr("name");
+                $(this).parent().parent().find(".slides").attr("src", link);
+            } catch (error) {}
             $(".overlay-cover").show();
             setTimeout(() => {
                 $(".overlay").css("opacity", "1");
