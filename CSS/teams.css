@@ -340,18 +340,23 @@ div.switch img {
 }
 
 .resources .col-c {
-    height: 40vh;
+    height: 38vh;
     border-radius: 1.5vh;
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 7vh;
-    width: 15%;
+    width: 16%;
     min-width: 28vh;
     max-width: 50vh;
+    transition: 0.3s;
+}
+
+.resources .col-c a {
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1.5vh;
     transition: 0.3s;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -359,16 +364,10 @@ div.switch img {
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 27.9px rgba(0, 0, 0, 0.072),
         0 31.8px 23.4px rgba(0, 0, 0, 0.086),
-        0 40px 30px rgba(0, 0, 0, 0.15);
+        0 30px 30px rgba(0, 0, 0, 0.15);
 }
 
-.col-place {
-    width: 17%;
-    min-width: 28vh;
-    max-width: 50vh;
-}
-
-.resources .col-c:hover {
+.resources .col-c a:hover {
     transform: scale(1.03);
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -376,12 +375,19 @@ div.switch img {
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 27.9px rgba(0, 0, 0, 0.072),
         0 31.8px 23.4px rgba(0, 0, 0, 0.086),
-        0 30px 20px rgba(0, 0, 0, 0.25);
+        0 20px 20px rgba(0, 0, 0, 0.25);
 }
 
 .resources .col-c img {
     min-width: 100%;
-    max-height: 40vh;
+    height: 38vh;
+    border-radius: 1.5vh;
+}
+
+.col-place {
+    width: 18%;
+    min-width: 28vh;
+    max-width: 50vh;
 }
 
 .resources .title {
