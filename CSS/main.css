@@ -1,39 +1,39 @@
 @font-face {
-    font-family: Nunito;
+    font-family: 'Nunito';
     src: url(fonts/Nunito/nunito-light-webfont.woff2) format('woff2');
     font-weight: 100
 }
 
 @font-face {
-    font-family: Nunito;
+    font-family: 'Nunito';
     src: url(fonts/Nunito/nunito-regular-webfont.woff2) format('woff2')
 }
 
 @font-face {
-    font-family: Nunito;
+    font-family: 'Nunito';
     src: url(fonts/Nunito/nunito-bold-webfont.woff2) format('woff2');
     font-weight: 700
 }
 
 @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: url(fonts/Lato/lato-light-webfont.woff2) format('woff2');
     font-weight: 100
 }
 
 @font-face {
-    font-family: Lato;
+    font-family: "Lato";
     src: url(fonts/Lato/lato-regular-webfont.woff2) format('woff2')
 }
 
 @font-face {
-    font-family: Lato;
+    font-family: "Lato";
     src: url(fonts/Lato/lato-bold-webfont.woff2) format('woff2');
     font-weight: 700
 }
 
 body {
-    font-family: Nunito, arial;
+    font-family: "Nunito", arial;
     overflow-x: hidden;
     user-select: none;
     font-weight: 100;
