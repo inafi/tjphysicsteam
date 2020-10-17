@@ -199,13 +199,18 @@ function initialize() {
             top: 20vh;
             font-size: 8vh;
         }
+
+        .b1 {
+            margin-top: -20vh;
+        }
     
         .b1 p.label {
             width: 80%;
         }
     
         .b1 p.desc {
-            width: 90%;
+            width: 85%;
+            text-align: justify;
         }
     
         .b2 .row>div,

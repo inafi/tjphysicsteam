@@ -99,13 +99,6 @@ nav {
     margin: 9vh auto 8vh auto !important;
     display: block;
     cursor: pointer;
-    box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 27.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 40px 30px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     transition: 0.3s;
 }
@@ -115,18 +108,18 @@ nav {
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 27.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 30px 20px rgba(0, 0, 0, 0.2);
+        0 12.5px 10px rgba(0, 0, 0, 0.02),
+        0 12.3px 11.9px rgba(0, 0, 0, 0.032),
+        0 11.8px 11.4px rgba(0, 0, 0, 0.036),
+        0 30px 20px rgba(0, 0, 0, 0.1);
 }
 
 .large .title {
     color: #fff;
-    font-size: 6vh;
+    font-size: 5.5vh;
     text-align: center;
     position: absolute;
-    top: 2vh;
+    top: 1vh;
     z-index: 9;
 }
 
@@ -146,7 +139,7 @@ nav {
 
 .large .desc {
     color: #fff;
-    font-size: 2.7vh;
+    font-size: 2.5vh;
     text-align: center;
     position: absolute;
     bottom: 2vh;
@@ -172,13 +165,6 @@ nav {
     border-radius: 1.5vh;
     margin-bottom: 8vh;
     display: block;
-    /* box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.024),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.038),
-        0 12.5px 10px rgba(0, 0, 0, 0.03),
-        0 12.3px 17.9px rgba(0, 0, 0, 0.032),
-        0 21.8px 13.4px rgba(0, 0, 0, 0.046),
-        0 30px 20px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;

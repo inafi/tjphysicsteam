@@ -73,6 +73,8 @@ body {
     /* display: flex;
     justify-content: center; */
     text-align: center;
+    margin-top: -25vh;
+    margin-bottom: 5vh;
 }
 
 .b1 p.title {
@@ -161,7 +163,6 @@ hr {
 
 .b2 .desc {
     font-size: 1.95vh;
-    margin-top: -1vh;
     text-align: justify;
     width: 105%;
     margin-left: -2.5%;
@@ -256,11 +257,24 @@ hr {
 .b4 .label {
     color: #06D6A0;
     font-size: 2.8vh;
-    margin: auto;
     display: inline-block;
     text-align: center;
-    margin-bottom: 3vh;
-    margin-top: 1vh;
+    margin: 0vh auto 4vh;
+}
+
+.b4>.row {
+    width: 80%;
+    max-width: 150vh;
+    margin: auto;
+    justify-content: center;
+}
+
+/*col-2*/
+.b4>div>div {
+    min-width: 33vh;
+    max-width: 33vh;
+    margin-bottom: 4vh;
+    justify-content: center;
 }
 
 .b4 .img-wrap {
@@ -274,25 +288,12 @@ hr {
     width: 12vh;
 }
 
-.b4>div>div {
-    margin-left: 1vh;
-    margin-right: 1vh;
-    min-width: 33vh;
-    max-width: 45vh;
-}
-
 .b4 .desc {
     margin-top: 2vh;
     right: 4vh;
     text-align: center;
     font-size: 1.9vh;
     transform: translateX(4vh);
-}
-
-.b4 .row {
-    padding-bottom: 3vh;
-    display: flex;
-    justify-content: center;
 }
 
 /* @media only screen and (orientation:portrait) {

@@ -74,23 +74,11 @@ function initialize() {
         width: 0px;
     }
 
-    .side {
-        display: none !important;
-    }
-
     .wrap {
         margin-top: 10vh;
     }
 
     @media only screen and (orientation:portrait) {
-        body {
-            overflow-x: scroll;
-        }
-    
-        .schedule {
-            overflow-x: scroll;
-        }
-
         .fc-scroller { 
             height: 70vh !important;   
         }
@@ -103,8 +91,8 @@ function initialize() {
             font-size: 1.3vh !important;
         }
 
-        .wrap {
-            width: 150%;
+        .wrap {            
+            width: 95%;
             height: 70vh;
             margin-bottom: 5vh;
         }
