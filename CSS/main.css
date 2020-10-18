@@ -101,7 +101,7 @@ nav .left {
 
 nav .left > div {
     position: absolute;
-    right: 18%;
+    right: 20%;
 }
 
 nav .right {
@@ -114,7 +114,7 @@ nav .right {
 
 nav .right > div {
     position: absolute;
-    left: 18%;
+    left: 20%;
 }
 
 nav a {

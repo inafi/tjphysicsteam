@@ -275,6 +275,7 @@ hr {
     max-width: 33vh;
     margin-bottom: 4vh;
     justify-content: center;
+    align-items: center;
 }
 
 .b4 .img-wrap {
@@ -285,11 +286,10 @@ hr {
 }
 
 .b4 img {
-    width: 12vh;
+    width: 100%;
 }
 
 .b4 .desc {
-    margin-top: 2vh;
     right: 4vh;
     text-align: center;
     font-size: 1.9vh;
