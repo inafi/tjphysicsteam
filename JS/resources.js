@@ -193,7 +193,7 @@ function initialize() {
             $("#sets .pdf-move").append(append);
         })
 
-    $(".toggle-center p").on("click touchstart", function () {
+    $(".toggle-center p").on("click", function () {
         if ($(this).attr("val") == "off") {
             if ($(this).text() == "Solutions") {
                 $(".toggle-move").css("transform", "translateX(100%)");
@@ -293,6 +293,10 @@ function initialize() {
     }
 
     @media only screen and (orientation:portrait) {
+        .viewer {
+            width: 90%;
+        }
+
         .teams .col-3 {
             width: 0% !important;
             flex: 0 0 0 !important;
@@ -302,6 +306,10 @@ function initialize() {
             margin-top: 2vh;
         }
     
+        .main-resource .col-c {
+            margin-bottom: 3vh;
+        }
+        
         .pdf{
             margin-right: 10%;
         }

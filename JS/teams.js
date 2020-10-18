@@ -474,7 +474,11 @@ function initialize() {
             margin-top: 10vh;
         }
 
-        .pdf{
+        .resources .col-c {
+            margin-bottom: 3vh;
+        }
+
+        .pdf {
             margin-right: 8%;
         }
 

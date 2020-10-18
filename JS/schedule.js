@@ -87,6 +87,10 @@ function initialize() {
             height: 2vh !important;
         }
 
+        .fc-right .fc-button-primary {
+            background-color: #1B98E0 !important;
+        }
+
         .fc-title {
             font-size: 1.3vh !important;
         }
