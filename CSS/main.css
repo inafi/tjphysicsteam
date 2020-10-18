@@ -273,9 +273,9 @@ footer {
     display: flex;
     justify-content: center;
     font-family: Lato, arial;
-    font-size: 1.9vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    font-size: 1.8vh;
+    padding-top: .7vh;
+    padding-bottom: .7vh;
     font-weight: 100
 }
 
@@ -283,11 +283,11 @@ footer>.row>div {
     width: 100%;
     text-align: center;
     color: #fff;
-    margin: .5vh auto
+    margin: .4vh auto
 }
 
 footer .info i {
-    font-size: 2.8vh;
+    font-size: 2.3vh;
     color: #fff;
     margin: 0 1vh;
     transition: .3s
@@ -299,8 +299,8 @@ footer .info i:hover {
 
 footer .row>div:last-child i {
     color: red;
-    font-size: 2.5vh;
-    margin: 0 .5vh;
+    font-size: 2.1vh;
+    margin: 0 .4vh;
     transform: translateY(.25vh)
 }
 
