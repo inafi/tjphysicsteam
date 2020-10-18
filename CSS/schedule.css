@@ -41,7 +41,7 @@ body {
     padding-bottom: 2vh;
 }
 
-#calendar .fc-right button {
+.fc-left button, .fc-right button {
     height: 4vh !important;
     line-height: 1vh !important;
     font-size: 1.6vh !important;

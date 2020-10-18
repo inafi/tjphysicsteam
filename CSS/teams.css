@@ -344,9 +344,7 @@ div.switch img {
 .resources .col-c {
     height: 38vh;
     border-radius: 1.5vh;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-bottom: 2vw;
+    margin: 0 1.25% 2.5vw;
     width: 16%;
     min-width: 28vh;
     max-width: 50vh;
@@ -387,7 +385,7 @@ div.switch img {
 }
 
 .col-place {
-    width: 18%;
+    width: 18.5%;
     min-width: 28vh;
     max-width: 50vh;
 }

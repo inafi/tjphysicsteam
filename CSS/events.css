@@ -104,14 +104,15 @@ nav {
 }
 
 .large:hover {
-    transform: scale(1.015);
+    cursor: inherit;
+    /* transform: scale(1.015);
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.02),
         0 12.3px 11.9px rgba(0, 0, 0, 0.032),
         0 11.8px 11.4px rgba(0, 0, 0, 0.036),
-        0 30px 20px rgba(0, 0, 0, 0.1);
+        0 30px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .large .title {
