@@ -67,32 +67,31 @@ div.desc {
     border-color: #3bb5fc;
 }
 
-.fc-button,
-.fc-button-group {
-    vertical-align: unset !important;
-}
-
-.fc-button-group {
-    transform: translateY(-1px);
-}
-
-.fc-button-primary:not(:disabled).fc-button-active, .fc-button-primary:not(:disabled):active {
-    background-color: #3BB5FC !important;
+.fc-button:active {
+    background-color: #1B98E0 !important;
     border-color: transparent !important;
     outline: none;
 }
 
+.fc-button-primary:hover {
+    background-color: #1B98E0 !important;
+}
+
 .fc-right .fc-button-primary {
     color: #fff;
-    background-color: #aaa !important;
+    background-color: #aaa ;
     border-color: transparent !important;
     outline: none !important;
+}
+
+.fc-right .fc-button-primary.fc-button-active {
+    background-color: #3bb5fc !important;
 }
 
 .change-view {
     outline: none;
     border: 0;
-    background-color: #1B98E0;
+    background-color: #3BB5FC;
     color: #fff;
     font-size: 1.6vh;
     line-height: 1vh;
@@ -118,7 +117,8 @@ div.desc {
 
 /*Month Day Grid*/
 .fc-toolbar h2 {
-    font-size: 2.8vh !important;
+    font-size: 4vh !important;
+    font-weight: 100;
 }
 
 a.fc-event .fc-content {
@@ -131,7 +131,7 @@ a.fc-event .fc-content {
 }
 
 .fc-today-button {
-    background-color: #1B98E0 !important;
+    background-color: #3BB5FC !important;
     border: 0px transparent solid !important;
 }
 
@@ -142,7 +142,7 @@ a.fc-event .fc-content {
 
 .fc-prev-button,
 .fc-next-button {
-    background-color: #1B98E0 !important;
+    background-color: #3BB5FC !important;
     border: 0px transparent solid !important;
 }
 

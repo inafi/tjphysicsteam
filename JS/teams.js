@@ -485,13 +485,17 @@ function initialize() {
         .schedule {
             width: 95%;
         }
-    
+
+        div.switch {
+            margin: 0 2%;
+        }
+            
         .pdf-wrap {
             width: 90%;
         }
 
         .topic-wrap {
-            width: 100%;
+            width: 95%;
         }
     }
     
