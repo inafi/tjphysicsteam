@@ -35,10 +35,8 @@ body {
 }
 
 #calendar {
-    width: 90%;
     margin: auto;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding: 2vh 4vh;
 }
 
 .fc-left button, .fc-right button {
