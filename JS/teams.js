@@ -248,7 +248,7 @@ function initialize() {
     $(".topic").on("click", function (e) {
         if ($("#lectures").attr("vis") == "off" || previnfo != $(this).attr("name")) {
             $("#lectures").css("height", "38vh");
-            $("#lectures").css("margin-bottom", "10vh");
+            $("#lectures").css("margin-bottom", "6vh");
             $(".topic").css("color", "#1B98E0");
             $(this).css("color", "#3D348B");
             $(".topic i").removeClass("fa-folder-open");

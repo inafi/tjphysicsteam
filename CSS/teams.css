@@ -105,7 +105,7 @@
 
 /*Lectures*/
 .lectures {
-    margin-top: 4vh;
+    margin-top: 3vh;
     width: 100%;
     text-align: center;
 }
@@ -304,12 +304,17 @@ div.switch img {
     height: auto;
     border-radius: 1.5vh;
     overflow: hidden;
+    height: 27vh;
 }
 
 .lecture-group .pdf img {
     border-radius: 1.5vh;
     height: 27vh;
     width: auto;
+}
+
+.lecture-group .youtube img {
+    height: 32vh;
 }
 
 .lecture-group .pdf-move {
