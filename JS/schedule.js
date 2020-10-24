@@ -118,6 +118,10 @@ function initialize() {
     }
     
     @media only screen and (orientation:landscape) {
+        .fc-view-container {
+            margin-top: -3vh;
+        }
+
         .wrap {
             width: 90%;
             height: 125vh;

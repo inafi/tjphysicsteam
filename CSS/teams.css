@@ -338,6 +338,7 @@ div.switch img {
     justify-content: center;
     padding-left: 3%;
     padding-right: 3%;
+    margin-top: -2vh;
 }
 
 .resources .col-c {
