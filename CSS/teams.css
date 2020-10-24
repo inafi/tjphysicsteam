@@ -120,20 +120,19 @@
 }
 
 .topic-wrap {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: -2vh auto;
     display: flex;
     justify-content: center;
     max-width: 200vh;
 }
 
 .topic {
-    height: 5.5vh;
+    height: 5vh;
     width: auto;
     background-color: #fff;
     border-radius: 1.5vh;
     margin: 1.5vh 1.5%;
-    padding: 0.4vh 2vh;
+    padding: 0vh 2vh;
     font-size: 2vh;
     color: #1B98E0;
     cursor: pointer;
