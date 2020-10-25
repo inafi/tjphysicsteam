@@ -40,20 +40,10 @@ table.student tr:nth-of-type(-n + 3) {
     background-image: linear-gradient(to right, #FFDA5D, #EEB609, #FFDA5D, #FCC201, #FFDA5D);
 }
 
-/* table.student tr:nth-of-type(-n + 7)> :first-child,
-table.student tr:nth-of-type(-n + 7)> :last-child {
-    color: #764ba2;
-}
-
-table.student tr:nth-of-type(-n + 3)> :first-child,
-table.student tr:nth-of-type(-n + 3)> :last-child {
-    color: #764ba2;
-} */
-
 tr.content {
     background-color: #fff;
     font-size: 2vh;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .td-over {
@@ -61,7 +51,7 @@ tr.content {
 }
 
 table.student tr.content:hover {
-    transform: scaleX(1.03);
+    transform: scaleX(1.02);
 }
 
 tr.space {
@@ -97,7 +87,7 @@ tr,
 table {
     text-align: center;
     user-select: text;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
     outline: none;
     transform: scale(1.00);
 }

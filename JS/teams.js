@@ -354,7 +354,10 @@ function initialize() {
                     }
                 }
 
-                update(0);
+                if (page[0] == "A")
+                    update(1);
+                else
+                    update(0);
 
                 function youtube_parser(url) {
                     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;

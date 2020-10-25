@@ -32,8 +32,8 @@ function initialize() {
                     0 2.3px 2px rgba(0, 0, 0, 0.022),
                     0 3.8px 2px rgba(0, 0, 0, 0.026),
                     0 4px 5px rgba(0, 0, 0, 0.05)`);
-                
-                if ($("nav #nav-icon3").attr("expanded") == "true"){
+
+                if ($("nav #nav-icon3").attr("expanded") == "true") {
                     $("nav #nav-icon3").click();
                 }
             }
@@ -44,13 +44,9 @@ function initialize() {
     var req = "https://sheets.googleapis.com/v4/spreadsheets/1vBfqcpmkNG3xDgoDCBVgLwaWlV4t88Ev8hlsyXMOPuo/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
 
     $(document).on('mouseenter', 'table.student tr', function (event) {
-        $(this).find("td").each(function () {
-            $(this).addClass("td-over");
-        })
+        $(this).find("td").addClass("td-over");
     }).on("mouseout", function () {
-        $(this).find("td").each(function () {
-            $(this).removeClass("td-over");
-        })
+        $(this).find("td").removeClass("td-over");
     });
 
     $.ajax({
