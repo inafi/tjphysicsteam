@@ -390,7 +390,8 @@ div.switch img {
 }
 
 .col-place {
-    width: 18.5%;
+    margin: 0 1.25% 2.5vw;
+    width: 16%;
     min-width: 28vh;
     max-width: 50vh;
 }
