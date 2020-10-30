@@ -43,6 +43,7 @@ body {
     height: 4vh !important;
     line-height: 1vh !important;
     font-size: 1.6vh !important;
+    transition: 0.3s
 }
 
 div.desc {

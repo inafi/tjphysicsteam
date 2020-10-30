@@ -11,46 +11,10 @@ function initialize() {
     }
 
     //navbar
-    var prev = -1;
-    var curr = 0;
     setInterval(function () {
-        curr = $(window).scrollTop() + $(window).width();
-        if (curr != prev) {
-            if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height() * 1.3) {
-                $("nav").css('background-color', 'transparent');
-                $("nav *").css('color', '#fff');
-                if (page[1] != 2)
-                    $(".active").css('color', '#3D348B');
-                else
-                    $(".active").css('color', '#06D6A0');
-                $("nav span:hover").css('color', '#3D348B');
-                $("nav img").attr("src", "Pics/copy2.png");
-                $("nav").css('box-shadow', 'none');
-            } else {
-                $("nav").css('background-color', '#fff');
-                $("nav *").css('color', '#1B98E0');
-                $(".active").css('color', '#3D348B');
-                $("nav span:hover").css('color', '#06D6A0');
-                if ($("nav img").attr("src") != "Pics/copy.png")
-                    $("nav img").attr("src", "Pics/copy.png");
-                $("nav").css('box-shadow', `
-                0 2.8px 2.2px rgba(0, 0, 0, 0.014),
-                0 6.7px 5.3px rgba(0, 0, 0, 0.018),
-                0 1.5px 2px rgba(0, 0, 0, 0.02),
-                0 2.3px 2px rgba(0, 0, 0, 0.022),
-                0 3.8px 2px rgba(0, 0, 0, 0.026),
-                0 4px 5px rgba(0, 0, 0, 0.05)`);
-
-                if ($("nav #nav-icon3").attr("expanded") == "true") {
-                    $("nav #nav-icon3").click();
-                }
-            }
-        }
-        prev = curr;
         try {
             ds.addSelectables(document.querySelectorAll('.pdf p'));
         } catch (error) {
-
         }
     }, 50)
 

@@ -44,7 +44,7 @@ nav {
     padding-left: 11%;
     padding-right: 11%;
     margin: auto !important;
-    max-width: 280vh;
+    max-width: 260vh;
     width: 100%;
 }
 
@@ -229,7 +229,7 @@ nav {
 
 .overlay {
     width: 85%;
-    max-width: calc(270vh - 22%);
+    max-width: calc(260vh - 22%);
     max-height: 85vh;
     background-color: #fff;
     position: fixed;

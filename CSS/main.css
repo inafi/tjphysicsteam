@@ -32,6 +32,11 @@
     font-weight: 700
 }
 
+* {
+    margin: 0;
+    padding: 0
+}
+
 body {
     font-family: "Nunito", arial;
     overflow-x: hidden;
@@ -117,10 +122,6 @@ nav .right > div {
     left: 22vh;
 }
 
-nav a {
-    color: #fff
-}
-
 nav img {
     height: 4vh;
     position: absolute;
@@ -138,20 +139,12 @@ nav span {
     padding-right: 2vh;
     padding-left: 2vh;
     font-size: 1.9vh;
-    transition: .3s
-}
-
-nav span:hover {
-    color: #3d348b !important
+    transition: .3s;
+    color: #fff
 }
 
 button:focus {
     outline: 0
-}
-
-* {
-    margin: 0;
-    padding: 0
 }
 
 .wrap-icon {
@@ -455,7 +448,7 @@ nav .wrap-icon {
     display: none
 }
 
-@media only screen and (max-width:130vh) {
+@media only screen and (max-width:140vh) {
 
     nav .left,
     nav .right {
@@ -508,7 +501,7 @@ nav .wrap-icon {
     }
 
     nav span:hover {
-        color: #06d6a0 !important
+        color: #3d348b !important
     }
 
     nav a:hover {
