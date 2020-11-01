@@ -32,9 +32,9 @@ nav {
 .event-title {
     width: 80%;
     text-align: center;
-    font-size: 7vh;
+    font-size: 8vh;
     margin: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
     margin-top: -2vh;
     color: #fff;
 }
@@ -99,7 +99,7 @@ nav {
 
 .large .title {
     color: #fff;
-    font-size: 5.5vh;
+    font-size: 6vh;
     text-align: center;
     position: absolute;
     top: 1vh;
