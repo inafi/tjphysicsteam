@@ -139,7 +139,7 @@ function initialize() {
                     link = "";
                 try {
                     if (parseInt(date.split("/")[0]) == month && save == null)
-                        save = i - 1;
+                        save = i - 2;
                     var href = "";
                     if (link != "")
                         href = ' href="' + link + '"';
