@@ -57,6 +57,7 @@ body {
 
 .metric-cover p {
     font-size: 12vh;
+    font-family: "Lato";
     position: absolute;
     top: 20vh;
     display: inline-block;
@@ -70,11 +71,9 @@ body {
 
 /*b1*/
 .b1 {
-    /* display: flex;
-    justify-content: center; */
     text-align: center;
-    margin-top: -25vh;
-    margin-bottom: 5vh;
+    width: 90%;
+    margin: -26vh auto 5vh;
 }
 
 .b1 p.title {
@@ -85,12 +84,11 @@ body {
     margin-top: 5vh !important;
     color: #1B98E0;
     font-family: 'Lato' !important;
-    width: 95%;
 }
 
 .b1 p.desc {
     padding-bottom: 2vh;
-    width: 60%;
+    width: 70%;
     margin: auto;
     margin-top: 1vh !important;
     text-align: center;
@@ -103,8 +101,6 @@ body {
     font-size: 2.8vh;
     display: inline-block;
     text-align: center;
-    margin-top: .6vh;
-    margin-bottom: -0.1vh;
 }
 
 hr {
