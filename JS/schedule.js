@@ -5,6 +5,7 @@ function initialize() {
         isMobile = true;
     }
 
+    //Drag Select
     try {
         var ds = new DragSelect({
             selectables: document.querySelectorAll('div.side p'),
@@ -16,6 +17,7 @@ function initialize() {
         });
     } catch (error) {}
 
+    //Event Hover in Month Grid Mode
     if (!isMobile) {
         $(document).on('mouseenter', 'a.fc-event', function () {
             $(this).children(".fc-content").css("display", "inline-block");
@@ -27,6 +29,7 @@ function initialize() {
         });
     }
 
+    //Change buttons to Upercase
     setInterval(function () {
         if ($(".fc-today-button").text() == "today")
             $(".fc-today-button").text("Today");
@@ -36,13 +39,210 @@ function initialize() {
             $(".fc-right .fc-button-group > :last-child").text("Month");
     }, 100)
 
+    //Calendar
+    var calendarEl = document.getElementById('calendar');
+
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
+    //Calendar Tooltip on event hover
+    if (!isMobile)
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'listMonth,dayGridMonth'
+            },
+            plugins: ['list', 'dayGrid'],
+            defaultView: 'listMonth',
+            eventOrder: 'color, start',
+            eventClick: function (info) {
+                var link = info.event.id.split(" __ ")[0];
+                var desc = info.event.id.split(" __ ")[1];
+                if (link != "")
+                    openInNewTab(link);
+            },
+            eventMouseEnter: function (info) {
+                var link = info.event.id.split(" __ ")[0];
+                var desc = info.event.id.split(" __ ")[1];
+                if (link != "") {
+                    document.documentElement.style.cursor = "pointer";
+                }
+                if (desc != "")
+                    $("div.desc").css("opacity", 1);
+                $("div.desc").html(desc);
+                $("div.desc").css("left", (event.clientX) + "px");
+                $("div.desc").css("border-color", info.event.backgroundColor);
+                if (event.clientY > $(window).height() * 0.5)
+                    $("div.desc").css("top", (event.clientY - ($("div.desc").height() + $(window)
+                        .height() *
+                        0.03)) + "px")
+                else
+                    $("div.desc").css("top", (event.clientY + $(window).height() * 0.03) + "px")
+            },
+            eventMouseLeave: function (info) {
+                $("div.desc").css("opacity", 0);
+                document.documentElement.style.cursor = "inherit";
+            }
+        });
+    else
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            header: {
+                left: 'title',
+                center: '',
+                right: 'prev,next'
+            },
+            plugins: ['list', 'dayGrid'],
+            defaultView: 'listMonth',
+            eventOrder: 'color, start',
+            eventClick: function (info) {
+                var link = info.event.id.split(" __ ")[0];
+                var desc = info.event.id.split(" __ ")[1];
+                if (link != "")
+                    openInNewTab(link);
+            }
+        });
+
+    //Calendar Reading CSV to add events
+    $.ajax({
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
+        type: "get",
+        async: false,
+        success: function (data) {
+            getDoc(4, '#BB0A21', "G");
+            getDoc(1, '#06D6A0', "A");
+            getDoc(2, '#1B98E0', "B");
+            getDoc(3, '#3D348B', "C");
+
+            function getDoc(req, color, type) {
+                var arr = data.sheets[req].data[0].rowData;
+                num = arr.length;
+
+                for (i = 1; i < arr.length; i++) {
+                    var date = "";
+                    var title = "";
+                    var desc = "";
+                    var link = "";
+                    var end = "";
+
+                    try {
+                        date = arr[i].values[0].formattedValue;
+                        title = arr[i].values[1].formattedValue;
+                        desc = arr[i].values[2].formattedValue;
+                        link = arr[i].values[3].formattedValue;
+                        if (req == 4) {
+                            end = arr[i].values[4].formattedValue;
+                            var me = end.split("/")[0];
+                            me = me.length > 1 ? me : '0' + me;
+
+                            var de = parseInt(end.split("/")[1]) + 1;
+                            de = de > 9 ? de : '0' + de;
+                        }
+                    } catch (err) {}
+
+                    if (date == null || end == null)
+                        continue;
+
+                    if (desc == null)
+                        desc = ""
+
+                    if (link == null)
+                        link = ""
+
+                    switch (type) {
+                        case "G":
+                            title = "General - " + title;
+                            break;
+                        case "A":
+                            title = "A Team - " + title;
+                            break;
+                        case "B":
+                            title = "B Team - " + title;
+                            break;
+                        case "C":
+                            title = "C Team - " + title;
+                            break;
+                    }
+
+                    var month = date.split("/")[0];
+                    month = month.length > 1 ? month : '0' + month;
+
+                    var day = date.split("/")[1];
+                    day = day.length > 1 ? day : '0' + day;
+
+                    var year = 2020;
+
+                    if (parseInt(month) > 0 && parseInt(month) < 7)
+                        year = 2021;
+
+                    var dateStr = year + "-" + month + "-" + day;
+                    var date = new Date(dateStr + 'T00:00:00');
+
+                    if (req != 4)
+                        end = date;
+                    else {
+                        var dateend = year + "-" + me + "-" + de;
+                        end = new Date(dateend + 'T00:00:00');
+                    }
+
+                    if (desc == null)
+                        desc = ""
+
+                    if (link == null)
+                        link = ""
+
+                    calendar.addEvent({
+                        title: title,
+                        start: date,
+                        end: end,
+                        allDay: true,
+                        backgroundColor: color,
+                        id: link + " __ " + desc
+                    });
+                }
+            }
+        }
+    });
+
+    calendar.render();
+
+    //Changes mode based on window height
+    setTimeout(() => {
+        if (!isMobile) {
+            calendar.setOption('height', $(window).height() * .95);
+            if ($(window).height() / $(window).width() > 0.65) {
+                aspectside = false;
+                if ($("#calendar").attr("view") == "grid")
+                    calendar.changeView('listMonth');
+            } else {
+                aspectside = true;
+            }
+        }
+    }, 50);
+
+    //Changes mode based on window height
+    $(window).on('resize', function () {
+        if (!isMobile) {
+            calendar.setOption('height', $(window).height() * .95);
+            if ($(window).height() / $(window).width() > 0.65) {
+                aspectside = false;
+                if ($("#calendar").attr("view") == "grid")
+                    calendar.changeView('listMonth');
+            } else {
+                aspectside = true;
+            }
+        }
+    });
+
     var css = `
     .fc-scroller::-webkit-scrollbar {
         width: 0px;
     }
 
     .wrap {
-        margin-top: 10vh;
+        margin-top: 8vh;
     }
 
     @media only screen and (orientation:portrait) {
