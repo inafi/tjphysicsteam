@@ -10,12 +10,6 @@
 }
 
 @font-face {
-    font-family: 'Nunito';
-    src: url(fonts/Nunito/nunito-bold-webfont.woff2) format('woff2');
-    font-weight: 700
-}
-
-@font-face {
     font-family: 'Lato';
     src: url(fonts/Lato/lato-light-webfont.woff2) format('woff2');
     font-weight: 100
@@ -24,12 +18,6 @@
 @font-face {
     font-family: "Lato";
     src: url(fonts/Lato/lato-regular-webfont.woff2) format('woff2')
-}
-
-@font-face {
-    font-family: "Lato";
-    src: url(fonts/Lato/lato-bold-webfont.woff2) format('woff2');
-    font-weight: 700
 }
 
 * {
