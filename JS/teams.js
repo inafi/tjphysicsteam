@@ -194,10 +194,7 @@ function initialize() {
 
     $(window).on('resize', function () {
         size = $(".event").width() + .02 * $(window).width();
-        if (save == null)
-            currc = -1 * size;
-        else
-            currc = save * -1 * size;
+        currc = 0;
         $(".event-wrap").css("transform", "translateX(0%)");
     });
 

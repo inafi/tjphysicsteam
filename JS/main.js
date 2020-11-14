@@ -121,7 +121,7 @@ function initialize() {
     var prev = -1;
     var curr = 0;
     var top;
-    setInterval(function () {
+    setInterval(function () { 
         curr = $(window).scrollTop() + $(window).width();
         if (curr != prev) {
             top = $(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height() * 1.4;
