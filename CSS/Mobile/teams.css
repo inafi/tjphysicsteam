@@ -1,0 +1,62 @@
+.schedule,
+.pdf-wrap {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.fa-chevron-left.sa,
+.fa-chevron-right.sa,
+.fa-chevron-left.pa,
+.fa-chevron-right.pa {
+    display: none;
+}
+
+
+@media only screen and (orientation:portrait) {
+    .viewer {
+        width: 90%;
+    }
+
+    .resources {
+        margin-top: 10vh;
+    }
+
+    .resources .col-c {
+        margin-bottom: 3vh;
+    }
+
+    .pdf {
+        margin-right: 8%;
+    }
+
+    .schedule {
+        width: 95%;
+    }
+
+    div.switch {
+        margin: 0 2%;
+    }
+
+    .pdf-wrap {
+        width: 90%;
+    }
+
+    .topic-wrap {
+        width: 95%;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    .fa-chevron-left.sa,
+    .fa-chevron-right.sa {
+        padding-top: 5.5vh;
+    }
+
+    .schedule {
+        width: 98%;
+    }
+
+    .pdf-wrap {
+        width: 97%;
+    }
+}

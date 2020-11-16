@@ -1,0 +1,58 @@
+@media only screen and (orientation:portrait) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body,
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .metric {
+        height: 80vh;
+    }
+
+    .metric-cover .back {
+        height: 60vh;
+    }
+
+    .metric-cover p {
+        top: 20vh;
+        font-size: 8vh;
+    }
+
+    .b1 {
+        margin-top: -20vh;
+    }
+
+    .b1 p.label {
+        width: 80%;
+    }
+
+    .b1 p.desc {
+        width: 85%;
+        text-align: justify;
+    }
+
+    .b2 .row>div,
+    .b3 .col-5 {
+        min-width: 40vh;
+    }
+
+    .b3 .col-5 {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .b3 .img-wrap {
+        display: none;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    .metric-cover p {
+        font-size: 14vh;
+    }
+}

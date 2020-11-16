@@ -1,0 +1,27 @@
+table.student tr:nth-of-type(-n + 7) {
+    background-image: linear-gradient(to right, #b1c0e2, #b1c0e2);
+}
+
+table.student tr:nth-of-type(-n + 3) {
+    background-image: linear-gradient(to right, #FFDA5D, #FFDA5D);
+}
+
+@media only screen and (orientation:portrait) {
+    .table-wrap {
+        overflow-x: scroll !important;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .table-wrap::-webkit-scrollbar {
+        width: 0px !important;
+    }
+
+    td {
+        min-width: 11vh;
+    }
+
+    table.student tr.content:hover {
+        transform: scaleX(1) scaleY(1);
+    }
+}

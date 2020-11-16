@@ -184,34 +184,5 @@ function initialize() {
             e.preventDefault();
         }
     });
-
-    var css = `
-    html {
-        overflow-x: hidden;
-    } 
-
-    *::-webkit-scrollbar{
-        width: 0 !important;
-        -webkit-appearance: none;
-    }
-
-    .navbar-nav {
-        z-index: 1;
-    }
-
-    .wrap-icon {
-        background-color: #fff;
-    }
-
-    @media only screen and (orientation:portrait) {
-    }
-
-    @media only screen and (orientation:landscape) {
-    }
-    `
-
-    if (isMobile) {
-        $("head").append('<style>' + css + '</style>');
-    }
 }
 $(initialize);

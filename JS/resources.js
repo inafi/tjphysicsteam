@@ -244,58 +244,5 @@ function initialize() {
         indexp = 0;
         $("#sets .pdf-move").css("transform", "translateX(0%)");
     });
-
-    var css = `
-    .pdf-wrap {
-        overflow-x: scroll;
-        overflow-y: hidden;
-    }
-
-    .fa-chevron-left.sa,
-    .fa-chevron-right.sa,
-    .fa-chevron-left.pa,
-    .fa-chevron-right.pa
-     {
-        display: none;
-    }
-
-    @media only screen and (orientation:portrait) {
-        .viewer {
-            width: 90%;
-        }
-
-        .teams .col-3 {
-            width: 0% !important;
-            flex: 0 0 0 !important;
-        }
-    
-        .resources .title> :first-child {
-            margin-top: 2vh;
-        }
-    
-        .main-resource .col-c {
-            margin-bottom: 3vh;
-        }
-        
-        .pdf{
-            margin-right: 10%;
-        }
-
-        .pdf-wrap {
-            width: 90%;
-        }
-    }
-    
-    @media only screen and (orientation:landscape) {
-
-        .pdf-wrap {
-            width: 97%;
-        }
-    }
-    `
-
-    if (isMobile) {
-        $("head").append('<style>' + css + '</style>');
-    }
 }
 $(initialize);

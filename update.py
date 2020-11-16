@@ -25,6 +25,14 @@ for name in result:
             else:
                 num = int(re.search('v=(.*)">', i).group(1)) + 1
                 i = re.sub('v=(.*)">', "v=" + str(num) + '">', i)
+
+        if '.append(' in i and "head" in i:
+            print(i)
+            if "version=" not in i:
+                i = i.replace('">', '?version=1">')
+            else:
+                num = int(re.search('version=(.*)"', i).group(1)) + 1
+                i = re.sub('version=(.*)"', "version=" + str(num) + '"', i)
         orig += i
     w = open(name, 'w')
     w.write(orig)
