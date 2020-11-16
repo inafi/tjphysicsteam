@@ -27,7 +27,6 @@ for name in result:
                 i = re.sub('v=(.*)">', "v=" + str(num) + '">', i)
 
         if '.append(' in i and "head" in i:
-            print(i)
             if "version=" not in i:
                 i = i.replace('">', '?version=1">')
             else:
