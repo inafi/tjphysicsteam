@@ -33,6 +33,27 @@ body {
     margin: 0 !important
 }
 
+body::-webkit-scrollbar {
+    width: 10px
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3bb5fc;
+    border-radius: 10px
+}
+
+body.top-flat::-webkit-scrollbar-thumb {
+    border-radius: 0 0 10px 10px
+}
+
+body.bot-flat::-webkit-scrollbar-thumb {
+    border-radius: 10px 10px 0 0
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #3d348b
+}
+
 a {
     text-decoration: none !important
 }
@@ -218,27 +239,6 @@ button:focus {
     left: 50%
 }
 
-body::-webkit-scrollbar {
-    width: 10px
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #3bb5fc;
-    border-radius: 10px
-}
-
-body.top-flat::-webkit-scrollbar-thumb {
-    border-radius: 0 0 10px 10px
-}
-
-body.bot-flat::-webkit-scrollbar-thumb {
-    border-radius: 10px 10px 0 0
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #3d348b
-}
-
 .block {
     width: 100%;
     height: 30vh
@@ -255,7 +255,7 @@ footer {
     display: flex;
     justify-content: center;
     font-family: Lato, arial;
-    font-size: 1.8vh;
+    font-size: 1.6vh;
     padding-top: .7vh;
     padding-bottom: .7vh;
     font-weight: 100
@@ -265,11 +265,11 @@ footer>.row>div {
     width: 100%;
     text-align: center;
     color: #fff;
-    margin: .4vh auto
+    margin: .2vh auto
 }
 
 footer .info i {
-    font-size: 2.3vh;
+    font-size: 2vh;
     color: #fff;
     margin: 0 1vh;
     transition: .3s
@@ -277,6 +277,10 @@ footer .info i {
 
 footer .info .fa-facebook:hover {
     color: #1b98e0
+}
+
+footer .info .fa-youtube:hover {
+    color: rgb(255, 80, 80)
 }
 
 footer .info .fa-envelope:hover {
@@ -289,7 +293,7 @@ footer .info .fa-github:hover {
 
 footer .row>div:last-child i {
     color: red;
-    font-size: 2.1vh;
+    font-size: 2vh;
     margin: 0 .4vh;
     transform: translateY(.25vh)
 }
