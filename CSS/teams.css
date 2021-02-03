@@ -313,7 +313,17 @@ div.switch img {
     width: auto;
 }
 
+.lecture-group .pdf .docs {
+    background-color: #fff;
+}
+
+.lecture-group .pdf .docs img {
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
 .lecture-group .youtube img {
+    border-radius: 1.5vh;
     height: 36vh;
 }
 

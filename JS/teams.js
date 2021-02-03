@@ -14,8 +14,7 @@ function initialize() {
     setInterval(function () {
         try {
             ds.addSelectables(document.querySelectorAll('.pdf p'));
-        } catch (error) {
-        }
+        } catch (error) {}
     }, 50)
 
     //DragSelect
@@ -71,10 +70,14 @@ function initialize() {
         if (off < scroll) {
             $(this).width(newwidth + "px");
             $(this).children(".label").width(newwidth + "px");
+            // $(this).find("img").width(newwidth + "px");
         }
+        console.log("on")
     }).on('mouseleave', '#8th .pdf', function () {
-        $(this).width($(this).find("img").width());
+        console.log("leave", $(this).width(), $(this).find(".img-wrap").width(), $(this).find("img").width())
+        $(this).width($(this).find("img").innerWidth());
         $(this).children(".label").width("100%");
+        // $(this).find("img").width("100%");
         setTimeout(() => {
             $(this).css("width", "auto");
         }, 300);
@@ -300,6 +303,7 @@ function initialize() {
                 var indexl = 0;
                 var slides = [];
                 var youtube = [];
+                var docs = [];
 
                 for (k = 0; k < index.length; k++) {
                     var arr = data.sheets[index[k]].data[0].rowData;
@@ -311,6 +315,10 @@ function initialize() {
                         try {
                             if (arr[i].values[2].formattedValue != null)
                                 youtube.push([arr[i].values[2].formattedValue, arr[i].values[3].formattedValue]);
+                        } catch (error) {}
+                        try {
+                            if (arr[i].values[4].formattedValue != null)
+                                docs.push([arr[i].values[4].formattedValue, arr[i].values[5].formattedValue]);
                         } catch (error) {}
                     }
                 }
@@ -349,6 +357,12 @@ function initialize() {
                         pick = "youtube";
                         $(id + " #youtube").addClass("active-switch");
                     }
+                    if (view == 2) {
+                        arr = docs;
+                        numpl = arr.length;
+                        pick = "docs";
+                        $(id + " #docs").addClass("active-switch");
+                    }
 
                     for (i = numpl - 1; i > -1; i--) {
                         var pic;
@@ -359,6 +373,16 @@ function initialize() {
                         if (view == 1) {
                             pic = youtube_parser(youtube[i][1]);
                             pic = "https://img.youtube.com/vi/" + pic + "/sddefault.jpg";
+                        }
+                        if (view == 2) {
+                            temp = docs[i][1].split(".")
+                            temp = temp[temp.length - 1]
+                            if (temp == "pdf") {
+                                pic = docs[i][1].split(".pdf")[0] + ".png"
+                            } else {
+                                pic = docs[i][1].split("/d/")[1].split("/")[0]
+                                pic = "https://lh3.googleusercontent.com/d/" + pic + "=w640"
+                            }
                         }
                         append += '<a href="' + arr[i][1] + '" target="_blank"><div class="pdf"><div class="img-wrap ' + pick + '"><img src="';
                         append += pic + '"></div><p class="label">' + arr[i][0];
@@ -374,6 +398,10 @@ function initialize() {
 
                 $(id + ' #youtube').click(function () {
                     update(1);
+                });
+
+                $(id + ' #docs').click(function () {
+                    update(2);
                 });
 
                 function moveLeftPdfl() {
