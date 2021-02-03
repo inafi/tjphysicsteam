@@ -318,8 +318,9 @@ div.switch img {
 }
 
 .lecture-group .pdf .docs img {
-    padding-left: 2vh;
-    padding-right: 2vh;
+    /* padding-left: 2vh;
+    padding-right: 2vh; */
+    height: 40vh;
 }
 
 .lecture-group .youtube img {
