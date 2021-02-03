@@ -27,6 +27,7 @@ Quantum_Mechanics/QuantumMechanicsLecture2_28_14-4.pdf
 Quantum_Mechanics/quantum.pdf
 Quantum_Mechanics/QuantumMechanics2Solutions.pdf
 Quantum_Mechanics/Quantum_Mechanics_Part_3-2.pdf
+Special_Relativity/Special_Relativity_Mathing_ed.pdf
 Special_Relativity/SpecialRelativity.pdf
 Special_Relativity/Special_Relativity.pdf
 Special_Relativity/Special_Relativity_Problem_Set_1.pdf
