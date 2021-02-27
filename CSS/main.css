@@ -34,24 +34,29 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 10px
+    width: 1vh;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #3bb5fc;
-    border-radius: 10px
+    background-color: #a3a3a3;
+    border-radius: 1vh;
 }
 
-body.top-flat::-webkit-scrollbar-thumb {
-    border-radius: 0 0 10px 10px
-}
-
-body.bot-flat::-webkit-scrollbar-thumb {
-    border-radius: 10px 10px 0 0
+body::-webkit-scrollbar-track {
+    background-color: rgb(224, 224, 224);
+    border-radius: 1vh;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #3d348b
+    background: #2C363F;
+}
+
+body.top-flat::-webkit-scrollbar-thumb {
+    border-radius: 0 0 1vh 1vh
+}
+
+body.bot-flat::-webkit-scrollbar-thumb {
+    border-radius: 1vh 1vh 0 0
 }
 
 a {

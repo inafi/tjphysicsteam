@@ -167,6 +167,11 @@ hr {
 }
 
 /*Outreach*/
+.b3 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .b3 img {
     width: 100%;
     min-height: 40vh;
