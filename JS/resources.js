@@ -5,27 +5,6 @@ function initialize() {
         isMobile = true;
     }
 
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
-            area: document.querySelector('body')
-        });
-    } catch (error) {
-
-    }
-
-    $('body').on('mousedown', 'p', function (event) {
-        ds.removeSelection0($(this).get(0));
-    });
-
-    setInterval(function () {
-        try {
-            ds.addSelectables(document.querySelectorAll('.pdf p'));
-        } catch (error) {
-
-        }
-    }, 100)
-
     $(document).on('mouseenter', '.pdf', function (event) {
         var newwidth = Math.max($(this).children(".label").get(0).scrollWidth, $(window).width() * .2);
         var off = $(this).children(".label").get(0).offsetWidth;

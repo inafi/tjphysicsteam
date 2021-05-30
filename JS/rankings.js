@@ -83,18 +83,5 @@ function initialize() {
             $("td").css("width", "calc(100%/" + arr[0].values.length + ")")
         }
     });
-
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('td, footer div'),
-            area: document.querySelector('body')
-        });
-
-        $('body').on('mousedown', 'td', function (event) {
-            ds.removeSelection(document.querySelectorAll('td'));
-        });
-    } catch (error) {
-
-    }
 }
 $(initialize);

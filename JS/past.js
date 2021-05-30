@@ -53,17 +53,5 @@ function initialize() {
     if (!isMobile) {
         $("head").append('<style>' + desk + '</style>');
     }
-
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('h4, p'),
-            area: document.querySelector('body')
-        });
-
-        $('body').on('mousedown', 'p', function (event) {
-            ds.removeSelection($(this).get(0));
-        });
-    } catch (error) {}
-
 }
 $(initialize);

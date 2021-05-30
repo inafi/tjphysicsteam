@@ -44,18 +44,5 @@ function initialize() {
         }, 200);
         e.preventDefault();
     })
-
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('p'),
-            area: document.querySelector('body')
-        });
-
-        $('body').on('mousedown', 'p', function (event) {
-            ds.removeSelection($(this).get(0));
-        });
-    } catch (error) {
-
-    }
 }
 $(initialize);

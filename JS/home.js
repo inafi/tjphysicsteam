@@ -123,21 +123,6 @@ function initialize() {
         count += 0.02;
     }
 
-    //Dragselect
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('p'),
-            area: document.querySelector('body')
-        });
-
-        $('body').on('mousedown', 'p', function (event) {
-            ds.removeSelection($(this).get(0));
-        });
-
-    } catch (error) {
-
-    }
-
     //Outreach
     setInterval(() => {
         if ($(".b3 .row").height() > 2 * $(".b3 .row .col-5").height()) {

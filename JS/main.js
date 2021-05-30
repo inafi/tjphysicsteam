@@ -19,28 +19,6 @@ function initialize() {
         }
     }, 100);
 
-    //Drag Select
-    var dstext = "";
-    setInterval(() => {
-        dstext = ""
-        $(".ds-selected").each(function () {
-            dstext += " " + $(this).text();
-        })
-        $("#clipboard").html(dstext);
-    }, 20);
-
-    $("body").bind('copy', function () {
-        var curr = window.getSelection().toString() == "";
-        if (curr && dstext != "") {
-            var text = $("#clipboard").get(0)
-            var selection = window.getSelection();
-            var range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    });
-
     //Footer
     $.ajax({
         url: "footer.html",

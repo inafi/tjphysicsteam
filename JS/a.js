@@ -47,21 +47,6 @@ function initialize() {
         }
     }, 50)
 
-    //DragSelect
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('div.event p, .topic p, .pdf p, p.title'),
-            area: document.querySelector('body')
-        });
-    } catch (error) {
-
-    }
-
-    if (!isMobile)
-        $('body').on('mousedown', 'p', function (event) {
-            ds.removeSelection($(this).get(0));
-        });
-
     //div width
     $(document).on('mouseenter', '.event', function (event) {
         var newwidth = Math.max($(this).children(".desc")[0].scrollWidth + $(".event").width() * .2, $(".event").width());
@@ -178,8 +163,6 @@ function initialize() {
                     num -= 1;
                 }
             }
-            if (!isMobile)
-                ds.addSelectables(document.querySelectorAll('div.event p'));
         }
     });
 

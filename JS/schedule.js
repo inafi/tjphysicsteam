@@ -5,18 +5,6 @@ function initialize() {
         isMobile = true;
     }
 
-    //Drag Select
-    try {
-        var ds = new DragSelect({
-            selectables: document.querySelectorAll('div.side p'),
-            area: document.querySelector('body')
-        });
-
-        $('body').on('mousedown', 'p', function (event) {
-            ds.removeSelection($(this).get(0));
-        });
-    } catch (error) {}
-
     //Event Hover in Month Grid Mode
     if (!isMobile) {
         $(document).on('mouseenter', 'a.fc-event', function () {
