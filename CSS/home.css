@@ -224,23 +224,27 @@ hr {
 
 .outreach .label {
     color: #06D6A0;
-    font-size: 3.7vh;
+    font-size: 3.4vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1vh;
     display: block;
     text-align: center;
 }
 
 .outreach .desc {
-    text-align: justify;
-    font-size: 2.3vh;
+    text-align: left;
+    font-size: 2vh;
 }
 
 /*Team*/
 .outreach,
 .b4 {
     text-align: center;
+}
+
+.b4 {
+    padding-top: 2vh;
+    padding-bottom: 3vh;
 }
 
 .outreach .title,
@@ -250,8 +254,7 @@ hr {
     color: #1B98E0;
     display: inline-block;
     text-align: center;
-    margin: auto;
-    margin-top: 2vh;
+    margin-top: 2vh auto auto;
     font-family: 'Lato' !important;
 }
 
@@ -270,7 +273,6 @@ hr {
     justify-content: center;
 }
 
-/*col-2*/
 .b4>div>div {
     min-width: 33vh;
     max-width: 33vh;
