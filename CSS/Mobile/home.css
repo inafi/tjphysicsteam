@@ -38,16 +38,16 @@
     }
 
     .b2 .row>div,
-    .b3 .col-5 {
+    .outreach .col-5 {
         min-width: 40vh;
     }
 
-    .b3 .col-5 {
+    .outreach .col-5 {
         margin-top: 5vh;
         margin-bottom: 2vh;
     }
 
-    .b3 img {
+    .outreach img {
         width: auto;
         min-height: 40vh;
     }
