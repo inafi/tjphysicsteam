@@ -167,17 +167,17 @@ hr {
 }
 
 /*Outreach*/
-.b3 {
+.outreach {
     padding-left: 5%;
     padding-right: 5%;
 }
 
-.b3 img {
+.outreach img {
     width: 100%;
     min-height: 40vh;
 }
 
-.b3 .img-wrap {
+.outreach .img-wrap {
     height: 40vh;
     width: auto;
     margin: auto;
@@ -191,9 +191,9 @@ hr {
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.04),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 40px 20px rgba(0, 0, 0, 0.12);
+        0 12.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 21.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .img-left {
@@ -206,23 +206,23 @@ hr {
     transition: 0.3s;
 }
 
-.b3 .row {
+.outreach .row {
     justify-content: center;
 }
 
-.b3 .col-5 {
+.outreach .col-5 {
     margin-top: 3vh;
     margin-bottom: 8vh;
     min-width: 70vh;
     max-width: 95vh;
 }
 
-.b3 .text {
+.outreach .text {
     display: flex;
     align-items: center;
 }
 
-.b3 .label {
+.outreach .label {
     color: #06D6A0;
     font-size: 3.7vh;
     margin-left: auto;
@@ -232,18 +232,18 @@ hr {
     text-align: center;
 }
 
-.b3 .desc {
+.outreach .desc {
     text-align: justify;
     font-size: 2.3vh;
 }
 
 /*Team*/
-.b3,
+.outreach,
 .b4 {
     text-align: center;
 }
 
-.b3 .title,
+.outreach .title,
 .b4 .title {
     font-size: 5vh;
     text-align: center;
@@ -323,11 +323,11 @@ hr {
     }
 
     .b2 .row>div,
-    .b3 .col-5 {
+    .outreach .col-5 {
         min-width: 40vh;
     }
 
-    .b3 .img-wrap {
+    .outreach .img-wrap {
         display: none;
     }
 } */

@@ -125,10 +125,10 @@ function initialize() {
 
     //Outreach
     setInterval(() => {
-        if ($(".b3 .row").height() > 2 * $(".b3 .row .col-5").height()) {
-            $(".b3 .img-left").css("transform", "rotateX(0deg) rotateY(0deg) translateX(0vh)");
-            $(".b3 .img-right").css("transform", "rotateX(0deg) rotateY(0deg) translateX(0vh)");
-            $(".b3 .row").each(function () {
+        if ($(".outreach .row").height() > 2 * $(".outreach .row .col-5").height()) {
+            $(".outreach .img-left").css("transform", "rotateX(0deg) rotateY(0deg) translateX(0vh)");
+            $(".outreach .img-right").css("transform", "rotateX(0deg) rotateY(0deg) translateX(0vh)");
+            $(".outreach .row").each(function () {
                 if ($(this).find(".img-wrap").hasClass("img-right")) {
                     if (!$(this).find(">:first-child").children().hasClass("img-right")) {
                         $(this).find(".img-right").parent().insertBefore($(this).find(".text"))
@@ -136,9 +136,9 @@ function initialize() {
                 }
             })
         } else {
-            $(".b3 .img-left").css("transform", "rotateX(10deg) rotateY(10deg) translateX(-4vh)");
-            $(".b3 .img-right").css("transform", "rotateX(10deg) rotateY(-10deg) translateX(4vh)");
-            $(".b3 .row").each(function () {
+            $(".outreach .img-left").css("transform", "rotateX(10deg) rotateY(10deg) translateX(-4vh)");
+            $(".outreach .img-right").css("transform", "rotateX(10deg) rotateY(-10deg) translateX(4vh)");
+            $(".outreach .row").each(function () {
                 if ($(this).find(".img-wrap").hasClass("img-right")) {
                     if ($(this).find(">:first-child").children().hasClass("img-right")) {
                         $(this).find(".text").insertBefore($(this).find(".img-right").parent())
