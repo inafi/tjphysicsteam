@@ -37,6 +37,7 @@ body {
 .timeline-item div.officers > div {
     margin: 0.5vh 2vh 1vh 0;
     font-size: 1.7vh;
+    line-height: 2.4vh;
 }
 
 .timeline-item div.officers span {
