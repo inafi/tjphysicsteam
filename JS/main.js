@@ -5,29 +5,29 @@ function initialize() {
         isMobile = true;
     }
 
-    //Scroll bar
-    setInterval(() => {
-        if ($(window).scrollTop() == 0) {
-            $("body").addClass("top-flat");
-            $("body").removeClass("bot-flat");
-        } else if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            $("body").removeClass("top-flat");
-            $("body").addClass("bot-flat");
-        } else {
-            $("body").removeClass("top-flat");
-            $("body").removeClass("bot-flat");
-        }
-    }, 100);
+    // Scroll bar
+    // setInterval(() => {
+    //     if ($(window).scrollTop() == 0) {
+    //         $("body").addClass("top-flat");
+    //         $("body").removeClass("bot-flat");
+    //     } else if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+    //         $("body").removeClass("top-flat");
+    //         $("body").addClass("bot-flat");
+    //     } else {
+    //         $("body").removeClass("top-flat");
+    //         $("body").removeClass("bot-flat");
+    //     }
+    // }, 100);
 
     //Footer
-    $.ajax({
-        url: "footer.html",
-        type: "get",
-        async: false,
-        success: function (data) {
-            $(".foot-wrap").append(data);
-        }
-    });
+    // $.ajax({
+    //     url: "footer.html",
+    //     type: "get",
+    //     async: false,
+    //     success: function (data) {
+    //         $(".foot-wrap").append(data);
+    //     }
+    // });
 
     //Navbar
     $("nav").append(`

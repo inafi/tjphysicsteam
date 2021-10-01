@@ -94,15 +94,19 @@ function initialize() {
         });
 
     //Calendar Reading CSV to add events
+    // const spreadsheetId = "1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g"
+    const spreadsheetId = "1StPsGXZK--1mKcc_-41eIEXSJfBj6x8033Njz2CMT00"
+    const spreadsheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true`
     $.ajax({
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
+        url: spreadsheetUrl,
         type: "get",
         async: false,
         success: function (data) {
-            getDoc(4, '#BB0A21', "G");
-            getDoc(1, '#06D6A0', "A");
-            getDoc(2, '#1B98E0', "B");
-            getDoc(3, '#3D348B', "C");
+            getDoc(1, '#FCBA03', "E")
+            getDoc(2, '#06D6A0', "A");
+            getDoc(3, '#1B98E0', "B");
+            getDoc(4, '#3D348B', "C");
+            getDoc(5, '#BB0A21', "G");
 
             function getDoc(req, color, type) {
                 var arr = data.sheets[req].data[0].rowData;
@@ -120,38 +124,38 @@ function initialize() {
                         title = arr[i].values[1].formattedValue;
                         desc = arr[i].values[2].formattedValue;
                         link = arr[i].values[3].formattedValue;
-                        if (req == 4) {
-                            end = arr[i].values[4].formattedValue;
-                            var me = end.split("/")[0];
-                            me = me.length > 1 ? me : '0' + me;
+                        // if (req == 4) {
+                        //     end = arr[i].values[4].formattedValue;
+                        //     var me = end.split("/")[0];
+                        //     me = me.length > 1 ? me : '0' + me;
 
-                            var de = parseInt(end.split("/")[1]) + 1;
-                            de = de > 9 ? de : '0' + de;
-                        }
-                    } catch (err) {}
+                        //     var de = parseInt(end.split("/")[1]) + 1;
+                        //     de = de > 9 ? de : '0' + de;
+                        // }
+                    } catch (err) { }
 
-                    if (date == null || end == null)
-                        continue;
+                    if (date == null || end == null) continue;
+                    if ((title == null || title.length < 1) && type == 'E') continue;
 
-                    if (desc == null)
-                        desc = ""
+                    desc = desc ? desc : ""
+                    link = link ? link : ""
 
-                    if (link == null)
-                        link = ""
-
+                    title = title ? ' - ' + title : ''
                     switch (type) {
                         case "G":
-                            title = "General - " + title;
+                            title = "B Block" + title;
                             break;
                         case "A":
-                            title = "A Team - " + title;
+                            title = "A Team" + title;
                             break;
                         case "B":
-                            title = "B Team - " + title;
+                            title = "B Team" + title;
                             break;
                         case "C":
-                            title = "C Team - " + title;
+                            title = "C Team" + title;
                             break;
+                        case "E":
+                            title = "Everyone" + title;
                     }
 
                     var month = date.split("/")[0];
@@ -160,10 +164,7 @@ function initialize() {
                     var day = date.split("/")[1];
                     day = day.length > 1 ? day : '0' + day;
 
-                    var year = 2020;
-
-                    if (parseInt(month) > 0 && parseInt(month) < 7)
-                        year = 2021;
+                    var year = parseInt(date.split("/")[2]);
 
                     var dateStr = year + "-" + month + "-" + day;
                     var date = new Date(dateStr + 'T00:00:00');
@@ -171,15 +172,9 @@ function initialize() {
                     if (req != 4)
                         end = date;
                     else {
-                        var dateend = year + "-" + me + "-" + de;
+                        var dateend = year + "-" + month + "-" + day;
                         end = new Date(dateend + 'T00:00:00');
                     }
-
-                    if (desc == null)
-                        desc = ""
-
-                    if (link == null)
-                        link = ""
 
                     calendar.addEvent({
                         title: title,
