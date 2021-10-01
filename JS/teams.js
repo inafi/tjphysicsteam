@@ -120,6 +120,7 @@ function initialize() {
                 if (desc == null)
                     link = "";
                 try {
+                    if(date.split('/').length > 2) date = date.substr(0, date.lastIndexOf('/'))
                     if (parseInt(date.split("/")[0]) == month && save == null)
                         save = i - 2;
                     var href = "";
