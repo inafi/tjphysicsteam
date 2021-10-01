@@ -1,7 +1,7 @@
 function initialize() {
     //Gets which team user is is viewing
     var page = [window.location.href.split("/").pop().split(".")[0].toUpperCase()];
-    page.push("ABC".indexOf(page[0]) + 1)
+    page.push("TEABCG".indexOf(page[0])) // sheet index of spreadsheet
 
     //Mobile
     var isMobile = false;
@@ -87,7 +87,8 @@ function initialize() {
         return false;
     }
 
-    var req = "https://sheets.googleapis.com/v4/spreadsheets/1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
+    const spreadsheetId = "1StPsGXZK--1mKcc_-41eIEXSJfBj6x8033Njz2CMT00"
+    const spreadsheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true`
     var TodayDate = new Date();
     var month = TodayDate.getMonth() + 1;
     var save; //Used to save index of month in the get array
@@ -96,7 +97,7 @@ function initialize() {
     var currc;
 
     $.ajax({
-        url: req,
+        url: spreadsheetUrl,
         type: "get",
         success: function (data) {
             var arr = data.sheets[page[1]].data[0].rowData;

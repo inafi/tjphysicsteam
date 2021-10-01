@@ -94,7 +94,6 @@ function initialize() {
         });
 
     //Calendar Reading CSV to add events
-    // const spreadsheetId = "1-JfkEnNY_z5T_oKnxL70sVwqe-ZKnuOmXHwDXnh0f9g"
     const spreadsheetId = "1StPsGXZK--1mKcc_-41eIEXSJfBj6x8033Njz2CMT00"
     const spreadsheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true`
     $.ajax({
