@@ -272,7 +272,7 @@ function initialize() {
         url: "https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
         type: "get",
         success: function (data) {
-            pdfviewer("#8th", [page[1] - 1]);
+            pdfviewer("#8th", [page[1] - 2]);
 
             function pdfviewer(id, index) {
                 var sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);

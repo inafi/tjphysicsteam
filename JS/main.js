@@ -19,15 +19,15 @@ function initialize() {
     //     }
     // }, 100);
 
-    //Footer
-    // $.ajax({
-    //     url: "footer.html",
-    //     type: "get",
-    //     async: false,
-    //     success: function (data) {
-    //         $(".foot-wrap").append(data);
-    //     }
-    // });
+    // Footer
+    $.ajax({
+        url: "footer.html",
+        type: "get",
+        async: false,
+        success: function (data) {
+            $(".foot-wrap").append(data);
+        }
+    });
 
     //Navbar
     $("nav").append(`
