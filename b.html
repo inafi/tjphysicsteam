@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="CSS/b.css?version=149">
     <link rel="stylesheet" href="CSS/teams.css?version=149">
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
+    <link rel="stylesheet" href="JS/slick/slick.css">
+    <link rel="stylesheet" href="JS/slick/slick-theme.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS/teams.js?v=115"></script>
     <script src="JS/main.js?v=115"></script>
@@ -46,27 +49,11 @@
         </div>
     </nav>
 
-    <p><span id="clipboard"></span></p>
-
-    <div class="slider">
-        <p><i class="far fa-chevron-left sa"></i></p>
-        <div class="schedule">
-            <div class="event-wrap">
-                <!-- <div class="event">
-                <p class="label">9/181</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-            <div class="event">
-                <p class="label">9/182</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div>
-            <div class="event">
-                <p class="label">9/188</p>
-                <p class="desc">Lecture on Lagrangian</p>
-            </div> -->
-            </div>
+    <div class='event-schedule'>
+        <i class="prev far fa-chevron-left sa"></i>
+        <div class="carousel">
         </div>
-        <p> <i class="far fa-chevron-right sa"></i></p>
+        <i class="next far fa-chevron-right sa"></i>
     </div>
 
     <div class="lectures" style="margin-top: 0;">
@@ -265,6 +252,8 @@
 </body>
 
 <script src="JS/custom/scroll.js"></script>
+<script src="JS/slick/slick.min.js"></script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152856221-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];

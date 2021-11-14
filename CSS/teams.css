@@ -11,56 +11,42 @@
     background: rgba(45, 170, 219, 0.3);
 }
 
-/*Schedule*/
-.slider {
+.event-schedule {
+    width: 84%;
+    margin: 8vh auto 0 auto;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-    height: 0vh;
-    margin-top: 8vh;
-    white-space: nowrap;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+    border-radius: 1.5vh;
 }
 
-.slider> :first-child,
-.slider> :last-child {
-    display: inline-block !important;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.schedule {
-    width: calc(100% - 10vh);
-    height: 9vh;
+.carousel {
+    width: calc(100% - 5rem);
+    margin: 1rem 0;
     text-align: center;
     padding: 0 !important;
     white-space: nowrap;
-    overflow: hidden;
     display: inline-block;
 }
 
-.event-wrap {
-    transition: 0.3s;
+.carousel .event-container {
+    padding: 0 0.5rem;
 }
 
-.schedule .event {
+.carousel .event {
     height: 7vh;
-    min-width: 24vh;
-    max-width: 40vh;
-    width: 13%;
+
+    width: 100%;
     background-color: #fff;
-    margin-top: 1vh;
-    margin-right: 2%;
+
     border-radius: 1.5vh;
-    overflow: hidden;
     display: inline-block;
     transition: 0.3s;
 }
 
-.schedule .label {
+.carousel .label {
     text-align: center;
     color: #06D6A0;
     font-size: 2vh;
@@ -68,7 +54,7 @@
     user-select: none;
 }
 
-.schedule .desc {
+.carousel .desc {
     text-align: center;
     color: #1B98E0;
     font-size: 1.8vh;
@@ -78,24 +64,21 @@
     user-select: none;
 }
 
-.fa-chevron-left.sa {
+.event-schedule .fa-chevron-left.sa {
     font-size: 3vh !important;
     width: 3%;
-    height: 10vh;
-    padding-top: 3.6vh;
+    margin: auto 0 auto 1rem;
     cursor: pointer;
     transition: 0.3s;
-    transform: translateX(-2vh);
 }
 
-.fa-chevron-right.sa {
+.event-schedule .fa-chevron-right.sa {
     font-size: 3vh !important;
     width: 3%;
-    height: 10vh;
-    padding-top: 3.6vh;
+    margin: auto 1rem auto 0;
     cursor: pointer;
     transition: 0.3s;
-    transform: translateX(2vh);
+    transform: translateX(0.5rem);
 }
 
 .fa-chevron-left.sa:hover,
