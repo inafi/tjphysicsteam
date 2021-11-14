@@ -11,18 +11,6 @@ function initialize() {
     }
 
     //div width
-    $(document).on('mouseenter', '.event', function (event) {
-        var newwidth = Math.max($(this).children(".desc")[0].scrollWidth + $(".event").width() * .2, $(".event").width());
-        var off = $(this).children(".desc")[0].offsetWidth;
-        var scroll = $(this).children(".desc")[0].scrollWidth;
-        if (off < scroll) {
-            $(this).css("width", newwidth + "px");
-        }
-    }).on('mouseleave', '.event', function () {
-        $(this).css("width", "13%");
-        $(this).css("margin-left", "0vh");
-        $(this).css("margin-right", "2%");
-    });
 
     $(document).on('mouseenter', '#lectures .pdf', function (event) {
         var newwidth = Math.max($(this).children(".label")[0].scrollWidth, $(window).width() * .2);
@@ -112,7 +100,7 @@ function initialize() {
                     title = arr[i].values[1].formattedValue;
                     desc = arr[i].values[2].formattedValue;
                     link = arr[i].values[3].formattedValue;
-                } catch (err) {}
+                } catch (err) { }
                 if (title == null)
                     title = "";
                 if (link == null)
@@ -120,16 +108,22 @@ function initialize() {
                 if (desc == null)
                     link = "";
                 try {
-                    if(date.split('/').length > 2) date = date.substr(0, date.lastIndexOf('/'))
+                    if (date.split('/').length > 2) date = date.substr(0, date.lastIndexOf('/'))
                     if (parseInt(date.split("/")[0]) == month && save == null)
                         save = i - 2;
                     var href = "";
                     if (link != "")
                         href = ' href="' + link + '"';
-                    var append = '<a' + href + ' target="_blank"><div class="event"><p class="label">';
-                    append += date + '</p>';
-                    append += '<p class="desc">' + title + "</p></div></a>";
-                    $(".event-wrap").append(append);
+
+                    var append = `
+                        <a ${href} target="_blank" class="event-container">
+                        <div class="event">
+                            <p class="label">${date}</p>
+                            <p class="desc">${title}</p>
+                        </div>
+                        </a>
+                    `;
+                    $(".carousel").append(append);
                 } catch (err) {
                     num -= 1;
                 }
@@ -151,33 +145,42 @@ function initialize() {
 
             $(".slider").height("9vh");
             $(".lectures").css("margin-top", "4vh");
+
+            $(".carousel").slick({
+                arrows: true,
+                dots: false,
+                fade: false,
+                infinite: false,
+                slidesToScroll: 2,
+                slidesToShow: 4,
+                prevArrow: $('.event-schedule .prev'),
+                nextArrow: $('.event-schedule .next'),
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
         }
-    });
-
-    function moveLeft() {
-        currc += size;
-        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
-    };
-
-    function moveRight() {
-        currc -= size;
-        $(".event-wrap").css("transform", "translateX(" + currc + "px)");
-    };
-
-    $('.fa-chevron-left.sa').click(function () {
-        if (!isVisible($(".event-wrap > :first-child")[0]))
-            moveLeft();
-    });
-
-    $('.fa-chevron-right.sa').click(function () {
-        if (!isVisible($(".event-wrap > :last-child")[0]))
-            moveRight();
-    });
-
-    $(window).on('resize', function () {
-        size = $(".event").width() + .02 * $(window).width();
-        currc = 0;
-        $(".event-wrap").css("transform", "translateX(0%)");
     });
 
     //PDF Viewer
@@ -290,15 +293,15 @@ function initialize() {
                         try {
                             if (arr[i].values[0].formattedValue != null)
                                 slides.push([arr[i].values[0].formattedValue, arr[i].values[1].formattedValue]);
-                        } catch (error) {}
+                        } catch (error) { }
                         try {
                             if (arr[i].values[2].formattedValue != null)
                                 youtube.push([arr[i].values[2].formattedValue, arr[i].values[3].formattedValue]);
-                        } catch (error) {}
+                        } catch (error) { }
                         try {
                             if (arr[i].values[4].formattedValue != null)
                                 docs.push([arr[i].values[4].formattedValue, arr[i].values[5].formattedValue]);
-                        } catch (error) {}
+                        } catch (error) { }
                     }
                 }
 
