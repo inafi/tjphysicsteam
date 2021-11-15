@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="CSS/main.css?version=148">
     <link rel="stylesheet" href="CSS/resources.css?version=149">
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
+    <link rel="stylesheet" href="JS/slick/slick.css">
+    <link rel="stylesheet" href="JS/slick/slick-theme.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS/resources.js?v=114"></script>
     <script src="JS/main.js?v=114"></script>
@@ -45,8 +48,6 @@
         </div>
     </nav>
 
-    <p><span id="clipboard"></span></p>
-
     <div class="teams">
         <div class="row">
             <button class="title">
@@ -82,22 +83,12 @@
                 USAPhO
             </div>
         </div>
-
-        <div class="viewer" id="tests" vis="off">
-            <i class="far fa-chevron-left pa"></i>
-            <div class="pdf-wrap">
-                <div class="pdf-move">
-                    <!-- <div class="pdf">
-                    <img src="Lectures/A/Electromagnetism/Electrostatics_Problem_Set_Solutions.png">
-                    <p class="label">Electrostatic PS Solutions</p>
-                </div>
-                <div class="pdf">
-                    <img src="Lectures/A/Electromagnetism/EMWaves2014.png">
-                    <p class="label">Clssical ELectromagnetic Waves That do stuff </p>
-                </div> -->
-                </div>
+        
+        <div id='res-viewer' class="slider" vis="off">
+            <i class="prev far fa-chevron-left sa"></i>
+            <div class="carousel">
             </div>
-            <i class="far fa-chevron-right pa"></i>
+            <i class="next far fa-chevron-right sa"></i>
         </div>
 
         <div class="row exam-resource">
@@ -139,23 +130,14 @@
                 <p val="off">Solutions</p>
             </div>
         </div>
-
-        <div class="viewer" id="sets">
-            <i class="far fa-chevron-left pa"></i>
-            <div class="pdf-wrap">
-                <div class="pdf-move">
-                    <!-- <div class="pdf">
-                    <img src="Lectures/A/Electromagnetism/Electrostatics_Problem_Set_Solutions.png">
-                    <p class="label">Electrostatic PS Solutions</p>
-                </div>
-                <div class="pdf">
-                    <img src="Lectures/A/Electromagnetism/EMWaves2014.png">
-                    <p class="label">Clssical ELectromagnetic Waves That do stuff </p>
-                </div> -->
-                </div>
+        
+        <div id='set-viewer' class="slider">
+            <i class="prev far fa-chevron-left sa"></i>
+            <div class="carousel">
             </div>
-            <i class="far fa-chevron-right pa"></i>
+            <i class="next far fa-chevron-right sa"></i>
         </div>
+        
 
         <p class="title">Resources</p>
         <div class="row main-resource">
@@ -182,12 +164,11 @@
             </div>
         </div>
     </div>
-
-    <div class="foot-wrap">
-    </div>
 </body>
 
 <script src="JS/custom/scroll.js"></script>
+<script src="JS/slick/slick.min.js"></script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152856221-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];

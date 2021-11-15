@@ -54,6 +54,10 @@
     color: #2c2379;
 }
 
+.slider[vis="off"] {
+    display: none;
+}
+
 /* Event Slider */
 #event-schedule .carousel .event-container {
     padding: 0 0.5rem;
@@ -162,10 +166,6 @@
     width: 20%;
     overflow: hidden;
     margin-bottom: 1rem !important;
-}
-
-.slider[vis="off"] {
-    display: none;
 }
 
 .viewer {
