@@ -11,7 +11,8 @@
     background: rgba(45, 170, 219, 0.3);
 }
 
-.event-schedule {
+/* Slider */
+.slider {
     width: 84%;
     margin: 8vh auto 0 auto;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
@@ -31,11 +32,34 @@
     display: inline-block;
 }
 
-.carousel .event-container {
+.slider .fa-chevron-left.sa {
+    font-size: 3vh !important;
+    width: 3%;
+    margin: auto 0 auto 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider .fa-chevron-right.sa {
+    font-size: 3vh !important;
+    width: 3%;
+    margin: auto 1rem auto 0;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(0.5rem);
+}
+
+.slider .fa-chevron-left.sa:hover,
+.slider .fa-chevron-right.sa:hover {
+    color: #2c2379;
+}
+
+/* Event Slider */
+#event-schedule .carousel .event-container {
     padding: 0 0.5rem;
 }
 
-.carousel .event {
+#event-schedule .carousel .event {
     height: 7vh;
 
     width: 100%;
@@ -46,7 +70,7 @@
     transition: 0.3s;
 }
 
-.carousel .label {
+#event-schedule .carousel .label {
     text-align: center;
     color: #06D6A0;
     font-size: 2vh;
@@ -54,7 +78,7 @@
     user-select: none;
 }
 
-.carousel .desc {
+#event-schedule .carousel .desc {
     text-align: center;
     color: #1B98E0;
     font-size: 1.8vh;
@@ -64,27 +88,6 @@
     user-select: none;
 }
 
-.event-schedule .fa-chevron-left.sa {
-    font-size: 3vh !important;
-    width: 3%;
-    margin: auto 0 auto 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.event-schedule .fa-chevron-right.sa {
-    font-size: 3vh !important;
-    width: 3%;
-    margin: auto 1rem auto 0;
-    cursor: pointer;
-    transition: 0.3s;
-    transform: translateX(0.5rem);
-}
-
-.fa-chevron-left.sa:hover,
-.fa-chevron-right.sa:hover {
-    color: #2c2379;
-}
 
 /*Lectures*/
 .lectures {
@@ -138,6 +141,33 @@
 }
 
 /*PDF*/
+.carousel .pdf-container {
+    padding: 0 0.5rem;
+}
+
+.carousel .pdf-container .pdf {
+    position: relative;
+    width: 1rem;
+    overflow: hidden;
+}
+
+.carousel .pdf-container .pdf .label {
+    position: absolute;
+    z-index: 1;
+
+    font-size: 1rem;
+    color: #000;
+    bottom: 0;
+    text-align: center;
+    width: 20%;
+    overflow: hidden;
+    margin-bottom: 1rem !important;
+}
+
+.slider[vis="off"] {
+    display: none;
+}
+
 .viewer {
     margin-top: 4vh;
     width: 84%;
@@ -213,23 +243,6 @@
     margin-bottom: 1.7vh !important;
 }
 
-.fa-chevron-left.pa {
-    font-size: 3vh !important;
-    cursor: pointer;
-    color: #3D348B;
-    transition: 0.3s;
-    z-index: 9;
-    transform: translateX(2.5vh)
-}
-
-.fa-chevron-right.pa {
-    font-size: 3vh !important;
-    cursor: pointer;
-    color: #3D348B;
-    transition: 0.3s;
-    z-index: 9;
-    transform: translateX(-2.5vh)
-}
 
 /*8th Periods*/
 div.switch-wrap {

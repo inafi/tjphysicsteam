@@ -10,45 +10,6 @@ function initialize() {
         isMobile = true;
     }
 
-    //div width
-
-    $(document).on('mouseenter', '#lectures .pdf', function (event) {
-        var newwidth = Math.max($(this).children(".label")[0].scrollWidth, $(window).width() * .2);
-        var off = $(this).children(".label")[0].offsetWidth;
-        var scroll = $(this).children(".label")[0].scrollWidth;
-        if (off < scroll) {
-            $(this).css("width", newwidth + "px");
-            $(this).children(".label").css("width", newwidth + "px");
-        }
-    }).on('mouseleave', '#lectures .pdf', function () {
-        $(this).css("width", "20%");
-        $(this).css("margin-left", "0vh");
-        $(this).css("margin-right", "3%");
-        $(this).children(".label").css("width", "20%");
-        $(this).children(".label").css("margin-left", "0px");
-    });
-
-    $(document).on('mouseenter', '#8th .pdf', function (event) {
-        var newwidth = $(this).children(".label")[0].scrollWidth;
-        var off = $(this).children(".label")[0].offsetWidth;
-        var scroll = $(this).children(".label")[0].scrollWidth;
-        $(this).width($(this).width());
-        if (off < scroll) {
-            $(this).width(newwidth + "px");
-            $(this).children(".label").width(newwidth + "px");
-            // $(this).find("img").width(newwidth + "px");
-        }
-        console.log("on")
-    }).on('mouseleave', '#8th .pdf', function () {
-        console.log("leave", $(this).width(), $(this).find(".img-wrap").width(), $(this).find("img").width())
-        $(this).width($(this).find("img").innerWidth());
-        $(this).children(".label").width("100%");
-        // $(this).find("img").width("100%");
-        setTimeout(() => {
-            $(this).css("width", "auto");
-        }, 300);
-    });
-
     //Events
     function isVisible(elem) {
         if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
@@ -123,7 +84,7 @@ function initialize() {
                         </div>
                         </a>
                     `;
-                    $(".carousel").append(append);
+                    $("#event-schedule .carousel").append(append);
                 } catch (err) {
                     num -= 1;
                 }
@@ -143,18 +104,17 @@ function initialize() {
                     $(".schedule").scrollLeft(lscroll);
             }
 
-            $(".slider").height("9vh");
             $(".lectures").css("margin-top", "4vh");
 
-            $(".carousel").slick({
+            $("#event-schedule .carousel").slick({
                 arrows: true,
                 dots: false,
                 fade: false,
                 infinite: false,
                 slidesToScroll: 2,
                 slidesToShow: 4,
-                prevArrow: $('.event-schedule .prev'),
-                nextArrow: $('.event-schedule .next'),
+                prevArrow: $('#event-schedule .prev'),
+                nextArrow: $('#event-schedule .next'),
                 responsive: [
                     {
                         breakpoint: 1024,
@@ -207,6 +167,11 @@ function initialize() {
                     text = text.split("\n");
                     nump = 0;
                     $("#lectures .pdf-move").html("");
+                    if ($("#lecture-viewer .carousel").hasClass('slick-initialized')) {
+                        $("#lecture-viewer .carousel").slick('unslick')
+                        $("#lecture-viewer .carousel").html("");
+                    }
+
                     viewp = parseInt($(".pdf-wrap").width());
                     currp = 0;
                     index = 0;
@@ -217,15 +182,48 @@ function initialize() {
                         if (text[i].split("/")[0] == fold) {
                             var name = text[i].split("/")[1].split(".pdf")[0];
                             dir = 'Lectures/' + page[0] + '/' + text[i];
-                            append += '<a href="' + dir + '" target="_blank"><div class="pdf"><img src="';
-                            append += dir.replace(/.pdf/g, '.png') + '"><p class="label">' + name.replace(/_/g, ' ');
-                            append += '</p></div></a>';
+                            append += `
+                                <a href="${dir}" target="_blank" class="pdf-container">
+                                <div class="pdf">
+                                <img src="${dir.replace(/.pdf/g, '.png')}">
+                                </div>
+                                <p class="label">${name.replace(/_/g, ' ')}</p>
+                                </a>
+                            `
                             nump += 1;
                         }
                     }
-                    $("#lectures .pdf-move").append(append);
+                    $("#lecture-viewer .carousel").append(append);
+
+                    $("#lecture-viewer .carousel").slick({
+                        arrows: true,
+                        dots: false,
+                        fade: false,
+                        infinite: false,
+                        slidesToScroll: 3,
+                        slidesToShow: 3,
+                        prevArrow: $('#lecture-viewer .prev'),
+                        nextArrow: $('#lecture-viewer .next'),
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2
+                                }
+                            },
+                            {
+                                breakpoint: 700,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1
+                                }
+                            },
+                        ]
+                    });
                 })
-            $("#lectures").attr("vis", "on");
+            $("#lecture-viewer").attr("vis", "on");
+
         } else if (previnfo != "" && previnfo == $(this).attr("name")) {
             $(".topic").css("color", "#1B98E0");
             $(".topic i").removeClass("fa-folder-open");
@@ -233,49 +231,18 @@ function initialize() {
             $("#lectures").css("height", "0vh");
             $("#lectures").css("margin-bottom", "0vh");
             $("#lectures").attr("vis", "off");
+
+            $("#lecture-viewer").attr("vis", "off");
         }
         previnfo = $(this).attr("name");
-    });
-
-    function moveLeftPdf() {
-        currp += sizep;
-        index -= 1;
-        $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
-    };
-
-    function moveRightPdf() {
-        currp -= sizep;
-        index += 1;
-        $("#lectures .pdf-move").css("transform", "translateX(" + currp + "px)");
-    };
-
-    $('#lectures .fa-chevron-left.pa').click(function () {
-        sizep = $("#lectures .pdf-move a").width();
-        viewp = parseInt($(".pdf-wrap").width());
-        if (viewp + sizep * index > $("#lectures .pdf-wrap").width())
-            moveLeftPdf();
-    });
-
-    $('#lectures .fa-chevron-right.pa').click(function () {
-        sizep = $("#lectures .pdf-move a").width();
-        viewp = parseInt($(".pdf-wrap").width());
-        if (viewp + sizep * index < nump * sizep - $(window).width() * .03)
-            moveRightPdf();
-    });
-
-    $(window).on('resize', function () {
-        sizep = $("#lectures .pdf-move a").width();
-        viewp = parseInt($(".pdf-wrap").width());
-        currp = 0;
-        index = 0;
-        $("#lectures .pdf-move").css("transform", "translateX(0%)");
     });
 
     $.ajax({
         url: "https://sheets.googleapis.com/v4/spreadsheets/1szjHffWEWHrcXE1XLEMKnzbOfAAAufuaSkYiuJN9YLA/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true",
         type: "get",
         success: function (data) {
-            pdfviewer("#8th", [page[1] - 1]);
+            console.log(data)
+            pdfviewer("#8th", [page[1] - 2]);
 
             function pdfviewer(id, index) {
                 var sizepl = parseInt($("#8th .pdf").width() + $(window).width() * .03);
@@ -317,7 +284,11 @@ function initialize() {
                 }
 
                 function update(view) {
-                    $(id + " .pdf-move").html("");
+                    if($("#8th-viewer .carousel").hasClass('slick-initialized')){
+                        $("#8th-viewer .carousel").slick('unslick')
+                        $("#8th-viewer .carousel").html('')
+                    }
+
                     viewpl = parseInt($(id + " .pdf-wrap").width());
                     currpl = 0;
                     indexl = 0;
@@ -366,12 +337,42 @@ function initialize() {
                                 pic = "https://lh3.googleusercontent.com/d/" + pic + "=w640"
                             }
                         }
-                        append += '<a href="' + arr[i][1] + '" target="_blank"><div class="pdf"><div class="img-wrap ' + pick + '"><img src="';
-                        append += pic + '"></div><p class="label">' + arr[i][0];
-                        append += '</p></div></a>';
+
+                        append += `
+                        <a href="${arr[i][1]}'" target="_blank">
+                            <div class="pdf">
+                                <div class="img-wrap ${pick}">
+                                    <img src="${pic}">
+                                </div>
+                            </div>
+                            <p class="label">${arr[i][0]}</p>
+                        </a>
+                        `;
                     }
 
                     $(id + " .pdf-move").append(append);
+                    $("#8th-viewer .carousel").append(append);
+
+
+                    $("#8th-viewer .carousel").slick({
+                        arrows: true,
+                        dots: false,
+                        fade: false,
+                        infinite: false,
+                        slidesToScroll: 2,
+                        slidesToShow: 2,
+                        prevArrow: $('#8th-viewer .prev'),
+                        nextArrow: $('#8th-viewer .next'),
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1
+                                }
+                            },
+                        ]
+                    });
                 }
 
                 $(id + ' #slides').click(function () {
@@ -384,40 +385,6 @@ function initialize() {
 
                 $(id + ' #docs').click(function () {
                     update(2);
-                });
-
-                function moveLeftPdfl() {
-                    currpl += sizepl;
-                    indexl -= 1;
-                    $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
-                };
-
-                function moveRightPdfl() {
-                    currpl -= sizepl;
-                    indexl += 1;
-                    $(id + " .pdf-move").css("transform", "translateX(" + currpl + "px)");
-                };
-
-                $(id + ' .fa-chevron-left.pa').click(function () {
-                    sizepl = $(id + " .pdf-move a").width();
-                    viewpl = parseInt($(id + " .pdf-wrap").width());
-                    if (viewpl + sizepl * indexl > $(id + " .pdf-wrap").width())
-                        moveLeftPdfl();
-                });
-
-                $(id + ' .fa-chevron-right.pa').click(function () {
-                    sizepl = $(id + " .pdf-move a").width();
-                    viewpl = parseInt($(id + " .pdf-wrap").width());
-                    if (viewpl + sizepl * indexl < numpl * sizepl - $(window).width() * .03)
-                        moveRightPdfl();
-                });
-
-                $(window).on('resize', function () {
-                    sizepl = $(id + " .pdf-move a").width();
-                    viewpl = parseInt($(id + " .pdf-wrap").width());
-                    currpl = 0;
-                    indexl = 0;
-                    $(id + " .pdf-move").css("transform", "translateX(0%)");
                 });
             }
         }
