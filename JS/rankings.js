@@ -6,41 +6,6 @@ function initialize() {
         isMobile = true;
     }
 
-    var prev = -1;
-    var curr = 0;
-    setInterval(function () {
-        curr = $(window).scrollTop() + $(window).width();
-        if (curr != prev) {
-            if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height() * 1.3) {
-                $("nav").css('background-color', 'transparent');
-                $("nav *").css('color', '#fff');
-                $(".active").css('color', '#3D348B');
-                $("nav span:hover").css('color', '#3D348B');
-                $("nav img").attr("src", "Pics/copy2.png");
-                $("nav").css('box-shadow', 'none');
-            } else {
-                $("nav").css('background-color', '#fff');
-                $("nav *").css('color', '#1B98E0');
-                $(".active").css('color', '#3D348B');
-                $("nav span:hover").css('color', '#06D6A0');
-                if ($("nav img").attr("src") != "Pics/copy.png")
-                    $("nav img").attr("src", "Pics/copy.png");
-                $("nav").css('box-shadow', `
-                    0 2.8px 2.2px rgba(0, 0, 0, 0.014),
-                    0 6.7px 5.3px rgba(0, 0, 0, 0.018),
-                    0 1.5px 2px rgba(0, 0, 0, 0.02),
-                    0 2.3px 2px rgba(0, 0, 0, 0.022),
-                    0 3.8px 2px rgba(0, 0, 0, 0.026),
-                    0 4px 5px rgba(0, 0, 0, 0.05)`);
-
-                if ($("nav #nav-icon3").attr("expanded") == "true") {
-                    $("nav #nav-icon3").click();
-                }
-            }
-        }
-        prev = curr;
-    }, 50)
-
     var req = "https://sheets.googleapis.com/v4/spreadsheets/1vBfqcpmkNG3xDgoDCBVgLwaWlV4t88Ev8hlsyXMOPuo/?key=AIzaSyAjX2wnpSdfn5KkEvaTwXMkTqCXxRRIxm8&includeGridData=true";
 
     $(document).on('mouseenter', 'table.student tr', function (event) {
@@ -70,7 +35,9 @@ function initialize() {
             append += '</tr>'
             $("table.test").append(append);
 
-            for (i = 2; i < arr.length; i++) {
+            var top_x = 10;
+
+            for (i = 2; i < top_x + 2; i++) {
                 append = '<tr class="content">';
                 for (k = 0; k < arr[0].values.length; k++) {
                     append += "<td>" + arr[i].values[k].formattedValue + "</td>";
@@ -79,7 +46,7 @@ function initialize() {
                 $("table.student").append(append);
             }
 
-            $("table.student").css("height", (arr.length - 2) * 6 + "vh");
+            $("table.student").css("height", (top_x) * 6 + "vh");
             $("td").css("width", "calc(100%/" + arr[0].values.length + ")")
         }
     });

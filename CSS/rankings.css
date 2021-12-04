@@ -3,16 +3,17 @@ body {
     min-height: 100vh;
 }
 
-.ds-selected {
-    background: rgba(45, 170, 219, 0.3);
-    border-radius: inherit;
-    transform: scaleX(1) !important;
+.title {
+    font-size: 5vh;
+    color: #fff;
+    text-align: center;
+    margin: 6vh auto 0 auto;
 }
 
 table.test {
     height: 10vh;
-    margin: 8vh auto 0 auto;
-    width: 80%;
+    margin: 2vh auto 0 auto;
+    width: 60%;
     max-width: 200vh;
     empty-cells: show;
 }
@@ -23,7 +24,7 @@ table.test tr {
 
 table.student {
     height: 40vh;
-    width: 80%;
+    width: 60%;
     max-width: 200vh;
     margin: 2vh auto 5vh auto;
 }
@@ -32,11 +33,11 @@ table.student tr {
     border: 0.3vh solid transparent;
 }
 
-table.student tr:nth-of-type(-n + 7) {
+table.student tr:nth-of-type(-n + 5) {
     background-image: linear-gradient(to right, #b1c0e2, #e4efe9, #c5d3f3, #dfe9fd, #b1c0e2);
 }
 
-table.student tr:nth-of-type(-n + 3) {
+table.student tr:nth-of-type(-n + 1) {
     background-image: linear-gradient(to right, #FFDA5D, #EEB609, #FFDA5D, #FCC201, #FFDA5D);
 }
 
@@ -126,12 +127,14 @@ table.student tr> :last-child {
     border-bottom-right-radius: 0.75vh;
 }
 
-footer {
-    position: absolute;
+.foot-wrap {
+    background-color: #fff;
+    position: relative;
 }
 
-.foot-wrap {
-    margin-top: 0vh;
+footer {
+    position: absolute;
+    transition: 0.3s;
 }
 
 /* @media only screen and (orientation:portrait) {
