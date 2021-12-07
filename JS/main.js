@@ -48,6 +48,9 @@ function initialize() {
             <a href="events.html">
                 <span name="events">Events</span>
             </a>
+            <a href="rankings.html">
+                <span name="rankings">Rankings</span>
+            </a>
             <a href="past.html">
                 <span name="past">Past</span>
             </a>

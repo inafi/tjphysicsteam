@@ -35,7 +35,7 @@ function initialize() {
             append += '</tr>'
             $("table.test").append(append);
 
-            var top_x = 10;
+            var top_x = 11;
 
             for (i = 2; i < top_x + 2; i++) {
                 append = '<tr class="content">';
@@ -50,5 +50,6 @@ function initialize() {
             $("td").css("width", "calc(100%/" + arr[0].values.length + ")")
         }
     });
+    $("tr td:first-child").css("width", "0%");
 }
 $(initialize);
