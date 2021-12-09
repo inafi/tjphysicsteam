@@ -1,7 +1,21 @@
-body {
-    background-image: linear-gradient(to top right, #0575E6, #3bb5fc, #43bca2, #00d2ff);
-    min-height: 100vh;
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #3bb5fc, #06D6A0);
+    -webkit-mask: linear-gradient(#fff, transparent);
+    mask: linear-gradient(#fff, transparent);
 }
+
+body {
+    background: linear-gradient(to right, #4568dc, #4ca1af, #3bb5fc, #4568dc);
+    transition: 0.3s;
+}
+
 
 .title {
     font-size: 5vh;
