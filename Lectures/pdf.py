@@ -1,11 +1,13 @@
 import glob
 import os
+
 result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/Tests/F=ma"
+PATH = "A/Electromagnetism/"
+
 for x in os.walk(PATH):
     for y in glob.glob(os.path.join(x[0], '*.pdf')):
         result.append(y)
-
+        
 #gs -o page-1-of-input-PDF.png -sDEVICE=pngalpha -dLastPage=1 input.pdf
 
 for i in result:

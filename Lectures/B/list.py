@@ -1,7 +1,8 @@
 import glob
 import os
+
 result = []
-PATH = "/Users/nafi/Develop/GitHub/tjphysicsteam/Lectures/B/"
+PATH = "."
 
 for x in os.walk(PATH):
     files = glob.glob(os.path.join(x[0], '*.pdf'))
