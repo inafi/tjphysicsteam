@@ -47,7 +47,11 @@ table.student tr {
     border: 0.3vh solid transparent;
 }
 
-table.student tr:nth-of-type(-n + 5) {
+table.student tr:nth-of-type(-n + 3) {
+    background-image: linear-gradient(to right, #d38537 , #D7995B, #cd7f32 , #D7995B, #cd7f32);
+}
+
+table.student tr:nth-of-type(-n + 2) {
     background-image: linear-gradient(to right, #b1c0e2, #e4efe9, #c5d3f3, #dfe9fd, #b1c0e2);
 }
 
