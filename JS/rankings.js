@@ -37,7 +37,7 @@ function initialize() {
 
             var top_x = 11;
 
-            for (i = 2; i < top_x + 3; i++) {
+            for (i = 2; i < top_x + 1; i++) {
                 append = '<tr class="content">';
                 for (k = 0; k < arr[0].values.length; k++) {
                     append += "<td>" + arr[i].values[k].formattedValue + "</td>";
